@@ -1,24 +1,25 @@
-#!/bin/bash
+#!/bin/env bash
 
 if [[ -z $1 ]]
 then
-    cd ~/Documents/textbooks
+    cd ~/Documents/textbooks/
     zathura $(ls | grep 12.pdf | rofi -dmenu) &
-
-elif [[ $1 -eq table && -z $2 ]]
-then
-    cd ~/Documents/textbooks
-    zathura $(ls | grep 12-table.pdf | rofi -dmenu) &
 else
     case "$1" in
 	table)
-	    case "$2" in
-		calc|calculus) zathura ~/Documents/textbooks/calculus12-table.pdf & ;;
-		phy|physics) zathura ~/Documents/textbooks/physics12-table.pdf & ;;
-		chem|chemistry) zathura ~/Documents/textbooks/chemistry12-table.pdf & ;;
-	    esac > /dev/null ;;
-	calc|calculus) zathura ~/Documents/textbooks/calculus12.pdf & ;;
-	phy|physics) zathura ~/Documents/textbooks/physics12.pdf & ;;
-	chem|chemistry) zathura ~/Documents/textbooks/chemistry12.pdf & ;;
+	    if [[ -z $2 ]]
+	    then
+		cd ~/Documents/textbooks/
+		zathura $(ls | grep 12-table.pdf | rofi -dmenu) &
+	    else
+		case "$2" in
+		    calc|calculus) zathura ~/Documents/textbooks/calculus12-table.pdf & exit 0 ;;
+		    phy|physics) zathura ~/Documents/textbooks/physics12-table.pdf & exit 0 ;;
+		    chem|chemistry) zathura ~/Documents/textbooks/chemistry12-table.pdf & exit 0 ;;
+		esac > /dev/null
+	    fi > /dev/null ;;
+	calc|calculus) zathura ~/Documents/textbooks/calculus12.pdf & exit 0 ;;
+	phy|physics) zathura ~/Documents/textbooks/physics12.pdf & exit 0 ;;
+	chem|chemistry) zathura ~/Documents/textbooks/chemistry12.pdf & exit 0 ;;
     esac > /dev/null
 fi > /dev/null
