@@ -1,6 +1,7 @@
 aic94xx-firmware
 android-studio
 barrier
+brother-dcpl2520dw
 citra-qt-git
 color-picker
 davinci-resolve

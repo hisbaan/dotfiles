@@ -10,6 +10,8 @@ bison
 borg
 broot
 chromium
+cups
+cups-pdf
 dhcpcd
 discord
 dolphin
@@ -48,6 +50,7 @@ ncmpcpp
 neofetch
 neovim
 nitrogen
+nmap
 ntfs-3g
 nvidia
 nvidia-dkms
@@ -68,6 +71,7 @@ redshift
 reflector
 rofi
 rsync
+sane
 speedtest-cli
 steam
 sudo
