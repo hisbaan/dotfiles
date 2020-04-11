@@ -49,14 +49,13 @@ format-margin =
 format-offset =
 
 [colors]
-background = #292d3e
-foreground = #c0c5ce
-; foreground = #A77AC4
-accent = #BD93F9
-alert = #bd2c40
-volume-min = #a3be8c
-volume-med = #ebcb8b
-volume-max = #bf616a
+background = ${xrdb:*.background}
+foreground = ${xrdb:*.foreground} 
+accent = ${xrdb:*.color4} 
+alert = ${xrdb:*.color1} 
+volume-min = 
+volume-med =
+volume-max =
 
 ################################################################################
 ################################################################################
@@ -68,7 +67,6 @@ volume-max = #bf616a
 ;https://github.com/jaagr/polybar/wiki/Configuration
 
 monitor = DVI-D-0
-;monitor-fallback = HDMI1
 monitor-strict = false
 override-redirect = false
 bottom = false
@@ -80,10 +78,6 @@ height = 20
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-; Background gradient (vertical steps)
-;   background-[0-9]+ = #aarrggbb
-;background-0 =
 
 radius = 0.0
 line-size = 2
@@ -108,7 +102,6 @@ font-1 = "MesloLGS Nerd Font Mono:size=16;3"
 font-2 = "MesloLGS Nerd Font Mono:style=Regular:pixelsize=8;1"
 font-3 = "MesloLGS Nerd Font Mono:style=Solid:pixelsize=8;1"
 font-4 = "MesloLGS Nerd Font Mono:pixelsize=8;1"
-
 
 modules-left = i3 xwindow
 modules-center = 
@@ -226,7 +219,7 @@ format = <label-state> <label-mode>
 label-mode = %mode%
 label-mode-padding = 2
 label-mode-foreground = #000000
-label-mode-background = #FFBB00
+label-mode-background = ${colors.accent}
 
 ; Available tokens:
 ;   %name%
@@ -278,7 +271,6 @@ format-background = ${colors.background}
 ############                       MODULES ARROWS                     ############
 ################################################################################
 ################################################################################
-
 
 [module/arrow1]
 ; grey to Blue

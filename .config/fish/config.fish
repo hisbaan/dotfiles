@@ -4,7 +4,7 @@ abbr --add sp 'sudo pacman'
 set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
 
-set PATH $PATH:/home/hisbaan/.local/bin/
+set PATH $PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/
 export EDITOR='/usr/bin/nvim'
 
 #sudo !!

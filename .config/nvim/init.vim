@@ -6,6 +6,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 Plug 'arcticicestudio/nord-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ap/vim-css-color'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else

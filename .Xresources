@@ -1,0 +1,56 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm*renderFont: true
+XTerm*faceName: xft:Nerd Fonts Meslo
+XTerm*faceSize: 12
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm*loginshell: true
+
+! Colors
+#include "/home/hisbaan/.xcolors/dracula"
+
+*.foreground: FOREGROUND 
+*.background: BACKGROUND 
+*.selection_foreground: BACKGROUND 
+*.selection_background: FOREGROUND 
+*.cursorColor: FOREGROUND 
+
+! black
+*.color0: COLOR0
+*.color8: COLOR8
+
+! red
+*.color1: COLOR1
+*.color9: COLOR9
+
+! green
+*.color2: COLOR2
+*.color10: COLOR10
+
+! yellow
+*.color3: COLOR3
+*.color11: COLOR11
+
+! blue
+*.color4: COLOR4
+*.color12: COLOR12
+
+! magenta
+*.color5: COLOR5
+*.color13: COLOR13
+
+! cyan
+*.color6: COLOR6
+*.color14: COLOR14
+
+! white
+*.color7: COLOR7
+*.color15: COLOR15

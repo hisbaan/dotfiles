@@ -168,7 +168,7 @@ browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 ##   available.
 ##
 #
-song_columns_list_format = (20)[141]{a} (50)[141]{t|f:Title} (20)[141]{b} (7f)[141]{l}
+song_columns_list_format = (20)[13]{a} (50)[13]{t|f:Title} (20)[13]{b} (7f)[13]{l}
 
 ##### various settings #####
 ##
@@ -366,19 +366,19 @@ use_console_editor = yes
 # transparent background.
 colors_enabled = yes
 empty_tag_color = cyan
-header_window_color = 141
-volume_color = 141
+header_window_color = 13
+volume_color = 13
 state_line_color = default
 state_flags_color = default:b
-main_window_color = 141
+main_window_color = 13
 color1 = white
 color2 = green
 
 progressbar_color = black:b
-progressbar_elapsed_color = 141
-statusbar_color = 141
-statusbar_time_color = 141:b
-player_state_color = 141:b
+progressbar_elapsed_color = 13
+statusbar_color = 13
+statusbar_time_color = 13:b
+player_state_color = 13:b
 alternative_ui_separator_color = black:b
-window_border_color = 141
-active_window_border = 141
+window_border_color = 13
+active_window_border = 13
