@@ -12,6 +12,7 @@ intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 lib32-gamemode
 minecraft-launcher
+moc-pulse
 nerd-fonts-meslo
 nomachine
 polybar
@@ -19,6 +20,7 @@ scrcpy
 smloadr
 wd719x-firmware
 windscribe-cli
+xiccd
 yay
 ytop
 zoom
