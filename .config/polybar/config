@@ -40,7 +40,7 @@ compositing-border = over
 
 ; Define fallback values used by all module formats
 format-foreground = #FF0000
-format-background = #00FF00
+format-background = #FF0000
 format-underline =
 format-overline =
 format-spacing =
@@ -97,11 +97,14 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "MesloLGS Nerd Font Mono:size=10;2"
-font-1 = "MesloLGS Nerd Font Mono:size=16;3"
-font-2 = "MesloLGS Nerd Font Mono:style=Regular:pixelsize=8;1"
-font-3 = "MesloLGS Nerd Font Mono:style=Solid:pixelsize=8;1"
-font-4 = "MesloLGS Nerd Font Mono:pixelsize=8;1"
+;font-0 = font pango:MesloLGS Nerd Font Mono, Font Awesome 5 Free:size=10
+font-0 = MesloLGS Nerd Font Mono:size=10;2
+;font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=11;2"
+;font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;2"
+;font-1 = MesloLGS Nerd Font Mono:size=16;2
+;font-2 = MesloLGS Nerd Font Mono:style=Regular:pixelsize=8;1
+;font-3 = MesloLGS Nerd Font Mono:style=Solid:pixelsize=8;1
+;font-4 = MesloLGS Nerd Font Mono:pixelsize=8;1
 
 modules-left = i3 xwindow
 modules-center = 
@@ -537,57 +540,6 @@ format-background = ${colors.background}
 label = "%date% %time% "
 
 #################################################################
-
-[module/ewmh]
-type = internal/xworkspaces
-
-pin-workspaces = false
-enable-click = true
-enable-scroll = true
-reverse-scroll = true
-
-;extra icons to choose from
-;http://fontawesome.io/cheatsheet/
-;       v     
-
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
-icon-5 = 6;
-icon-6 = 7;
-icon-7 = 8;
-#icon-8 = 9;
-#icon-9 = 10;
-#icon-default = " "
-format = <label-state>
-label-monitor = %name%
-
-label-active = %name%
-label-active-foreground = ${colors.foreground}
-label-active-background = ${colors.background}
-label-active-underline= #6790eb
-label-active-padding = 1
-
-label-occupied = %name%
-label-occupied-background = ${colors.background}
-label-occupied-padding = 1
-
-label-urgent = %name%
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.alert}
-label-urgent-underline = ${colors.alert}
-label-urgent-padding = 1
-
-label-empty = %name%
-label-empty-foreground = ${colors.foreground}
-label-empty-padding = 1
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
-
-################################################################################
 
 [module/filesystem]
 ;https://github.com/jaagr/polybar/wiki/Module:-filesystem

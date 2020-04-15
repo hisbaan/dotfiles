@@ -1,3 +1,4 @@
+" Start vim plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -33,6 +34,10 @@ set encoding=utf-8
 set number
 set spell spelllang=en_ca
 set shiftwidth=4
+set hidden
+set ignorecase
+set smartcase
+set mouse=a
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h

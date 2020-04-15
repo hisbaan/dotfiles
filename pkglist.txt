@@ -1,7 +1,6 @@
 alsa-utils
 amd-ucode
 android-tools
-arandr
 audacity
 autoconf
 automake
@@ -21,7 +20,6 @@ efibootmgr
 exfat-utils
 fakeroot
 feh
-figlet
 firefox
 fish
 flameshot
@@ -43,7 +41,6 @@ libreoffice-fresh
 libtool
 linux
 linux-firmware
-lolcat
 lutris
 m4
 make

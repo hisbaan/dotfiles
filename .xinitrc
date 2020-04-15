@@ -5,7 +5,7 @@ xmodmap ~/.Xmodmap
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144 &
 
 # starting picom
-picom -b 
+# picom -b
 
 # forcing programs to use .Xresources
 ~/.local/bin/xresources/xresources-kitty &
