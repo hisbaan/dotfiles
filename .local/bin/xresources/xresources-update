@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+xrdb /home/hisbaan/.Xresources
+xresources-kitty

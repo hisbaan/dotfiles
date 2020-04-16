@@ -97,14 +97,8 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-;font-0 = font pango:MesloLGS Nerd Font Mono, Font Awesome 5 Free:size=10
-font-0 = MesloLGS Nerd Font Mono:size=10;2
-;font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=11;2"
-;font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;2"
-;font-1 = MesloLGS Nerd Font Mono:size=16;2
-;font-2 = MesloLGS Nerd Font Mono:style=Regular:pixelsize=8;1
-;font-3 = MesloLGS Nerd Font Mono:style=Solid:pixelsize=8;1
-;font-4 = MesloLGS Nerd Font Mono:pixelsize=8;1
+font-0=MesloLGS:size=10;2
+font-1=MesloLGS Nerd Font Mono:size=15;4.5
 
 modules-left = i3 xwindow
 modules-center = 
@@ -501,7 +495,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 label-font = 1
