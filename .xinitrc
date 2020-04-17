@@ -1,4 +1,4 @@
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f ~/.config/Xresources/Xresources ]] && xrdb -merge -I$HOME ~/.config/Xresources/Xresources
 xmodmap ~/.Xmodmap
 
 # changing display refresh rate

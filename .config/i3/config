@@ -181,13 +181,17 @@ bindsym XF86AudioNext 	exec --no-startup-id mpc next
 bindsym XF86AudioPrev 	exec --no-startup-id mpc prev
 bindsym XF86AudioStop 	exec --no-startup-id mpc stop
 
-exec --no-startup-id picom -b
+bindsym Print exec --no-startup-id "flameshot gui"
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id redshift
-exec --no-startup-id dunst
+exec --no-startup-id "picom -b"
 
-exec --no-startup-id flameshot
-bindsym Print exec --no-startup-id flameshot gui
+exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id "redshift"
+
+# exec_always --no-startup-id "killall dunst"
+exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"
+
+exec --no-startup-id "flameshot"
+
+exec --no-startup-id "nitrogen --restore"
