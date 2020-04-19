@@ -18,12 +18,12 @@ then
 else 
     touch  $HOME/.xcolors/$1
 
-    COLORS_ARRAY=("foreground" "background" "Color0 (black 1)" "Color8 (black 2)" "Color1 (red 1)" "Color9 (red 2)" "Color2 (green 1)" "Color10 (green 2)" "Color3 (yellow 1)" "Color11 (yellow 2)" "Color4 (blue 1)" "Color12 (blue 2)" "Color5 (magenta 1)" "Color13 (magenta 2)" "Color6 (cyan 1)" "Color14 (cyan 2)" "Color7 (white 1)" "Color15 (white 2)")
-    COLOR_NAME=(FOREGROUND BACKGROUND COLOR0 COLOR8 COLOR1 COLOR9 COLOR2 COLOR10 COLOR3 COLOR11 COLOR4 COLOR12 COLOR5 COLOR13 COLOR6 COLOR14 COLOR7 COLOR15)
+    COLORS_ARRAY=("foreground" "background" "Color0 (black 1)" "Color8 (black 2)" "Color1 (red 1)" "Color9 (red 2)" "Color2 (green 1)" "Color10 (green 2)" "Color3 (yellow 1)" "Color11 (yellow 2)" "Color4 (blue 1)" "Color12 (blue 2)" "Color5 (magenta 1)" "Color13 (magenta 2)" "Color6 (cyan 1)" "Color14 (cyan 2)" "Color7 (white 1)" "Color15 (white 2)" "Accent")
+    COLOR_NAME=(FOREGROUND BACKGROUND COLOR0 COLOR8 COLOR1 COLOR9 COLOR2 COLOR10 COLOR3 COLOR11 COLOR4 COLOR12 COLOR5 COLOR13 COLOR6 COLOR14 COLOR7 COLOR15 ACCENT)
 
 echo -e For the folloing, do not use the \# symbol infront of the color'\n'
 
-    for c in {0..17}
+    for c in {0..18}
     do
 	echo Enter the hex code for ${COLORS_ARRAY[c]}
 	read INPUT

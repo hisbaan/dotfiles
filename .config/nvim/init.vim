@@ -8,6 +8,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'arcticicestudio/nord-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
+Plug 'dylanaraps/wal'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -38,6 +39,7 @@ set hidden
 set ignorecase
 set smartcase
 set mouse=a
+set linebreak
 
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
@@ -51,8 +53,8 @@ let g:deoplete#enable_at_startup = 1
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'nord'
+let g:airline_theme = 'minimalist'
 
 " Theme
-colorscheme nord
+colorscheme wal
 " highlight Normal ctermbg=black

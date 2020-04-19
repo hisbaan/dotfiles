@@ -14,7 +14,7 @@ XTerm*locale: true
 
 XTerm*loginshell: true
 
-! Colors
+! ==Colors==
 #include "/home/hisbaan/.xcolors/dracula"
 
 *.foreground: FOREGROUND 
@@ -54,3 +54,8 @@ XTerm*loginshell: true
 ! white
 *.color7: COLOR7
 *.color15: COLOR15
+
+! accent
+*.accent: ACCENT
+
+! rofi theme

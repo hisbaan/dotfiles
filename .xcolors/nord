@@ -15,4 +15,5 @@
 #define COLOR6 #88C0D0
 #define COLOR14 #8FBCBB
 #define COLOR7 #E5E9F0
-#define COLOR15 #B48EAD
+#define COLOR15 #E5E9F0
+#define ACCENT #81A1C1

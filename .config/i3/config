@@ -163,7 +163,8 @@ for_window [class=".*"] border pixel 3
 
 set_from_resource $fg foreground
 set_from_resource $bg background
-set_from_resource $accent color4
+set_from_resource $accent accent
+set_from_resource $alert color1
 
 # class                 border  backgr. text    indicator child_border
 client.focused_inactive $bg	$bg 	$fg	$bg	$bg 

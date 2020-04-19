@@ -16,3 +16,4 @@
 #define COLOR14 #00dded
 #define COLOR7 #ffffff
 #define COLOR15 #ffffff
+#define ACCENT #ec89cb

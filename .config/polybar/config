@@ -51,7 +51,7 @@ format-offset =
 [colors]
 background = ${xrdb:*.background}
 foreground = ${xrdb:*.foreground} 
-accent = ${xrdb:*.color4} 
+accent = ${xrdb:*.accent} 
 alert = ${xrdb:*.color1} 
 volume-min = 
 volume-med =
@@ -100,7 +100,7 @@ module-margin-right = 0
 font-0=MesloLGS:size=10;2
 font-1=MesloLGS Nerd Font Mono:size=15;4.5
 
-modules-left = i3 xwindow
+modules-left = i3 
 modules-center = 
 modules-right = divider memory2 divider cpu2 divider pavolume divider date
 
