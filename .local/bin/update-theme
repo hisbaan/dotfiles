@@ -43,6 +43,8 @@ sed -i "s/%clbg%/\#${background}/g" $kitty_target_file.tmp
 rm $kitty_target_file
 mv $kitty_target_file.tmp $kitty_target_file
 
+# kitty @ set-colors -a foreground=${foreground} background=${background}
+
 # Update dunst config to apply Xresources color scheme
 
 dunst_target_file="$HOME/.config/dunst/dunstrc"
