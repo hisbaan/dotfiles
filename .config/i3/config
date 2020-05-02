@@ -13,11 +13,10 @@ font pango:Meslo Nerd Font 10
 #font pango:DejaVu Sans Mono 8
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute	exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0 
+bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0 
+bindsym XF86AudioMute		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute	exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -145,9 +144,9 @@ mode "resize" {
 
 bindsym $mod+0 mode "(l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown"
 mode "(l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown" {
-    bindsym l 		exec --no-startup-id i3exit lock, mode "default"
+    bindsym l 		exec --no-startup-id betterlockscreen -l blur, mode "default"
     bindsym e 		exec --no-startup-id i3exit logout, mode "default"
-    bindsym s 		exec --no-startup-id systemctl suspend, mode "default"
+    bindsym s 		exec --no-startup-id betterlockscreen -s blur, mode "default"
     bindsym h 		exec --no-startup-id systemctl hibernate, mode "default"
     bindsym r 		exec --no-startup-id reboot, mode "default"
     bindsym Shift+s 	exec --no-startup-id poweroff, mode "default"
@@ -196,3 +195,5 @@ exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"
 exec --no-startup-id "flameshot"
 
 exec --no-startup-id "nitrogen --restore"
+
+exec --no-startup-id "espanso start"
