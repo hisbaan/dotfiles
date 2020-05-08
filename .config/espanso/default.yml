@@ -10,8 +10,16 @@ use_system_agent: false
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
+
+  # Emails
+  - trigger: ":student"
+    replace: "hisbaan.noorani@student.tdsb.on.ca"
+
+  - trigger: ":bsg"
+    replace: "bluesniperf18@gmail.com"
+
+  - trigger: ":hsg"
+    replace: "hisbaan@gmail.com"
 
   # Dates
   - trigger: ":date"
@@ -23,10 +31,10 @@ matches:
             format: "%b %d, %Y | %I:%M %p"
 
   # Shell commands
-  - trigger: ":shell"
+  - trigger: ":textbook"
     replace: "{{output}}"
     vars:
       - name: output
         type: shell
         params:
-          cmd: "echo Hello from your shell"
+          cmd: "ls ~/Documents/textbooks"

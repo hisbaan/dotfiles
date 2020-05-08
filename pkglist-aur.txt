@@ -1,13 +1,12 @@
 aic94xx-firmware
 android-studio
 barrier
-brother-dcpl2520dw
+betterlockscreen
+brlaser
 citra-qt-git
 color-picker
-davinci-resolve
 espanso
 gamemode
-glimpse-editor-git
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 lib32-gamemode
@@ -17,7 +16,6 @@ nomachine
 polybar
 scrcpy
 smloadr
-sxlock-git
 ttf-meslo
 wd719x-firmware
 windscribe-cli
