@@ -13,6 +13,7 @@ bison
 borg
 broot
 capitaine-cursors
+celluloid
 chromium
 cups
 cups-pdf
@@ -30,6 +31,7 @@ fish
 flameshot
 flex
 fzf
+galculator
 gcc
 gimp
 git
@@ -48,6 +50,7 @@ linux-firmware
 linux-headers
 lolcat
 lutris
+lxappearance
 m4
 make
 meld
@@ -69,6 +72,7 @@ nvidia-settings
 obs-studio
 openresolv
 otf-ipafont
+papirus-icon-theme
 patch
 pdfsam
 pdftk
@@ -84,6 +88,9 @@ qemu
 ranger
 redshift
 reflector
+retroarch
+retroarch-assets-ozone
+retroarch-assets-xmb
 ripgrep
 rofi
 rsync
@@ -101,9 +108,8 @@ ttf-dejavu
 unrar
 unzip
 usbutils
-vim
+vi
 virtualbox
-vlc
 which
 wqy-zenhei
 xclip
