@@ -21,6 +21,10 @@ matches:
   - trigger: ":hsg"
     replace: "hisbaan@gmail.com"
 
+# Shruggie
+  - trigger: ":shrug"
+    replace: "¯\\_(ツ)_/¯"
+
   # Dates
   - trigger: ":date"
     replace: "{{mydate}}"
