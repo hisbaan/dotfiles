@@ -33,7 +33,7 @@ matches:
         type: date
         params:
             format: "%b %d, %Y | %I:%M %p"
-
+            
   # Shell commands
   - trigger: ":textbook"
     replace: "{{output}}"

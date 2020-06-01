@@ -4,6 +4,7 @@ android-tools
 audacity
 autoconf
 automake
+barrier
 base
 bashtop
 bat
@@ -72,10 +73,12 @@ nvidia-settings
 obs-studio
 openresolv
 otf-ipafont
+pacman-contrib
 papirus-icon-theme
 patch
 pdfsam
 pdftk
+perl-file-mimeinfo
 picom
 piper
 pkgconf
@@ -99,6 +102,8 @@ speedtest-cli
 steam
 sudo
 sxiv
+tesseract
+tesseract-data-eng
 texinfo
 tldr
 transmission-cli
@@ -166,6 +171,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yarn
+youtube-dl
 zathura
 zathura-pdf-mupdf
 zip
