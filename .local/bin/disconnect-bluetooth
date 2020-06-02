@@ -1,0 +1,5 @@
+#!/bin/sh
+
+bluetoothctl disconnect
+bluetoothctl power off
+sudo systemctl stop bluetooth

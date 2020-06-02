@@ -1,0 +1,25 @@
+#!/bin/env bash
+
+if [[ -z $1 ]]
+then
+    cd ~/Documents/textbooks/
+    zathura $(ls | grep 12.pdf | rofi -dmenu) &
+else
+    case "$1" in
+	table)
+	    if [[ -z $2 ]]
+	    then
+		cd ~/Documents/textbooks/
+		zathura $(ls | grep 12-table.pdf | rofi -dmenu) &
+	    else
+		case "$2" in
+		    calc|calculus) zathura ~/Documents/textbooks/calculus12-table.pdf & exit 0 ;;
+		    phy|physics) zathura ~/Documents/textbooks/physics12-table.pdf & exit 0 ;;
+		    chem|chemistry) zathura ~/Documents/textbooks/chemistry12-table.pdf & exit 0 ;;
+		esac > /dev/null
+	    fi > /dev/null ;;
+	calc|calculus) zathura ~/Documents/textbooks/calculus12.pdf & exit 0 ;;
+	phy|physics) zathura ~/Documents/textbooks/physics12.pdf & exit 0 ;;
+	chem|chemistry) zathura ~/Documents/textbooks/chemistry12.pdf & exit 0 ;;
+    esac > /dev/null
+fi > /dev/null

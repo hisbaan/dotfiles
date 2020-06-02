@@ -1,0 +1,32 @@
+#!/bin/env bash
+
+help() {
+    echo -e SYNOPSIS'\n'    addcolorscheme [colorscheme name]'\n\n'DESCRIPTION'\n'    This script adds a colorscheme to the .xcolors directory with user input.'\n\n'OPTIONS'\n'    -h, --help'\t'Shows this help menu.
+}
+
+if [[ $# == 0 ]]
+then
+    echo -e Error: The theme name cannot be blank'\n'
+    help
+elif [[ $# > 1 ]]
+then
+    echo -e Error: Too many arguments'\n'
+    help
+elif [[ $1 == --help || $1 == -h ]]
+then
+    help
+else 
+    touch  $HOME/.xcolors/$1
+
+    COLORS_ARRAY=("foreground" "background" "Color0 (black 1)" "Color8 (black 2)" "Color1 (red 1)" "Color9 (red 2)" "Color2 (green 1)" "Color10 (green 2)" "Color3 (yellow 1)" "Color11 (yellow 2)" "Color4 (blue 1)" "Color12 (blue 2)" "Color5 (magenta 1)" "Color13 (magenta 2)" "Color6 (cyan 1)" "Color14 (cyan 2)" "Color7 (white 1)" "Color15 (white 2)" "Accent")
+    COLOR_NAME=(FOREGROUND BACKGROUND COLOR0 COLOR8 COLOR1 COLOR9 COLOR2 COLOR10 COLOR3 COLOR11 COLOR4 COLOR12 COLOR5 COLOR13 COLOR6 COLOR14 COLOR7 COLOR15 ACCENT)
+
+echo -e For the folloing, do not use the \# symbol infront of the color'\n'
+
+    for c in {0..18}
+    do
+	echo Enter the hex code for ${COLORS_ARRAY[c]}
+	read INPUT
+	echo \#define ${COLOR_NAME[c]} \#${INPUT} >> $HOME/.xcolors/$1
+    done
+fi
