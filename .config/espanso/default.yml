@@ -1,0 +1,44 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+use_system_agent: false
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+
+  # Emails
+  - trigger: ":student"
+    replace: "hisbaan.noorani@student.tdsb.on.ca"
+
+  - trigger: ":bsg"
+    replace: "bluesniperf18@gmail.com"
+
+  - trigger: ":hsg"
+    replace: "hisbaan@gmail.com"
+
+# Shruggie
+  - trigger: ":shrug"
+    replace: "¯\\_(ツ)_/¯"
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+            format: "%b %d, %Y | %I:%M %p"
+
+  # Shell commands
+  - trigger: ":textbook"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "ls ~/Documents/textbooks"
