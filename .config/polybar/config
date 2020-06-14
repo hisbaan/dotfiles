@@ -51,7 +51,7 @@ format-offset =
 [colors]
 background = ${xrdb:*.background}
 foreground = ${xrdb:*.foreground} 
-accent = ${xrdb:*.color4} 
+accent = ${xrdb:*.accent} 
 alert = ${xrdb:*.color1} 
 volume-min = 
 volume-med =

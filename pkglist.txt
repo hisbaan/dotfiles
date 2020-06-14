@@ -1,3 +1,4 @@
+acpi
 acpilight
 alsa-utils
 android-tools
@@ -10,6 +11,9 @@ bashtop
 bat
 binutils
 bison
+bluez
+bluez-plugins
+bluez-utils
 broot
 capitaine-cursors
 celluloid
@@ -21,9 +25,9 @@ discord
 dolphin
 dunst
 efibootmgr
+ethtool
 exfat-utils
 fakeroot
-feh
 figlet
 firefox
 fish
@@ -46,6 +50,7 @@ libreoffice-fresh
 libtool
 linux
 linux-firmware
+lolcat
 lutris
 lxappearance
 m4
@@ -70,6 +75,7 @@ pkgconf
 playerctl
 powertop
 pulseaudio-alsa
+pulseaudio-bluetooth
 python-pip
 python-pywal
 qemu
@@ -85,6 +91,7 @@ rsync
 speedtest-cli
 steam
 sudo
+sxiv
 texinfo
 tldr
 tlp
@@ -96,9 +103,9 @@ unrar
 unzip
 usbutils
 vi
-vim
 virtualbox
 which
+wine
 xf86-video-vesa
 xorg-bdftopcf
 xorg-docs

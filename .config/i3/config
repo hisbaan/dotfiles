@@ -100,7 +100,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 
-bindsym Mod1+Tab workspace back_and_forth
+bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -185,8 +185,8 @@ bindsym XF86AudioPrev 	exec --no-startup-id mpc prev
 bindsym XF86AudioStop 	exec --no-startup-id mpc stop
 
 # backlight controls
-bindsym XF86MonBrightnessUp	exec --no-startup-id "xbacklight -inc 5"
-bindsym XF86MonBrightnessDown	exec --no-startup-id "xbacklight -dec 5"
+bindsym XF86MonBrightnessUp	exec --no-startup-id "xbacklight -inc 2"
+bindsym XF86MonBrightnessDown	exec --no-startup-id "xbacklight -dec 2"
 
 bindsym Print exec --no-startup-id "flameshot gui"
 
@@ -195,6 +195,8 @@ exec --no-startup-id "picom -b"
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 
 exec --no-startup-id "redshift"
+
+exec --no-startup-id "dispad --config ~/.config/dispad/dispad"
 
 # exec_always --no-startup-id "killall dunst"
 exec_always --no-startup-id "dunst --config ~/.config/dunst/dunstrc"

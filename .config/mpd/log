@@ -1017,3 +1017,341 @@ Jun 02 12:17 : client: [1] closed
 Jun 02 12:51 : player: played "Music Downloads/EDEN/i think you think too much of me (Album)/Disc 01/04 rock + roll.mp3"
 Jun 02 12:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jun 02 12:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 09:47 : player: played "Music Downloads/EDEN/i think you think too much of me (Album)/Disc 01/04 rock + roll.mp3"
+Jun 03 09:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 09:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:35 : client: [0] opened from [::1]:53556
+Jun 03 11:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:37 : player: played "Music Downloads/EDEN/vertigo (Album)/03 start-end.mp3"
+Jun 03 11:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:39 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 03 11:40 : client: [0] closed
+Jun 03 11:57 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 11:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:58 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 11:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:58 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:58 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 11:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 11:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 12:03 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 12:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 12:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 13:22 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 13:23 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 13:23 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 16:24 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 03 16:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 03 16:24 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 18:07 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 04 18:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 18:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 20:46 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 04 20:52 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 20:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 21:56 : player: played "Music Downloads/EDEN/vertigo (Album)/12 love; not wrong (brave).mp3"
+Jun 04 21:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 21:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 22:45 : client: [0] opened from [::1]:33600
+Jun 04 22:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 04 22:46 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 04 22:46 : client: [0] closed
+Jun 05 10:37 : client: [1] opened from [::1]:35062
+Jun 05 10:37 : client: [1] closed
+Jun 05 10:37 : client: [2] opened from [::1]:35064
+Jun 05 10:37 : client: [2] closed
+Jun 05 10:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:37 : client: [3] opened from [::1]:35066
+Jun 05 10:37 : client: [3] closed
+Jun 05 10:37 : client: [4] opened from [::1]:35068
+Jun 05 10:37 : client: [4] closed
+Jun 05 10:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:37 : client: [5] opened from [::1]:35070
+Jun 05 10:37 : client: [5] closed
+Jun 05 10:37 : client: [6] opened from [::1]:35074
+Jun 05 10:37 : client: [6] closed
+Jun 05 10:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:38 : client: [7] opened from [::1]:35082
+Jun 05 10:38 : client: [7] closed
+Jun 05 10:38 : client: [8] opened from [::1]:35096
+Jun 05 10:38 : client: [8] closed
+Jun 05 10:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:38 : client: [9] opened from [::1]:35098
+Jun 05 10:38 : client: [9] closed
+Jun 05 10:38 : client: [10] opened from [::1]:35100
+Jun 05 10:38 : client: [10] closed
+Jun 05 10:38 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:38 : client: [11] opened from [::1]:35102
+Jun 05 10:38 : client: [11] closed
+Jun 05 10:55 : client: [12] opened from [::1]:35832
+Jun 05 10:55 : client: [12] closed
+Jun 05 10:55 : client: [13] opened from [::1]:35836
+Jun 05 10:55 : client: [13] closed
+Jun 05 10:55 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:55 : client: [14] opened from [::1]:35840
+Jun 05 10:55 : client: [14] closed
+Jun 05 10:56 : client: [15] opened from [::1]:35872
+Jun 05 10:56 : client: [15] closed
+Jun 05 10:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 05 10:56 : client: [16] opened from [::1]:35874
+Jun 05 10:56 : client: [16] closed
+Jun 05 16:56 : player: played "Music Downloads/EDEN/i think you think too much of me (Album)/Disc 02/01 Fumes.mp3"
+Jun 05 16:57 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 05 16:57 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 05 16:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 05 16:59 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 06 15:56 : client: [0] opened from [::1]:44558
+Jun 06 15:56 : client: [0] closed
+Jun 06 15:56 : client: [1] opened from [::1]:44560
+Jun 06 15:56 : client: [2] opened from [::1]:44562
+Jun 06 15:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 06 15:56 : client: [2] closed
+Jun 06 15:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 15:56 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 15:59 : player: played "Chill/01 Belly Breathing (Original Mix).mp3"
+Jun 06 16:01 : player: played "Chill/01 Love Rework.mp3"
+Jun 06 16:05 : player: played "Chill/01 The One (Original Mix).mp3"
+Jun 06 16:06 : player: played "Chill/01 You (Odetowuntwo).mp3"
+Jun 06 16:08 : player: played "Chill/02 300 Miles to U.mp3"
+Jun 06 16:10 : client: [1] closed
+Jun 06 16:10 : client: [3] opened from [::1]:44830
+Jun 06 16:11 : player: played "Chill/02 Funkaholic (Original Mix).mp3"
+Jun 06 16:13 : client: [4] opened from [::1]:44834
+Jun 06 16:13 : client: [4] closed
+Jun 06 16:28 : client: [5] opened from [::1]:44896
+Jun 06 16:28 : client: [5] closed
+Jun 06 16:28 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 16:28 : player: played "Chill/02 Good Morning Sunshine (Original Mix).mp3"
+Jun 06 16:31 : player: played "Chill/02 night walk (Original Mix).mp3"
+Jun 06 16:34 : player: played "Chill/03 Azahar (Original Mix).mp3"
+Jun 06 16:36 : player: played "Chill/03 Dog Days (Original Mix).mp3"
+Jun 06 16:37 : client: [6] opened from [::1]:44952
+Jun 06 16:37 : client: [6] closed
+Jun 06 16:37 : client: [7] opened from [::1]:44954
+Jun 06 16:37 : client: [7] closed
+Jun 06 16:37 : client: [8] opened from [::1]:44956
+Jun 06 16:37 : client: [8] closed
+Jun 06 16:37 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 16:37 : client: [9] opened from [::1]:44958
+Jun 06 16:37 : client: [9] closed
+Jun 06 16:37 : client: [10] opened from [::1]:44960
+Jun 06 16:37 : client: [10] closed
+Jun 06 16:40 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 16:41 : player: played "Chill/04 Swix (Original Mix).mp3"
+Jun 06 16:42 : client: [11] opened from [::1]:45104
+Jun 06 16:42 : client: [11] closed
+Jun 06 19:17 : client: [3] closed
+Jun 06 19:17 : client: [12] opened from [::1]:46006
+Jun 06 19:17 : player: played "Chill/04 YesPlease (Original Mix).mp3"
+Jun 06 19:17 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 06 19:17 : client: [12] closed
+Jun 08 15:40 : player: played "Music Downloads/The 1975/A Brief Inquiry Into Online Relationships (Album)/05 Love It If We Made It.mp3"
+Jun 08 15:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 08 15:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 10:02 : player: played "Music Downloads/The 1975/A Brief Inquiry Into Online Relationships (Album)/05 Love It If We Made It.mp3"
+Jun 09 10:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 10:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 16:16 : client: [0] opened from [::1]:40316
+Jun 09 16:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 16:16 : client: [0] closed
+Jun 09 16:16 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 16:16 : client: [1] opened from [::1]:40318
+Jun 09 16:16 : client: [1] closed
+Jun 09 16:16 : client: [2] opened from [::1]:40320
+Jun 09 16:16 : client: [2] closed
+Jun 09 16:16 : client: [3] opened from [::1]:40322
+Jun 09 16:16 : client: [3] closed
+Jun 09 16:16 : client: [4] opened from [::1]:40326
+Jun 09 16:16 : client: [4] closed
+Jun 09 16:16 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 16:16 : client: [5] opened from [::1]:40328
+Jun 09 16:16 : client: [5] closed
+Jun 09 16:16 : client: [6] opened from [::1]:40330
+Jun 09 16:16 : client: [6] closed
+Jun 09 16:16 : client: [7] opened from [::1]:40332
+Jun 09 16:16 : client: [7] closed
+Jun 09 16:16 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 16:16 : client: [8] opened from [::1]:40334
+Jun 09 16:16 : client: [8] closed
+Jun 09 16:22 : client: [9] opened from [::1]:40366
+Jun 09 16:22 : client: [9] closed
+Jun 09 16:22 : client: [10] opened from [::1]:40380
+Jun 09 16:22 : client: [10] closed
+Jun 09 16:22 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 16:22 : client: [11] opened from [::1]:40382
+Jun 09 16:22 : client: [11] closed
+Jun 09 16:54 : client: [12] opened from [::1]:40906
+Jun 09 16:54 : client: [12] closed
+Jun 09 16:54 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 16:58 : player: played "Music Downloads/The 1975/A Brief Inquiry Into Online Relationships (Album)/05 Love It If We Made It.mp3"
+Jun 09 17:00 : player: played "Music Downloads/Adelitas Way/Notorious (Album)/01 Notorious.mp3"
+Jun 09 17:02 : client: [13] opened from [::1]:40984
+Jun 09 17:02 : client: [13] closed
+Jun 09 17:03 : client: [14] opened from [::1]:40996
+Jun 09 17:03 : client: [14] closed
+Jun 09 17:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:03 : client: [15] opened from [::1]:40998
+Jun 09 17:03 : client: [15] closed
+Jun 09 17:03 : client: [16] opened from [::1]:41000
+Jun 09 17:03 : client: [16] closed
+Jun 09 17:03 : client: [17] opened from [::1]:41004
+Jun 09 17:03 : client: [17] closed
+Jun 09 17:04 : client: [18] opened from [::1]:41008
+Jun 09 17:04 : client: [18] closed
+Jun 09 17:04 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:06 : player: played "Music Downloads/AJR/Burn the House Down (Single)/01 Burn the House Down.mp3"
+Jun 09 17:09 : player: played "Music Downloads/Alec Benjamin/Death Of A Hero (Single)/01 Death Of A Hero.mp3"
+Jun 09 17:12 : player: played "Music Downloads/Alec Benjamin/Let Me Down Slowly (Single)/01 Let Me Down Slowly.mp3"
+Jun 09 17:15 : player: played "Music Downloads/Alec Benjamin/Narrated For You (Album)/08 Gotta Be A Reason.mp3"
+Jun 09 17:15 : client: [19] opened from [::1]:41252
+Jun 09 17:15 : client: [19] closed
+Jun 09 17:15 : client: [20] opened from [::1]:41254
+Jun 09 17:15 : client: [20] closed
+Jun 09 17:18 : client: [21] opened from [::1]:41298
+Jun 09 17:18 : client: [21] closed
+Jun 09 17:18 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:18 : client: [22] opened from [::1]:41300
+Jun 09 17:18 : client: [22] closed
+Jun 09 17:18 : client: [23] opened from [::1]:41304
+Jun 09 17:18 : client: [23] closed
+Jun 09 17:21 : player: played "Music Downloads/Arrested Youth/A Painting in Paris (Single)/01 A Painting in Paris.mp3"
+Jun 09 17:25 : player: played "Music Downloads/Asking Alexandria/Asking Alexandria (Album)/01 Alone In A Room.mp3"
+Jun 09 17:26 : client: [24] opened from [::1]:41422
+Jun 09 17:26 : client: [24] closed
+Jun 09 17:28 : player: played "Music Downloads/Atreyu/In Our Wake (Album)/03 The Time Is Now.mp3"
+Jun 09 17:30 : client: [25] opened from [::1]:41468
+Jun 09 17:30 : client: [25] closed
+Jun 09 17:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:30 : client: [26] opened from [::1]:41480
+Jun 09 17:30 : client: [26] closed
+Jun 09 17:30 : client: [27] opened from [::1]:41482
+Jun 09 17:30 : client: [27] closed
+Jun 09 17:30 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:32 : client: [28] opened from [::1]:41498
+Jun 09 17:32 : client: [28] closed
+Jun 09 17:36 : client: [29] opened from [::1]:41614
+Jun 09 17:36 : client: [29] closed
+Jun 09 17:36 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:38 : player: played "Music Downloads/EDEN/vertigo (Album)/07 crash.mp3"
+Jun 09 17:42 : player: played "Music Downloads/Bishop Briggs/Church Of Scars (Album)/04 White Flag.mp3"
+Jun 09 17:44 : client: [30] opened from [::1]:41738
+Jun 09 17:44 : client: [30] closed
+Jun 09 17:45 : client: [31] opened from [::1]:41750
+Jun 09 17:45 : client: [31] closed
+Jun 09 17:45 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:45 : client: [32] opened from [::1]:41754
+Jun 09 17:45 : client: [32] closed
+Jun 09 17:47 : client: [33] opened from [::1]:41816
+Jun 09 17:47 : client: [33] closed
+Jun 09 17:47 : client: [34] opened from [::1]:41820
+Jun 09 17:47 : client: [34] closed
+Jun 09 17:47 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:47 : client: [35] opened from [::1]:41822
+Jun 09 17:47 : client: [35] closed
+Jun 09 17:48 : client: [36] opened from [::1]:41834
+Jun 09 17:48 : client: [36] closed
+Jun 09 17:49 : client: [37] opened from [::1]:41838
+Jun 09 17:49 : client: [37] closed
+Jun 09 17:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:49 : client: [38] opened from [::1]:41840
+Jun 09 17:49 : client: [38] closed
+Jun 09 17:49 : client: [39] opened from [::1]:41846
+Jun 09 17:49 : client: [39] closed
+Jun 09 17:49 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:49 : client: [40] opened from [::1]:41848
+Jun 09 17:49 : client: [40] closed
+Jun 09 17:49 : client: [41] opened from [::1]:41854
+Jun 09 17:49 : client: [41] closed
+Jun 09 17:50 : client: [42] opened from [::1]:41856
+Jun 09 17:50 : client: [42] closed
+Jun 09 17:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 17:50 : client: [43] opened from [::1]:41860
+Jun 09 17:50 : client: [43] closed
+Jun 09 18:01 : client: [44] opened from [::1]:42052
+Jun 09 18:01 : client: [44] closed
+Jun 09 18:01 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 18:01 : client: [45] opened from [::1]:42054
+Jun 09 18:01 : client: [45] closed
+Jun 09 19:10 : client: [46] opened from [::1]:42986
+Jun 09 19:10 : client: [46] closed
+Jun 09 19:10 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 19:10 : client: [47] opened from [::1]:43002
+Jun 09 19:10 : client: [47] closed
+Jun 09 19:10 : client: [48] opened from [::1]:43006
+Jun 09 19:10 : client: [48] closed
+Jun 09 19:11 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 19:11 : client: [49] opened from [::1]:43014
+Jun 09 19:11 : client: [49] closed
+Jun 09 19:13 : client: [50] opened from [::1]:43040
+Jun 09 19:13 : client: [50] closed
+Jun 09 19:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 19:13 : client: [51] opened from [::1]:43042
+Jun 09 19:13 : client: [51] closed
+Jun 09 19:13 : client: [52] opened from [::1]:43044
+Jun 09 19:13 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 09 19:13 : client: [52] closed
+Jun 09 22:14 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 09 22:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 10 22:28 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 10 22:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 10 22:28 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 12 20:26 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 12 20:27 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 12 20:27 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 08:57 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:06 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:07 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:07 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:09 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:09 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:19 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:24 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:31 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 09:31 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 09:31 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:02 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 10:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:33 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 10:37 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:50 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 10:51 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:51 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:52 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 10:53 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:53 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:53 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 10:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:54 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 10:55 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 11:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 11:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 11:09 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 11:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 11:12 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 11:12 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 13 11:15 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 11:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 16:03 : client: [0] opened from [::1]:34044
+Jun 13 16:03 : client: [0] closed
+Jun 13 16:03 : client: [1] opened from [::1]:34050
+Jun 13 16:03 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 13 16:03 : client: [1] closed
+Jun 13 16:03 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 13 16:03 : client: [2] opened from [::1]:34052
+Jun 13 16:03 : client: [2] closed
+Jun 13 16:39 : client: [3] opened from [::1]:34358
+Jun 13 16:39 : client: [3] closed

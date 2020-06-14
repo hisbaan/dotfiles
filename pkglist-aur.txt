@@ -1,9 +1,11 @@
 aic94xx-firmware
 android-studio
+authy-snap
 betterlockscreen
 brlaser
 citra-qt-git
 color-picker
+dispad-git
 espanso
 gamemode
 howdy
@@ -16,6 +18,7 @@ nerd-fonts-meslo
 nomachine
 numix-gtk-theme-git
 papirus-folders-git
+pfetch
 polybar
 scrcpy
 smloadr
