@@ -26,4 +26,6 @@ fi
 # changing display refresh rate
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
 
+xset r rate 300 50
+
 exec i3
