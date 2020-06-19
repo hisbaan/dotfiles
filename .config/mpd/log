@@ -1355,3 +1355,8 @@ Jun 13 16:03 : client: [2] opened from [::1]:34052
 Jun 13 16:03 : client: [2] closed
 Jun 13 16:39 : client: [3] opened from [::1]:34358
 Jun 13 16:39 : client: [3] closed
+Jun 16 13:39 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 16 13:40 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 16 13:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 17 12:11 : client: [0] opened from [::1]:44712
+Jun 17 12:11 : client: [0] closed
