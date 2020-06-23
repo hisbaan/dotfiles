@@ -27,4 +27,4 @@ xrandr --output eDP-1 --mode 3840x2400 --rate 60 --dpi 220
 
 xset r rate 300 50
 
-exec i3
+exec bspwm

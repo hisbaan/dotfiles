@@ -1360,3 +1360,23 @@ Jun 16 13:40 : exception: RTIOThread could not get realtime scheduling, continui
 Jun 16 13:40 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jun 17 12:11 : client: [0] opened from [::1]:44712
 Jun 17 12:11 : client: [0] closed
+Jun 21 22:53 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 21 22:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 21 22:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 21 23:26 : client: [0] opened from [::1]:49134
+Jun 21 23:26 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 21 23:26 : client: [0] closed
+Jun 21 23:26 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 21 23:26 : client: [1] opened from [::1]:49136
+Jun 21 23:26 : client: [1] closed
+Jun 21 23:34 : client: [2] opened from [::1]:49212
+Jun 21 23:34 : client: [2] closed
+Jun 21 23:34 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Jun 21 23:34 : client: [3] opened from [::1]:49214
+Jun 21 23:34 : client: [3] closed
+Jun 22 10:13 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 22 10:14 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 22 10:14 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 22 20:59 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 22 21:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 22 21:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

@@ -51,11 +51,232 @@ format-offset =
 [colors]
 background = ${xrdb:*.background}
 foreground = ${xrdb:*.foreground} 
+foreground2 = #626273
 accent = ${xrdb:*.accent} 
 alert = ${xrdb:*.color1} 
 volume-min = 
 volume-med =
 volume-max =
+
+################################################################################
+################################################################################
+############                       MAINBAR-BSPWM                    ############
+################################################################################
+################################################################################
+
+[bar/mainbar-bspwm]
+;https://github.com/jaagr/polybar/wiki/Configuration
+
+monitor = eDP-1 
+;monitor-fallback = HDMI1
+monitor-strict = false
+override-redirect = false
+bottom = false
+fixed-center = true
+width = 100%
+height = 44
+;offset-x = 1%
+;offset-y = 1%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+radius = 0.0
+line-size = 2
+line-color = #000000
+
+border-size = 0
+;border-left-size = 25
+;border-right-size = 25
+;border-top-size = 0
+;border-bottom-size = 25
+border-color = #000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 0
+
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = MesloLGS:size=22;2
+font-1 = MesloLGS Nerd Font Mono:size=36;8
+
+modules-left = bspwm
+modules-right = divider memory2 divider cpu2 divider pavolume divider battery divider wireless-network divider date
+
+separator = 
+;dim-value = 1.0
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 30
+tray-background = ${colors.background}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 10
+tray-scale = 1.0
+
+#i3: Make the bar appear below windows
+;wm-restack = i3
+;override-redirect = true
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+; Fallback click handlers that will be called if
+; there's no matching module handler found.
+click-left =
+click-middle =
+click-right =
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+double-click-left =
+double-click-middle =
+double-click-right =
+
+; Requires polybar to be built with xcursor support (xcb-util-cursor)
+; Possible values are:
+; - default   : The default pointer as before, can also be an empty string (default)
+; - pointer   : Typically in the form of a hand
+; - ns-resize : Up and down arrows, can be used to indicate scrolling
+cursor-click =
+cursor-scroll =
+
+##############################################################################
+##############################################################################
+####################		MODULE BSPWM		######################
+##############################################################################
+##############################################################################
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = false
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+
+;extra icons to choose from
+;http://fontawesome.io/cheatsheet/
+;       v      ﭮ  
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;拾
+ws-icon-4 = 5;辶
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;ﱘ 
+ws-icon-8 = 9;ﭮ
+ws-icon-default = ""
+
+
+format = <label-state> <label-mode>
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.accent}
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+; Default: %icon%  %name%
+; focused = Active workspace on focused monitor
+label-focused = %icon% %name%
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.accent}
+label-focused-underline-width = 4
+label-focused-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon% %name%
+label-unfocused-padding = 2
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-underline =
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon% %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 2
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+; urgent = Workspace with urgency hint set
+label-urgent = %icon% %name%
+label-urgent-background = ${self.label-focused-background}
+label-urgent-foreground = #db104e
+label-urgent-padding = 2
+
+;label-focused = %icon% %name%
+;label-focused-background = ${colors.background}
+;label-focused-underline= ${colors.accent}
+;label-focused-padding = 2
+;label-focused-foreground = ${colors.foreground}
+
+label-occupied = %icon% %name%
+label-occupied-padding = 2
+label-occupied-background = ${colors.background}
+
+;label-urgent = %icon%
+;label-urgent-padding = 2
+
+label-empty = 
+label-empty-foreground = ${colors.foreground}
+label-empty-padding = 3
+label-empty-background = ${colors.background}
+
+label-monocle = "  "
+label-monocle-foreground = ${colors.foreground}
+
+label-tiled = 
+label-tiled-foreground = ${colors.foreground}
+
+label-fullscreen = "  "
+label-fullscreen-foreground = ${colors.foreground}
+
+label-floating = "  "
+label-floating-foreground = ${colors.foreground}
+
+label-pseudotiled = "  "
+label-pseudotiled-foreground = ${colors.foreground}
+
+label-locked = "  "
+label-locked-foreground = ${colors.foreground}
+
+label-sticky = "  "
+label-sticky-foreground = ${colors.foreground}
+
+label-private =  "     "
+label-private-foreground = ${colors.foreground}
+
+; Separator in between workspaces
+;label-separator = " " 
+;label-separator-padding = 2
+;label-separator-foreground = #ffb52a
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 ################################################################################
 ################################################################################
@@ -110,7 +331,7 @@ separator =
 
 tray-position = right
 tray-detached = false
-tray-maxsize = 40
+tray-maxsize = 30
 tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
