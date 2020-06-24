@@ -118,7 +118,7 @@ tray-padding = 10
 tray-scale = 1.0
 
 #i3: Make the bar appear below windows
-;wm-restack = i3
+wm-restack = bspwm
 ;override-redirect = true
 
 ; Enable support for inter-process messaging

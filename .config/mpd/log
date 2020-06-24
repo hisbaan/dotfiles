@@ -1380,3 +1380,6 @@ Jun 22 10:14 : exception: OutputThread could not get realtime scheduling, contin
 Jun 22 20:59 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
 Jun 22 21:00 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Jun 22 21:00 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 23 22:35 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Jun 23 22:37 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Jun 23 22:37 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

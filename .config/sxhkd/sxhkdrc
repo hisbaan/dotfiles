@@ -41,15 +41,14 @@ super + {_,shift + }n
 super + bracket{left,right}
     bspc desktop -f {prev,next}.local
 
-
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
 
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-    bspc {desktop -f,node -d} focused:'^{1-9,10}'
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} focused:'^{1-9}'
 
 # PRESELECT
 
@@ -73,7 +72,7 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 super + r : {h,j,k,l}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+    ~/.config/bspwm/bspwm_resize.sh {west,south,north,east} 20
 
 # contract a window by moving one of its side inward
 ctrl + alt + shift + {h,j,k,l}
@@ -134,7 +133,7 @@ XF86AudioMute
 ### System control ###
 
 # power states
-super + 0 : {l,e,s,r,shift + s}
+super + 0 ; {l,e,s,r,shift + s}
     {betterlockscreen -l,bspc quit,systemctl suspend,reboot,poweroff}
 
 # brightness up
