@@ -102,7 +102,7 @@ module-margin-right = 0
 font-0 = MesloLGS:size=22;4
 font-1 = MesloLGS Nerd Font Mono:size=36;8
 
-modules-left = bspwm mode
+modules-left = bspwm space mode
 modules-right = divider memory2 divider cpu2 divider pavolume divider battery divider wireless-network divider date
 
 separator = 
@@ -287,6 +287,14 @@ tail = true
 interval = 0
 label-background = ${colors.accent}
 label-foreground = ${colors.background}
+
+###############################################################################
+
+[module/space]
+type = custom/text
+content = "  "
+content-background = ${colors.background}
+content-foreground = ${colors.background}
 
 ################################################################################
 ################################################################################
