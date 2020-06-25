@@ -99,10 +99,10 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = MesloLGS:size=22;2
+font-0 = MesloLGS:size=22;4
 font-1 = MesloLGS Nerd Font Mono:size=36;8
 
-modules-left = bspwm
+modules-left = bspwm mode
 modules-right = divider memory2 divider cpu2 divider pavolume divider battery divider wireless-network divider date
 
 separator = 
@@ -159,7 +159,7 @@ index-sort = false
 enable-click = true
 enable-scroll = true
 wrapping-scroll = false
-reverse-scroll = false
+reverse-scroll = true
 fuzzy-match = false
 
 ;extra icons to choose from
@@ -267,7 +267,7 @@ label-locked-foreground = ${colors.foreground}
 label-sticky = "  "
 label-sticky-foreground = ${colors.foreground}
 
-label-private =  "     "
+label-private =  "  "
 label-private-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
@@ -276,11 +276,21 @@ label-private-foreground = ${colors.foreground}
 ;label-separator-foreground = #ffb52a
 
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-background = ${colors.background} 
+
+###############################################################################
+
+[module/mode]
+type = custom/script
+exec = "cat ~/.config/bspwm/bspwm-chord-status"
+tail = true
+interval = 0
+label-background = ${colors.accent}
+label-foreground = ${colors.background}
 
 ################################################################################
 ################################################################################
-############                         MAINBAR-I3                     ############
+############                      MAINBAR-I3                     ###############
 ################################################################################
 ################################################################################
 
@@ -485,36 +495,11 @@ label-urgent-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-################################################################################
 ###############################################################################
-############                       MODULES ARROWS                     ############
-################################################################################
-################################################################################
-
-
-[module/arrow1]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = ${colors.accent}
-content-background = ${colors.background}
-
-[module/arrow2]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = ${colors.background}
-content-background = ${colors.accent}
-
-[module/arrow3]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = ${colors.accent}
-content-background = ${colors.background}
+###############################################################################
+#########                       MODULES ARROWS                     ############
+###############################################################################
+###############################################################################
 
 [module/divider]
 type = custom/text
@@ -540,6 +525,7 @@ format-background = #A77AC4
 format-prefix = "  "
 format-prefix-foreground = #fefefe
 
+################################################################################
 
 [module/aur-updates]
 type = custom/script
@@ -553,6 +539,7 @@ format-prefix-foreground = #FFBB00
 format-underline = #FFBB00
 
 ################################################################################
+
 [module/alsa]
 type = internal/alsa
 
@@ -638,6 +625,7 @@ format-background = ${colors.background}
 format-prefix-foreground = #7D49B6
 format-prefix-underline = #7D49B6
 format-underline = #7D49B6
+
 ################################################################################
 
 [module/backlight]
@@ -804,6 +792,8 @@ format-background = ${colors.background}
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
+click-left=kitty -e bashtop
+
 label-font = 1
 
 ; Available tags:
@@ -888,7 +878,6 @@ label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-
 
 ################################################################################
 
@@ -1062,7 +1051,6 @@ format-underline = #3384d0
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
 ################################################################################
 
 [module/mpd]
@@ -1087,6 +1075,7 @@ bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
 format-online-foreground = ${colors.foreground}
 format-online-background = ${colors.background}
+
 ################################################################################
 
 [module/networkspeedup]
