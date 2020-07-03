@@ -1,0 +1,7 @@
+#!/bin/sh
+
+APPLICATION_ARRAY=("bspwm" "dunst" "espanso" "fish" "kitty" "mpd" "ncmpcpp" "neofetch" "nvim" "polybar" "pulseaudio" "ranger" "sxhkd" "Xresources")
+
+CONFIG_ARRAY=("bspwmrc" "dunstrc.in" "default.yml" "config.fish" "kitty.conf" "mpd.conf" "config" "config.conf" "init.vim" "config" "daemon.conf" "rc.conf" "sxhkdrc" "Xresources")
+
+APPLICATION_ARRAY ( IFS=$'\n'; echo "${APPLICATION_ARRAY[*]}" ) | rofi -dmenu

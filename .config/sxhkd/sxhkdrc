@@ -103,6 +103,9 @@ super + d
 super + w
     firefox
 
+Print
+    flameshot gui
+
 ### Media keys ###
 
 # pause/play music

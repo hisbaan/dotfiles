@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sudo systemctl start bluetooth
+bluetoothctl power on
+bluetoothctl remove E4:17:D8:E0:08:79
+bluetoothctl pair E4:17:D8:E0:08:79
+bluetoothctl connect E4:17:D8:E0:08:79
