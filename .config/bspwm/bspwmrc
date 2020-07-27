@@ -19,7 +19,7 @@ bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
 ### BSPWM Configuration ###
 bspc config border_width		4
 bspc config window_gap          	20
-bspc config top_padding 		44
+bspc config top_padding 		45
 bspc config left_padding 		0
 bspc config right_padding		0	
 bspc config bottom_padding 		0
@@ -39,13 +39,23 @@ bspc config pointer_action2 		resize_side
 bspc config pointer_action3 		resize_corner
 
 ### Colouring ###
-bspc config normal_border_color		"#1a1b23"
-bspc config active_border_color		"#1a1b23"
-bspc config focused_border_color	"#bd93f9"
-bspc config presel_feedback_color	"#bd93f9"
-bspc config urgent_border_color		"#ff5555"
+bspc config normal_border_color		$(xrdb -q | grep color0 | awk '{print $2}')
+bspc config active_border_color		$(xrdb -q | grep color0 | awk '{print $2}')
+bspc config focused_border_color	$(xrdb -q | grep accent | awk '{print $2}')
+bspc config presel_feedback_color	$(xrdb -q | grep accent | awk '{print $2}')
+bspc config urgent_border_color		$(xrdb -q | grep color1 | awk '{print $2}')
+
+#bspc config normal_border_color		"#1a1b23"
+#bspc config active_border_color		"#1a1b23"
+#bspc config focused_border_color	"#bd93f9"
+#bspc config presel_feedback_color	"#bd93f9"
+#bspc config urgent_border_color		"#ff5555"
 
 #polybar hidden when fullscreen for vlc, youtube, mpv, etc.
 xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP-1)
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Emacs state=tiled
+
+# fix jetbrains software
+wmname LG3D
