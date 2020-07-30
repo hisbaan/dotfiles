@@ -4,6 +4,7 @@ betterlockscreen
 brlaser
 citra-qt-git
 color-picker
+davinci-resolve
 espanso
 gamemode
 intellij-idea-ultimate-edition
@@ -14,9 +15,12 @@ minecraft-launcher
 nerd-fonts-meslo
 nomachine
 numix-gtk-theme-git
+pfetch
+picom-ibhagwan-git
 polybar
 scrcpy
 smloadr
+teams
 themix-full-git
 trello
 ttf-meslo
