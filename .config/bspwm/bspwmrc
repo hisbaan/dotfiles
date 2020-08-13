@@ -7,6 +7,7 @@ nitrogen --restore &
 $HOME/.config/polybar/launch.sh &
 espanso start &
 flameshot &
+killall -9 redshift
 redshift &
 dunst &
 dispad &

@@ -47,7 +47,6 @@ git
 gradle
 groff
 htop
-i3-gaps
 intel-ucode
 iwd
 jdk11-openjdk
@@ -84,6 +83,7 @@ neovim
 networkmanager
 nitrogen
 noto-fonts-emoji
+nss-mdns
 ntfs-3g
 obs-studio
 openresolv

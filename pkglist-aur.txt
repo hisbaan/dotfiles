@@ -16,6 +16,7 @@ kimi-dark-gtk-theme-git
 lib32-gamemode
 libfprint-2-tod1-xps9300-bin
 minecraft-launcher
+mu
 nerd-fonts-meslo
 nomachine
 numix-gtk-theme-git
