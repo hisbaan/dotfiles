@@ -1522,3 +1522,39 @@ Aug 07 12:29 : exception: OutputThread could not get realtime scheduling, contin
 Aug 07 13:20 : avahi: Service 'Music Player @ archen' successfully established.
 Aug 07 13:20 : avahi: Client Disconnected, will reconnect shortly
 Aug 07 13:20 : avahi: Service 'Music Player @ archen' successfully established.
+Aug 13 11:04 : avahi: Client Disconnected, will reconnect shortly
+Aug 13 11:04 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Aug 13 11:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 13 11:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 15 11:16 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Aug 15 11:17 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 15 11:17 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 15 13:15 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Aug 15 13:16 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 15 13:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 15 13:20 : client: [0] opened from [::1]:55474
+Aug 15 13:20 : client: [0] closed
+Aug 17 22:24 : player: played "Music Downloads/Pop Evil/Pop Evil (Album)/07 A Crime To Remember.mp3"
+Aug 17 22:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 17 22:24 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 18 09:27 : client: [0] opened from [::1]:54630
+Aug 18 09:27 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 18 09:27 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Aug 18 09:27 : client: [0] closed
+Aug 18 20:41 : client: [1] opened from [::1]:55342
+Aug 18 20:41 : client: [1] closed
+Aug 18 20:41 : client: [2] opened from [::1]:55344
+Aug 18 20:41 : client: [2] closed
+Aug 18 20:41 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Aug 18 20:41 : client: [3] opened from [::1]:55346
+Aug 18 20:41 : client: [3] closed
+Aug 18 20:50 : client: [4] opened from [::1]:55438
+Aug 18 20:50 : client: [4] closed
+Aug 18 20:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Aug 18 20:50 : client: [5] opened from [::1]:55440
+Aug 18 20:50 : client: [5] closed
+Aug 18 20:50 : client: [6] opened from [::1]:55442
+Aug 18 20:50 : client: [6] closed
+Aug 18 20:50 : alsa_output: Decoder is too slow; playing silence to avoid xrun
+Aug 18 20:50 : client: [7] opened from [::1]:55444
+Aug 18 20:50 : client: [7] closed

@@ -11,6 +11,7 @@ killall -9 redshift
 redshift &
 dunst &
 dispad &
+pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
 
 ### Monitors ###
@@ -57,6 +58,7 @@ xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP-1)
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Emacs state=tiled
+bspc rule -a zathura stat=tiled
 
 # fix jetbrains software
 wmname LG3D

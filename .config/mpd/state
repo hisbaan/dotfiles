@@ -3,7 +3,7 @@ audio_device_state:1:alsa_card.pci-0000_12_00.3
 audio_device_state:1:Visualizer feed
 state: pause
 current: 159
-time: 32.715000
+time: 51.520000
 random: 1
 repeat: 0
 single: 0
