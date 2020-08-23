@@ -21,8 +21,6 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-;;(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 10)
-;;      doom-variable-pitch-font (font-spec :family "MesloLGS Nerd Font Mono" :size 10))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -37,9 +35,8 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-(setq default-tab-width 4)
+(setq confirm-kill-emacs nil)
 
-(bind-key "TAB" #'indent-for-tab-command)
 (bind-key "M-i" #'company-complete)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
