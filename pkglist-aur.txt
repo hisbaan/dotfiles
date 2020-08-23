@@ -19,9 +19,7 @@ minecraft-launcher
 mu
 nerd-fonts-meslo
 nomachine
-numix-gtk-theme-git
-papirus-folders-git
-pfetch
+pfetch-git
 polybar
 pycharm-professional
 scrcpy

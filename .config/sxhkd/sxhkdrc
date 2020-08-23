@@ -97,7 +97,7 @@ super + Return
 
 # rofi
 super + d
-    rofi -show run
+    noswallow_rofi
 
 # firefox
 super + w

@@ -14,7 +14,7 @@ function sudo
 end
 
 set -x -g PATH $PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
-set -x -g EDITOR '/usr/bin/emacs'
+set -x -g EDITOR "/usr/bin/emacsclient -c -a 'emacs'"
 set -x -g DISPLAY ':0'
 set -x -g MOZ_USE_XINPUT2 1
 set -x -g QT_AUTO_SCREEN_SCALE_FACTOR 1

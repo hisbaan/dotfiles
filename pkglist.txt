@@ -80,7 +80,6 @@ nautilus
 ncmpcpp
 neofetch
 neovim
-networkmanager
 nitrogen
 noto-fonts-emoji
 nss-mdns
@@ -121,6 +120,8 @@ texinfo
 throttled
 tldr
 tlp
+tor
+torbrowser-launcher
 transmission-cli
 transmission-qt
 tree
