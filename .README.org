@@ -2,7 +2,7 @@
 
 - OS: Arch Linux
 - WM: BSPWM
-- Hotkey Daemon: SXHKDRC
+- Hotkey Daemon: SXHKD
 - Terminal: Kitty
 - Shell: Fish
 - Editor: Doom Emacs
