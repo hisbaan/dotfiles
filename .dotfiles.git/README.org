@@ -1,0 +1,20 @@
+#+TITLE: Description
+
+* OS: Arch Linux
+* WM: BSPWM
+* Hotkey Daemon: SXHKDRC
+* Terminal: Kitty
+* Shell: Fish
+* Editor: Doom Emacs
+* Font: MesloLSG Nerd Font Mono
+* App Launcher: Rofi
+* Browser: Firefox
+* Music Player: MPS + NCMPCPP
+* Terminal File Manager: Ranger
+* GUI File Manager: Nautilus
+* Notification Daemon: Dunst
+* Compositor: Picom
+* Video Player: MPV + Celluloid
+* System Monitor: Bashtop
+* Image Viewer: SXIV
+* Document Viewer: Zathura
