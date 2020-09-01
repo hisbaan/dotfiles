@@ -17,6 +17,7 @@ set -x -g PATH $PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-sc
 set -x -g EDITOR "/usr/bin/emacsclient -c -a 'emacs'"
 set -x -g DISPLAY ':0'
 set -x -g MOZ_USE_XINPUT2 1
+set -x -g MOZ_X11_EGL 1
 set -x -g QT_AUTO_SCREEN_SCALE_FACTOR 1
 set -x -g OPENCV_LOG_LEVEL ERROR
 set -x -g GDK_SCALE 2

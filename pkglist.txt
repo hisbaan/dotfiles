@@ -13,6 +13,7 @@ bashtop
 bat
 binutils
 bison
+blueman
 bluez
 bluez-plugins
 bluez-utils
@@ -48,6 +49,7 @@ gradle
 groff
 htop
 intel-ucode
+intel-undervolt
 iwd
 jdk11-openjdk
 kitty
@@ -67,6 +69,7 @@ lib32-openal
 lib32-v4l-utils
 libreoffice-fresh
 libtool
+libva-intel-driver
 linux
 linux-firmware
 lolcat
@@ -74,6 +77,7 @@ lutris
 lxappearance
 m4
 make
+meld
 mpc
 mpd
 nautilus
@@ -87,6 +91,7 @@ ntfs-3g
 obs-studio
 openresolv
 otf-ipafont
+pacman-contrib
 patch
 pavucontrol
 pdftk
@@ -120,8 +125,6 @@ texinfo
 throttled
 tldr
 tlp
-tor
-torbrowser-launcher
 transmission-cli
 transmission-qt
 tree
@@ -130,6 +133,7 @@ unrar
 unzip
 usbutils
 vi
+vim
 virtualbox
 which
 wine-mono
