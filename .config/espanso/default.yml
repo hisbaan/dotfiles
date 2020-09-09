@@ -13,7 +13,7 @@ matches:
 
   # Emails
   - trigger: ":student"
-    replace: "hisbaan.noorani@student.tdsb.on.ca"
+    replace: "hisbaan.noorani@mail.utoronto.ca"
 
   - trigger: ":bsg"
     replace: "bluesniperf18@gmail.com"

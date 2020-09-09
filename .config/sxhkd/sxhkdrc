@@ -1,0 +1,161 @@
+### BSPWM hotkeys ###
+
+echo "" > ~/.config/bspwm/bspwmrc
+
+# close and kill
+super + shift + q
+    bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+    bspc desktop -l next
+
+# send the newset marked node to the newwest preselected node
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest node
+super + g
+    bspc node -s biggest.local
+
+# set the window state
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,\~fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private}
+
+# restart bspwm in place
+super + shift + r
+    killall -9 sxhkd && bspc wm -r
+
+# focus or swap the node in the given direction
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+    bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }n
+    bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} focused:'^{1-9}'
+
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} focused:'^{1-9}'
+
+# PRESELECT
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+    bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+    bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+    bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# MOVE/RESIZE
+
+# puts text into an identifier file then runs the resize chord.
+super + r
+    echo " resize " > ~/.config/bspwm/bspwm-chord-status; \
+    xdotool key super+XF86Eject
+
+# expand a window by moving one of its side outward
+super + XF86Eject : {h,j,k,l,Return}
+    {~/.config/bspwm/bspwm_resize.sh west 20,~/.config/bspwm/bspwm_resize.sh south 20,~/.config/bspwm/bspwm_resize.sh north 20,~/.config/bspwm/bspwm_resize.sh east 20, xdotool key Escape && echo "" > ~/.config/bspwm/bspwm-chord-status}
+
+
+# move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+### Application keybindings ###
+
+# terminal emulator
+super + Return
+    kitty
+
+# rofi
+super + d
+    noswallow_rofi
+
+# firefox
+super + w
+    firefox
+
+Print
+    flameshot gui
+
+### Media keys ###
+
+# pause/play music
+XF86AudioPlay
+    mpc toggle
+
+# pause music
+XF86AudioPause
+    mpc pause
+
+# skip track
+XF86AudioNext
+    mpc next
+
+# go back a track
+XF86AudioPrev
+    mpc prev
+
+# stop music
+XF86AudioStop
+    mpc stop
+
+# increase volume and unmute
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+# lower volume and unmute
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+# mute audio
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+### System control ###
+
+# put text into an identifier file then run the power states chord
+super + 0
+    echo " (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift + s)hutdown " > ~/.config/bspwm/bspwm-chord-status; \
+    xdotool key super+XF86Tools
+
+# power states
+super + XF86Tools ; {l,e,s,r,shift + s,Return}
+    echo "" > ~/.config/bspwm/bspwm-chord-status; \
+    {betterlockscreen -l,bspc quit,betterlockscreen -s,reboot,poweroff,xdotool key Escape}
+
+# brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 2
+
+# brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 2
