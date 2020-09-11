@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+file_to_open="$(find ~ -type f ! -path "/home/hisbaan/.*" ! -path "/home/hisbaan/Pictures/Photos Library.photoslibrary/*" ! -path "/home/hisbaan/Music/*" ! -path "/home/hisbaan/Android/*" ! -path "/home/hisbaan/Games/*" | rofi -dmenu)"
+
+echo "$file_to_open"
+
+xdg-open "$file_to_open"
