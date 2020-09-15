@@ -93,7 +93,8 @@ super + {Left,Down,Up,Right}
 
 # terminal emulator
 super + Return
-    kitty
+      kitty
+      #urxvt
 
 # rofi
 super + d

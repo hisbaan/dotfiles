@@ -7,6 +7,7 @@ citra-qt-git
 color-picker
 davinci-resolve
 dispad-git
+droidcam
 espanso
 gamemode
 howdy
@@ -19,9 +20,12 @@ minecraft-launcher
 mu
 nerd-fonts-meslo
 nomachine
+onlyoffice-bin
 pfetch-git
+picom-ibhagwan-git
 polybar
 pycharm-professional
+rxvt-unicode-cvs
 scrcpy
 smloadr
 teams

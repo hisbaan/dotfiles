@@ -4,6 +4,7 @@ alsa-utils
 android-file-transfer
 android-tools
 arandr
+archiso
 audacity
 autoconf
 automake
@@ -33,6 +34,7 @@ emacs
 ethtool
 exfat-utils
 fakeroot
+fd
 figlet
 firefox
 fish
@@ -95,7 +97,6 @@ pacman-contrib
 patch
 pavucontrol
 pdftk
-picom
 pkgconf
 playerctl
 powertop
@@ -141,11 +142,11 @@ transmission-cli
 transmission-qt
 tree
 ttf-dejavu
+unison
 unrar
 unzip
 usbutils
 vi
-vim
 virtualbox
 which
 wine-mono
@@ -202,6 +203,8 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xterm
+youtube-dl
 zathura
 zathura-pdf-mupdf
 zip
