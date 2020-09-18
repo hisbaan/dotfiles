@@ -96,11 +96,10 @@ module-margin-right = 0
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = MesloLGS:size=22;5
 font-1 = MesloLGS Nerd Font Mono:size=36;8
-font-2 = material\-wifi:pixelsize=26;5
+font-2 = Material Design Icons Desktop:pixelsize=26;5
 
 modules-left = bspwm space mode
 modules-right = divider memory2 divider cpu2 divider pavolume divider battery divider wireless-network divider date
-;dim-value = 1.0
 
 tray-position = right
 tray-detached = false
@@ -161,7 +160,7 @@ ws-icon-3 = 4;拾
 ws-icon-4 = 5;辶
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-ws-icon-7 = 8;ﱘ 
+ws-icon-7 = 8;ﱘ
 ws-icon-8 = 9;ﭮ
 ws-icon-default = ""
 
@@ -440,33 +439,51 @@ format-discharging-underline = ${colors.background}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
-format-full-prefix = " "
+format-full-prefix = "󰁹 "
 format-full-prefix-foreground = #a3c725
 format-full-underline = %{colors.background}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-font = 2
+ramp-capacity-0 = 󰁺
+ramp-capacity-1 = 󰁻
+ramp-capacity-2 = 󰁼
+ramp-capacity-3 = 󰁽
+ramp-capacity-4 = 󰁾
+ramp-capacity-5 = 󰁿
+ramp-capacity-6 = 󰂀
+ramp-capacity-7 = 󰂁
+ramp-capacity-8 = 󰂂
+ramp-capacity-9 = 󰁹
 ramp-capacity-foreground = ${colors.foreground}
 
-ramp-charging-0 = 
-ramp-charging-1 = 
-ramp-charging-2 = 
-ramp-charging-3 = 
-ramp-charging-4 = 
+ramp-charging-font = 2
+ramp-charging-0 = 󰢜
+ramp-charging-1 = 󰂆
+ramp-charging-2 = 󰂇
+ramp-charging-3 = 󰂈
+ramp-charging-4 = 󰢝
+ramp-charging-5 = 󰂉
+ramp-charging-6 = 󰢞
+ramp-charging-7 = 󰂊
+ramp-charging-8 = 󰂋
+ramp-charging-9 = 󰂅
 ramp-charging-foreground = #a3c725
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-font = 2
+animation-charging-0 = 󰢜
+animation-charging-1 = 󰂆
+animation-charging-2 = 󰂇
+animation-charging-3 = 󰂈
+animation-charging-4 = 󰢝
+animation-charging-5 = 󰂉
+animation-charging-6 = 󰢞
+animation-charging-7 = 󰂊
+animation-charging-8 = 󰂋
+animation-charging-9 = 󰂅
 animation-charging-foreground = #a3c725
-animation-charging-framerate = 750
+animation-charging-framerate = 500
 
 click-left = ~/.config/polybar/scripts/battery.sh
 
@@ -582,7 +599,8 @@ date = " %a %b %d, %Y"
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
-format-prefix = ""
+format-prefix-font = 2
+format-prefix = "󰃭"
 format-prefix-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background} 
@@ -879,7 +897,7 @@ format-background = ${colors.background}
 format-underline = #FFBB00
 label = %output%
 format-prefix = "  "
-format-prefix-foreground = #FFBB00
+format-pefix-foreground = #FFBB00
 
 [module/release]
 type = custom/script
@@ -1071,17 +1089,19 @@ label-disconnected-background = ${colors.background}
 format-disconnected = disconnected
 format-disconnected-foreground = ${colors.alert}
 format-disconnected-background = ${colors.background}
-format-disconnected-prefix = " "
+format-disconnected-prefix = "󰤫 "
 format-disconnected-prefix-foreground = ${colors.alert}
 format-disconnected-prefix-background = ${colors.background}
 ; format-disconnected-underline =${colors.alert}
 
 ramp-signal-font = 2
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-; ramp-signal-4 =
+;ramp-signal-0 = %{F#ff004b}󰤫%{F-}
+;ramp-signal-1 = %{F#ffd200}󰤟%{F-}
+ramp-signal-0 = 󰤫
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
 ramp-signal-foreground = ${colors.foreground}
 
 [module/xbacklight]
