@@ -11,6 +11,7 @@ redshift -x
 killall -9 redshift
 redshift &
 dunst &
+killall -9 dispad
 dispad &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &

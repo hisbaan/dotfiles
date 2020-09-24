@@ -153,7 +153,7 @@ wrapping-scroll = false
 reverse-scroll = true
 fuzzy-match = false
 
-ws-icon-0 = 1;
+ws-icon-0 = 1;󰈹
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;拾
@@ -485,7 +485,8 @@ animation-charging-9 = 󰂅
 animation-charging-foreground = #a3c725
 animation-charging-framerate = 500
 
-click-left = ~/.config/polybar/scripts/battery.sh
+click-left = notify-send "$(acpi)"
+; click-left = ~/.config/polybar/scripts/battery.sh
 
 [module/bluetooth]
 type = custom/script
