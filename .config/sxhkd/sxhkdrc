@@ -46,14 +46,16 @@ super + {_,shift + }n
 super + bracket{left,right}
     bspc desktop -f {prev,next}.local
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9}
-    bspc {desktop -f,node -d} focused:'^{1-9}'
+# send to the given desktop
+super + shift + {1-9}
+    bspc node -d focused:'^{1-9}'
 
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9}
-    bspc {desktop -f,node -d} focused:'^{1-9}'
+super + {1-9}
+    bspc desktop -f '^{1-9}'
+# focus on the given desktop with a hack for discord
+# super + {1-9}
+#     xdotool mousemove 960 5 restore; \
+#     bspc desktop -f '^{1-9}'
 
 # PRESELECT
 

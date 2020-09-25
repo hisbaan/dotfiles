@@ -9,6 +9,8 @@
 (setq user-full-name "Hisbaan Noorani"
       user-mail-address "hisbaan@gmail.com")
 
+(setq-default tab-width 4)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -21,15 +23,21 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;;
+(setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13)
+      doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 20)
+      doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13)
+      doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13 :weight 'light))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-one)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/org/")
+(setq org-latex-packages-alist '(("margin=0.5in" "geometry" nil)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.

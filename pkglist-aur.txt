@@ -1,5 +1,6 @@
 aic94xx-firmware
 android-studio
+authy-snap
 betterlockscreen
 brlaser
 citra-qt-git
@@ -12,12 +13,14 @@ intellij-idea-ultimate-edition-jre
 kimi-dark-gtk-theme-git
 lib32-gamemode
 minecraft-launcher
+mu
 nerd-fonts-meslo
 nomachine
-numix-gtk-theme-git
+onlyoffice-bin
 pfetch
 picom-ibhagwan-git
 polybar
+pycharm-professional
 scrcpy
 smloadr
 teams

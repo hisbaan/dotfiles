@@ -6,12 +6,12 @@ picom --config ~/.config/picom/picom.conf &
 nitrogen --restore &
 $HOME/.config/polybar/launch.sh &
 espanso start &
+killall -9 flameshot
 flameshot &
 redshift -x
 killall -9 redshift
 redshift &
 dunst &
-dispad &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
 
