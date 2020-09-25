@@ -8,8 +8,29 @@ export ZSH="$HOME/.config/zsh/oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-PS1='%F{#5993D7}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
+# ZSH_THEME="gnzh"
+
+if [[ -n $SSH_CONNECTION ]]
+then
+    PS1='%F{#61AFEF}%~ %F{#CFD1D6}… %F{#E06C75}● %f'
+else
+    PS1='%F{#61AFEF}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
+fi
+
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
+zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' get-revision true
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:*' stagedstr ''
+# zstyle ':vcs_info:*' unstagedstr '●'
+# zstyle ':vcs_info:*' formats ' %u%c'
+# zstyle ':vcs_info:*' actionformats ' %u%c'
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,7 +90,7 @@ PS1='%F{#5993D7}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(autojump zsh-autosuggestions fast-syntax-highlighting expand-ealias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,7 +127,13 @@ alias grep="rg $argv"
 alias mv="mv -i $argv"
 
 # Envvar
-export EDITOR="emacsclient -c -a 'emacs'"
+if [[ -n $SSH_CONNECTION ]]
+then
+    export EDITOR='nvim'
+else
+    export EDITOR="emacsclient -c -a 'emacs'"
+fi
+
 export DISPLAY=":0"
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
