@@ -11,7 +11,6 @@ export ZSH="$HOME/.config/zsh/oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 PS1='%F{#5993D7}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -98,7 +97,17 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cat="bat $argv"
+alias cp="cp -i $argv"
+alias df="df -h $argv"
+alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
+alias emacs="emacsclient -c -a 'emacs'"
+alias grep="rg $argv"
+alias mv="mv -i $argv"
 
 # Envvar
+export EDITOR="emacsclient -c -a 'emacs'"
+export DISPLAY=":0"
 export HISTFILE="$HOME/.config/zsh/history"
+export MOZ_USE_XINPUT2=1
+export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
