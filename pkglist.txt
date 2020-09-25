@@ -99,6 +99,7 @@ pavucontrol
 pdftk
 pkgconf
 playerctl
+polkit-gnome
 powertop
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -147,7 +148,9 @@ unrar
 unzip
 usbutils
 vi
+vim
 virtualbox
+wavemon
 which
 wine-mono
 wine-staging
@@ -181,6 +184,7 @@ xorg-xcursorgen
 xorg-xdpyinfo
 xorg-xdriinfo
 xorg-xev
+xorg-xfd
 xorg-xgamma
 xorg-xhost
 xorg-xinit
@@ -208,3 +212,4 @@ youtube-dl
 zathura
 zathura-pdf-mupdf
 zip
+zsh
