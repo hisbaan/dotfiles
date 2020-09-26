@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,8 +15,7 @@ export ZSH="$HOME/.config/zsh/oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-PS1='%F{#5993D7}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,7 +75,7 @@ PS1='%F{#5993D7}%~ %F{#CFD1D6}… %F{#9FC582}● %f'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(autojump zsh-autosuggestions fast-syntax-highlighting expand-ealias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,8 +112,17 @@ alias grep="rg $argv"
 alias mv="mv -i $argv"
 
 # Envvar
-export EDITOR="emacsclient -c -a 'emacs'"
+if [[ -n $SSH_CONNECTION ]]
+then
+    export EDITOR='nvim'
+else
+    export EDITOR="emacsclient -c -a 'emacs'"
+fi
+
 export DISPLAY=":0"
 export HISTFILE="$HOME/.config/zsh/history"
 export MOZ_USE_XINPUT2=1
 export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

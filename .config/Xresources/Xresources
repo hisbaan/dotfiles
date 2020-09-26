@@ -15,7 +15,7 @@ XTerm*locale: true
 XTerm*loginshell: true
 
 ! == colours ==
-#include "/home/hisbaan/.xcolors/dracula"
+#include "/home/hisbaan/.xcolors/onedark-custom"
 
 *.foreground: FOREGROUND 
 *.background: BACKGROUND 
