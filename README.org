@@ -2,22 +2,22 @@
 
 | *Item*                  | *Program*               | *Config*        |
 |-------------------------+-------------------------+-----------------|
-| *OS*                    | [[https://archlinux.org][Arch Linux]]              | -               |
+| *OS*                    | [[https://archlinux.org][Arch Linux]]              | \-              |
 | *WM*                    | [[https://github.com/baskerville/bspwm][bspwm]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/bspwm/bspwmrc][config]]          |
 | *Hotkey Daemon*         | [[https://github.com/baskerville/sxhkd][sxhkd]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/sxhkd/sxhkdrc][config]]          |
 | *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/picom/picom.conf][config]]          |
 | *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/kitty/kitty.conf][config]]          |
 | *Shell*                 | [[https://www.zsh.org/][zsh]]                     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/zsh/.zshrc][config]]          |
 | *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.doom.d/][config]]          |
-| *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | -               |
+| *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
 | *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/rofi/config.rasi][config]]          |
-| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | -               |
-| *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                   | -               |
+| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | \-              |
+| *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                   | \-              |
 | *Music Player*          | [[https://www.musicpd.org/][mpd]] + [[https://github.com/ncmpcpp/ncmpcpp][ncmpcpp]]           | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/mpd/mpd.conf][config]] + [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ncmpcpp/config][config]] |
 | *Terminal File Manager* | [[https://github.com/ranger/ranger][Ranger]]                  | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ranger/rc.conf][config]]          |
-| *GUI File Manager*      | [[https://gitlab.gnome.org/GNOME/nautilus][Nautilus]]                | -               |
+| *GUI File Manager*      | [[https://gitlab.gnome.org/GNOME/nautilus][Nautilus]]                | \-              |
 | *Notification Daemon*   | [[https://github.com/dunst-project/dunst][Dunst]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/dunst/dunstrc][config]]          |
-| *Video Player*          | [[https://mpv.io/][mpv]] + [[https://celluloid-player.github.io/][Celluloid]]         | -               |
-| *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                 | -               |
-| *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                    | -               |
-| *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                 | -               |
+| *Video Player*          | [[https://mpv.io/][mpv]] + [[https://celluloid-player.github.io/][Celluloid]]         | \-              |
+| *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                 | \-              |
+| *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                    | \-              |
+| *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                 | \-              |
