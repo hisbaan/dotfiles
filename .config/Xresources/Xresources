@@ -47,7 +47,7 @@ URxvt*depth: 32
 rofi.dpi: 220;
 
 ! == colours ==
-#include "/home/hisbaan/.xcolors/onedark"
+#include "/home/hisbaan/.xcolors/onedark-custom"
 
 *.foreground: FOREGROUND 
 *.background: BACKGROUND 

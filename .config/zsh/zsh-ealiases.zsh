@@ -1,1 +1,0 @@
-ealias sp='sudo pacman'
