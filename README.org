@@ -18,3 +18,23 @@
  - *System Monitor*: Bashtop
  - *Image Viewer*: SXIV
  - *Document Viewer*: Zathura
+
+   | OS                    | Arch Linux              |   |
+   | WM                    | bspwm                   |   |
+   | Hotkey Daemon         | sxhkd                   |   |
+   | Compositor            | Picom Ibghawan Fork     |   |
+   | Terminal              | Kitty                   |   |
+   | Shell                 | zsh                     |   |
+   | Editor                | Doom Emacs              |   |
+   | Font                  | MesloLGS Nerd Font Mono |   |
+   | App Launcher          | Rofi                    |   |
+   | Browser               | Firefox + userChrome    |   |
+   | Startpage             | bento                   |   |
+   | Music Player          | mpd + ncmpcpp           |   |
+   | Terminal File Manager | Ranger                  |   |
+   | GUI File Manager      | Nautilus                |   |
+   | Notification Daemon   | Dunst                   |   |
+   | Video Player          | mpv + Celluloid         |   |
+   | System Monitor        | Bashtop                 |   |
+   | Image Viewer          | sxiv                    |   |
+   | Document Viewer       | Zathura                 |   |
