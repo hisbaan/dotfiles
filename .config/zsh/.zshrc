@@ -70,6 +70,7 @@ alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=
 alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
 alias mv="mv -i $argv"
+alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
 
 # Environmental Variables
 if [[ -n $SSH_CONNECTION ]]
