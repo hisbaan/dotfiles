@@ -1,6 +1,7 @@
 aic94xx-firmware
 android-studio
 authy-snap
+autojump
 betterlockscreen
 brlaser
 citra-qt-git
@@ -9,12 +10,10 @@ davinci-resolve
 dispad-git
 droidcam
 espanso
-gamemode
 howdy
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 kimi-dark-gtk-theme-git
-lib32-gamemode
 libfprint-2-tod1-xps9300-bin
 minecraft-launcher
 mu
