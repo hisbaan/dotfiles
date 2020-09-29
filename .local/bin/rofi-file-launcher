@@ -4,4 +4,13 @@ file_to_open="$(find ~ -type f ! -path "/home/hisbaan/.*" ! -path "/home/hisbaan
 
 echo "$file_to_open"
 
-xdg-open "$file_to_open"
+file_extension=${file_to_open##*\.}
+echo "$file_extension"
+
+case "$file_extension" in
+    txt | org | config | zsh | bash | sh | fish | py | html | css | java | md | json | tex) $EDITOR "$file_to_open" ;;
+    pdf) zathura "$file_to_open" ;;
+    mp4 | mkv | mov) celluloid "$file_to_open"  ;;
+    png | jpg | jpeg | gif) sxiv "$file_to_open" ;;
+    *) xdg-open "$file_to_open" ;;
+esac
