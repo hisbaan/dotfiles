@@ -82,7 +82,7 @@ message_delay_time = 5
 ## - 2 - red
 ## - 3 - green
 ## - 4 - yellow
-## - 5 - blue
+## - 5 - magenta
 ## - 6 - magenta
 ## - 7 - cyan
 ## - 8 - white
@@ -112,7 +112,7 @@ song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
 song_library_format = {%n - }{%t}|{%f}
 alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
 alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-current_item_prefix = $(blue)$r
+current_item_prefix = $(magenta)$r
 current_item_suffix = $/r$(end)
 current_item_inactive_column_prefix = $(white)$r
 current_item_inactive_column_suffix = $/r$(end)
@@ -168,7 +168,7 @@ browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 ##   available.
 ##
 #
-song_columns_list_format = (20)[blue]{a} (50)[blue]{t|f:Title} (20)[blue]{b} (7f)[blue]{l}
+song_columns_list_format = (20)[magenta]{a} (50)[magenta]{t|f:Title} (20)[magenta]{b} (7f)[magenta]{l}
 
 ##### various settings #####
 ##
@@ -366,19 +366,19 @@ use_console_editor = yes
 # transparent background.
 colors_enabled = yes
 empty_tag_color = cyan
-header_window_color = blue
-volume_color = blue
+header_window_color = magenta
+volume_color = magenta
 state_line_color = default
 state_flags_color = default:b
-main_window_color = blue
+main_window_color = magenta
 color1 = white
 color2 = green
 
 progressbar_color = black:b
-progressbar_elapsed_color = blue
-statusbar_color = blue
-statusbar_time_color = blue:b
-player_state_color = blue:b
+progressbar_elapsed_color = magenta
+statusbar_color = magenta
+statusbar_time_color = magenta:b
+player_state_color = magenta:b
 alternative_ui_separator_color = black:b
-window_border_color = blue
-active_window_border = blue
+window_border_color = magenta
+active_window_border = magenta
