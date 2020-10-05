@@ -1,21 +1,14 @@
 #+STARTUP: inlineimages
 
 * Screenshots
-# [[https://github.com/hisbaan/dotfiles-laptop/tree/master/Pictures/screenshots/desktop-screenshots/desktop-screenshot-01.png]]
 
-# [[https://github.com/hisbaan/dotfiles-laptop/tree/master/Pictures/screenshots/desktop-screenshots/desktop-screenshot-02.png]]
+[[Pictures/screenshots/desktop-screenshots/desktop-screenshot-01.png]]
 
-# [[https://github.com/hisbaan/dotfiles-laptop/tree/master/Pictures/screenshots/desktop-screenshots/desktop-screenshot-03.png]]
+[[Pictures/screenshots/desktop-screenshots/desktop-screenshot-02.png]]
 
-# [[https://github.com/hisbaan/dotfiles-laptop/tree/master/Pictures/screenshots/desktop-screenshots/desktop-screenshot-04.png]]
+[[Pictures/screenshots/desktop-screenshots/desktop-screenshot-03.png]]
 
-[[/Pictures/screenshots/desktop-screenshots/desktop-screenshot-01.png]]
-
-[[/Pictures/screenshots/desktop-screenshots/desktop-screenshot-02.png]]
-
-[[/Pictures/screenshots/desktop-screenshots/desktop-screenshot-03.png]]
-
-[[/Pictures/screenshots/desktop-screenshots/desktop-screenshot-04.png]]
+[[Pictures/screenshots/desktop-screenshots/desktop-screenshot-04.png]]
 
 * Software and links
 | *Item*                  | *Program*               | *Config*        |
