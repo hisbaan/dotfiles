@@ -19,6 +19,7 @@
 | *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/picom/picom.conf][config]]          |
 | *Bar*                   | [[https://github.com/polybar/polybar][Polybar]]                 | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/polybar/config][config]]          |
 | *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/kitty/kitty.conf][config]]          |
+| *Color Scheme*          | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.xcolors/onedark-cusom][Atom One Dark Custom]]    | \-              |
 | *Shell*                 | [[https://www.zsh.org/][zsh]]                     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/zsh/.zshrc][config]]          |
 | *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.doom.d/][config]]          |
 | *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
@@ -33,3 +34,9 @@
 | *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                 | \-              |
 | *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                    | \-              |
 | *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                 | \-              |
+
+* Notable Scripts
+** [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.local/bin/update-theme][update-theme]]
+Reads a theme from the .xcolors directory and applies it to xresources and all used applications.
+** [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.local/bin/addcolorshceme][addcolorscheme]]
+Creates a colour scheme in a format that [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.local/bin/update-theme][update-theme]] can read and places it in the .xcolors directory based on user input.
