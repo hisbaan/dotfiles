@@ -58,6 +58,14 @@ export UPDATE_ZSH_DAYS=7
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(autojump zsh-autosuggestions fast-syntax-highlighting expand-ealias)
 
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey '^E' edit-command-line                   # Opens Vim to edit current command line
+# bindkey '^R' history-incremental-search-backward # Perform backward search in command line history
+# bindkey '^S' history-incremental-search-forward  # Perform forward search in command line history
+# bindkey '^P' history-search-backward             # Go back/search in history (autocomplete)
+# bindkey '^N' history-search-forward              # Go forward/search in history (autocomplete)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -88,6 +96,10 @@ export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
+
+# Enable Vim mode in ZSH
+bindkey -v
+export KEYTIMEOUT=1
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

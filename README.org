@@ -6,6 +6,7 @@
 | *WM*                    | [[https://github.com/baskerville/bspwm][bspwm]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/bspwm/bspwmrc][config]]          |
 | *Hotkey Daemon*         | [[https://github.com/baskerville/sxhkd][sxhkd]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/sxhkd/sxhkdrc][config]]          |
 | *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/picom/picom.conf][config]]          |
+| *Bar*                   | [[https://github.com/polybar/polybar][Polybar]]                 | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/polybar/config][config]]          |
 | *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/kitty/kitty.conf][config]]          |
 | *Shell*                 | [[https://www.zsh.org/][zsh]]                     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/zsh/.zshrc][config]]          |
 | *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.doom.d/][config]]          |
