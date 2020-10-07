@@ -101,5 +101,12 @@ export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scrip
 bindkey -v
 export KEYTIMEOUT=1
 
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+
+bindkey '^e' edit-command-line
+
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
