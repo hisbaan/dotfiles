@@ -54,6 +54,7 @@ xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP-1)
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Emacs state=tiled
 bspc rule -a Zathura state=tiled
+bspc rule -a Wine:photoshop.exe state=floating
 
 # fix jetbrains software
 wmname LG3D

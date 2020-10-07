@@ -1,20 +1,21 @@
 * {
     font:			 "MesloLGS Nerd Font 10";
-    selected-normal-foreground:  #1a1b23;
+    dpi:			 220;
+    selected-normal-foreground:  #1e2127;
     foreground:                  #bfbfbf;
     normal-foreground:           @foreground;
-    alternate-normal-background: #1a1b23;
+    alternate-normal-background: #1e2127;
     red:                         #ff5555;
     selected-urgent-foreground:  #ff5555;
     blue:                        #8be9fd;
     urgent-foreground:           #ff5555;
-    alternate-urgent-background: #1a1b23;
+    alternate-urgent-background: #122127;
     active-foreground:           rgba ( 128, 203, 196, 100 % );
     selected-active-foreground:  rgba ( 128, 203, 196, 100 % );
     alternate-active-background: #bd93f9;
-    background:                  #1a1b23;
+    background:                  #1e2127;
     alternate-normal-foreground: @foreground;
-    normal-background:           #1a1b23;
+    normal-background:           #1e2127;
     selected-normal-background:  #bd93f9;
     border-color:                #bd93f9;
     spacing:                     2;

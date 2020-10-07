@@ -2,6 +2,7 @@ alsa-utils
 amd-ucode
 android-file-transfer
 android-tools
+aria2
 audacity
 autoconf
 automake
@@ -35,6 +36,7 @@ flameshot
 flex
 fzf
 galculator
+gamemode
 gcc
 gimp
 git
@@ -42,6 +44,7 @@ gradle
 htop
 jdk11-openjdk
 kitty
+lib32-gamemode
 lib32-giflib
 lib32-gst-plugins-base-libs
 lib32-gtk3
@@ -60,6 +63,7 @@ linux
 linux-firmware
 linux-headers
 lolcat
+luit
 lutris
 lxappearance
 m4
@@ -159,7 +163,6 @@ xorg-fonts-75dpi
 xorg-fonts-encodings
 xorg-fonts-misc
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server
 xorg-server-common
@@ -210,3 +213,4 @@ zathura
 zathura-pdf-mupdf
 zip
 zsh
+zsh-autosuggestions
