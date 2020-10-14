@@ -94,7 +94,13 @@ super + {Left,Down,Up,Right}
 # terminal emulator
 super + Return
       kitty
+      # kitty --single-instance
       #urxvt
+
+super + shift + Return
+      bspc rule -a kitty state=floating; \
+      kitty -c ~/.config/kitty/kitty-floating.conf; \
+      bspc rule -a kitty state=tiled
 
 # rofi
 super + d

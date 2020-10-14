@@ -105,6 +105,11 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIOWR_FOREGROUND=magenta
 #   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
 # Current directory.
+if [[ -n $SSH_CONNECTION ]]
+then
+    POWERLEVEL9K_DIR_PREFIX="$USER@$(hostname -s) "
+fi
+
 POWERLEVEL9K_DIR_FOREGROUND=blue
 
 # Dir truncation
