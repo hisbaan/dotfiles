@@ -8,6 +8,7 @@ file_extension=${file_to_open##*\.}
 echo "$file_extension"
 
 # TODO use mime types instead of file extensions because this requires manual things and that doesn't. Or at least the work is done for you.
+# file --mime-type ~/Documents/uoft/csc199/week-05/dartmouth.pdf | awk '{print $NF}'
 case "$file_extension" in
     txt | org | config | zsh | bash | sh | fish | py | html | css | java | md | json | tex) $EDITOR "$file_to_open" ;;
     pdf) zathura "$file_to_open" ;;
