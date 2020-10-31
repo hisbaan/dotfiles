@@ -28,4 +28,11 @@ xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
 
 xset r rate 300 50
 
+# session=${1:bspwm}
+# case $session in
+#     awesome ) exec awesome;;
+#     bspwm   ) exec bspwm;;
+#     *       ) exec $1;;
+# esac
+
 exec bspwm

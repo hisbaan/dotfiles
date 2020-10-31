@@ -1,3 +1,43 @@
+function x11-clip-wrap-widgets() {
+    # NB: Assume we are the first wrapper and that we only wrap native widgets
+    # See zsh-autosuggestions.zsh for a more generic and more robust wrapper
+    local copy_or_paste=$1
+    shift
+
+    for widget in $@; do
+        # Ugh, zsh doesn't have closures
+        if [[ $copy_or_paste == "copy" ]]; then
+            eval "
+            function _x11-clip-wrapped-$widget() {
+                zle .$widget
+                xclip -in -selection clipboard <<<\$CUTBUFFER
+            }
+            "
+        else
+            eval "
+            function _x11-clip-wrapped-$widget() {
+                CUTBUFFER=\$(xclip -out -selection clipboard)
+                zle .$widget
+            }
+            "
+        fi
+
+        zle -N $widget _x11-clip-wrapped-$widget
+    done
+}
+
+local copy_widgets=(
+    vi-yank vi-yank-eol vi-delete vi-backward-kill-word vi-change-whole-line
+)
+local paste_widgets=(
+    vi-put-{before,after}
+)
+
+# NB: can atm. only wrap native widgets
+x11-clip-wrap-widgets copy $copy_widgets
+x11-clip-wrap-widgets paste  $paste_widgets
+
+
 # # Temporarily change options.
 # 'builtin' 'local' '-a' 'p10k_config_opts'
 # [[ ! -o 'aliases'         ]] || p10k_config_opts+=('aliases')
@@ -42,6 +82,9 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_FOREGROUND=blue
 typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIVIS_FOREGROUND=yellow
 typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIOWR_FOREGROUND=magenta
 
+# typeset -g POWERLEVEL9k_PROMPT_CHAR_{OK,ERROR}_VICMD_FOREGROUND=blue
+# typeset -g POWERLEVEL9k_PROMPT_CHAR_{OK,ERROR}_VIVIS_FOREGROUND=yellow
+
 #   # Magenta prompt symbol if the last command succeeded.
 #   typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$magenta
 #   # Red prompt symbol if the last command failed.
@@ -62,6 +105,11 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIOWR_FOREGROUND=magenta
 #   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
 
 # Current directory.
+if [[ -n $SSH_CONNECTION ]]
+then
+    POWERLEVEL9K_DIR_PREFIX="$USER@$(hostname -s) "
+fi
+
 POWERLEVEL9K_DIR_FOREGROUND=blue
 
 # Dir truncation

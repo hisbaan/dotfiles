@@ -143,14 +143,37 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias cat="bat $argv"
-alias cp="cp -i $argv"
-alias df="df -h $argv"
+alias cat="bat "
+alias cp="cp -i "
+alias df="df -h "
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
 alias mv="mv -i $argv"
 alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
+alias sudo='sudo '
+
+# Setting tty colour scheme
+if [ "$TERM" = "linux" ]
+then
+  echo -en "\e]P0000000"
+  echo -en "\e]P1E06C75"
+  echo -en "\e]P298C379"
+  echo -en "\e]P3D19A66"
+  echo -en "\e]P441AFEF"
+  echo -en "\e]P5BD93F9"
+  echo -en "\e]P656B6C2"
+  echo -en "\e]P7ABB2BF"
+  echo -en "\e]P8000000"
+  echo -en "\e]P9E06C75"
+  echo -en "\e]PA98C379"
+  echo -en "\e]PBD19A66"
+  echo -en "\e]PC41AFEF"
+  echo -en "\e]PDBD93F9"
+  echo -en "\e]PE56B6C2"
+  echo -en "\e]PFABB2BF"
+  clear # Clear artifacts
+fi
 
 # Envvar
 if [[ -n $SSH_CONNECTION ]]
@@ -165,9 +188,16 @@ export HISTFILE="$HOME/.config/zsh/history"
 export MOZ_USE_XINPUT2=1
 export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
 
-# Enable vim keys
+# Enable Vim mode in ZSH
 bindkey -v
 export KEYTIMEOUT=1
+
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+
+bindkey '^e' edit-command-line
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
