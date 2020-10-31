@@ -27,4 +27,11 @@ xrandr --output eDP-1 --mode 3840x2400 --rate 60 --dpi 220
 
 xset r rate 300 50
 
+# session=${1:bspwm}
+# case $session in
+    # awesome ) exec awesome;;
+    # # bspwm   ) exec bspwm;;
+    # *       ) exec $1;;
+# esac
+
 exec bspwm

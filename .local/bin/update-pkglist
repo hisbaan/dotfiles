@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pacman -Qqen > pkglist.txt
-pacman -Qqem > pkglist-aur.txt
+pacman -Qqen > $HOME/pkglist.txt
+pacman -Qqem > $HOME/pkglist-aur.txt

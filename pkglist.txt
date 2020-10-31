@@ -4,7 +4,10 @@ alsa-utils
 android-file-transfer
 android-tools
 arandr
+arch-wiki-docs
+arch-wiki-lite
 archiso
+asciinema
 audacity
 autoconf
 automake
@@ -26,6 +29,7 @@ chromium
 cpupower
 cups
 cups-pdf
+dialog
 dunst
 efibootmgr
 emacs

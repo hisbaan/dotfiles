@@ -24,6 +24,7 @@ mu
 nerd-fonts-meslo
 nomachine
 onlyoffice-bin
+paru
 pfetch-git
 picom-ibhagwan-git
 polybar
@@ -39,6 +40,5 @@ ttf-meslo
 wd719x-firmware
 windscribe-cli
 xf86-input-mtrack
-yay
 ytop
 zoom
