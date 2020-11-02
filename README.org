@@ -39,7 +39,7 @@
 * Installation
 ** Manual:
 - Clone the repo and migrate files as necessary.
-- All of my installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files
+- All of my installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files.
 
 ** Automatic:
 - /Under construction:/ I'll have another repo that you can clone to install my dots
