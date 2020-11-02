@@ -3,6 +3,7 @@ android-studio
 authy
 autojump
 betterlockscreen
+bitwarden
 brlaser
 citra-qt-git
 color-picker

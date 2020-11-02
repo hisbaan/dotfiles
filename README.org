@@ -1,6 +1,6 @@
 #+STARTUP: inlineimages
 
-* Screenshots
+* Preview
 
 [[Pictures/screenshots/desktop-screenshots/desktop-screenshot-01.png]]
 
@@ -10,30 +10,39 @@
 
 [[Pictures/screenshots/desktop-screenshots/desktop-screenshot-04.png]]
 
-* Software and links
-| *Item*                  | *Program*                     | *Config*        |
-|-------------------------+-------------------------------+-----------------|
-| *OS*                    | [[https://archlinux.org][Arch Linux]]                    | \-              |
-| *WM*                    | [[https://github.com/baskerville/bspwm][bspwm]]                         | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/bspwm/bspwmrc][config]]          |
-| *Hotkey Daemon*         | [[https://github.com/baskerville/sxhkd][sxhkd]]                         | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/sxhkd/sxhkdrc][config]]          |
-| *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]           | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/picom/picom.conf][config]]          |
-| *Bar*                   | [[https://github.com/polybar/polybar][Polybar]]                       | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/polybar/config][config]]          |
-| *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                         | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/kitty/kitty.conf][config]]          |
-| *Color Scheme*          | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.xcolors/onedark-custom][Atom One Dark Custom]]          | \-              |
-| *Shell*                 | [[https://www.zsh.org/][zsh]]                           | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/zsh/.zshrc][config]]          |
-| *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]                    | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.doom.d/][config]]          |
-| *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]]       | \-              |
-| *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                          | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/rofi/config.rasi][config]]          |
-| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]          | \-              |
-| *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                         | \-              |
-| *Music Player*          | [[https://www.musicpd.org/][mpd]] + [[https://github.com/ncmpcpp/ncmpcpp][ncmpcpp]]                 | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/mpd/mpd.conf][config]] + [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ncmpcpp/config][config]] |
-| *Terminal File Manager* | [[https://github.com/ranger/ranger][Ranger]]                        | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ranger/rc.conf][config]]          |
-| *GUI File Manager*      | [[https://gitlab.gnome.org/GNOME/nautilus][Nautilus]]                      | \-              |
-| *Notification Daemon*   | [[https://github.com/dunst-project/dunst][Dunst]]                         | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/dunst/dunstrc][config]]          |
-| *Video Player*          | [[https://mpv.io/][mpv]] + [[https://celluloid-player.github.io/][Celluloid]]               | \-              |
-| *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                       | \-              |
-| *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                          | \-              |
-| *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                       | \-              |
+* System Info
+| *Item*                  | *Program*               | *Config*        |
+|-------------------------+-------------------------+-----------------|
+| *OS*                    | [[https://archlinux.org][Arch Linux]]              | \-              |
+| *WM*                    | [[https://github.com/baskerville/bspwm][bspwm]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/bspwm/bspwmrc][config]]          |
+| *Hotkey Daemon*         | [[https://github.com/baskerville/sxhkd][sxhkd]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/sxhkd/sxhkdrc][config]]          |
+| *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/picom/picom.conf][config]]          |
+| *Bar*                   | [[https://github.com/polybar/polybar][Polybar]]                 | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/polybar/config][config]]          |
+| *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/kitty/kitty.conf][config]]          |
+| *Color Scheme*          | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.xcolors/onedark-custom][Atom One Dark Custom]]    | \-              |
+| *Shell*                 | [[https://www.zsh.org/][zsh]]                     | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/zsh/.zshrc][config]]          |
+| *AUR Helper*            | [[https://github.com/Morganamilo/paru][paru]]                    | \-              |
+| *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.doom.d/][config]]          |
+| *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
+| *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/rofi/config.rasi][config]]          |
+| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | \-              |
+| *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                   | \-              |
+| *Music Player*          | [[https://www.musicpd.org/][mpd]] + [[https://github.com/ncmpcpp/ncmpcpp][ncmpcpp]]           | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/mpd/mpd.conf][config]] + [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ncmpcpp/config][config]] |
+| *Terminal File Manager* | [[https://github.com/ranger/ranger][Ranger]]                  | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/ranger/rc.conf][config]]          |
+| *GUI File Manager*      | [[https://gitlab.gnome.org/GNOME/nautilus][Nautilus]]                | \-              |
+| *Notification Daemon*   | [[https://github.com/dunst-project/dunst][Dunst]]                   | [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.config/dunst/dunstrc][config]]          |
+| *Video Player*          | [[https://mpv.io/][mpv]] + [[https://celluloid-player.github.io/][Celluloid]]         | \-              |
+| *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                 | \-              |
+| *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                    | \-              |
+| *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                 | \-              |
+
+* Installation
+** Manual:
+- Clone the repo and migrate files as necessary.
+- All of my installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files
+
+** Automatic:
+- /Under construction:/ I'll have another repo that you can clone to install my dots
 
 * Notable Scripts
 ** [[https://github.com/hisbaan/dotfiles-laptop/tree/master/.local/bin/update-theme][update-theme]]

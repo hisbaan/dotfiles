@@ -266,7 +266,8 @@ label-foreground = ${colors.background}
 type = custom/text
 content-background = ${colors.background}
 content-foreground = ${colors.foreground}
-content = "%{T3}  %{T-}"
+; content = "%{T3}  %{T-}"
+content = "   "
 content-overline = ${colors.background}
 content-underline = ${colors.background}
 
