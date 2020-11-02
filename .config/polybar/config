@@ -71,7 +71,7 @@ override-redirect = false
 bottom = false
 fixed-center = true
 width = 100%
-height = 20
+height = 25
 ;offset-x = 1%
 ;offset-y = 1%
 
@@ -295,7 +295,8 @@ content-foreground = ${colors.background}
 type = custom/text
 content-background = ${colors.background}
 content-foreground = ${colors.foreground}
-content = "%{T3}  %{T-}"
+; content = "%{T3}  %{T-}"
+content = "   "
 content-overline = ${colors.background}
 content-underline = ${colors.background}
 
