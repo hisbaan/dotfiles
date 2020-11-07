@@ -67,11 +67,11 @@ monitor = eDP-1
 monitor-strict = false
 override-redirect = false
 bottom = false
-fixed-center = true
-width = 100%
-height = 45
-;offset-x = 1%
-;offset-y = 1%
+fixed-center = false
+width = 3840
+height = 55
+; offset-x = 20
+; offset-y = 20
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -98,7 +98,8 @@ font-0 = MesloLGS:size=22;5
 font-1 = MesloLGS Nerd Font Mono:size=36;8
 font-2 = Material Design Icons Desktop:pixelsize=26;5
 
-modules-left = bspwm space mode
+; modules-left = bspwm space mode
+modules-left = bspwm
 modules-right = divider memory divider cpu divider pavolume divider battery divider wireless-network divider date
 
 tray-position = right
@@ -110,7 +111,6 @@ tray-offset-y = 0
 tray-padding = 10
 tray-scale = 1.0
 
-#i3: Make the bar appear below windows
 wm-restack = bspwm
 ;override-redirect = true
 
@@ -167,7 +167,7 @@ ws-icon-default = ""
 format = <label-state> <label-mode>
 
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.accent}
 
@@ -220,7 +220,7 @@ label-occupied-background = ${colors.background}
 
 label-empty =
 label-empty-foreground = ${colors.foreground}
-label-empty-padding = 3
+label-empty-padding = 2
 label-empty-background = ${colors.background}
 
 label-monocle = "  "
@@ -270,12 +270,6 @@ content-foreground = ${colors.foreground}
 content = "   "
 content-overline = ${colors.background}
 content-underline = ${colors.background}
-
-[module/space]
-type = custom/text
-content = "  "
-content-background = ${colors.background}
-content-foreground = ${colors.background}
 
 ###################
 ### MODULES A-Z ###
@@ -345,7 +339,7 @@ format-discharging-underline = ${colors.background}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
-format-full-prefix = "󰁹 "
+format-full-prefix = "󰁹"
 format-full-prefix-foreground = #a3c725
 format-full-underline = %{colors.background}
 format-foreground = ${colors.foreground}
@@ -411,7 +405,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 
 click-left=kitty -e bashtop
@@ -506,7 +500,7 @@ label-disconnected-background = ${colors.background}
 format-disconnected = disconnected
 format-disconnected-foreground = ${colors.alert}
 format-disconnected-background = ${colors.background}
-format-disconnected-prefix = "󰤫 "
+format-disconnected-prefix = "󰤫"
 format-disconnected-prefix-foreground = ${colors.alert}
 format-disconnected-prefix-background = ${colors.background}
 ; format-disconnected-underline =${colors.alert}
@@ -525,7 +519,7 @@ ramp-signal-foreground = ${colors.foreground}
 ;https://github.com/jaagr/polybar/wiki/Module:-xbacklight
 type = internal/xbacklight
 format = <label> <bar>
-format-prefix = "   "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.background}
 format-prefix-underline = #9f78e1

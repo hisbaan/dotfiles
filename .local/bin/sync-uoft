@@ -1,3 +1,0 @@
-#!/bin/sh
-
-unison ~/Documents/uoft ssh://hisbaan@10.0.0.160/Documents/uoft

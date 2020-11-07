@@ -1,0 +1,4 @@
+root = /home/hisbaan/Documents/uoft
+root = ssh://hisbaan@10.0.0.160/Documents/uoft
+
+ignore = Path *csc110/project/climate-change-qol
