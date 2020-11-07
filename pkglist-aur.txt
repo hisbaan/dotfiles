@@ -3,6 +3,7 @@ android-studio
 authy
 autojump
 betterlockscreen
+bitwarden
 brlaser
 citra-qt-git
 color-picker
@@ -18,8 +19,9 @@ mu
 nerd-fonts-meslo
 nomachine
 onlyoffice-bin
+pandoc-bin
 paru
-pfetch
+pfetch-git
 picom-ibhagwan-git
 polybar
 pycharm-professional

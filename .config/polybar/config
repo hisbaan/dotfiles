@@ -100,7 +100,8 @@ font-0 = MesloLGS:size=10;2
 font-1 = MesloLGS Nerd Font Mono:size=15;4.5
 font-2 = Material Design Icons Desktop:pixelsize=11;2
 
-modules-left = bspwm space mode
+;modules-left = bspwm space mode
+modules-left = bspwm space
 modules-right = divider memory divider cpu divider pavolume divider date
 
 separator = 
@@ -238,7 +239,7 @@ label-occupied-background = ${colors.background}
 
 label-empty = 
 label-empty-foreground = ${colors.foreground}
-label-empty-padding = 3
+label-empty-padding = 2
 label-empty-background = ${colors.background}
 
 label-monocle = "  "

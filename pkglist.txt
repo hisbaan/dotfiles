@@ -30,6 +30,7 @@ dialog
 dunst
 efibootmgr
 emacs
+espeak
 exfat-utils
 fakeroot
 feh
@@ -60,7 +61,6 @@ lib32-ocl-icd
 lib32-openal
 lib32-v4l-utils
 lib32-vulkan-icd-loader
-libreoffice-fresh
 libtool
 linux
 linux-firmware
@@ -71,6 +71,7 @@ lolcat
 luit
 lutris
 lxappearance
+lynx
 m4
 make
 meld
@@ -80,6 +81,7 @@ nautilus
 ncmpcpp
 neofetch
 neovim
+net-snmp
 networkmanager
 nitrogen
 nmap
@@ -94,7 +96,6 @@ obs-studio
 openresolv
 otf-ipafont
 pacman-contrib
-pandoc
 patch
 pavucontrol
 pdfsam
@@ -121,6 +122,7 @@ rsync
 rxvt-unicode
 s-tui
 sane
+smbclient
 speedtest-cli
 steam
 sudo

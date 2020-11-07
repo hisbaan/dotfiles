@@ -29,6 +29,8 @@
       doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13)
       doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13 :weight 'light))
 
+(setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -46,6 +48,14 @@
 (setq confirm-kill-emacs nil)
 
 (bind-key "M-i" #'company-complete)
+
+(defun compile-latex ()
+  (interactive)
+  (save-buffer)
+  (shell-command (concat "pdflatex " buffer-file-name)))
+(map! :leader
+      :desc "Compile LaTeX document using pdflatex"
+      "c l" 'compile-latex)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
