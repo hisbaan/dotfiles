@@ -405,7 +405,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 click-left=kitty -e bashtop
@@ -424,7 +424,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = %percentage:2%%
+label = %percentage:1%%
 
 [module/date]
 ;https://github.com/jaagr/polybar/wiki/Module:-date
@@ -500,7 +500,7 @@ label-disconnected-background = ${colors.background}
 format-disconnected = disconnected
 format-disconnected-foreground = ${colors.alert}
 format-disconnected-background = ${colors.background}
-format-disconnected-prefix = "󰤫"
+format-disconnected-prefix = "󰤫 "
 format-disconnected-prefix-foreground = ${colors.alert}
 format-disconnected-prefix-background = ${colors.background}
 ; format-disconnected-underline =${colors.alert}

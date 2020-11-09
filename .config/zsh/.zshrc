@@ -60,6 +60,14 @@ then
   clear # Clear artifacts
 fi
 
+# History
+export HISTFILE="$HOME/.config/zsh/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt append_history
+setopt hist_expire_dups_first
+setopt share_history
+
 # Environmental Variables
 if [[ -n $SSH_CONNECTION ]]
 then
@@ -71,17 +79,21 @@ fi
 export DISPLAY=":0"
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
-export HISTFILE="$HOME/.config/zsh/history"
 export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
 
-# Enable Vim mode in ZSH
-bindkey -v
-export KEYTIMEOUT=1
+[[ -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompcache" ]] || mkdir -p -- "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompcache"
+autoload -Uz compinit
+compinit -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump"
 zstyle ':completion:*' menu select
 zmodload zsh/complist
+
+# Enable Vim mode in ZSH
+
+bindkey -v
+export KEYTIMEOUT=1
 autoload -U edit-command-line
 zle -N edit-command-line
 
