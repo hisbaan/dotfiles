@@ -1,23 +1,3 @@
-# colors for man pages
-function man () {
-    # mb - Start blinking
-    # md - Start bold mode
-    # me - End all mode like so, us, mb, md and mr
-    # so - Start standout mode
-    # se - End standout mode
-    # us - Start underlining
-    # ue - End underlining
-
-    LESS_TERMCAP_mb=$'\e[01;31m' \
-    LESS_TERMCAP_md=$'\e[01;38;5;44m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[38;5;206m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[04;38;5;119m' \
-    command man "$@"
-}
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -27,7 +7,32 @@ fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Aliases
+###############################
+### Cleaning Home Directory ###
+###############################
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CONFIG_DIRS=/etc/xdg
+
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
+export NVM_DIR="$XDG_DATA_HOME"/nvm
+export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
+
+alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
+
+###############
+### Aliases ###
+###############
+
 alias cat="bat $argv"
 alias cp="cp -i $argv"
 alias df="df -h $argv"
@@ -38,7 +43,10 @@ alias ls='ls --color=auto'
 alias mv="mv -i $argv"
 alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
 
-# Setting tty colour scheme
+###################
+### TTY Colours ###
+###################
+
 if [ "$TERM" = "linux" ]
 then
   echo -en "\e]P0000000"
@@ -60,7 +68,10 @@ then
   clear # Clear artifacts
 fi
 
-# History
+###############
+### History ###
+###############
+
 export HISTFILE="$HOME/.config/zsh/.zsh_history"
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -68,7 +79,10 @@ setopt append_history
 setopt hist_expire_dups_first
 setopt share_history
 
-# Environmental Variables
+###############
+### Env Var ###
+###############
+
 if [[ -n $SSH_CONNECTION ]]
 then
     export EDITOR='nvim'
@@ -82,7 +96,11 @@ export GDK_DPI_SCALE=0.5
 export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.config/emacs/bin/
+
+#############
+### Other ###
+#############
 
 [[ -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompcache" ]] || mkdir -p -- "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompcache"
 autoload -Uz compinit
@@ -90,19 +108,30 @@ compinit -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump"
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 
-# Enable Vim mode in ZSH
+################
+### Bindings ###
+################
 
 bindkey -v
 export KEYTIMEOUT=1
+
 autoload -U edit-command-line
 zle -N edit-command-line
 
+# Use hjkl to move around the tab menu
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 bindkey '^e' edit-command-line
+
+#################
+### Functions ###
+#################
+
+source ~/.config/zsh/functions.zsh
 
 ###############
 ### Plugins ###
@@ -112,11 +141,14 @@ bindkey '^e' edit-command-line
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-# Expand Ealias
-source ~/.config/zsh/plugins/expand-ealias/expand-ealias.plugin.zsh
+# zsh abbr
+source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
 
 # zsh autosuggestions
-source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh vim mode
+source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # fast syntax highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

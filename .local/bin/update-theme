@@ -2,7 +2,7 @@
 
 if [[ $# == 0 ]]
 then
-    THEME=$(ls $HOME/.xcolors/ | rofi -dmenu)
+    THEME=$(ls .xcolors | rofi -dmenu)
 elif [[ $# == 1 ]]
 then
     THEME=${1}
