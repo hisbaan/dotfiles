@@ -10,12 +10,25 @@ set pages-per-row 1
 #stop at page boundries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
-set scroll-step 50
+# set scroll-step 50
 
 #zoom settings
 set zoom-min 10
-set guioptions ""
 
 set render-loading "false"
 
-# map <C-i> include zathurarc-dark
+set recolor true
+
+set default-bg '#1e2127'
+set default-fg '#dfdfdf'
+
+set recolor-lightcolor '#1e2127'
+set recolor-darkcolor '#dfdfdf'
+
+set inputbar-bg '#1e2127'
+set inputbar-fg '#dfdfdf'
+
+set statusbar-bg '#1e2127'
+set statusbar-fg '#dfdfdf'
+
+set font "MesloLGS Nerd Font normal 10"

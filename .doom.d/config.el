@@ -53,9 +53,26 @@
   (interactive)
   (save-buffer)
   (shell-command (concat "pdflatex " buffer-file-name)))
+
 (map! :leader
       :desc "Compile LaTeX document using pdflatex"
       "c l" 'compile-latex)
+
+;; (defun run-latexmk ()
+;;   (interactive)
+;;   (let ((TeX-save-query nil)
+;;         (TeX-process-asynchronous nil)
+;;         (master-file (TeX-master-file)))
+;;     (TeX-save-document "")
+;;     (TeX-run-TeX "latexmk"
+;;          (TeX-command-expand "latexmk -pdf %t" 'TeX-master-file)
+;;          master-file)
+;;     (if (plist-get TeX-error-report-switches (intern master-file))
+;;         (TeX-next-error t)
+;;       (minibuffer-message "latexmk done"))))
+
+;; (add-hook 'LaTeX-mode-hook
+;;           (lambda () (local-set-key [SPC] (kbd "c-l") #'compile-latex)))
 
 ;(output-pdf "Zathura")
 

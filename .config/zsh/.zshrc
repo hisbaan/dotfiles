@@ -23,9 +23,8 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
+# export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
 export NVM_DIR="$XDG_DATA_HOME"/nvm
-export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
 
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
@@ -96,7 +95,7 @@ export GDK_DPI_SCALE=0.5
 export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.config/emacs/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
 
 #############
 ### Other ###
