@@ -31,4 +31,7 @@ set inputbar-fg '#dfdfdf'
 set statusbar-bg '#1e2127'
 set statusbar-fg '#dfdfdf'
 
+set highlight-active-color '#7218f2'
+set highlight-color '#bd93f9'
+
 set font "MesloLGS Nerd Font normal 10"

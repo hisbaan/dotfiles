@@ -1,0 +1,9 @@
+#!/bin/sh
+
+workflow=$(echo -e "The Machine Question\n" | rofi -dmenu)
+
+case "$workflow" in
+    "The Machine Question" )
+        zathura ~/Documents/uoft/csc199/book-review/the-machine-question.pdf &
+        emacsclient -c -a 'emacs' ~/Documents/uoft/csc199/book-review/notes.org & ;;
+esac
