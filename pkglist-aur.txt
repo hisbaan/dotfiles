@@ -25,6 +25,7 @@ mu
 nerd-fonts-meslo
 nomachine
 onlyoffice-bin
+pandoc-bin
 paru
 pfetch-git
 picom-ibhagwan-git
@@ -43,3 +44,5 @@ windscribe-cli
 xf86-input-mtrack
 ytop
 zoom
+zsh-abbr
+zsh-theme-powerlevel10k-git

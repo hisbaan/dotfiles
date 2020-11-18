@@ -1,11 +1,12 @@
 " Start vim plug
 call plug#begin('~/.config/nvim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'joshdick/onedark.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'dylanaraps/wal'
@@ -42,9 +43,9 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'minimalist'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme = 'minimalist'
 
 " Theme
 colorscheme wal

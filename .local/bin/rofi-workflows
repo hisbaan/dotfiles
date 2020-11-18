@@ -1,9 +1,16 @@
 #!/bin/sh
 
-workflow=$(echo -e "The Machine Question\n" | rofi -dmenu)
+workflow=$(echo -e "the machine question\nmat137 assignment 4\ncsc110 assignment 4" | rofi -dmenu)
 
 case "$workflow" in
-    "The Machine Question" )
+    "the machine question" )
         zathura ~/Documents/uoft/csc199/book-review/the-machine-question.pdf &
         emacsclient -c -a 'emacs' ~/Documents/uoft/csc199/book-review/notes.org & ;;
+    "mat137 assignment 4" )
+        zathura ~/Documents/uoft/mat137/assignments/assignment-04/137_2021_A4.pdf &
+        emacsclient -c -a 'emacs' ~/Documents/uoft/mat137/assignments/assignment-04/assignment-04.tex & ;;
+    "csc110 assignment 4" )
+        emacsclient -c -a 'emacs' ~/Documents/uoft/csc110/assignments/assignment-04/ &
+        firefox -new-window "https://www.teach.cs.toronto.edu/~csc110y/fall/assignments/a4/handout/" & ;;
+
 esac

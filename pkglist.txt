@@ -8,6 +8,7 @@ arch-wiki-docs
 arch-wiki-lite
 archiso
 asciinema
+aspell-en
 audacity
 autoconf
 automake
@@ -102,7 +103,6 @@ obs-studio
 openresolv
 otf-ipafont
 pacman-contrib
-pandoc
 patch
 pavucontrol
 pdftk
@@ -161,7 +161,6 @@ unzip
 urxvt-perls
 usbutils
 vi
-vim
 virtualbox
 wavemon
 which

@@ -1,7 +1,5 @@
 ### BSPWM hotkeys ###
 
-echo "" > ~/.config/bspwm/bspwmrc
-
 # close and kill
 super + shift + q
     bspc node -c
@@ -30,6 +28,10 @@ super + ctrl + {m,x,y,z}
 super + shift + r
     killall -9 sxhkd && bspc wm -r
 
+#############
+### Focus ###
+#############
+
 # focus or swap the node in the given direction
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
@@ -55,7 +57,9 @@ super + {_,shift + }{1-9}
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
 
-# PRESELECT
+#################
+### Preselect ###
+#################
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -73,7 +77,9 @@ super + ctrl + space
 super + ctrl + shift + space
     bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# MOVE/RESIZE
+###################
+### Move/Resize ###
+###################
 
 # puts text into an identifier file then runs the resize chord.
 super + r
@@ -89,14 +95,15 @@ super + XF86Eject : {h,j,k,l,Return}
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
 
-### Application keybindings ###
+####################
+### Applications ###
+####################
 
-# terminal emulator
+# kitty (terminal emulator)
 super + Return
       kitty
-      # kitty --single-instance
-      #urxvt
 
+# floating kitty
 super + shift + Return
       bspc rule -a kitty state=floating; \
       kitty -c ~/.config/kitty/kitty-floating.conf; \
@@ -106,14 +113,25 @@ super + shift + Return
 super + d
     noswallow_rofi
 
+# rofi-workflows
+super + o
+    rofi-workflows
+
+# rofi-file-launcher
+super + shift + d
+    rofi-file-launcher
+
 # firefox
 super + w
     firefox
 
+# flameshot (screenshot)
 Print
     flameshot gui
 
-### Media keys ###
+##################
+### Media Keys ###
+##################
 
 # pause/play music
 XF86AudioPlay
@@ -147,7 +165,9 @@ XF86AudioLowerVolume
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-### System control ###
+######################
+### System Control ###
+######################
 
 # put text into an identifier file then run the power states chord
 super + 0
