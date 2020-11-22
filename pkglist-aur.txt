@@ -35,3 +35,5 @@ wd719x-firmware
 windscribe-cli
 ytop
 zoom
+zsh-abbr
+zsh-theme-powerlevel10k-git

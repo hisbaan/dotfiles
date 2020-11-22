@@ -1,0 +1,38 @@
+* {
+	background-color: #1E2127;
+	text-color: #ABB2BF;
+	spacing: 0;
+	width: 720px;
+}
+
+inputbar {
+	border: 0 0 1px 0;
+	children: [prompt, entry];
+}
+
+prompt {
+	padding: 16px;
+}
+
+textbox {
+	padding: 8px 16px;
+}
+
+entry {
+	padding: 16px;
+}
+
+listview {
+	cycle: false;
+	margin: 0 0 -1px 0;
+	scrollbar: false;
+}
+
+element {
+	padding: 16px;
+}
+
+element selected {
+	background-color: #BD93F9;
+	text-color: #1E2127;
+}

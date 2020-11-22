@@ -7,6 +7,7 @@ arch-wiki-lite
 archiso
 aria2
 asciinema
+aspell-en
 audacity
 autoconf
 automake
@@ -46,6 +47,8 @@ gimp
 git
 gradle
 htop
+hyphen-en
+inetutils
 jdk11-openjdk
 kitty
 lib32-gamemode
@@ -61,6 +64,7 @@ lib32-ocl-icd
 lib32-openal
 lib32-v4l-utils
 lib32-vulkan-icd-loader
+libreoffice-fresh
 libtool
 linux
 linux-firmware
@@ -153,7 +157,6 @@ unrar
 unzip
 usbutils
 vi
-vim
 virtualbox
 wget
 which
