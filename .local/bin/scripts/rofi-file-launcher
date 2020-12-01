@@ -1,6 +1,7 @@
 #!/bin/env bash
 
 file_to_open="$(find ~ -type f ! -path "/home/hisbaan/.*" ! -path "/home/hisbaan/Pictures/Photos Library.photoslibrary/*" ! -path "/home/hisbaan/Music/*" ! -path "/home/hisbaan/Android/*" ! -path "/home/hisbaan/Games/*" ! -path *.git* ! -path *.auctex* ! -path *.hypothesis* ! -path *.pytest_cache* ! -path *.lock* | rofi -dmenu)"
+# file_to_open="$(find -type f | rofi -dmenu)"
 
 echo "$file_to_open"
 
