@@ -8,8 +8,6 @@
 (setq user-full-name "Hisbaan Noorani"
       user-mail-address "hisbaan@gmail.com")
 
-(setq-default tab-width 4)
-
 ;;;;;;;;;;
 ;; Font ;;
 ;;;;;;;;;;
@@ -25,12 +23,32 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock0keyword-face :slant italic))
 
-(setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
-
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
+
+;;;;;;;;;;
+;; Tabs ;;
+;;;;;;;;;;
+
+(setq-default tab-width 4)
+
+;; (setq custom-tab-width 4)
+
+;; (defun disable-tabs () (setq indent-tabs-mode nil))
+;; (defun enable-tabs  ()
+;;   (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+;;   (setq indent-tabs-mode t)
+;;   (setq tab-width custom-tab-width))
+
+;; (add-hook 'prog-mode-hook 'enable-tabs)
+;; (add-hook 'org-mode-hook 'enable-tabs)
+
+;; (setq-default python-indent-offset custom-tab-width)
+;; (setq-default evil-shift-width custom-tab-width)
+
+; (setq backward-delete-char-untabify-method 'hungry)
 
 ;;;;;;;;;;;;;;
 ;; Org Mode ;;
@@ -51,6 +69,8 @@
 ;;;;;;;;;;;
 ;; LaTeX ;;
 ;;;;;;;;;;;
+
+(setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
 (defun compile-latex ()
   (interactive)
@@ -79,9 +99,18 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; CONFIGURE SPELL CHECK ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;
+;; Misc ;;
+;;;;;;;;;;
+
+;; (setq mode-require-final-newline nil)
+;; (setq require-final-newline nil)
+;; (require 'elcord)
+;; (elcord-mode)
+
+;;;;;;;;;;;;;;;;;
+;; Spell Check ;;
+;;;;;;;;;;;;;;;;;
 
 ;; if (aspell installed) { use aspell}
 ;; else if (hunspell installed) { use hunspell }

@@ -1,11 +1,13 @@
 aic94xx-firmware
+anbox-git
+anbox-image-gapps
 android-studio
 authy
 autojump
 betterlockscreen
 bitwarden
 brlaser
-citra-qt-git
+citra-qt-bin
 color-picker
 davinci-resolve
 discord_arch_electron
