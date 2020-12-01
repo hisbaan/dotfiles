@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]
+then
+    echo "1007164587" | xclip -selection clipboard
+else
+    echo "1007164587"
+fi

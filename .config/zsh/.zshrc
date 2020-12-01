@@ -96,7 +96,7 @@ export GDK_DPI_SCALE=0.5
 export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/scripts/
 
 #############
 ### Other ###
