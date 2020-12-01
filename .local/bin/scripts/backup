@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -auhAP --numeric-ids --info=progress2 --exclude={'/home/hisbaan/.cache','/mnt','/proc','/lost+found'} / /mnt/storage/backup/archeops/

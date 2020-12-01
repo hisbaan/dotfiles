@@ -93,7 +93,7 @@ fi
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
-export PATH=$PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/
 
 #############
 ### Other ###

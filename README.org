@@ -44,7 +44,7 @@
 - /Under construction:/ I’ll have another repo that you can clone to install my dots
 
 * Notable Scripts
-** [[https://github.com/hisbaan/dotfiles/tree/master/.local/bin/update-theme][update-theme]]
+** [[https://github.com/hisbaan/dotfiles/tree/master/.local/bin/scripts/update-theme][update-theme]]
 Reads a theme from the .xcolors directory and applies it to xresources and all used applications.
-** [[https://github.com/hisbaan/dotfiles/tree/master/.local/bin/addcolorscheme][addcolorscheme]]
+** [[https://github.com/hisbaan/dotfiles/tree/master/.local/bin/scripts/addcolorscheme][addcolorscheme]]
 Creates a colour scheme in a format that [[https://github.com/hisbaan/dotfiles/tree/master/.local/bin/update-theme][update-theme]] can read and places it in the .xcolors directory based on user input.
