@@ -100,9 +100,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; CONFIGURE SPELL CHECK ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;; Spell Check ;;
+;;;;;;;;;;;;;;;;;
 
 ;; if (aspell installed) { use aspell}
 ;; else if (hunspell installed) { use hunspell }
