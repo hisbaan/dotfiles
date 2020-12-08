@@ -340,12 +340,16 @@ format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
 format-full-prefix = "󰁹"
-format-full-prefix-foreground = #a3c725
-format-full-underline = %{colors.background}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+; format-full-prefix-foreground = #a3c725
+format-full-underline = ${colors.background}
+format-full-foreground = ${colors.foreground}
+; format-foreground = ${colors.foreground}
+; format-background = ${colors.background}
+format-full-background = ${colors.background}
+; format-foreground = ${colors.foreground}
+; format-background = ${colors.background}
 
-ramp-capacity-font = 2
+;ramp-capacity-font = 2
 ramp-capacity-0 = 󰁺
 ramp-capacity-1 = 󰁻
 ramp-capacity-2 = 󰁼
@@ -358,7 +362,7 @@ ramp-capacity-8 = 󰂂
 ramp-capacity-9 = 󰁹
 ramp-capacity-foreground = ${colors.foreground}
 
-ramp-charging-font = 2
+;ramp-charging-font = 2
 ramp-charging-0 = 󰢜
 ramp-charging-1 = 󰂆
 ramp-charging-2 = 󰂇
@@ -371,7 +375,7 @@ ramp-charging-8 = 󰂋
 ramp-charging-9 = 󰂅
 ramp-charging-foreground = #a3c725
 
-animation-charging-font = 2
+;animation-charging-font = 2
 animation-charging-0 = 󰢜
 animation-charging-1 = 󰂆
 animation-charging-2 = 󰂇
