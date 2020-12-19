@@ -33,6 +33,7 @@ teams
 themix-full-git
 trello
 ttf-meslo
+vscodium-bin
 wd719x-firmware
 windscribe-cli
 ytop

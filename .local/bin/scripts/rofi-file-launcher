@@ -37,6 +37,9 @@ case "$mime_type" in
 
     video/mp4 | video/x-matroska | video/mov )
         celluloid "$file_to_open" ;;
+
+    * )
+        xdg-open "$file_to_open" ;;
 esac
 
 # case "$file_extension" in

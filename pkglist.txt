@@ -32,14 +32,17 @@ dunst
 efibootmgr
 emacs
 espeak
+exa
 exfat-utils
 fakeroot
+fd
 feh
 figlet
 firefox
 fish
 flameshot
 flex
+foliate
 fzf
 gamemode
 gcc
@@ -47,6 +50,7 @@ gimp
 git
 gradle
 htop
+httrack
 hyphen-en
 inetutils
 jdk11-openjdk
@@ -184,7 +188,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -217,6 +220,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud

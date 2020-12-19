@@ -38,7 +38,7 @@ alias df="df -h "
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
-alias ls="ls --color=auto"
+alias ls="exa --color=auto"
 alias mv="mv -i $argv"
 alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
 alias sudo='sudo '
@@ -146,6 +146,14 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
+
+# Proper history behaviour
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+
+bindkey "\e[A" history-beginning-search-backward-end
+bindkey "\e[B" history-beginning-search-forward-end
 
 # fast syntax highlighting -- should be last
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
