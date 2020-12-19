@@ -35,6 +35,7 @@ dunst
 efibootmgr
 emacs
 ethtool
+exa
 exfat-utils
 fakeroot
 fd
@@ -43,6 +44,7 @@ firefox
 fish
 flameshot
 flex
+foliate
 fprintd
 fwupd
 fzf
@@ -52,6 +54,7 @@ gimp
 git
 gradle
 groff
+hsetroot
 htop
 intel-gpu-tools
 intel-ucode
@@ -81,6 +84,8 @@ linux
 linux-firmware
 linux-headers
 linux-lts
+linux-zen
+linux-zen-headers
 lolcat
 luit
 lutris
@@ -116,6 +121,7 @@ pulseeffects
 python-pip
 python-pywal
 qemu
+qt5ct
 ranger
 redshift
 refind
@@ -184,7 +190,6 @@ xorg-server-devel
 xorg-server-xephyr
 xorg-server-xnest
 xorg-server-xvfb
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -215,6 +220,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud

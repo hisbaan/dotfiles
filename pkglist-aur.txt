@@ -1,4 +1,6 @@
 aic94xx-firmware
+anbox-git
+anbox-image-gapps
 android-studio
 authy
 autojump
@@ -39,6 +41,7 @@ themix-full-git
 trello
 ttf-material-wifi-icons-git
 ttf-meslo
+vscodium-bin
 wd719x-firmware
 windscribe-cli
 xf86-input-mtrack

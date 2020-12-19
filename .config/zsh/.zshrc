@@ -38,10 +38,11 @@ alias df="df -h $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
-alias ls='ls --color=auto'
+alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias rs='rsync --numeric-ids --info=progress2'
 
 ###################
 ### TTY Colours ###
