@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rsync -auhAP "sudo -u hisbaan ssh" --numeric-ids --info=progress2 --exclude '/home/hisbaan/.cache' / hisbaan@10.0.0.160:/mnt/storage/backup/archen/
+rsync -auhAP "sudo -u hisbaan ssh" --numeric-ids --info=progress2 --exclude{'/home/hisbaan/.cache', '/mnt', '/proc', '/lost+found', '/tmp'} / hisbaan@10.0.0.160:/mnt/storage/backup/archen/

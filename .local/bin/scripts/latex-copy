@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+# deps: bspwm, texlive, emacs, xclip
+
+cd /tmp
+
+bspc rule -a Emacs --one-shot state=floating;
+
+> /tmp/latex-copy.tex
+emacsclient -c -a 'emacs' /tmp/latex-copy.tex
+# emacsclient -nw -c -a 'emacs' /tmp/latex-copy.tex
+xclip /tmp/latex-copy.tex -selection clipboard
