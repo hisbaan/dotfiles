@@ -24,7 +24,7 @@
 | *AUR Helper*            | [[https://github.com/Morganamilo/paru][paru]]                    | \-              |
 | *Editor*                | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[.doom.d/][config]]          |
 | *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
-| *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[.config/rofi/config.rasi][config]]          |
+| *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[.config/rofi/config][config]]          |
 | *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | \-              |
 | *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                   | \-              |
 | *Music Player*          | [[https://www.musicpd.org/][mpd]] + [[https://github.com/ncmpcpp/ncmpcpp][ncmpcpp]]           | [[.config/mpd/mpd.conf][config]] + [[.config/ncmpcpp/config][config]] |
@@ -42,7 +42,7 @@
 - All of my explicityly installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files.
 ** Automatic /(Arch Linux only, work in progress)/:
 - Run the following set of commands on an Arch Linux system.
-  #+begin_src sh
+  #+begin_src
 git clone https://github.com/hisbaan/hass $HOME/hass
 $HOME/hass/hass.sh
   #+end_src
