@@ -1,0 +1,21 @@
+set ideajoin
+
+" Sets the clipboard to be the ctrl+c/v one
+set clipboard+=unnamedplus
+
+" Splits open at the bottom and the right.
+set splitbelow splitright
+
+" Some basic stuff
+syntax on
+set nocompatible
+set number
+set hidden
+set ignorecase
+set smartcase
+
+" Shortcutting split navigation, saving a keypress:
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l

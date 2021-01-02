@@ -1,0 +1,22 @@
+# default dispad config file
+
+# name of the property used to enable/disable the trackpad
+property = "Trackpad Disable Input"
+
+# the value used to enable the trackpad
+enable = 0
+
+# the value used to disable the trackpad
+disable = 1
+
+# whether or not modifier keys disable the trackpad
+modifiers = false
+
+# how long (in ms) to sleep between keyboard polls
+poll = 100
+
+# how long (in ms) to disable the trackpad after a keystroke
+delay = 1000
+
+# create a pid file at the given location; not created if left commented
+pidfile = "/home/hisbaan/.config/dispad/dispad.pid"

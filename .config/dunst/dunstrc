@@ -1,5 +1,7 @@
 [global]
+    ###############
     ### Display ###
+    ###############
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -84,7 +86,9 @@
     # section for how to disable this if necessary
     idle_threshold = 120
 
+    ############
     ### Text ###
+    ############
 
     font = MesloLGS Nerd Font Mono 10
 
@@ -157,7 +161,9 @@
     # Display indicators for URLs (U) and actions (A).
     show_indicators = no
 
+    #############
     ### Icons ###
+    #############
 
     # Align icons left/right/off
     icon_position = left
@@ -168,7 +174,9 @@
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
+    ###############
     ### History ###
+    ###############
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
@@ -177,7 +185,9 @@
     # Maximum amount of notifications kept in history
     history_length = 20
 
+    #####################
     ### Misc/Advanced ###
+    #####################
 
     # dmenu path.
     dmenu = /usr/bin/rofi -dmenu -p dunst:
@@ -215,7 +225,9 @@
     # notification height to avoid clipping text and/or icons.
     corner_radius = 0
 
-    ### Legacy
+    ##############
+    ### Legacy ###
+    ##############
 
     # Use the Xinerama extension instead of RandR for multi-monitor support.
     # This setting is provided for compatibility with older nVidia drivers that
@@ -227,7 +239,9 @@
     # layout changes.
     force_xinerama = false
 
-    ### mouse
+    #############
+    ### Mouse ###
+    #############
 
     # Defines action of mouse event
     # Possible values are:
@@ -410,5 +424,3 @@
 #[stack-volumes]
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
-#
-# vim: ft=cfg

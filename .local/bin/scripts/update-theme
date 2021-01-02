@@ -11,6 +11,12 @@ else
     exit 1
 fi
 
+if [[ ! -f ~/.xcolors/$1 ]]
+then
+    echo "Theme not found in ~/.xcolors"
+    exit 1
+fi
+
 xresources="$HOME/.config/Xresources/Xresources"
 theme_name_dir=$HOME/.config/Xresources/current-theme
 current_theme=$(cat $theme_name_dir)
