@@ -1,11 +1,13 @@
 #!/bin/sh
 
+####################################
+### Merging Defaults and Keymaps ###
+####################################
+
 userresources=$HOME/.config/Xresources/Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
-
-# merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
     xrdb -merge $sysresources
@@ -23,16 +25,27 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# changing display refresh rate
+###############
+### Display ###
+###############
+
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
+
+##################
+### Key Repeat ###
+##################
 
 xset r rate 300 50
 
-# session=${1:bspwm}
-# case $session in
-#     awesome ) exec awesome;;
-#     bspwm   ) exec bspwm;;
-#     *       ) exec $1;;
-# esac
+############
+### Exec ###
+############
 
-exec bspwm
+session=${1:bspwm}
+case $session in
+    awesome ) exec awesome;;
+    bspwm   ) exec bspwm;;
+    *       ) exec bspwm;;
+esac
+
+# exec bspwm

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+command=$(echo -e "Cancel\nLock\nExit\nSuspend\nReboot\nShutdown" | rofi -dmenu)
+
+echo "$command"
+
+case "$command" in
+    Cancel      ) ;;
+    Lock        ) betterlockscreen -l ;;
+    Exit        ) bspc quit ;;
+    Suspend     ) systemctl suspend ;;
+    Reboot      ) reboot ;;
+    Shutdown    ) poweroff ;;
+esac

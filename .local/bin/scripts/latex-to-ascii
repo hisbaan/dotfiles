@@ -1,0 +1,32 @@
+#!/bin/env bash
+
+# deps: bspwm, texlive, emacs, pdflatex, catdvi
+
+cd /tmp
+
+bspc rule -a Emacs --one-shot state=floating
+
+> /tmp/latex-copy.tex
+# emacsclient -c -a 'emacs' /tmp/latex-copy.tex
+emacsclient -nw -c -a 'emacs' /tmp/latex-copy.tex
+
+echo "%&latex
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\qedsymbol}{(\blacksquare)}
+\renewcommand*{\proofname}{\underline{Pf}:}
+\pagestyle{empty}
+\title{TITLE}
+\author{Hisbaan Noorani}
+\date{DATE}
+\begin{document}
+\input{/tmp/latex-copy.tex}
+\end{document}" > /tmp/latex-to-ascii.tex
+latex /tmp/latex-to-ascii.tex > /dev/null
+catdvi /tmp/latex-to-ascii.dvi | xclip -selection clipboard

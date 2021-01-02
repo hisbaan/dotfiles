@@ -65,7 +65,6 @@ volume-max =
 ;https://github.com/jaagr/polybar/wiki/Configuration
 
 monitor = DVI-D-0
-;monitor-fallback = HDMI1
 monitor-strict = false
 override-redirect = false
 bottom = false
