@@ -38,12 +38,15 @@
 
 * Installation
 ** Manual:
-- Clone the repo and migrate files as necessary.
-- All of my installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files.
-
-** Automatic:
-- /Under construction:/ I'll have another repo that you can clone to install my dots
-
+- Clone the repo and migrate configuration files as necessary.
+- All of my explicityly installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files.
+** Automatic /(Arch Linux only, work in progress)/:
+- Run the following set of commands on an Arch Linux system.
+  #+begin_src sh
+git clone https://github.com/hisbaan/hass $HOME/hass
+$HOME/hass/hass.sh
+  #+end_src
+- Answer the prompts that appear.
 * Notable Scripts
 ** [[.local/bin/scripts/update-theme][update-theme]]
 Reads a theme from the .xcolors directory and applies it to xresources and all used applications.
