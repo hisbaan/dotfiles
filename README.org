@@ -44,7 +44,7 @@
 ** Automatic /(Arch Linux only, work in progress)/:
 Run the following set of commands on an Arch Linux system.
   #+BEGIN_SRC sh
-GIT CLONE HTTPs://github.com/hisbaan/hass $HOME/hass; \
+git clone https://github.com/hisbaan/hass $HOME/hass; \
 $HOME/hass/hass.sh
   #+END_SRC
 Answer the prompts that appear.
