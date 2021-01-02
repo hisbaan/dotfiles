@@ -1,3 +1,4 @@
+#+AUTHOR: Hisbaan Noorani
 #+STARTUP: inlineimages
 
 * Preview
@@ -41,12 +42,14 @@
 - Clone the repo and migrate configuration files as necessary.
 - All of my explicityly installed programs are in the ~pkglist.txt~ and ~pkglist-aur.txt~ files.
 ** Automatic /(Arch Linux only, work in progress)/:
-- Run the following set of commands on an Arch Linux system.
-  #+begin_src
-git clone https://github.com/hisbaan/hass $HOME/hass
+Run the following set of commands on an Arch Linux system.
+  #+BEGIN_SRC sh
+GIT CLONE HTTPs://github.com/hisbaan/hass $HOME/hass; \
 $HOME/hass/hass.sh
-  #+end_src
-- Answer the prompts that appear.
+  #+END_SRC
+Answer the prompts that appear.
+
+The script will create a backup folder for your old configs in ~~/hass-backup~. There will be an uninstall script in the future that assumes ~~/hass-backup~ exists so don't delete the folder if you're just trying out my config.
 * Notable Scripts
 ** [[.local/bin/scripts/update-theme][update-theme]]
 Reads a theme from the .xcolors directory and applies it to xresources and all used applications.
