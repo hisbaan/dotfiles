@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: normal-template
+# key: template
+# --
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
+
+\title{TITLE}
+\author{Hisbaan Noorani}
+\date{DATE}
+
+\begin{document}
+
+\end{document}

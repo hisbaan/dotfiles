@@ -1,0 +1,30 @@
+# -*- mode: snippet -*-
+# name: math-template
+# key: mathtemplate
+# --
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
+
+\DeclarePairedDelimiter\autobracket{(}{)}
+\newcommand{\br}[1]{\autobracket*{#1}}
+\DeclarePairedDelimiter\autosquarebracket{[}{]}
+\newcommand{\sbr}[1]{\autosquarebracket*{#1}}
+
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\renewcommand{\qedsymbol}{\(\blacksquare\)}
+\renewcommand*{\proofname}{\underline{Pf}:}
+\pagestyle{empty}
+
+\title{TITLE}
+\author{Hisbaan Noorani}
+\date{DATE}
+
+\begin{document}
+$0
+\end{document}

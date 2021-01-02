@@ -109,6 +109,12 @@ compinit -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump"
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 
+############################
+### Interactive Comments ###
+############################
+
+setopt interactivecomments
+
 ################
 ### Bindings ###
 ################
