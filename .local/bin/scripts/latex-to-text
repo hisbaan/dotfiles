@@ -27,6 +27,8 @@ echo "%&latex
 \date{DATE}
 \begin{document}
 \input{/tmp/latex-copy.tex}
-\end{document}" > /tmp/latex-to-ascii.tex
-latex /tmp/latex-to-ascii.tex > /dev/null
-catdvi /tmp/latex-to-ascii.dvi | xclip -selection clipboard
+\end{document}" > /tmp/latex-to-text.tex
+# might not need the whole big thing. Just the small latex file.
+# use pandoc to convert to txt (or just use the small latex file directly)
+# run it though a little replace thing where it interprets the plain text
+# (or use the one that you saw on github if you can find it again)

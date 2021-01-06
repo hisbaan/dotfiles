@@ -129,8 +129,6 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
-bindkey '^e' edit-command-line
-
 #################
 ### Functions ###
 #################
@@ -161,6 +159,7 @@ zle -N history-beginning-search-forward-end history-search-end
 
 bindkey "\e[A" history-beginning-search-backward-end
 bindkey "\e[B" history-beginning-search-forward-end
+bindkey -M viins '^e' edit-command-line
 
 # fast syntax highlighting -- should be last
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

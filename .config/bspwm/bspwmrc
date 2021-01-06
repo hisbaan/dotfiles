@@ -5,7 +5,7 @@
 #################
 
 sxhkd &
-picom --config ~/.config/picom/picom.conf &
+picom &
 nitrogen --restore &
 $HOME/.config/polybar/launch.sh &
 espanso start &
@@ -77,7 +77,7 @@ x=$(xwininfo -root | grep Width | awk '{print $2}')
 y=$(xwininfo -root | grep Height | awk '{print $2}')
 
 # bspc rule -a firefox center=true rectangle=${$((0.6 * x))%.}x${$((0.6 * y))%.}+0+0
-bspc rule -a firefox center=true rectangle=1280x720+0+0
+bspc rule -a firefox:Navigator center=true rectangle=1280x720+0+0
 # bspc rule -a kitty center=true rectangle=${$((0.36 * x))%.}x${$((0.3 * y))%.}+0+0
 bspc rule -a kitty center=true rectangle=700x400+0+0
 
