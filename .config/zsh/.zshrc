@@ -97,7 +97,7 @@ export GDK_DPI_SCALE=0.5
 export MOZ_USE_XINPUT2=1
 export MOZ_X11_EGL=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/
 
 #############
 ### Other ###
@@ -131,7 +131,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect '^[[Z' reverse-menu-complete
-bindkey -M viins '^x^e' edit-command-line
 
 #################
 ### Functions ###
@@ -164,6 +163,7 @@ zle -N history-beginning-search-forward-end history-search-end
 
 bindkey "\e[A" history-beginning-search-backward-end
 bindkey "\e[B" history-beginning-search-forward-end
+bindkey -M viins '^e' edit-command-line
 
 # fast syntax highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

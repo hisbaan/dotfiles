@@ -40,7 +40,7 @@ map <C-l> <C-w>l
 
 " Lightline
 let g:lightline = {
-    \ 'colorscheme': 'one',
+    \ 'colorscheme': 'darcula',
     \ }
 
 " Airline

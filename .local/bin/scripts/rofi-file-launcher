@@ -1,6 +1,16 @@
 #!/bin/env bash
 
-file_to_open="$(find ~ -type f ! -path "/home/hisbaan/.*" ! -path "/home/hisbaan/Pictures/Photos Library.photoslibrary/*" ! -path "/home/hisbaan/Music/*" ! -path "/home/hisbaan/Android/*" ! -path "/home/hisbaan/Games/*" ! -path *.git* ! -path *.auctex* ! -path *.hypothesis* ! -path *.pytest_cache* ! -path *.lock* | rofi -dmenu)"
+cache_dir=$HOME/.cache/rofi-file-launcher
+cache_file=$HOME/.cache/rofi-file-launcher/index
+[ ! -d $cache_dir ] && mkdir -p $cache_dir
+
+find $HOME/Documents -type f >> $cache_file
+find $HOME/.config -type f >> $cache_file
+
+# use this file to search for the rofi thing
+
+# file_to_open="$(find ~ -type f ! -path "/home/hisbaan/.*" ! -path "/home/hisbaan/Pictures/Photos Library.photoslibrary/*" ! -path "/home/hisbaan/Music/*" ! -path "/home/hisbaan/Android/*" ! -path "/home/hisbaan/Games/*" ! -path *.git* ! -path *.auctex* ! -path *.hypothesis* ! -path *.pytest_cache* ! -path *.lock* | rofi -dmenu)"
+file_to_open="$(find ~ -type f -path /home/hisbaan/Documents -path | rofi -dmenu)"
 
 echo "$file_to_open"
 
