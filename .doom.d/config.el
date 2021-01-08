@@ -105,96 +105,54 @@
 ;; MU4E ;;
 ;;;;;;;;;;
 
-;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-;; ;;(require 'smtpmail)
-;; (setq user-mail-address "fullname@gmail.com"
-;;       user-full-name  "Full Name"
-;;       ;; I have my mbsyncrc in a different folder on my system, to keep it separate from the
-;;       ;; mbsyncrc available publicly in my dotfiles. You MUST edit the following line.
-;;       ;; Be sure that the following command is: "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-;;       mu4e-get-mail-command "mbsync -c ~/.config/mu4e-dt/mbsyncrc -a"
-;;       mu4e-update-interval  300
-;;       mu4e-main-buffer-hide-personal-addresses t
-;;       message-send-mail-function 'smtpmail-send-it
-;;       starttls-use-gnutls t
-;;       smtpmail-starttls-credentials '(("smtp.1and1.com" 587 nil nil))
-;;       mu4e-sent-folder "/account-1/Sent"
-;;       mu4e-drafts-folder "/account-1/Drafts"
-;;       mu4e-trash-folder "/account-1/Trash"
-;;       mu4e-maildir-shortcuts
-;;       '(("/account-1/Inbox"      . ?i)
-;;         ("/account-1/Sent Items" . ?s)
-;;         ("/account-1/Drafts"     . ?d)
-;;         ("/account-1/Trash"      . ?t)))
+(use-package mu4e
+  :ensure nil
+  ;; :load-path "/usr/share/emacs/site-lisp/mu4e/"
+  ;; :defer 20 ; Wait until 20 seconds after startup
+  :config
 
-;; (defvar my-mu4e-account-alist
-;;   '(("acc1-domain"
-;;      (mu4e-sent-folder "/acc1-domain/Sent")
-;;      (mu4e-drafts-folder "/acc1-domain/Drafts")
-;;      (mu4e-trash-folder "/acc1-domain/Trash")
-;;      (mu4e-compose-signature
-;;        (concat
-;;          "Ricky Bobby\n"
-;;          "acc1@domain.com\n"))
-;;      (user-mail-address "acc1@domain.com")
-;;      (smtpmail-default-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-user "acc1@domain.com")
-;;      (smtpmail-stream-type starttls)
-;;      (smtpmail-smtp-service 587))
-;;     ("acc2-domain"
-;;      (mu4e-sent-folder "/acc2-domain/Sent")
-;;      (mu4e-drafts-folder "/acc2-domain/Drafts")
-;;      (mu4e-trash-folder "/acc2-domain/Trash")
-;;      (mu4e-compose-signature
-;;        (concat
-;;          "Suzy Q\n"
-;;          "acc2@domain.com\n"))
-;;      (user-mail-address "acc2@domain.com")
-;;      (smtpmail-default-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-user "acc2@domain.com")
-;;      (smtpmail-stream-type starttls)
-;;      (smtpmail-smtp-service 587))
-;;     ("acc3-domain"
-;;      (mu4e-sent-folder "/acc3-domain/Sent")
-;;      (mu4e-drafts-folder "/acc3-domain/Drafts")
-;;      (mu4e-trash-folder "/acc3-domain/Trash")
-;;      (mu4e-compose-signature
-;;        (concat
-;;          "John Boy\n"
-;;          "acc3@domain.com\n"))
-;;      (user-mail-address "acc3@domain.com")
-;;      (smtpmail-default-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-server "smtp.domain.com")
-;;      (smtpmail-smtp-user "acc3@domain.com")
-;;      (smtpmail-stream-type starttls)
-;;      (smtpmail-smtp-service 587))))
+  ;; This is set to 't' to avoid mail syncing issues when using mbsync
+  (setq mu4e-change-filenames-when-moving t)
 
-;; sourcing these blocks block so that I don't have to share email addresses publicly
-(load "~/.doom.d/email")
+  ;; Refresh mail using isync every 10 minutes
+  (setq mu4e-update-interval (* 10 60))
+  (setq mu4e-get-mail-command "mbsync -c '/home/hisbaan/.config/mu4e/mbsyncrc' -a")
+  ;; (setq mu4e-maildir "~/Mail/hisbaan-gmail")
+  (setq mu4e-root-maildir "~/Mail/hisbaan-gmail")
+  (setq my-mu4e-account-alist "hisbaan-gmail")
 
-(defun my-mu4e-set-account ()
-  "Set the account for composing a message."
-  (let* ((account
-          (if mu4e-compose-parent-message
-              (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
-                (string-match "/\\(.*?\\)/" maildir)
-                (match-string 1 maildir))
-            (completing-read (format "Compose with account: (%s) "
-                                     (mapconcat #'(lambda (var) (car var))
-                                                my-mu4e-account-alist "/"))
-                             (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
-                             nil t nil nil (caar my-mu4e-account-alist))))
-         (account-vars (cdr (assoc account my-mu4e-account-alist))))
-    (if account-vars
-        (mapc #'(lambda (var)
-                  (set (car var) (cadr var)))
-              account-vars)
-      (error "No email account found"))))
+  (setq mu4e-drafts-folder "/[Gmail]/Drafts")
+  (setq mu4e-sent-folder   "/[Gmail]/Sent Mail")
+  (setq mu4e-refile-folder "/[Gmail]/All Mail")
+  (setq mu4e-trash-folder  "/[Gmail]/Trash")
 
-(add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+  (setq mu4e-maildir-shortcuts
+      '(("/Inbox"             . ?i)
+        ("/[Gmail]/Sent Mail" . ?s)
+        ("/[Gmail]/Trash"     . ?t)
+        ("/[Gmail]/Drafts"    . ?d)
+        ("/[Gmail]/All Mail"  . ?a))))
 
+;; (defun my-mu4e-set-account ()
+;;   "Set the account for composing a message."
+;;   (let* ((account
+;;           (if mu4e-compose-parent-message
+;;               (let ((maildir (mu4e-message-field mu4e-compose-parent-message :maildir)))
+;;                 (string-match "/\\(.*?\\)/" maildir)
+;;                 (match-string 1 maildir))
+;;             (completing-read (format "Compose with account: (%s) "
+;;                                      (mapconcat #'(lambda (var) (car var))
+;;                                                 my-mu4e-account-alist "/"))
+;;                              (mapcar #'(lambda (var) (car var)) my-mu4e-account-alist)
+;;                              nil t nil nil (caar my-mu4e-account-alist))))
+;;          (account-vars (cdr (assoc account my-mu4e-account-alist))))
+;;     (if account-vars
+;;         (mapc #'(lambda (var)
+;;                   (set (car var) (cadr var)))
+;;               account-vars)
+;;       (error "No email account found"))))
+;; 
+;; (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
 
 ;;;;;;;;;;;;;;;;;
 ;; Spell Check ;;
