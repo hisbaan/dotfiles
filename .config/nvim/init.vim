@@ -1,16 +1,16 @@
-" Start vim plug
 call plug#begin('~/.config/nvim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
-Plug 'arcticicestudio/nord-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ap/vim-css-color'
 Plug 'dylanaraps/wal'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 " Sets the clipboard to be the ctrl+c/v one
@@ -18,9 +18,6 @@ set clipboard+=unnamedplus
 
 " Splits open at the bottom and the right.
 set splitbelow splitright
-
-" Save files as sudo on files that require root permisson 
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Some basic stuff
 syntax on
@@ -41,11 +38,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'minimalist'
+" Lightline
+let g:lightline = {
+    \ 'colorscheme': 'darcula',
+    \ }
 
 " Theme
 colorscheme wal
-" highlight Normal ctermbg=black

@@ -125,11 +125,8 @@ super + w
     firefox
 
 # flameshot (screenshot)
-Print
+{Print, Insert}
     flameshot gui
-
-Insert
-    xdotool key Print
 
 ##################
 ### Media Keys ###
@@ -156,15 +153,15 @@ XF86AudioStop
     mpc stop
 
 # increase volume and unmute
-XF86AudioRaiseVolume
+{XF86AudioRaiseVolume, super + equal}
     pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # lower volume and unmute
-XF86AudioLowerVolume
+{XF86AudioLowerVolume, super + minus}
     pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # mute audio
-XF86AudioMute
+{XF86AudioMute, super + BackSpace}
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ######################
