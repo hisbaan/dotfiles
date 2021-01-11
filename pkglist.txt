@@ -81,6 +81,7 @@ lolcat
 luit
 lutris
 lxappearance
+lxsession
 lynx
 m4
 make
@@ -108,12 +109,12 @@ otf-ipafont
 pacman-contrib
 patch
 pavucontrol
-pdfsam
 pdftk
 perl-file-mimeinfo
 piper
 pkgconf
 playerctl
+polkit-gnome
 pulseaudio-alsa
 python-pip
 python-pywal
@@ -132,6 +133,7 @@ rsync
 rxvt-unicode
 s-tui
 sane
+signal-desktop
 smbclient
 speedtest-cli
 steam
@@ -154,6 +156,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 tldr
+torbrowser-launcher
 transmission-cli
 transmission-qt
 tree

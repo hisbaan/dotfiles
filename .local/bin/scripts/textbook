@@ -2,24 +2,22 @@
 
 if [[ -z $1 ]]
 then
-    cd ~/Documents/textbooks/
-    zathura $(ls | grep 12.pdf | rofi -dmenu) &
+    cd ~/Documents/uoft/textbooks/
+    textbook=$(ls | grep pdf | rofi -dmenu -p textbook)
+    [ -f ~/Documents/uoft/textbooks/$textbook ] && zathura ~/Documents/uoft/textbooks/"$textbook"
 else
     case "$1" in
-	table)
-	    if [[ -z $2 ]]
-	    then
-		cd ~/Documents/textbooks/
-		zathura $(ls | grep 12-table.pdf | rofi -dmenu) &
-	    else
-		case "$2" in
-		    calc|calculus) zathura ~/Documents/textbooks/calculus12-table.pdf & exit 0 ;;
-		    phy|physics) zathura ~/Documents/textbooks/physics12-table.pdf & exit 0 ;;
-		    chem|chemistry) zathura ~/Documents/textbooks/chemistry12-table.pdf & exit 0 ;;
-		esac > /dev/null
-	    fi > /dev/null ;;
-	calc|calculus) zathura ~/Documents/textbooks/calculus12.pdf & exit 0 ;;
-	phy|physics) zathura ~/Documents/textbooks/physics12.pdf & exit 0 ;;
-	chem|chemistry) zathura ~/Documents/textbooks/chemistry12.pdf & exit 0 ;;
+        table)
+            if [[ -z $2 ]]
+            then
+                cd ~/Documents/uoft/textbooks/
+                textbook=$(ls | grep pdf | rofi -dmenu -p textbook)
+                [ -f ~/Documents/uoft/textbooks/$textbook ] && zathura ~/Documents/uoft/textbooks/"$textbook"
+            else
+            case "$2" in
+                linear-algebra|mat223|223) zathura ~/Documents/uoft/textbooks/mat223-linear-algebra.pdf ;;
+            esac > /dev/null
+            fi > /dev/null ;;
+        linear-algebra|mat223|223) zathura ~/Documents/uoft/textbooks/mat223-linear-algebra.pdf ;;
     esac > /dev/null
 fi > /dev/null

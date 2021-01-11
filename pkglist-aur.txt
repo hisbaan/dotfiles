@@ -16,6 +16,7 @@ espanso
 hfsprogs
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
+mbsync-git
 minecraft-launcher
 mu
 nerd-fonts-meslo
@@ -23,6 +24,7 @@ nomachine
 onlyoffice-bin
 pandoc-bin
 paru
+pdfsam
 pfetch-git
 picom-ibhagwan-git
 polybar
@@ -33,6 +35,7 @@ teams
 themix-full-git
 trello
 ttf-meslo
+via-bin
 vscodium-bin
 wd719x-firmware
 windscribe-cli

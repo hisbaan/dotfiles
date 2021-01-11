@@ -161,7 +161,7 @@ XF86AudioStop
     pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # mute audio
-{XF86AudioMute, super + BackSpace}
+{XF86AudioMute, super + 0, super + BackSpace}
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ######################
@@ -169,7 +169,7 @@ XF86AudioStop
 ######################
 
 # put text into an identifier file then run the power states chord
-super + 0
+super + Escape
     echo " (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift + s)hutdown " > ~/.config/bspwm/bspwm-chord-status; \
     xdotool key super+XF86Tools
 
@@ -177,11 +177,3 @@ super + 0
 super + XF86Tools ; {l,e,s,r,shift + s,Return}
     echo "" > ~/.config/bspwm/bspwm-chord-status; \
     {betterlockscreen -l,bspc quit,systemctl suspend,reboot,poweroff,xdotool key Escape}
-
-# brightness up
-XF86MonBrightnessUp
-    xbacklight -inc 2
-
-# brightness down
-XF86MonBrightnessDown
-    xbacklight -dec 2
