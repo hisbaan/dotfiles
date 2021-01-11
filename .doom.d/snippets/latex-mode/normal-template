@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: normal-template
-# key: template
+# key: temp
 # --
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}

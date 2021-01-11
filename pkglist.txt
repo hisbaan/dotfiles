@@ -12,6 +12,7 @@ aspell-en
 audacity
 autoconf
 automake
+awesome
 barrier
 base
 bashtop
@@ -111,6 +112,7 @@ pacman-contrib
 patch
 pavucontrol
 pdftk
+peek
 pkgconf
 playerctl
 polkit-gnome
@@ -134,6 +136,7 @@ rofi
 rsync
 s-tui
 scrot
+signal-desktop
 smartmontools
 speedtest-cli
 steam

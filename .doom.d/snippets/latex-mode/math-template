@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: math-template
-# key: mathtemplate
+# key: mtemp
 # --
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}

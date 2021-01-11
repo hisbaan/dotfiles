@@ -125,7 +125,7 @@ super + w
     firefox
 
 # flameshot (screenshot)
-Print
+{Print, Insert}
     flameshot gui
 
 ##################
@@ -153,15 +153,15 @@ XF86AudioStop
     mpc stop
 
 # increase volume and unmute
-XF86AudioRaiseVolume
+{XF86AudioRaiseVolume, super + equal}
     pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # lower volume and unmute
-XF86AudioLowerVolume
+{XF86AudioLowerVolume, super + minus}
     pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # mute audio
-XF86AudioMute
+{XF86AudioMute, super + 0}
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ######################
@@ -169,7 +169,7 @@ XF86AudioMute
 ######################
 
 # put text into an identifier file then run the power states chord
-super + 0
+super + Escape
     echo " (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift + s)hutdown " > ~/.config/bspwm/bspwm-chord-status; \
     xdotool key super+XF86Tools
 

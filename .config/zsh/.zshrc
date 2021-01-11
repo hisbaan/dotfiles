@@ -40,7 +40,6 @@ alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
-alias todo="emacsclient -c -a 'emacs' ~/Documents/uoft/todo.org"
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 alias rs='rsync --numeric-ids --info=progress2'
 

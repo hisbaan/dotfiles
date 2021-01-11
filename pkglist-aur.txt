@@ -1,6 +1,4 @@
 aic94xx-firmware
-anbox-git
-anbox-image-gapps
 android-studio
 authy
 autojump
@@ -24,6 +22,7 @@ intellij-idea-ultimate-edition-jre
 kimi-dark-gtk-theme-git
 libfprint-2-tod1-xps9300-bin
 masterpdfeditor-free
+mbsync-git
 minecraft-launcher
 mu
 nerd-fonts-meslo
