@@ -17,6 +17,7 @@
       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 45)
       doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font" :size 30)
       doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30 :weight 'light))
+;; (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -60,19 +61,30 @@
 (setq org-directory "~/Documents/org/"
       org-latex-packages-alist '(("margin=0.5in" "geometry" nil))
       org-hide-emphasis-markers t)
-      ;; org-highlight-latex-and-related t)
 
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+;; Use minted instead of verbatim to allow for syntax hilighting in LaTeX export
+(require 'org)
+(require 'ox-latex)
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
 
-(setq comfirm-kill-emacs nil)
+(setq org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
-; (bind-key "M-i" #'company-complete)
+(setq org-src-fontify-natively t)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((R . t)
+   (latex . t)))
 
 ;;;;;;;;;;;
 ;; LaTeX ;;
 ;;;;;;;;;;;
+
+(setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
 (defun compile-latex ()
   (interactive)
@@ -151,8 +163,20 @@
 ;;                   (set (car var) (cadr var)))
 ;;               account-vars)
 ;;       (error "No email account found"))))
-;; 
+;;
 ;; (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
+
+;;;;;;;;;;
+;; Misc ;;
+;;;;;;;;;;
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+(setq comfirm-kill-emacs nil)
+
+; (bind-key "M-i" #'company-complete)
 
 ;;;;;;;;;;;;;;;;;
 ;; Spell Check ;;
