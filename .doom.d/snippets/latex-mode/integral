@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: int_^
+# key: int
+# --
+\int_{${1:left}}^{${2:right}}{$3} \mathrm{d}x $0
