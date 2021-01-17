@@ -144,6 +144,15 @@
 ;;         ("/[Gmail]/Drafts"    . ?d)
 ;;         ("/[Gmail]/All Mail"  . ?a))))
 
+;;;;;;;;;;;;;;;
+;; Yasnippet ;;
+;;;;;;;;;;;;;;;
+
+(add-hook 'snippet-hook 'my-snippet-hook)
+(defun my-snippet-hook ()
+  "Custom behaviours for `snippet'."
+  (setq-local require-final-newline nil))
+
 ;;;;;;;;;;
 ;; Misc ;;
 ;;;;;;;;;;
