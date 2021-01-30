@@ -1,3 +1,4 @@
+! == Xft ==
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -6,22 +7,50 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
+! == XTerm ==
 XTerm*renderFont: true
-XTerm*faceName: xft:Nerd Fonts Meslo
-XTerm*faceSize: 12
+XTerm*faceName: xft:meslolgsnerdfontmono:size=10
+XTerm*faceSize: 10
 XTerm*utf8: 2
 XTerm*locale: true
-
 XTerm*loginshell: true
+
+! == URxvt ==
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: false
+URxvt.intensityStyles: false
+URxvt.font: xft:meslolgsnerdfontmono:size=10
+URxvt.saveLines: 2000
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+URxvt.internalBorder: 12
+
+! Extensions
+URxvt.perl-ext-common: default,matcher,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! Matcher
+URxvt.url-launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+! clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt*depth: 32
 
 ! == colours ==
 #include "/home/hisbaan/.xcolors/onedark-custom"
 
-*.foreground: FOREGROUND 
-*.background: BACKGROUND 
-*.selection_foreground: BACKGROUND 
-*.selection_background: FOREGROUND 
-*.cursorColor: FOREGROUND 
+*.foreground: FOREGROUND
+*.background: BACKGROUND
+*.selection_foreground: BACKGROUND
+*.selection_background: FOREGROUND
+*.cursorColor: FOREGROUND
 
 ! black
 *.color0: COLOR0
