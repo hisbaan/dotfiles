@@ -124,6 +124,9 @@ super + shift + d
 super + w
     firefox
 
+ctrl + q:
+     notify-send "Saved you!" "You were about to hate yourself!"
+
 # flameshot (screenshot)
 {Print, Insert}
     flameshot gui

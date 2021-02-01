@@ -491,8 +491,8 @@ label = %output%
 exec = ~/.config/polybar/scripts/pavolume.sh --listen
 click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
+; scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
+; scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
