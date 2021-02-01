@@ -8,7 +8,6 @@
 (setq user-full-name "Hisbaan Noorani"
       user-mail-address "hisbaan@gmail.com")
 
-
 ;;;;;;;;;;
 ;; Font ;;
 ;;;;;;;;;;
@@ -59,7 +58,7 @@
 ;;;;;;;;;;;;;;
 
 (setq org-directory "~/Documents/org/"
-      org-latex-packages-alist '(("margin=0.5in" "geometry" nil))
+      org-latex-packages-alist '(("margin=1in" "geometry" nil))
       org-hide-emphasis-markers t)
 
 ;; Use minted instead of verbatim to allow for syntax hilighting in LaTeX export
@@ -79,6 +78,7 @@
  'org-babel-load-languages
  '((R . t)
    (latex . t)))
+
 ;;;;;;;;;;;
 ;; LaTeX ;;
 ;;;;;;;;;;;
@@ -112,9 +112,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; ;;;;;;;;;;
-;; ;; MU4E ;;
-;; ;;;;;;;;;;
+;;;;;;;;;;
+;; MU4E ;;
+;;;;;;;;;;
 
 ;; (use-package mu4e
 ;;   :ensure nil

@@ -17,7 +17,7 @@
 ;   Themes : https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes
 ;   https://github.com/jaagr/polybar/wiki/
 ;   https://github.com/jaagr/polybar/wiki/Configuration
-;   https://github.com/jaagr/polybar/wiki/Formattin 
+;   https://github.com/jaagr/polybar/wiki/Formatting
 ;
 ;=========================================================
 
@@ -40,7 +40,7 @@ compositing-border = over
 
 ; Define fallback values used by all module formats
 format-foreground = #FF0000
-format-background = #00FF00
+format-background = #FF0000
 format-underline =
 format-overline =
 format-spacing =
@@ -50,10 +50,12 @@ format-offset =
 
 [colors]
 background = ${xrdb:*.background}
-foreground = ${xrdb:*.foreground} 
-foreground2 = #626273
+foreground = ${xrdb:*.foreground}
 accent = ${xrdb:*.accent} 
-alert = ${xrdb:*.color1}
+alert = ${xrdb:*.color1} 
+volume-min = 
+volume-med =
+volume-max =
 
 #####################
 ### MAINBAR-BSPWM ###
@@ -146,12 +148,16 @@ type = internal/bspwm
 
 pin-workspaces = true
 strip-wsnumbers = false
-index-sort = false ${colorsal}
+index-sort = false
 enable-click = true
 enable-scroll = true
 wrapping-scroll = false
 reverse-scroll = true
 fuzzy-match = false
+
+;extra icons to choose from
+;http://fontawesome.io/cheatsheet/
+;       v      ﭮ  
 
 ws-icon-0 = 1;󰈹
 ws-icon-1 = 2;

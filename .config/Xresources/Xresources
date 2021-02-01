@@ -49,11 +49,11 @@ rofi.dpi: 220;
 ! == colours ==
 #include "/home/hisbaan/.xcolors/onedark-custom"
 
-*.foreground: FOREGROUND 
-*.background: BACKGROUND 
-*.selection_foreground: BACKGROUND 
-*.selection_background: FOREGROUND 
-*.cursorColor: FOREGROUND 
+*.foreground: FOREGROUND
+*.background: BACKGROUND
+*.selection_foreground: BACKGROUND
+*.selection_background: FOREGROUND
+*.cursorColor: FOREGROUND
 
 ! black
 *.color0: COLOR0
