@@ -4,7 +4,7 @@
 # --
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools}
 
 \DeclarePairedDelimiter\autobracket{(}{)}
 \newcommand{\br}[1]{\autobracket*{#1}}
@@ -17,7 +17,7 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 
-\renewcommand{\qedsymbol}{\(\blacksquare\)}
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
 \renewcommand*{\proofname}{\underline{Pf}:}
 \pagestyle{empty}
 

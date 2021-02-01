@@ -110,11 +110,11 @@ super + shift + Return
 
 # rofi
 super + d
-    noswallow_rofi
+      noswallow_rofi
 
 # rofi-workflows
 super + o
-    rofi-workflows
+      rofi-workflows
 
 # rofi-file-launcher
 super + shift + d
@@ -122,11 +122,14 @@ super + shift + d
 
 # firefox
 super + w
-    firefox
+      firefox
+
+ctrl + q
+     notify-send "Saved you!" "You were about to hate yourself!"
 
 # flameshot (screenshot)
 {Print, Insert}
-    flameshot gui
+        flameshot gui
 
 ##################
 ### Media Keys ###
