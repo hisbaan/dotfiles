@@ -1,0 +1,37 @@
+# Zathura configuration file
+# See man `man zathurarc'
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+# One page per row by default
+set pages-per-row 1
+
+#stop at page boundries
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+# set scroll-step 50
+
+#zoom settings
+set zoom-min 10
+
+set render-loading "false"
+
+set recolor true
+
+set default-bg '#1e2127'
+set default-fg '#dfdfdf'
+
+set recolor-lightcolor '#1e2127'
+set recolor-darkcolor '#dfdfdf'
+
+set inputbar-bg '#1e2127'
+set inputbar-fg '#dfdfdf'
+
+set statusbar-bg '#1e2127'
+set statusbar-fg '#dfdfdf'
+
+set highlight-active-color '#7218f2'
+set highlight-color '#bd93f9'
+
+set font "MesloLGS Nerd Font normal 10"

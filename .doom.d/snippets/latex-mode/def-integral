@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: def-int
+# key: dint
+# --
+\int_{${1:a}}^{${2:b}}{$3} dx $0

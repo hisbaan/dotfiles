@@ -32,16 +32,15 @@ alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 ### Aliases ###
 ###############
 
-alias cat="bat "
-alias cp="cp -i "
-alias df="df -h "
+alias cat="bat $argv"
+alias cp="cp -i $argv"
+alias df="df -h $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
-alias ls="exa --color=auto"
+alias ls='exa --color=auto'
 alias mv="mv -i $argv"
-alias sudo='sudo '
-alias uoft='cd ~/Documents/uoft/; . ranger'
+alias uoft="cd ~/Documents/uoft/ ; . ranger"
 alias rs='rsync --numeric-ids --info=progress2'
 
 ###################
@@ -106,7 +105,7 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 
 ###########################
-### Interactive Coments ###
+### Interactive Comments ###
 ###########################
 
 setopt interactivecomments
