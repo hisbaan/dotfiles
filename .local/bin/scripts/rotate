@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+case "$1" in
+    left) xrandr --output eDP-1 --rotate left ;;
+    right) xrandr --output eDP-1 --rotate right ;;
+    inverted) xrandr --outpu eDP-1 --rotate inverted ;;
+    normal|*) xrandr --output eDP-1 --rotate normal ;;
+esac

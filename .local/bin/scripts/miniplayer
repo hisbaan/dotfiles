@@ -1,0 +1,4 @@
+#!/bin/sh
+
+bspc rule -a kitty --one-shot state=floating rectangle=750x550+0+0 sticky=on
+kitty -e ncmpcpp

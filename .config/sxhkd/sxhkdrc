@@ -159,9 +159,15 @@ XF86AudioStop
 {XF86AudioRaiseVolume, super + equal}
     pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
+super + shift + equal
+    pactl set-sink-volume @DEFAULT_SINK@ +1% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
 # lower volume and unmute
 {XF86AudioLowerVolume, super + minus}
     pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+super + shift + minus
+    pactl set-sink-volume @DEFAULT_SINK@ -1% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # mute audio
 {XF86AudioMute, super + 0, super + BackSpace}
