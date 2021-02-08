@@ -1,0 +1,3 @@
+#!/bin/sh
+
+discord --no-sandbox

@@ -25,6 +25,9 @@ matches:
   - trigger: ":shrug"
     replace: "¯\\_(ツ)_/¯"
 
+  - trigger: ":turt"
+    replace: "https://discord.com/channels/@me/417069231788654645/806562708161691649"
+
   # Dates
   - trigger: ":date"
     replace: "{{mydate}}"

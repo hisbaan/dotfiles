@@ -65,9 +65,12 @@
 (setq org-latex-listings 'minted)
 
 (setq org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+      ;; '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;;   "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+      ;;   "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+      '("pdflatex -shell-escape -interaction nonstopmode %f"
+        "pdflatex -shell-escape -interaction nonstopmode %f"
+        "pdflatex -shell-escape -interaction nonstopmode %f"))
 
 (setq org-src-fontify-natively t)
 
@@ -85,7 +88,7 @@
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  (shell-command (concat "pdflatex " buffer-file-name)))
+  (shell-command (concat "pdflatex -shell-escape " buffer-file-name)))
 
 (eval-after-load 'latex
   '(map! :leader

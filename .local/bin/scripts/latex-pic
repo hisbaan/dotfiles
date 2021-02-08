@@ -1,0 +1,64 @@
+#!/bin/env bash
+
+# deps: bspwm, texlive, emacs, pdflatex, catdvi
+
+case "$1" in
+    discord)
+        foreground=DCDDDE
+        background=36393F
+        ;;
+    light)
+        foreground=000000
+        background=FFFFFF
+        ;;
+    *|dark)
+        foreground=1E2127
+        backgroud=DFDFDF
+        ;;
+esac
+
+echo $background
+
+cd /tmp
+rm /tmp/latex-pic*
+
+bspc rule -a Emacs --one-shot state=floating
+
+echo "\(\displaystyle{}
+
+\)" > /tmp/latex-copy.tex
+# emacsclient -c -a 'emacs' /tmp/latex-copy.tex
+emacsclient -c -a 'emacs' /tmp/latex-copy.tex
+
+echo "\documentclass[border=0.2cm]{standalone}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, xcolor, pagecolor, mathtools}
+\definecolor{background}{HTML}{${background}}
+\definecolor{foreground}{HTML}{${foreground}}
+\pagecolor{background}
+\DeclarePairedDelimiter\autobracket{(}{)}
+\newcommand{\br}[1]{\autobracket*{#1}}
+\DeclarePairedDelimiter\autosquarebracket{[}{]}
+\newcommand{\sbr}[1]{\autosquarebracket*{#1}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\qedsymbol}{(\blacksquare)}
+\renewcommand*{\proofname}{\underline{Pf}:}
+\pagestyle{empty}
+\title{TITLE}
+\author{Hisbaan Noorani}
+\date{DATE}
+\begin{document}
+\color{foreground}
+$(cat /tmp/latex-copy.tex)
+\end{document}" > /tmp/latex-pic.tex
+# might not need the whole big thing. Just the small latex file.
+# use pandoc to convert to txt (or just use the small latex file directly)
+# run it though a little replace thing where it interprets the plain text
+# (or use the one that you saw on github if you can find it again)
+
+pdflatex -shell-escape -interaction nonstopmode /tmp/latex-pic.tex
+[ -f /tmp/latex-pic.pdf ] && convert -density 3000 /tmp/latex-pic.pdf /tmp/latex-pic.png
+[ -f /tmp/latex-pic.png ] && xclip -selection clipboard -t image/png -i /tmp/latex-pic.png
