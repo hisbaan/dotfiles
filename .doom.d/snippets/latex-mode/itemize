@@ -1,0 +1,6 @@
+# key: itemize
+# name: itemize
+# --
+\begin{itemize}
+\item $0
+\end{itemize}

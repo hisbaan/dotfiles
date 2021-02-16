@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: apa
+# key: apa
+# --
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa]{biblatex}
+\addbibresource{refs.bib}
+\printbibliography[title={Reference}]
