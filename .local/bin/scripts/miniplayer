@@ -2,4 +2,3 @@
 
 bspc rule -a kitty --one-shot state=floating rectangle=350x250+0+0 sticky=on
 kitty -e ncmpcpp
-bspc node -g sticky

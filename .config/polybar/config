@@ -152,9 +152,9 @@ pin-workspaces = true
 strip-wsnumbers = false
 index-sort = false
 enable-click = true
-enable-scroll = true
+enable-scroll = false
 wrapping-scroll = false
-reverse-scroll = true
+reverse-scroll = false
 fuzzy-match = false
 
 ;extra icons to choose from
