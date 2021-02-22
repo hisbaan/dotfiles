@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: antiderivative evaluation
+# key: eval
+# --
+\Big\vert_{x = ${1:a}}^{x = ${2:b}}
