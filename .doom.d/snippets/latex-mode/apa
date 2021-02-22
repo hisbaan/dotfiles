@@ -1,9 +1,29 @@
-# -*- mode: snippet -*-
-# name: apa
 # key: apa
+# name: apa
 # --
+\documentclass[man, 12pt]{apa7}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
 \usepackage[english]{babel}
 \usepackage{csquotes}
-\usepackage[style=apa]{biblatex}
-\addbibresource{refs.bib}
-\printbibliography[title={Reference}]
+\usepackage[style=apa, backend=biber, sortcites=true, sorting=nty]{biblatex}
+\addbibresources{refs.bib}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+\title{${1:TITLE}}
+\author{Hisbaan Noorani}
+\affiliation{University of Toronto, ${2:COURSE}, ${3:PROFESSOR}, ${4:DATE}}
+\shorttitle{}
+
+\linespread{2}
+\setlength{\parindent}{0.5in}
+
+\begin{document}
+\maketitle
+$0
+\newpage
+\printbibliography[title={\centering References}]
+\end{document}
