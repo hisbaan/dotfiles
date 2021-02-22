@@ -88,12 +88,18 @@
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  (shell-command (concat "pdflatex " buffer-file-name)))
+  (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
-(eval-after-load 'latex
-  '(map! :leader
-         :desc "Compile using pdflatex"
-         "c l" 'compile-latex))
+(map! :leader
+      :desc "Compile with lualatex"
+      "c l" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+                   #'+default/lsp-command-map))
+
+;; (map! :after latex/tex/auctex
+;;       :localleader
+;;       :desc "Compile using lualatex"
+;;       :map latex-mode-map
+;;       "c" #'compile-latex)  ; this will be on `SPC m c` in latex-mode
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
