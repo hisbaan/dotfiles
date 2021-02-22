@@ -85,10 +85,17 @@
 
 (setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
+;; (define-key LaTeX-mode-map (kbd "SPC c l")
+;;   (lambda ()
+;;     "Save the buffer and run `TeX-command-run-all`."
+;;     (interactive)
+;;     (let (TeX-save-query) (TeX-save-document (TeX-master-file)))
+;;     (TeX-command-run-all nil)))
+
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  (shell-command (concat "pdflatex -shell-escape " buffer-file-name)))
+  (shell-command (concat "lualatex -shell-escape " buffer-file-name)))
 
 (eval-after-load 'latex
   '(map! :leader

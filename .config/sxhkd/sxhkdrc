@@ -36,9 +36,9 @@ super + shift + r
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-    bspc node -f @{parent,brother,first,second}
+# # focus the node for the given path jump
+# super + {p,b,comma,period}
+#     bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
 super + {_,shift + }n
@@ -136,19 +136,15 @@ ctrl + q
 ##################
 
 # pause/play music
-XF86AudioPlay
+{XF86AudioPlay, super + slash}
     mpc toggle
 
-# pause music
-XF86AudioPause
-    mpc pause
-
 # skip track
-XF86AudioNext
+{XF86AudioNext, super + period}
     mpc next
 
 # go back a track
-XF86AudioPrev
+{XF86AudioPrev, super + comma}
     mpc prev
 
 # stop music
