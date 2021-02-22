@@ -65,9 +65,6 @@
 (setq org-latex-listings 'minted)
 
 (setq org-latex-pdf-process
-      ;; '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;;   "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-      ;;   "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
       '("pdflatex -shell-escape -interaction nonstopmode %f"
         "pdflatex -shell-escape -interaction nonstopmode %f"
         "pdflatex -shell-escape -interaction nonstopmode %f"))
@@ -85,22 +82,21 @@
 
 (setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
-;; (define-key LaTeX-mode-map (kbd "SPC c l")
-;;   (lambda ()
-;;     "Save the buffer and run `TeX-command-run-all`."
-;;     (interactive)
-;;     (let (TeX-save-query) (TeX-save-document (TeX-master-file)))
-;;     (TeX-command-run-all nil)))
-
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  (shell-command (concat "lualatex -shell-escape " buffer-file-name)))
+  (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
-(eval-after-load 'latex
-  '(map! :leader
-         :desc "Compile using pdflatex"
-         "c l" 'compile-latex))
+(map! :leader
+      :desc "Compile with lualatex"
+      "c l" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+                   #'+default/lsp-command-map))
+
+;; (map! :after latex/tex/auctex
+;;       :localleader
+;;       :desc "Compile using lualatex"
+;;       :map latex-mode-map
+;;       "c" #'compile-latex)  ; this will be on `SPC m c` in latex-mode
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -118,38 +114,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-;;;;;;;;;;
-;; MU4E ;;
-;;;;;;;;;;
-
-;; (use-package mu4e
-;;   :ensure nil
-;;   ;; :load-path "/usr/share/emacs/site-lisp/mu4e/"
-;;   ;; :defer 20 ; Wait until 20 seconds after startup
-;;   :config
-;; 
-;;   ;; This is set to 't' to avoid mail syncing issues when using mbsync
-;;   (setq mu4e-change-filenames-when-moving t)
-;; 
-;;   ;; Refresh mail using isync every 10 minutes
-;;   (setq mu4e-update-interval (* 10 60))
-;;   (setq mu4e-get-mail-command "mbsync -c '/home/hisbaan/.config/mu4e/mbsyncrc' -a")
-;;   ;; (setq mu4e-maildir "~/Mail/hisbaan-gmail")
-;;   (setq mu4e-root-maildir "~/Mail/hisbaan-gmail")
-;;   (setq my-mu4e-account-alist "hisbaan-gmail")
-;; 
-;;   (setq mu4e-drafts-folder "/[Gmail]/Drafts")
-;;   (setq mu4e-sent-folder   "/[Gmail]/Sent Mail")
-;;   (setq mu4e-refile-folder "/[Gmail]/All Mail")
-;;   (setq mu4e-trash-folder  "/[Gmail]/Trash")
-;; 
-;;   (setq mu4e-maildir-shortcuts
-;;       '(("/Inbox"             . ?i)
-;;         ("/[Gmail]/Sent Mail" . ?s)
-;;         ("/[Gmail]/Trash"     . ?t)
-;;         ("/[Gmail]/Drafts"    . ?d)
-;;         ("/[Gmail]/All Mail"  . ?a))))
 
 ;;;;;;;;;;;;;;;
 ;; Yasnippet ;;

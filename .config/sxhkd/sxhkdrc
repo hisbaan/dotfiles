@@ -88,12 +88,12 @@ super + r
 
 # expand a window by moving one of its side outward
 super + XF86Eject : {h,j,k,l,Return}
-    {~/.config/bspwm/bspwm_resize.sh west 40,~/.config/bspwm/bspwm_resize.sh south 40,~/.config/bspwm/bspwm_resize.sh north 40,~/.config/bspwm/bspwm_resize.sh east 40, xdotool key Escape && echo "" > ~/.config/bspwm/bspwm-chord-status}
+    {~/.config/bspwm/bspwm_resize.sh west 20,~/.config/bspwm/bspwm_resize.sh south 20,~/.config/bspwm/bspwm_resize.sh north 20,~/.config/bspwm/bspwm_resize.sh east 20, xdotool key Escape && echo "" > ~/.config/bspwm/bspwm-chord-status}
 
 
 # move a floating window
 super + {Left,Down,Up,Right}
-    bspc node -v {-20 0,0 20,0 -20,20 0}
+    bspc node -v {-10 0,0 10,0 -10,10 0}
 
 ####################
 ### Applications ###
