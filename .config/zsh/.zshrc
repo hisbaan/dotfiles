@@ -42,6 +42,7 @@ alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 alias rs='rsync --numeric-ids --info=progress2'
+alias a2='cd ~/Documents/uoft/csc111/assignments/a2/'
 
 ###################
 ### TTY Colours ###

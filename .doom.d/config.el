@@ -79,6 +79,11 @@
  '((R . t)
    (latex . t)))
 
+(map! :leader
+      :desc "Open already compiled org pdf"
+      "m o" (cmds! (eq major-mode 'org-mode) #'open-pdf
+                   #'+default/lsp-command-map))
+
 ;;;;;;;;;;;
 ;; LaTeX ;;
 ;;;;;;;;;;;
@@ -91,8 +96,18 @@
   (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
 (map! :leader
+      :desc "Open already compiled latex pdf"
+      "m c" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+                   #'+default/lsp-command-map))
+
+(defun open-pdf ()
+  ; (interactive)
+  (save-buffer)
+  (shell-command (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
+
+(map! :leader
       :desc "Compile with lualatex"
-      "c l" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+      "m o" (cmds! (eq major-mode 'latex-mode) #'open-pdf
                    #'+default/lsp-command-map))
 
 ;; (map! :after latex/tex/auctex
