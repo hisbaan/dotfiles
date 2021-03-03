@@ -1,6 +1,8 @@
 #!/bin/env bash
 
 # deps: bspwm, texlive, emacs, pdflatex, catdvi
+# TODO integrate python script
+# TODO for super and subscript, find text in between {} and if it's all able to be replaced, replace it all
 
 cd /tmp
 
