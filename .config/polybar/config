@@ -483,7 +483,7 @@ format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+; sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true

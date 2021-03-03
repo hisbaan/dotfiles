@@ -153,27 +153,21 @@ XF86AudioStop
 
 # increase volume and unmute
 {XF86AudioRaiseVolume, super + equal}
-                       pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo -i 5 \
-                       && pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo --unmute
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 super + shift + equal
-      pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo -i 1 \
-      && pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo --unmute
+    pactl set-sink-volume @DEFAULT_SINK@ +1% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # lower volume and unmute
 {XF86AudioLowerVolume, super + minus}
-                       pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo -d 5 \
-                       && pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo --unmute
-
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 super + shift + minus
-      pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo -d 1 \
-        && pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo --unmute
-
+    pactl set-sink-volume @DEFAULT_SINK@ -1% && pactl set-sink-mute @DEFAULT_SINK@ 0
 
 # mute audio
-{XF86AudioMute, super + 0}
-                pamixer --sink alsa_output.pci-0000_00_1f.3.analog-stereo --toggle-mute
+{XF86AudioMute, super + 0, super + BackSpace}
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ######################
 ### System Control ###
