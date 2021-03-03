@@ -39,8 +39,8 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
-format-foreground = #FF0000
-format-background = #FF0000
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 format-underline =
 format-overline =
 format-spacing =
@@ -101,7 +101,7 @@ font-2 = Material Design Icons Desktop:pixelsize=11;2
 
 ;modules-left = bspwm space mode
 modules-left = bspwm space
-modules-right = divider memory divider cpu divider pavolume divider date
+modules-right = divider memory divider cpu divider pulseaudio divider date
 
 separator = 
 ;dim-value = 1.0
@@ -484,17 +484,54 @@ bar-progress-indicator-foreground = ${colors.foreground}
 format-online-foreground = ${colors.foreground}
 format-online-background = ${colors.background}
 
-[module/pavolume]
-type = custom/script
-tail = true
-label = %output%
-exec = ~/.config/polybar/scripts/pavolume.sh --listen
-click-right = exec pavucontrol
-click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
-; scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
-; scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = ${colors.foreground}
+[module/pulseaudio]
+type = internal/pulseaudio
+
 format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-muted = 󰖁 muted
+label-muted-foreground = ${colors.foreground}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 󰕿
+ramp-volume-1 = 󰖀
+ramp-volume-2 = 󰕾
+
+; Right and Middle click
+click-right = pavucontrol
+; click-middle = make a script that changes the default sink based on the current one
 
 [module/uptime]
 ;https://github.com/jaagr/polybar/wiki/User-contributed-modules#uptime
