@@ -89,7 +89,17 @@
 
 (map! :leader
       :desc "Compile with lualatex"
-      "c l" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+      "m c" (cmds! (eq major-mode 'latex-mode) #'compile-latex
+                   #'+default/lsp-command-map))
+
+(defun open-pdf ()
+  ; (interactive)
+  (save-buffer)
+  (shell-command (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
+
+(map! :leader
+      :desc "Open already compiled pdf"
+      "m o" (cmds! (eq major-mode 'latex-mode) #'open-pdf
                    #'+default/lsp-command-map))
 
 ;; (map! :after latex/tex/auctex
@@ -97,7 +107,6 @@
 ;;       :desc "Compile using lualatex"
 ;;       :map latex-mode-map
 ;;       "c" #'compile-latex)  ; this will be on `SPC m c` in latex-mode
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one

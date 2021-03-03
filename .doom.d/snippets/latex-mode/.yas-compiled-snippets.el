@@ -21,4 +21,4 @@
                        ("align" "\\begin{align*}\n$0\n\\end{align*}" "align" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/align" nil nil)))
 
 
-;;; Do not edit! File generated at Mon Feb 22 15:23:45 2021
+;;; Do not edit! File generated at Mon Feb 22 16:57:41 2021

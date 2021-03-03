@@ -44,6 +44,7 @@ echo "\documentclass[border=0.2cm]{standalone}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
 \renewcommand{\qedsymbol}{(\blacksquare)}
 \renewcommand*{\proofname}{\underline{Pf}:}
 \pagestyle{empty}
@@ -54,10 +55,6 @@ echo "\documentclass[border=0.2cm]{standalone}
 \color{foreground}
 $(cat /tmp/latex-copy.tex)
 \end{document}" > /tmp/latex-pic.tex
-# might not need the whole big thing. Just the small latex file.
-# use pandoc to convert to txt (or just use the small latex file directly)
-# run it though a little replace thing where it interprets the plain text
-# (or use the one that you saw on github if you can find it again)
 
 pdflatex -shell-escape -interaction nonstopmode /tmp/latex-pic.tex
 [ -f /tmp/latex-pic.pdf ] && convert -density 3000 /tmp/latex-pic.pdf /tmp/latex-pic.png
