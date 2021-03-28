@@ -39,6 +39,8 @@ echo "\documentclass[border=0.2cm]{standalone}
 \newcommand{\br}[1]{\autobracket*{#1}}
 \DeclarePairedDelimiter\autosquarebracket{[}{]}
 \newcommand{\sbr}[1]{\autosquarebracket*{#1}}
+\DeclarePairedDelimiter\autocurlybracket{\{}{\}}
+\newcommand{\cbr}[1]{\autocurlybracket*{#1}}
 \newcommand{\st}{\text{ s.t. }}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}

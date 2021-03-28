@@ -135,6 +135,22 @@ ctrl + q
 ### Media Keys ###
 ##################
 
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     playerctl play-pause
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     playerctl next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     platerctl prev
+
+# # stop music
+# XF86AudioStop
+#     playerctl stop
+
 # pause/play music
 {XF86AudioPlay, super + slash}
     mpc toggle

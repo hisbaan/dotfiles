@@ -6,24 +6,31 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools}
 
-\DeclarePairedDelimiter\autobracket{(}{)}
-\newcommand{\br}[1]{\autobracket*{#1}}
-\DeclarePairedDelimiter\autosquarebracket{[}{]}
-\newcommand{\sbr}[1]{\autosquarebracket*{#1}}
+% \DeclarePairedDelimiter\autobracket{(}{)}
+% \newcommand{\br}[1]{\autobracket*{#1}}
+% \DeclarePairedDelimiter\autosquarebracket{[}{]}
+% \newcommand{\sbr}[1]{\autosquarebracket*{#1}}
+% \DeclarePairedDelimiter\autocurlybracket{\\{}{\\}}
+% \newcommand{\cbr}[1]{\autocurlybracket*{#1}}
+
+\newcommand{\br}[1]{\left(#1\right)}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
 
 \newcommand{\st}{\text{ s.t. }}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\DS}{\displaystyle}
 
 \renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
 \renewcommand*{\proofname}{\underline{Pf}:}
 \pagestyle{empty}
 
-\title{TITLE}
+\title{${1:TITLE}}
 \author{Hisbaan Noorani}
-\date{DATE}
+\date{${2:DATE}}
 
 \begin{document}
 $0

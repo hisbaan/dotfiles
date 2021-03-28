@@ -2,6 +2,8 @@ root = /home/hisbaan/Documents/uoft
 root = ssh://hisbaan@10.0.0.29/Documents/uoft
 
 ignore = Path *csc110/project/climate-disasters
+ignore = Path *csc111/project/bruh
 ignore = Path *csc111/assignments/a1
 ignore = Path *csc111/assignments/a2
+ignore = Path *csc111/assignments/a3
 ignore = Path *_minted*

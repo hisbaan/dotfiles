@@ -9,7 +9,7 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage[style=apa, backend=biber, sortcites=true, sorting=nty]{biblatex}
-\addbibresources{refs.bib}
+\bibliography{refs.bib}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
 

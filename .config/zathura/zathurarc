@@ -19,16 +19,16 @@ set render-loading "false"
 
 set recolor true
 
-set default-bg '#1e2127'
+set default-bg '#1E2127'
 set default-fg '#dfdfdf'
 
-set recolor-lightcolor '#1e2127'
+set recolor-lightcolor '#1E2127'
 set recolor-darkcolor '#dfdfdf'
 
-set inputbar-bg '#1e2127'
+set inputbar-bg '#1E2127'
 set inputbar-fg '#dfdfdf'
 
-set statusbar-bg '#1e2127'
+set statusbar-bg '#1E2127'
 set statusbar-fg '#dfdfdf'
 
 set highlight-active-color '#7218f2'

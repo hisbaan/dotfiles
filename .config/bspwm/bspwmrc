@@ -17,6 +17,7 @@ redshift &
 dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ################
 ### Monitors ###
@@ -68,6 +69,7 @@ bspc config urgent_border_color $(xrdb -q | grep color1 | awk '{print $2}')
 bspc rule -a Emacs state=tiled
 bspc rule -a Zathura state=tiled
 bspc rule -a Wine:photoshop.exe state=floating
+bspc rule -a firefox:Toolkit state=floating sticky=on
 
 #####################
 ### Floating Size ###

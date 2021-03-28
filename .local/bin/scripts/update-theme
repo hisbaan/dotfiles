@@ -24,6 +24,7 @@ echo $THEME >> $theme_name_dir
 xrdb $xresources
 foreground=`xrdb -query | awk '/*.foreground/ { print substr($2,2) }'`
 background=`xrdb -query | awk '/*.background/ { print substr($2,2) }'`
+accent=`xrdb -query | awk '/*.accent/ { print substr($2,2) }'`
 
 # Update kitty config to apply Xresources color scheme.
 
@@ -56,3 +57,26 @@ sed -i "s/%clbg%/\#${background}/g" $dunst_target_file.tmp
 
 rm $dunst_target_file
 mv $dunst_target_file.tmp $dunst_target_file
+
+# Update zathurarc to apply Xresources color scheme
+
+zathura_target_file="$HOME/.config/zathura/zathurarc"
+
+cp $zathura_target_file.in $zathura_target_file.tmp
+
+sed -i "s/%clfg%/\#${foreground}/g" $zathura_target_file.tmp
+sed -i "s/%clbg%/\#${background}/g" $zathura_target_file.tmp
+
+rm $zathura_target_file
+mv $zathura_target_file.tmp $zathura_target_file
+
+# Update firefox userChrome
+
+firefox_target_file="$HOME/.config/firefox/userChrome.css"
+
+cp $firefox_target_file.in $firefox_target_file.tmp
+
+sed -i "s/%clac%/\#${accent}/g" $firefox_target_file.tmp
+
+rm $firefox_target_file
+mv $firefox_target_file.tmp $firefox_target_file

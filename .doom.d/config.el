@@ -76,16 +76,31 @@
  '((R . t)
    (latex . t)))
 
+(map! :leader
+      :desc "Open compiled pdf"
+      "m o" (cmds! (eq major-mode 'org-mode) #'open-pdf
+                   #'+default/lsp-command-map))
+
 ;;;;;;;;;;;
 ;; LaTeX ;;
 ;;;;;;;;;;;
+
+(with-eval-after-load 'tex
+  (setq TeX-source-correlate-method 'synctex)
+  (TeX-source-correlate-mode)
+  (setq TeX-source-correlate-start-server t)
+
+  (add-to-list 'TeX-view-program-selection
+               '(output-pdf "Zathura")))
 
 (setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
+  ;; (async-shell-command
+  (shell-command
+   (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
 (map! :leader
       :desc "Compile with lualatex"
@@ -93,12 +108,12 @@
                    #'+default/lsp-command-map))
 
 (defun open-pdf ()
-  ; (interactive)
-  (save-buffer)
-  (shell-command (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
+  (interactive)
+  (async-shell-command
+    (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
 
 (map! :leader
-      :desc "Open already compiled pdf"
+      :desc "Open compiled pdf"
       "m o" (cmds! (eq major-mode 'latex-mode) #'open-pdf
                    #'+default/lsp-command-map))
 

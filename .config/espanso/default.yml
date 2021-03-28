@@ -26,7 +26,7 @@ matches:
     replace: "¯\\_(ツ)_/¯"
 
   - trigger: ":turt"
-    replace: "https://discord.com/channels/@me/417069231788654645/806562708161691649"
+    replace: "https://cdn.discordapp.com/emojis/620690079442141214.png?size=64"
 
   # Dates
   - trigger: ":date"
