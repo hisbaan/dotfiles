@@ -131,41 +131,47 @@ ctrl + q
 {Print, Insert}
     flameshot gui
 
+# screenshot with drop shadow
+shift + {Print, Insert}
+        scrot -szb -e 'dropshadow $f'
+        scrot -szb -e 'dropshadow $f; xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/$f'
+
+
 ##################
 ### Media Keys ###
 ##################
 
-# # pause/play music
-# {XF86AudioPlay, super + slash}
-#     playerctl play-pause
-
-# # skip track
-# {XF86AudioNext, super + period}
-#     playerctl next
-
-# # go back a track
-# {XF86AudioPrev, super + comma}
-#     platerctl prev
-
-# # stop music
-# XF86AudioStop
-#     playerctl stop
-
 # pause/play music
 {XF86AudioPlay, super + slash}
-    mpc toggle
+                spdctl play-pause
 
 # skip track
 {XF86AudioNext, super + period}
-    mpc next
+                spdctl next
 
 # go back a track
 {XF86AudioPrev, super + comma}
-    mpc prev
+                spdctl prev
 
 # stop music
 XF86AudioStop
-    mpc stop
+    spdctl stop
+
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     mpc toggle
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     mpc next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     mpc prev
+
+# # stop music
+# XF86AudioStop
+#     mpc stop
 
 # increase volume and unmute
 {XF86AudioRaiseVolume, super + equal}

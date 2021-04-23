@@ -5,9 +5,10 @@ if !exists('g:vscode')
     Plug 'itchyny/lightline.vim'
     Plug 'farmergreg/vim-lastplace'
     Plug 'tpope/vim-surround'
-    Plug 'vim-syntastic/syntastic'
+    " Plug 'vim-syntastic/syastic'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ap/vim-css-color'
+    Plug 'sholland1/vim-wal'
     Plug 'dylanaraps/wal'
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     Plug 'neoclide/coc.nvim', {'branch': 'release'}

@@ -49,6 +49,7 @@ flameshot
 flex
 foliate
 fzf
+galculator
 gamemode
 gcc
 gimp
@@ -144,11 +145,13 @@ rsync
 rxvt-unicode
 s-tui
 sane
+scrot
 signal-desktop
 sl
 smartmontools
 smbclient
 speedtest-cli
+spotifyd
 steam
 sudo
 sxhkd

@@ -53,3 +53,5 @@ Creates a colour scheme in a format that [[.local/bin/update-theme][update-theme
 Opens an emacs window and allows the user to type in LaTeX code which can then be coppied to the user's clipboard as latex or unicode (depending on the script run).
 ** [[.local/bin/scripts/mkrecursiveplaylist][mkrecursiveplaylist]]
 Makes a playlist file that can be read by a music player such as ncmpcpp. Currently only finds mp3 files.
+** [[.local/bin/scripts/spdctl][spdctl]]
+Controlls spotifyd (the daemon) due to a lack of good support for playerctl

@@ -1,0 +1,13 @@
+#!/bin/bash
+SCREENSHOTFOLDER="$HOME/Pictures/screenshots"
+
+FILE="${1}"
+FILENAME="${FILE##*/}"
+FILEBASE="${FILENAME%.*}"
+
+# drop shadow: 60% opacity, 10 sigma, +0x +10y
+convert "${FILE}" \( +clone -background black -shadow 60x10+0+10 \) +swap -background transparent -layers merge +repage "$SCREENSHOTFOLDER/${FILEBASE}.png"
+
+notify-send -t 2000 "${FILEBASE}.png saved."
+
+rm "$FILE" #remove this line to preserve original image

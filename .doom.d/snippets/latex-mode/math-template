@@ -15,7 +15,7 @@
 
 \newcommand{\br}[1]{\left(#1\right)}
 \newcommand{\sbr}[1]{\left[#1\right]}
-\newcommand{\cbr}[1]{\left\{#1\right\}}
+\newcommand{\cbr}[1]{\left\\{#1\right\\}}
 
 \newcommand{\st}{\text{ s.t. }}
 \newcommand{\R}{\mathbb{R}}

@@ -26,6 +26,7 @@ minecraft-launcher
 mpd-mpris
 mpdscribble
 mu
+neovide
 neovim-nightly-bin
 nerd-fonts-meslo
 nomachine
@@ -40,6 +41,9 @@ polybar
 pycharm-professional
 scrcpy
 smloadr
+sp
+spotify
+spotify-tui-bin
 teams
 themix-full-git
 trello

@@ -196,6 +196,7 @@ song_columns_list_format = (20)[magenta]{a} (50)[magenta]{t|f:Title} (20)[magent
 ## state (either unknown, play, pause, or stop) for its duration.
 
 #execute_on_player_state_change = ""
+execute_on_song_change="/home/hisbaan/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
 
 playlist_show_mpd_host = no
 playlist_show_remaining_time = no

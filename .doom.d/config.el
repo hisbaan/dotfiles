@@ -98,8 +98,8 @@
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  ;; (async-shell-command
   (shell-command
+  ;; (async-shell-command
    (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
 (map! :leader

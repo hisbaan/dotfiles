@@ -1,5 +1,5 @@
 root = /home/hisbaan/Documents/uoft
-root = ssh://hisbaan@10.0.0.29/Documents/uoft
+root = ssh://hisbaan@archen/Documents/uoft
 
 ignore = Path *csc110/project/climate-disasters
 ignore = Path *csc111/project/bruh
