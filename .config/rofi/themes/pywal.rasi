@@ -1,9 +1,10 @@
 /* start flavours */
 * {
-	background-color: #1E2127;
-	text-color: #ABB2BF;
+	background-color: #1e2127;
+	text-color: #abb2bf;
 	spacing: 0;
 	width: 720px;
+    dpi: 220;
 }
 
 inputbar {
@@ -34,7 +35,7 @@ element {
 }
 
 element selected {
-	background-color: #BD93F9;
-	text-color: #1E2127;
+	background-color: #bd93f9;
+	text-color: #1e2127;
 }
 /* end flavours */

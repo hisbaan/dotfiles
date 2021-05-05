@@ -1,0 +1,45 @@
+shell = "bash -c '{}'"
+
+[[item]]
+file = "~/.config/Xresources/Xresources"
+template = "xresources"
+subtemplate = "custom"
+hook = "xrdb ~/.config/Xresources/Xresources"
+start= "! start flavours"
+end = "! end flavours"
+
+[[item]]
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+subtemplate = "custom"
+# hook = "refresh zathurarc somehow"  # Doesn't look like I can do anything here
+
+[[item]]
+file = "~/.config/kitty/kitty.conf"
+template = "kitty"
+subtemplate = "custom"
+hook = "kitty @ set-colors --all ~/.config/kitty/kitty.conf"
+
+[[item]]
+file = "~/.config/polybar/config"
+template = "polybar"
+subtemplate = "custom"
+
+[[item]]
+file = "~/.config/bspwm/bspwmrc"
+template = "bspwm"
+subtemplate = "custom"
+hook = "bspc wm -r"
+
+[[item]]
+file = "~/.config/dunst/dunstrc"
+template = "dunst"
+subtemplate = "custom"
+hook = "killall -9 dunst"
+
+[[item]]
+file = "~/.config/rofi/themes/pywal.rasi"
+template = "rofi"
+subtemplate = "custom"
+start = "/* start flavours */"
+end = "/* end flavours */"

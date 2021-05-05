@@ -46,48 +46,62 @@ URxvt*depth: 32
 ! == colours ==
 
 ! start flavours
+! Base16 OneDark Custom
+! Scheme: Hisbaan (https://github.com/hisbaan)
 
-#include "/home/hisbaan/.xcolors/onedark-custom"
+#define base00 #1e2127
+#define base01 #282c34
+#define base02 #353b45
+#define base03 #3e4451
+#define base04 #545862
+#define base05 #abb2bf
+#define base06 #b6bdca
+#define base07 #d9dde5
+#define base08 #e06c75
+#define base09 #d19a66
+#define base0A #e5c07b
+#define base0B #98c379
+#define base0C #56b6c2
+#define base0D #62afef
+#define base0E #bd93f9
+#define base0F #be5046
 
-*.foreground: FOREGROUND
-*.background: BACKGROUND
-*.selection_foreground: BACKGROUND
-*.selection_background: FOREGROUND
-*.cursorColor: FOREGROUND
+*.foreground: base05
+*.background: base00
+*.selection_foreground: base00
+*.selection_background: base05
+*.cursorColor: base05
 
 ! black
 *.color0: COLOR0
 *.color8: COLOR8
 
 ! red
-*.color1: COLOR1
-*.color9: COLOR9
+*.color1: base08 
+*.color9: base08
 
 ! green
-*.color2: COLOR2
-*.color10: COLOR10
+*.color2: base0B
+*.color10: base0B
 
 ! yellow
-*.color3: COLOR3
-*.color11: COLOR11
+*.color3: base09
+*.color11: base09
 
 ! blue
-*.color4: COLOR4
-*.color12: COLOR12
+*.color4: base0D
+*.color12: base0D
 
 ! magenta
-*.color5: COLOR5
-*.color13: COLOR13
+*.color5: base0E
+*.color13: base0E
 
 ! cyan
-*.color6: COLOR6
-*.color14: COLOR14
+*.color6: base0C
+*.color14: base0C
 
 ! white
-*.color7: COLOR7
-*.color15: COLOR15
-
-! accent
-*.accent: ACCENT
+*.color7: base05
+*.color15: base07
 
 ! end flavours

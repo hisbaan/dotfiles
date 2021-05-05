@@ -20,21 +20,35 @@ set render-loading "false"
 set recolor true
 
 # start flavours
+# Base16 OneDark Custom
+# Author: Hisbaan (https://github.com/hisbaan)
 
-set default-bg '#1E2127'
-set default-fg '#dfdfdf'
+set default-bg                  "#1e2127"
+set default-fg                  "#d9dde5"
 
-set recolor-lightcolor '#1E2127'
-set recolor-darkcolor '#dfdfdf'
+set inputbar-bg                 "#1e2127"
+set statusbar-fg                "#d9dde5"
 
-set inputbar-bg '#1E2127'
-set inputbar-fg '#dfdfdf'
+set notification-bg             "#1e2127"
+set notification-fg             "#d9dde5"
 
-set statusbar-bg '#1E2127'
-set statusbar-fg '#dfdfdf'
+set notification-error-bg       "#1e2127"
+set notification-error-fg       "#e06c75"
 
-set highlight-active-color '#7218f2'
-set highlight-color '#bd93f9'
+set notification-warning-bg     "#1e2127"
+set notification-warning-fg     "#e06c75"
+
+set highlight-color             "#bd93f9"
+set highlight-active-color      "#62afef"
+
+set completion-bg               "#282c34"
+set completion-fg               "#d9dde5"
+
+set completion-highlight-fg     "#d9dde5"
+set completion-highlight-bg     "#bd93f9"
+
+set recolor-lightcolor          "#1e2127"
+set recolor-darkcolor           "#d9dde5"
 
 # end flavours
 
