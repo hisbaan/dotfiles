@@ -7,8 +7,10 @@ arandr
 arch-wiki-docs
 arch-wiki-lite
 archiso
+arp-scan
 asciinema
 aspell-en
+atop
 audacity
 autoconf
 automake
@@ -17,6 +19,7 @@ barrier
 base
 bashtop
 bat
+biber
 binutils
 bison
 blueman
@@ -53,6 +56,8 @@ gamemode
 gcc
 gimp
 git
+github-cli
+gnome-calculator
 gradle
 groff
 hsetroot
@@ -111,6 +116,7 @@ otf-ipafont
 pacman-contrib
 patch
 pavucontrol
+pdf2svg
 pdftk
 peek
 pkgconf
@@ -118,7 +124,6 @@ playerctl
 polkit-gnome
 powertop
 pulseaudio-alsa
-pulseaudio-bluetooth
 pulseeffects
 python-pip
 python-pywal
@@ -139,6 +144,7 @@ scrot
 signal-desktop
 smartmontools
 speedtest-cli
+spotifyd
 steam
 sudo
 sxhkd

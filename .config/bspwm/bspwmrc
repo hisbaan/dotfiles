@@ -53,11 +53,13 @@ bspc config pointer_motion_interval 7
 ### Colouring ###
 #################
 
-bspc config normal_border_color $(xrdb -q | grep color0 | awk '{print $2}')
-bspc config active_border_color $(xrdb -q | grep color0 | awk '{print $2}')
-bspc config focused_border_color $(xrdb -q | grep accent | awk '{print $2}')
-bspc config presel_feedback_color $(xrdb -q | grep accent | awk '{print $2}')
-bspc config urgent_border_color $(xrdb -q | grep color1 | awk '{print $2}')
+# start flavours
+bspc config normal_border_color 	\#1e2127
+bspc config active_border_color 	\#1e2127
+bspc config focused_border_color 	\#bd93f9
+bspc config presel_feedback_color 	\#bd93f9
+bspc config urgent_border_color 	\#e06c75
+# end flavours
 
 #############
 ### Rules ###
@@ -67,6 +69,7 @@ bspc config urgent_border_color $(xrdb -q | grep color1 | awk '{print $2}')
 bspc rule -a Emacs state=tiled
 bspc rule -a Zathura state=tiled
 bspc rule -a Wine:photoshop.exe state=floating
+bspc rule -a firefox:Toolkit state=floating sticky=on
 
 #####################
 ### Floating Size ###
@@ -76,7 +79,7 @@ x=$(xwininfo -root | grep Width | awk '{print $2}')
 y=$(xwininfo -root | grep Height | awk '{print $2}')
 
 # bspc rule -a firefox center=true rectangle=${$((0.6 * x))%.}x${$((0.6 * y))%.}+0+0
-bspc rule -a firefox center=true rectangle=2560x1440+0+0
+bspc rule -a firefox:Navigator center=true rectangle=2560x1440+0+0
 # bspc rule -a kitty center=true rectangle=${$((0.36 * x))%.}x${$((0.3 * y))%.}+0+0
 bspc rule -a kitty center=true rectangle=1400x800+0+0
 

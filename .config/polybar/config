@@ -48,14 +48,14 @@ format-padding =
 format-margin =
 format-offset =
 
+# start flavours
 [colors]
-background = ${xrdb:*.background}
-foreground = ${xrdb:*.foreground}
-accent = ${xrdb:*.accent} 
-alert = ${xrdb:*.color1} 
-volume-min = 
-volume-med =
-volume-max =
+background = 1e2127
+foreground = abb2bf
+accent = bd93f9
+alert = e06c75
+
+# end flavours
 
 #####################
 ### MAINBAR-BSPWM ###

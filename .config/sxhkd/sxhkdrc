@@ -101,12 +101,12 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-      kitty
+      kitty --single-instance
 
 # floating kitty
 super + shift + Return
       bspc rule -a kitty --one-shot state=floating; \
-      kitty 
+      kitty --single-instance
 
 # rofi
 super + d
@@ -137,19 +137,35 @@ ctrl + q
 
 # pause/play music
 {XF86AudioPlay, super + slash}
-    mpc toggle
+    spdctl play-pause
 
 # skip track
 {XF86AudioNext, super + period}
-    mpc next
+    spdctl next
 
 # go back a track
 {XF86AudioPrev, super + comma}
-    mpc prev
+    spdctl prev
 
 # stop music
 XF86AudioStop
-    mpc stop
+    spdctl stop
+
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     mpc toggle
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     mpc next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     mpc prev
+
+# # stop music
+# XF86AudioStop
+#     mpc stop
 
 # increase volume and unmute
 {XF86AudioRaiseVolume, super + equal}
@@ -185,8 +201,8 @@ super + XF86Tools ; {l,e,s,r,shift + s,Return}
 
 # brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 2
+    xbacklight -inc 1
 
 # brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 2
+    xbacklight -dec 1
