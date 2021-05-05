@@ -1,4 +1,4 @@
-;;; doom-one-custom-theme.el --- inspired by Atom One Dark and modified by Hisbaan Noorani -*- no-byte-compile: t; -*-
+;;; doom-custom-theme.el --- inspired by Atom One Dark and modified by Hisbaan Noorani -*- no-byte-compile: t; -*-
 (require 'doom-themes)
 
 ;; TODO make the background darker to match terminal background
@@ -7,34 +7,34 @@
 ;;              --> comment out old stuff so you still have colours as reference
 
 ;;
-(defgroup doom-one-custom-theme nil
+(defgroup doom-custom-theme nil
   "Options for doom-themes"
   :group 'doom-themes)
 
 (defcustom doom-one-brighter-modeline nil
   "If non-nil, more vivid colors will be used to style the mode-line."
-  :group 'doom-one-custom-theme
+  :group 'doom-custom-theme
   :type 'boolean)
 
 (defcustom doom-one-brighter-comments nil
   "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'doom-one-custom-theme
+  :group 'doom-custom-theme
   :type 'boolean)
 
 (defcustom doom-one-comment-bg doom-one-brighter-comments
   "If non-nil, comments will have a subtle, darker background. Enhancing their
 legibility."
-  :group 'doom-one-custom-theme
+  :group 'doom-custom-theme
   :type 'boolean)
 
 (defcustom doom-one-padded-modeline doom-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
 determine the exact padding."
-  :group 'doom-one-custom-theme
+  :group 'doom-custom-theme
   :type '(choice integer boolean))
 
 ;;
-(def-doom-theme doom-one-custom
+(def-doom-theme doom-custom
   "A dark theme inspired by Atom One Dark and modified by Hisbaan Noorani"
 
   ;; name        default   256       16
@@ -176,4 +176,4 @@ determine the exact padding."
   ()
   )
 
-;;; doom-one-custom-theme.el ends here
+;;; doom-custom-theme.el ends here

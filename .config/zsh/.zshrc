@@ -40,9 +40,16 @@ alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
-alias uoft="cd ~/Documents/uoft/ ; . ranger"
 alias rs='rsync --numeric-ids --info=progress2'
-alias a2='cd ~/Documents/uoft/csc111/assignments/a2/'
+alias a3='cd ~/Documents/uoft/csc111/assignments/a3'
+alias proj='cd ~/Documents/uoft/csc111/project/bruh'
+
+alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias uoft111="cd ~/Documents/uoft/csc111 ; . ranger"
+alias uoft122="cd ~/Documents/uoft/vic122 ; . ranger"
+alias uoft137="cd ~/Documents/uoft/mat137 ; . ranger"
+alias uoft193="cd ~/Documents/uoft/ant193 ; . ranger"
+alias uoft223="cd ~/Documents/uoft/mat223 ; . ranger"
 
 ###################
 ### TTY Colours ###

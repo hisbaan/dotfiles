@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: times
+# key: times
+# --
+\usepackage{fontspec}
+\setmainfont{Times New Roman}

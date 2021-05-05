@@ -29,7 +29,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one-custom)
+(setq doom-theme 'doom-custom)
 
 ;;;;;;;;;;
 ;; Tabs ;;
@@ -93,6 +93,7 @@
 (defun compile-latex ()
   (interactive)
   (save-buffer)
+  ;; (async-shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
   (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
 (map! :leader
@@ -101,9 +102,9 @@
                    #'+default/lsp-command-map))
 
 (defun open-pdf ()
-  ; (interactive)
-  (save-buffer)
-  (shell-command (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
+  (interactive)
+  (async-shell-command
+   (concat "zathura " (file-name-base (buffer-file-name)) ".pdf")))
 
 (map! :leader
       :desc "Compile with lualatex"
@@ -132,38 +133,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-;;;;;;;;;;
-;; MU4E ;;
-;;;;;;;;;;
-
-;; (use-package mu4e
-;;   :ensure nil
-;;   ;; :load-path "/usr/share/emacs/site-lisp/mu4e/"
-;;   ;; :defer 20 ; Wait until 20 seconds after startup
-;;   :config
-
-;;   ;; This is set to 't' to avoid mail syncing issues when using mbsync
-;;   (setq mu4e-change-filenames-when-moving t)
-
-;;   ;; Refresh mail using isync every 10 minutes
-;;   (setq mu4e-update-interval (* 10 60))
-;;   (setq mu4e-get-mail-command "mbsync -c '/home/hisbaan/.config/mu4e/mbsyncrc' -a")
-;;   ;; (setq mu4e-maildir "~/Mail/hisbaan-gmail")
-;;   (setq mu4e-root-maildir "~/Mail/hisbaan-gmail")
-;;   (setq my-mu4e-account-alist "hisbaan-gmail")
-
-;;   (setq mu4e-drafts-folder "/[Gmail]/Drafts")
-;;   (setq mu4e-sent-folder   "/[Gmail]/Sent Mail")
-;;   (setq mu4e-refile-folder "/[Gmail]/All Mail")
-;;   (setq mu4e-trash-folder  "/[Gmail]/Trash")
-
-;;   (setq mu4e-maildir-shortcuts
-;;       '(("/Inbox"             . ?i)
-;;         ("/[Gmail]/Sent Mail" . ?s)
-;;         ("/[Gmail]/Trash"     . ?t)
-;;         ("/[Gmail]/Drafts"    . ?d)
-;;         ("/[Gmail]/All Mail"  . ?a))))
 
 ;;;;;;;;;;;;;;;
 ;; Yasnippet ;;

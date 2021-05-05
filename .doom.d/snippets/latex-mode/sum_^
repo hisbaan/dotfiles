@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sum_^
+# key: sum
+# --
+\sum_{${1:n}}^{${2:\infty}} $0

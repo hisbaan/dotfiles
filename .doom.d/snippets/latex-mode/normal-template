@@ -6,10 +6,10 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
 
-\title{TITLE}
+\title{${1:TITLE}}
 \author{Hisbaan Noorani}
-\date{DATE}
+\date{${2:DATE}}
 
 \begin{document}
-
+$0
 \end{document}
