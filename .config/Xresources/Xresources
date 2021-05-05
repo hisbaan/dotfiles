@@ -44,6 +44,9 @@ URxvt.keysym.M-v: perl:clipboard:paste
 URxvt*depth: 32
 
 ! == colours ==
+
+! start flavours
+
 #include "/home/hisbaan/.xcolors/onedark-custom"
 
 *.foreground: FOREGROUND
@@ -86,3 +89,5 @@ URxvt*depth: 32
 
 ! accent
 *.accent: ACCENT
+
+! end flavours

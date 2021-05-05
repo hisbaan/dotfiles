@@ -272,6 +272,8 @@
     # Context menu.
     context = ctrl+shift+period
 
+# start flavours
+
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
@@ -295,6 +297,8 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
+
+# end flavours
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

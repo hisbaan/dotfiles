@@ -101,12 +101,12 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-      kitty
+      kitty --single-instance
 
 # floating kitty
 super + shift + Return
       bspc rule -a kitty --one-shot state=floating; \
-      kitty 
+      kitty --single-instance
 
 # rofi
 super + d

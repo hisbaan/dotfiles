@@ -1,3 +1,4 @@
+/* start flavours */
 * {
 	background-color: #1E2127;
 	text-color: #ABB2BF;
@@ -36,3 +37,4 @@ element selected {
 	background-color: #BD93F9;
 	text-color: #1E2127;
 }
+/* end flavours */

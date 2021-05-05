@@ -12,12 +12,14 @@ set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 # set scroll-step 50
 
-#zoom settings
+# zoom settings
 set zoom-min 10
 
 set render-loading "false"
 
 set recolor true
+
+# start flavours
 
 set default-bg '#1E2127'
 set default-fg '#dfdfdf'
@@ -33,5 +35,7 @@ set statusbar-fg '#dfdfdf'
 
 set highlight-active-color '#7218f2'
 set highlight-color '#bd93f9'
+
+# end flavours
 
 set font "MesloLGS Nerd Font normal 10"
