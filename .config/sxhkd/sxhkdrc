@@ -131,6 +131,10 @@ ctrl + q
 {Print, Insert}
     flameshot gui
 
+# scrot (screenshot)
+shift + {Print, Insert}
+    scrot
+
 ##################
 ### Media Keys ###
 ##################
