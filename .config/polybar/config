@@ -105,7 +105,7 @@ font-2 = Material Design Icons Desktop:pixelsize=26;5
 modules-left = bspwm
 modules-right = divider memory divider cpu divider pulseaudio divider battery divider wireless-network divider date
 
-tray-position = none
+tray-position = right
 tray-detached = false
 tray-maxsize = 30
 tray-background = ${colors.background}

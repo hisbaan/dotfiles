@@ -3,13 +3,13 @@
 
 * Preview
 
-[[Pictures/screenshots/desktop-screenshots/gif/1.gif]]
+[[Pictures/screenshots/desktop-screenshots/gif/1-compressed.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/2.gif]]
+[[Pictures/screenshots/desktop-screenshots/gif/2-compressed.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/3.gif]]
+[[Pictures/screenshots/desktop-screenshots/gif/3-compressed.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/4.gif]]
+[[Pictures/screenshots/desktop-screenshots/gif/4-compressed.gif]]
 
 * System Info
 | *Item*                  | *Program*                 | *Config*          |
