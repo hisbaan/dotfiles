@@ -55,6 +55,7 @@ gcc
 gimp
 git
 github-cli
+gnome-calculator
 gradle
 hdparm
 htop
@@ -129,6 +130,7 @@ polkit-gnome
 powertop
 pulseaudio-alsa
 python-pip
+python-pipenv
 python-pywal
 python2
 qemu
@@ -146,6 +148,7 @@ rxvt-unicode
 s-tui
 sane
 scrot
+shellcheck
 signal-desktop
 sl
 smartmontools

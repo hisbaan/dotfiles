@@ -43,3 +43,17 @@ template = "rofi"
 subtemplate = "custom"
 start = "/* start flavours */"
 end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/discocss/custom.css"
+template = "discocss"
+subtemplate = "custom"
+start = "/* start flavours */"
+end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/firefox/userChrome.css"
+template = "firefox"
+subtemplate = "custom"
+start = "/* start flavours */"
+end = "/* end flavours */"

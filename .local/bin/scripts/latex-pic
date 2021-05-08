@@ -34,7 +34,7 @@ echo "\documentclass[border=0.2cm]{standalone}
 \usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, xcolor, pagecolor, mathtools}
 \definecolor{background}{HTML}{${background}}
 \definecolor{foreground}{HTML}{${foreground}}
-\pagecolor{background}
+%\pagecolor{background}
 \DeclarePairedDelimiter\autobracket{(}{)}
 \newcommand{\br}[1]{\autobracket*{#1}}
 \DeclarePairedDelimiter\autosquarebracket{[}{]}

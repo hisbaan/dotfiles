@@ -8,15 +8,18 @@ betterlockscreen
 bitwarden
 brave-bin
 brlaser
+brother-dcpl2520dw
 cbonsai
 citra-qt-bin
 color-picker
 davinci-resolve
+discocss-git
 discord_arch_electron
 droidcam
 espanso-bin
 ffhevc
 ffmpeg-compat-57
+flavours
 foxitreader
 gstreamer0.10-base
 hfsprogs
@@ -26,7 +29,6 @@ minecraft-launcher
 mpd-mpris
 mpdscribble
 mu
-neovide
 neovim-nightly-bin
 nerd-fonts-meslo
 nomachine
@@ -53,7 +55,9 @@ tuxi-git
 via-bin
 wd719x-firmware
 windscribe-cli
+xcolor
 ytop
+zaread-git
 zoom
 zsh-abbr
 zsh-theme-powerlevel10k-git

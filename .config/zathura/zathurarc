@@ -27,6 +27,9 @@ set default-bg                  "#1e2127"
 set default-fg                  "#d9dde5"
 
 set inputbar-bg                 "#1e2127"
+set inputbar-fg                 "#d9dde5"
+
+set statusbar-bg                "#1e2127"
 set statusbar-fg                "#d9dde5"
 
 set notification-bg             "#1e2127"
