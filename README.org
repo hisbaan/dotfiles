@@ -3,13 +3,13 @@
 
 * Preview
 
-[[Pictures/screenshots/desktop-screenshots/gif/1.gif]]
+[[https://github.com/hisbaan/dotfiles-images/tree/master/gif/1.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/2.gif]]
+[[https://github.com/hisbaan/dotfiles-images/tree/master/gif/2.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/3.gif]]
+[[https://github.com/hisbaan/dotfiles-images/tree/master/gif/3.gif]]
 
-[[Pictures/screenshots/desktop-screenshots/gif/4.gif]]
+[[https://github.com/hisbaan/dotfiles-images/tree/master/gif/4.gif]]
 
 * System Info
 | *Item*                  | *Program*                 | *Config*          |
