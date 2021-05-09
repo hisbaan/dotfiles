@@ -1,3 +1,9 @@
+/* start flavours */
+:root {
+    --accent-color: #bd93f9;
+}
+/* end flavours */
+
 window,
 #main-window,
 #toolbar-menubar,
@@ -13,7 +19,7 @@ toolbar {
 }
 
 .tab-background[selected="true"] {
-  background-color: #bd93f9 !important;
+  background-color: var(--accent-color) !important;
   -moz-appearance: none !important;
   background-image: none !important;
   border: none !important;
@@ -32,7 +38,7 @@ toolbar {
   display: none !important;
 }
 
-.tabbrowser-tab::before, 
+.tabbrowser-tab::before,
 .tabbrowser-tab::after{
   display: none !important;
 }
@@ -112,12 +118,10 @@ toolbar {
 
 #urlbar ::-moz-selection,
 .searchbar-textbox ::-moz-selection {
-  background-color: #bd93f9 !important;
+  background-color: var(--accent-color) !important;
   color: #000 !important;
 }
 
 #Tabbrowser-tabpanels{
   background-color: #ffffff !important;
 }
-
-
