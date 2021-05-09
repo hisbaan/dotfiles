@@ -20,9 +20,10 @@ mpd_connection_timeout = 5
 
 mpd_music_dir = ~/Music
 mpd_crossfade_time = 5
-# ########################
-# ### music visualizer ###
-# ########################
+
+########################
+### music visualizer ###
+########################
 
 # visualizer_fifo_path = /tmp/mpd.fifo
 
@@ -40,6 +41,8 @@ mpd_crossfade_time = 5
 # visualizer_type = wave
 # visualizer_look = ●▮
 # visualizer_color = 13
+
+visualizer_color = "red,magenta,cyan,green,yellow"
 
 ##############
 ### delays ###

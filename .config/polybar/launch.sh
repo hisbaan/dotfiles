@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env bash
 
 if [[ $(pidof -s polybar) ]]
 then
