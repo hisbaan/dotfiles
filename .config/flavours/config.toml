@@ -57,3 +57,10 @@ template = "firefox"
 subtemplate = "custom"
 start = "/* start flavours */"
 end = "/* end flavours */"
+
+[[item]]
+file = "~/projects/bento/css/style.css"
+template = "bento"
+subtemplate = "custom"
+start = "/* start flavours */"
+end = "/* end flavours */"
