@@ -1,0 +1,18 @@
+scheme: "Dracula"
+author: "Hisbaan Noorani (http://github.com/hisbaan)"
+base00: "282936" #background
+base01: "3a3c4e"
+base02: "4d4f68"
+base03: "626483"
+base04: "8284a3"
+base05: "e9e9f4" #foreground
+base06: "f1f2f8"
+base07: "f7f7fb"
+base08: "ff5555"
+base09: "f1fa8c"
+base0A: "ebff87"
+base0B: "50fa7b"
+base0C: "8be9fd"
+base0D: "9aedfe"
+base0E: "bd93f9"
+base0F: "ef3f3f"

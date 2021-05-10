@@ -47,7 +47,7 @@ URxvt*depth: 32
 
 ! start flavours
 ! Base16 OneDark Custom
-! Scheme: Hisbaan (https://github.com/hisbaan)
+! Scheme: Hisbaan Noorani (https://github.com/hisbaan)
 
 #define base00 #1e2127
 #define base01 #282c34

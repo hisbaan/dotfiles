@@ -21,7 +21,7 @@ set recolor true
 
 # start flavours
 # Base16 OneDark Custom
-# Author: Hisbaan (https://github.com/hisbaan)
+# Author: Hisbaan Noorani (https://github.com/hisbaan)
 
 set default-bg                  "#1e2127"
 set default-fg                  "#d9dde5"
