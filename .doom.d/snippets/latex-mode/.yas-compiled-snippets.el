@@ -13,6 +13,7 @@
                        ("int" "\\int{$1} d${2:x}$0" "int_^" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/integral" nil nil)
                        ("frac" "\\frac{${1:numerator}}{${2:denominator}}$0" "frac-alt" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/frac-alt" nil nil)
                        ("/" "\\frac{${1:numerator}}{${2:denominator}}$0" "frac" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/frac" nil nil)
+                       ("ep" "\\varepsilon\n" "epsilon" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/epsilon" nil nil)
                        ("enum" "\\begin{enumerate}\n\\item $0\n\\end{enumerate}" "enumerate" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/enumerate" nil nil)
                        ("e3" "\\vec{e_3}$0" "e3" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/e3" nil nil)
                        ("e2" "\\vec{e_2}$0" "e2" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/e2" nil nil)
@@ -20,7 +21,8 @@
                        ("dint" "\\int_{${1:a}}^{${2:b}}{$3} d${4:x}$0" "def-int" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/def-integral" nil nil)
                        ("apa" "\\documentclass[man, 12pt]{apa7}\n\n\\usepackage{fontspec}\n\\setmainfont{Times New Roman}\n\n\\usepackage[english]{babel}\n\\usepackage{csquotes}\n\\usepackage[style=apa, backend=biber, sortcites=true, sorting=nty]{biblatex}\n\\bibliography{refs.bib}\n\\usepackage{hyperref}\n\\hypersetup{hidelinks}\n\n\\title{${1:TITLE}}\n\\author{Hisbaan Noorani}\n\\affiliation{University of Toronto, ${2:COURSE}, ${3:PROFESSOR}, ${4:DATE}}\n\\shorttitle{}\n\n\\linespread{2}\n\\setlength{\\parindent}{0.5in}\n\n\\begin{document}\n\\maketitle\n$0\n\\newpage\n\\printbibliography[title={\\centering References}]\n\\end{document}" "apa" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/apa" nil nil)
                        ("eval" "\\Big\\vert_{x = ${1:a}}^{x = ${2:b}}" "antiderivative evaluation" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/antiderivative evaluation" nil nil)
-                       ("align" "\\begin{align*}\n$0\n\\end{align*}" "align" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/align" nil nil)))
+                       ("align" "\\begin{align*}\n$0\n\\end{align*}" "align" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/align" nil nil)
+                       ("abs" "\\abs{${1:x - a}}$0\n" "absolute value" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/absolute-value" nil nil)))
 
 
-;;; Do not edit! File generated at Wed Apr 14 00:40:55 2021
+;;; Do not edit! File generated at Tue Sep  7 22:40:44 2021

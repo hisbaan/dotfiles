@@ -141,19 +141,35 @@ shift + {Print, Insert}
 
 # pause/play music
 {XF86AudioPlay, super + slash}
-    spdctl play-pause
+    playerctl -p spotify play-pause
 
 # skip track
 {XF86AudioNext, super + period}
-    spdctl next
+    playerctl -p spotify next
 
 # go back a track
 {XF86AudioPrev, super + comma}
-    spdctl prev
+    playerctl -p spotify previous
 
 # stop music
 XF86AudioStop
-    spdctl stop
+    playerctl -p spotify stop
+
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     spdctl play-pause
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     spdctl next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     spdctl prev
+
+# # stop music
+# XF86AudioStop
+#     spdctl stop
 
 # # pause/play music
 # {XF86AudioPlay, super + slash}
@@ -204,9 +220,9 @@ super + XF86Tools ; {l,e,s,r,shift + s,Return}
     {betterlockscreen -l,bspc quit,systemctl suspend,reboot,poweroff,xdotool key Escape}
 
 # brightness up
-XF86MonBrightnessUp
-    xbacklight -inc 1
+{shift,_} XF86MonBrightnessUp
+    xbacklight -steps 10 -inc {1,5}
 
 # brightness down
-XF86MonBrightnessDown
-    xbacklight -dec 1
+{shift,_} XF86MonBrightnessDown
+    xbacklight -steps 10 -dec {1,5}

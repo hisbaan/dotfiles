@@ -31,7 +31,9 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-custom)
 
-;;;;;;;;;;
+;; (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
+(setq org-superstar-headline-bullets-list '("⁖"))
+
 ;; Tabs ;;
 ;;;;;;;;;;
 
@@ -52,6 +54,12 @@
 ;; (setq-default evil-shift-width custom-tab-width)
 
 ;; (setq backward-delete-char-untabify-method 'hungry)
+
+;;;;;;;;;;;;;;;;
+;; Projectile ;;
+;;;;;;;;;;;;;;;;
+
+(setq projectile-project-search-path '("~/projects"))
 
 ;;;;;;;;;;;;;;
 ;; Org Mode ;;
@@ -134,6 +142,16 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;;;;;;;;;;;;;;;;;;
+;; Company-mode ;;
+;;;;;;;;;;;;;;;;;;
+
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 2)
+(setq company-selection-wrap-around t)
+(company-tng-configure-default)
+
 ;;;;;;;;;;;;;;;
 ;; Yasnippet ;;
 ;;;;;;;;;;;;;;;
@@ -149,7 +167,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 (setq comfirm-kill-emacs nil)
 

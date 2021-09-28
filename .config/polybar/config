@@ -169,7 +169,6 @@ ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;ﱘ
 ws-icon-8 = 9;ﭮ
-ws-icon-default = ""
 
 format = <label-state> <label-mode>
 
@@ -186,6 +185,9 @@ label-mode-background = ${colors.accent}
 ; Default: %icon%  %name%
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
+; label-focused-background = ${colors.background}
+; label-focused-foreground = ${colors.foreground}
+; label-focused-underline = ${colors.accent}
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
 label-focused-underline = ${colors.accent}
@@ -218,7 +220,7 @@ label-visible-padding = 2
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon% %name%
 label-urgent-background = ${self.label-focused-background}
-label-urgent-foreground = #db104e
+label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 2
 
 label-occupied = %icon% %name%
@@ -230,29 +232,29 @@ label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
+; label-monocle = "  "
+; label-monocle-foreground = ${colors.foreground}
 
-label-tiled = 
-label-tiled-foreground = ${colors.foreground}
+; label-tiled =
+; label-tiled-foreground = ${colors.foreground}
 
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
+; label-fullscreen = "  "
+; label-fullscreen-foreground = ${colors.foreground}
 
-label-floating = "  "
-label-floating-foreground = ${colors.foreground}
+; label-floating = "  "
+; label-floating-foreground = ${colors.foreground}
 
-label-pseudotiled = "  "
-label-pseudotiled-foreground = ${colors.foreground}
+; label-pseudotiled = "  "
+; label-pseudotiled-foreground = ${colors.foreground}
 
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
+; label-locked = "  "
+; label-locked-foreground = ${colors.foreground}
 
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
+; label-sticky = "  "
+; label-sticky-foreground = ${colors.foreground}
 
-label-private =  "  "
-label-private-foreground = ${colors.foreground}
+; label-private =  "  "
+; label-private-foreground = ${colors.foreground}
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background} 
@@ -444,7 +446,8 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %a %b %d, %Y"
+; date = " %a %b %d, %Y"
+date = %{A1:~/.config/eww/system-monitor:} %a %b %d, %Y%{A}
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
