@@ -20,8 +20,8 @@ biber
 bind
 binutils
 bison
-borg
-broot
+bitwarden
+bpytop
 bspwm
 capitaine-cursors
 celluloid
@@ -31,6 +31,9 @@ cuda
 cups
 cups-pdf
 dialog
+discord
+docker
+docker-compose
 dolphin-emu
 dunst
 efibootmgr
@@ -49,9 +52,9 @@ flameshot
 flex
 foliate
 fzf
-galculator
 gamemode
 gcc
+gcc-fortran
 gimp
 git
 github-cli
@@ -61,6 +64,7 @@ hdparm
 htop
 httrack
 hyphen-en
+imv
 inetutils
 jdk11-openjdk
 kitty
@@ -85,8 +89,6 @@ linux-firmware
 linux-headers
 linux-lts
 linux-lts-headers
-linux-zen
-linux-zen-headers
 lolcat
 luit
 lutris
@@ -95,12 +97,15 @@ lxsession
 lynx
 m4
 make
+mariadb
 meld
+mosh
 mpc
 mpd
 nautilus
 ncmpcpp
 neofetch
+neovim
 net-snmp
 networkmanager
 nitrogen
@@ -129,11 +134,13 @@ playerctl
 polkit-gnome
 powertop
 pulseaudio-alsa
+pv
 python-pip
 python-pipenv
 python-pywal
 python2
 qemu
+r
 ranger
 redshift
 refind
@@ -144,6 +151,7 @@ retroarch-assets-xmb
 ripgrep
 rofi
 rsync
+rustup
 rxvt-unicode
 s-tui
 sane
@@ -158,7 +166,6 @@ spotifyd
 steam
 sudo
 sxhkd
-sxiv
 tesseract
 tesseract-data-eng
 texinfo
@@ -176,6 +183,7 @@ texlive-publishers
 texlive-science
 tldr
 torbrowser-launcher
+traceroute
 transmission-cli
 transmission-qt
 tree
@@ -195,6 +203,7 @@ wmctrl
 wmname
 wqy-zenhei
 xclip
+xcolor
 xdo
 xf86-video-vesa
 xorg-bdftopcf

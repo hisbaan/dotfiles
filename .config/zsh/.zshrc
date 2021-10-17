@@ -26,7 +26,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 
-alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
+# alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
 ###############
 ### Aliases ###
@@ -41,6 +41,8 @@ alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
+alias btop='bpytop'
+alias bin='cd ~/projects/binocularss/'
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
@@ -94,6 +96,7 @@ fi
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
 export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/
+export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 #############
 ### Other ###
@@ -105,9 +108,9 @@ compinit -d "${XDG_CACHE_HOME:-${HOME}/.cache}/zsh/zcompdump"
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 
-###########################
+############################
 ### Interactive Comments ###
-###########################
+############################
 
 setopt interactivecomments
 

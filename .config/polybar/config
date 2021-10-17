@@ -236,37 +236,37 @@ label-occupied-background = ${colors.background}
 ;label-urgent = %icon%
 ;label-urgent-padding = 2
 
-label-empty = 
+label-empty =
 label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
+; label-monocle = "  "
+; label-monocle-foreground = ${colors.foreground}
 
-label-tiled = 
-label-tiled-foreground = ${colors.foreground}
+; label-tiled =
+; label-tiled-foreground = ${colors.foreground}
 
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
+; label-fullscreen = "  "
+; label-fullscreen-foreground = ${colors.foreground}
 
-label-floating = "  "
-label-floating-foreground = ${colors.foreground}
+; label-floating = "  "
+; label-floating-foreground = ${colors.foreground}
 
-label-pseudotiled = "  "
-label-pseudotiled-foreground = ${colors.foreground}
+; label-pseudotiled = "  "
+; label-pseudotiled-foreground = ${colors.foreground}
 
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
+; label-locked = "  "
+; label-locked-foreground = ${colors.foreground}
 
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
+; label-sticky = "  "
+; label-sticky-foreground = ${colors.foreground}
 
-label-private =  "  "
-label-private-foreground = ${colors.foreground}
+; label-private =  "  "
+; label-private-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
-;label-separator = " " 
+;label-separator = " "
 ;label-separator-padding = 2
 ;label-separator-foreground = #ffb52a
 
@@ -378,7 +378,8 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %a %b %d, %Y"
+; date = " %a %b %d, %Y"
+date = %{A:~/.config/eww/system-monitor:} %a %b %d, %Y%{A}
 date-alt = " %a %b %d, %Y"
 time = %l:%M%p
 time-alt = %l:%M%p
@@ -534,6 +535,7 @@ ramp-volume-1 = 󰕾
 
 ; Right and Middle click
 click-right = pavucontrol
+click-middle = switch-sink
 ; click-middle = make a script that changes the default sink based on the current one
 
 [module/uptime]

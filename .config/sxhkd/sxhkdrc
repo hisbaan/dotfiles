@@ -143,19 +143,19 @@ shift + {Print, Insert}
 
 # pause/play music
 {XF86AudioPlay, super + slash}
-                spdctl play-pause
+                playerctl -p spotify play-pause
 
 # skip track
 {XF86AudioNext, super + period}
-                spdctl next
+                playerctl -p spotify next
 
 # go back a track
 {XF86AudioPrev, super + comma}
-                spdctl prev
+                playerctl -p spotify previous
 
 # stop music
 XF86AudioStop
-    spdctl stop
+    playerctl -p spotify stop
 
 # # pause/play music
 # {XF86AudioPlay, super + slash}
