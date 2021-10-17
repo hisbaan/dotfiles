@@ -1,0 +1,28 @@
+#!/bin/env bash
+
+TEMPLATE=~/Documents/inkscape-figures/template.svg
+FIGURE_DIR=img
+FIGURE_NAME=$1
+
+if [[ ! -d $FIGURE_DIR ]]
+then
+    echo "No 'img' directory found, creating"
+    mkdir img
+fi
+
+cd $FIGURE_DIR
+
+if [[ ! -f $FIGURE_NAME.svg ]]
+then
+    cp $TEMPLATE $FIGURE_NAME.svg
+fi
+
+inkscape $FIGURE_NAME.svg
+inkscape --export-filename=$FIGURE_NAME.pdf $FIGURE_NAME.svg --export-latex
+
+# search for the figure name in ./img dir
+# if there, insert it
+#
+# if not there, copy the inkscape template to ./img/figure-name
+# then open it in inkscape
+# have inkscape configured to do so (maybe a custom config that is different from the default one? inkscape -c?)

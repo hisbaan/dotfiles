@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+cd ~/.unison/
+
+for i in *.prf
+do
+    unison ${i/.prf/}
+done
