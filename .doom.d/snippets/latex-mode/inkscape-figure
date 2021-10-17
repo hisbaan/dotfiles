@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: inkscape-figure
+# key: inkfig
+# --
+\begin{figure}[ht]
+    \centering
+    \inkfig{${1:figure}}
+    \caption{${2:caption}}
+    \label{fig:${3:label}}
+\end{figure}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: absolute value
+# key: abs
+# --
+\abs{${1:x - a}}$0

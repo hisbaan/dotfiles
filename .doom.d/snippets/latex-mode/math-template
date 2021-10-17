@@ -4,20 +4,23 @@
 # --
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools, mdframed}
+\usepackage{import, pdfpages, transparent, xcolor}
 
-% \DeclarePairedDelimiter\autobracket{(}{)}
-% \newcommand{\br}[1]{\autobracket*{#1}}
-% \DeclarePairedDelimiter\autosquarebracket{[}{]}
-% \newcommand{\sbr}[1]{\autosquarebracket*{#1}}
-% \DeclarePairedDelimiter\autocurlybracket{\\{}{\\}}
-% \newcommand{\cbr}[1]{\autocurlybracket*{#1}}
+\newcommand{\inkfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./img/}{#2.pdf_tex}
+}
 
 \newcommand{\br}[1]{\left(#1\right)}
 \newcommand{\sbr}[1]{\left[#1\right]}
 \newcommand{\cbr}[1]{\left\\{#1\right\\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
 
 \newcommand{\st}{\text{ s.t. }}
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tor}{\text{ or }}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
