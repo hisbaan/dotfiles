@@ -7,3 +7,5 @@ ignore = Path *csc111/assignments/a1
 ignore = Path *csc111/assignments/a2
 ignore = Path *csc111/assignments/a3
 ignore = Path *_minted*
+
+ignore = Path {z-completed-courses/csc111/project/wikigraph/.git/index}
