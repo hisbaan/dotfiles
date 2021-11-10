@@ -525,7 +525,7 @@ ramp-volume-1 = 󰕾
 
 ; Right and Middle click
 click-right = pavucontrol
-; click-middle = nterval = 5
+click-middle = switch-sink
 
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network

@@ -4,7 +4,13 @@
 # --
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools, mdframed}
+\usepackage{import, pdfpages, transparent, xcolor}
+
+\newcommand{\inkfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./img/}{#2.pdf_tex}
+}
 
 \newcommand{\br}[1]{\left(#1\right)}
 \newcommand{\sbr}[1]{\left[#1\right]}

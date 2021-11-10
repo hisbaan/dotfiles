@@ -24,8 +24,6 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock0keyword-face :slant italic))
 
-(setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
-
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -34,6 +32,7 @@
 ;; (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
 (setq org-superstar-headline-bullets-list '("⁖"))
 
+;;;;;;;;;;
 ;; Tabs ;;
 ;;;;;;;;;;
 
@@ -152,6 +151,21 @@
 (setq company-selection-wrap-around t)
 (company-tng-configure-default)
 
+;; (setq company-global-modes '(not latex-mode))
+;;
+(add-hook 'latex-mode-hook 'inhibit-global-company-mode)
+
+(defun inhibit-global-company-mode ()
+  "Counter-act `global-company-mode'."
+  (add-hook 'after-change-major-mode-hook
+            (lambda () (company-mode 0))
+            :append :local))
+
+;; (defun disable-company-mode ()
+;;   (company-mode -1))
+;; (add-hook 'latex-mode-hook 'disable-company-mode)
+; (setq company-global-modes '(not LaTeX-mode))
+
 ;;;;;;;;;;;;;;;
 ;; Yasnippet ;;
 ;;;;;;;;;;;;;;;
@@ -160,6 +174,9 @@
 (defun my-snippet-hook ()
   "Custom behaviours for `snippet'."
   (setq-local require-final-newline nil))
+
+; (setq yas/triggers-in-field t)
+(setq yas-triggers-in-field t)
 
 ;;;;;;;;;;
 ;; Misc ;;

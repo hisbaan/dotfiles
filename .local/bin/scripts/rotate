@@ -18,8 +18,8 @@
 #
 
 # Configure these to match your hardware (names taken from `xinput` output).
-TOUCHPAD='SynPS/2 Synaptics TouchPad'
-TOUCHSCREEN='Atmel Atmel maXTouch Digitizer'
+TOUCHPAD='DLL096D:01 06CB:CDE6 Touchpad'
+TOUCHSCREEN='Wacom HID 4943 Finger touch'
 
 if [ -z "$1" ]; then
   echo "Missing orientation."

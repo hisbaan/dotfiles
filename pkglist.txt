@@ -17,7 +17,6 @@ automake
 awesome
 barrier
 base
-bashtop
 bat
 biber
 binutils
@@ -33,6 +32,7 @@ capitaine-cursors
 celluloid
 cheese
 chromium
+code
 cpupower
 cups
 cups-pdf
@@ -70,11 +70,13 @@ gradle
 groff
 hsetroot
 htop
+imv
 intel-gpu-tools
 intel-ucode
 intel-undervolt
 iwd
 jdk11-openjdk
+kdeconnect
 kitty
 lib32-gamemode
 lib32-giflib
@@ -150,6 +152,7 @@ ripgrep
 rofi
 rsync
 rustup
+rxvt-unicode
 s-tui
 scrot
 signal-desktop
@@ -161,7 +164,6 @@ steam
 sudo
 swayidle
 sxhkd
-sxiv
 tesseract
 tesseract-data-eng
 testdisk
@@ -202,6 +204,7 @@ wine-staging
 winetricks
 wmname
 wofi
+xcolor
 xdo
 xf86-input-wacom
 xf86-video-vesa

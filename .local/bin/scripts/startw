@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_X11_EGL=1
+
+sway

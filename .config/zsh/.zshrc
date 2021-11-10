@@ -35,6 +35,8 @@ alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 alias cat="bat $argv"
 alias cp="cp -i $argv"
 alias df="df -h $argv"
+alias rm="trash-put $argv"
+alias undo-rm="trash-restore $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias system="/usr/bin/git --git-dir=/home/hisbaan/.system-setup.git/ --work-tree=/ $argv"
 alias emacs="emacsclient -c -a 'emacs'"
@@ -43,6 +45,8 @@ alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
 alias btop='bpytop'
+alias bin="cd ~/projects/binocularss/"
+alias iwlan="iwctl station wlan0 "
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
@@ -96,14 +100,14 @@ fi
 # export DISPLAY=":0"
 
 # Comment out for wayland
-export GDK_SCALE=2
-export GDK_DPI_SCALE=0.5
-export MOZ_USE_XINPUT2=1
-export MOZ_X11_EGL=1
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
+# export GDK_SCALE=2
+# export GDK_DPI_SCALE=0.5
+# export MOZ_USE_XINPUT2=1
+# export MOZ_X11_EGL=1
+# export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # export MOZ_ENABLE_WAYLAND=1
 
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/
 
 #############
 ### Other ###

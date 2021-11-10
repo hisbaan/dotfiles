@@ -1,7 +1,9 @@
 aic94xx-firmware
 android-studio
+android-studio-beta
 authy
 autojump
+autotiling
 betterlockscreen
 bluebubbles-desktop-app
 brave-bin
@@ -20,9 +22,9 @@ downgrade
 downgrader-git
 droidcam
 espanso-bin
-eww-git
 flavours
 howdy
+i3-swallow-git
 i8kutils
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
@@ -34,7 +36,6 @@ mbsync-git
 megasync-bin
 minecraft-launcher
 mkmm
-mu
 nerd-fonts-meslo
 nomachine
 onlyoffice-bin
@@ -63,10 +64,8 @@ ttf-meslo
 ttf-times-new-roman
 tuxi-git
 via-bin
-vscodium-bin
 wd719x-firmware
 windscribe-cli
-xcolor
 xf86-input-mtrack
 ytop
 zoom
