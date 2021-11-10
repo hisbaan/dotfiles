@@ -17,7 +17,8 @@ set zoom-min 10
 
 set render-loading "false"
 
-set recolor true
+set recolor "true"
+set recolor-keephue "true"
 
 # start flavours
 # Base16 OneDark Custom
