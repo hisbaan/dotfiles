@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: avant
+# key: avant
+# --
+\usepackage[charter,cal=cmcal]{mathdesign} % Specify font for serif family
+\usepackage{avant} % Specify avant font for sans serif family
+\usepackage{mathtools} % Replaces amsmath
+\usepackage{sectsty} % Specify section formatting
+	\sectionfont{\sffamily\color{DarkBlue}}
+	\subsectionfont{\sffamily\color{LightBlue}}
+	\subsubsectionfont{\small\sffamily}

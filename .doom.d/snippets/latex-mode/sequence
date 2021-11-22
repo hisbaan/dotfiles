@@ -1,0 +1,4 @@
+# key: seq
+# name: sequence
+# --
+\cbr{${1:a}}_{${2:n = 1}}^{${3:\infty}}$0

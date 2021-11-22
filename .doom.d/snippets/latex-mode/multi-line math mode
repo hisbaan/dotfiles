@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: multi-line math mode
+# key: mlm
+# --
+\[
+  $0
+\]

@@ -14,15 +14,27 @@
 
 (setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30)
       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 45)
-      doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font" :size 30)
-      doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30 :weight 'light))
-;; (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
+      doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30)
+      doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
-  '(font-lock0keyword-face :slant italic))
+  '(font-lock-keyword-face :slant italic))
+
+
+;; (setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30)
+;;       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 45)
+;;       doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font" :size 30)
+;;       doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30 :weight 'light))
+;; ;; (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
+;; (after! doom-themes
+;;   (setq doom-themes-enable-bold t
+;;         doom-themes-enable-italic t))
+;; (custom-set-faces!
+;;   '(font-lock-comment-face :slant italic)
+;;   '(font-lock-keyword-face :slant italic))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
