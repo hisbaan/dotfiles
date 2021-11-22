@@ -1,0 +1,162 @@
+* {
+    all: unset;
+}
+
+window {
+    color: #{{base07-hex}};
+    font-family: "CaskaydiaCove Nerd Font";
+}
+
+button:hover {
+    color: #{{base0E-hex}};
+}
+
+.eww-window, .layout-manager, .system-manager {
+    border-radius: 10px;
+}
+
+.triangle, .date {
+    background-color: transparent;
+}
+
+.eww-window {
+    background-color: #{{base00-hex}};
+}
+
+.layout-manager, .system-manager {
+    background-color: #{{base01-hex}};
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.layout-manager {
+    background-color: transparent;
+    margin-top: -25px;
+}
+
+// TRIANGLE
+
+.tr-text {
+    font-size: 26px;
+    color: #{{base07-hex}};
+}
+
+// DATE
+
+.time {
+    margin: 15px 75px -20px 75px;
+    font-size: 50px;
+    color: #{{base07-hex}};
+}
+
+.semicolon {
+    margin: 0px;
+    margin-top: -5px;
+    color: #{{base05-hex}};
+}
+
+.day {
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #{{base0E-hex}};
+}
+
+// LAYOUT MANAGER
+
+.layout-btn button {
+    font-family: "Material Icons";
+    font-size: 27px;
+
+    margin: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+// SYSTEM MANAGER
+
+.system-manager slider {
+    all: unset;
+}
+
+.label-ram-bar, .label-vol-bar, .label-brightness-bar {
+    font-size: 23px;
+    font-family: "Material Icons";
+
+    margin-top: 12px;
+    margin-left: -35px;
+}
+
+.label-ram-bar {
+    margin-top: 25px;
+    margin-left: -62px;
+    font-size: 27px;
+    color: #{{base08-hex}};
+}
+
+.label-brightness-bar {
+    margin-left: -64px;
+    color: #{{base0A-hex}};
+}
+
+.label-vol-bar {
+    margin-left: -64px;
+    color: #{{base0B-hex}};
+}
+
+.ram-bar scale trough highlight {
+    all: unset;
+    background-image: linear-gradient(to right, #{{base08-hex}}, #{{base08-hex}});
+	color: #000000;
+	border-radius: 10px;
+}
+
+.brightness-bar scale trough highlight {
+    all: unset;
+    background-image: linear-gradient(to right, #{{base0A-hex}}, #{{base0A-hex}});
+    color: #000000;
+    border-radius: 10px;
+
+}
+
+.vol-bar scale trough highlight {
+    all: unset;
+    background-image: linear-gradient(to right, #{{base0B-hex}}, #{{base0B-hex}});
+    color: #000000;
+    border-radius: 10px;
+
+}
+
+.ram-bar scale trough {
+	all: unset;
+	background-color: #{{base03-hex}};
+	border-radius: 50px;
+
+	min-height: 5px;
+    min-width: 150px;
+
+    margin: 25px 40px 0px -65px;
+}
+
+.vol-bar scale trough, .brightness-bar scale trough {
+	all: unset;
+	background-color: #{{base03-hex}};
+	border-radius: 50px;
+
+	min-height: 5px;
+    min-width: 150px;
+
+    margin: 10px 40px 0px -65px;
+}
+
+.powermenu-btn button {
+    font-family: "Material Icons";
+    font-size: 30px;
+
+    margin: 23px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 0px 15px 0px 15px;
+}
