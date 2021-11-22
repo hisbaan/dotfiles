@@ -47,25 +47,25 @@ URxvt*depth: 32
 rofi.dpi: 220;
 
 ! start flavours
-! Base16 OneDark Custom
-! Scheme: Hisbaan (https://github.com/hisbaan)
+! Base16 Rosé Pine Moon Custom
+! Scheme: Hisbaan Noorani (https://github.com/hisbaan)
 
-#define base00 #1e2127
-#define base01 #282c34
-#define base02 #353b45
-#define base03 #3e4451
-#define base04 #545862
-#define base05 #abb2bf
-#define base06 #b6bdca
-#define base07 #d9dde5
-#define base08 #e06c75
-#define base09 #d19a66
-#define base0A #e5c07b
-#define base0B #98c379
-#define base0C #56b6c2
-#define base0D #62afef
-#define base0E #bd93f9
-#define base0F #be5046
+#define base00 #232136
+#define base01 #2a273f
+#define base02 #393552
+#define base03 #59546d
+#define base04 #817c9c
+#define base05 #e0def4
+#define base06 #d9d7e1
+#define base07 #f5f5f7
+#define base08 #eb6f92
+#define base09 #ea9a97
+#define base0A #f6c177
+#define base0B #cbf2b8
+#define base0C #3e8fb0
+#define base0D #9ccfd8
+#define base0E #c4a7e7
+#define base0F #b9b9bc
 
 *.foreground: base05
 *.background: base00

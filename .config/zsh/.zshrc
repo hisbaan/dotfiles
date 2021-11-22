@@ -47,33 +47,36 @@ alias rs='rsync --numeric-ids --info=progress2'
 alias btop='bpytop'
 alias bin="cd ~/projects/binocularss/"
 alias iwlan="iwctl station wlan0 "
+alias proj="source projects"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
+# start flavours
 ###################
 ### TTY Colours ###
 ###################
 
 if [ "$TERM" = "linux" ]
 then
-  echo -en "\e]P0000000"
-  echo -en "\e]P1E06C75"
-  echo -en "\e]P298C379"
-  echo -en "\e]P3D19A66"
-  echo -en "\e]P441AFEF"
-  echo -en "\e]P5BD93F9"
-  echo -en "\e]P656B6C2"
-  echo -en "\e]P7ABB2BF"
-  echo -en "\e]P8000000"
-  echo -en "\e]P9E06C75"
-  echo -en "\e]PA98C379"
-  echo -en "\e]PBD19A66"
-  echo -en "\e]PC41AFEF"
-  echo -en "\e]PDBD93F9"
-  echo -en "\e]PE56B6C2"
-  echo -en "\e]PFABB2BF"
+  echo -en "\e]P0232136"
+  echo -en "\e]P1eb6f92"
+  echo -en "\e]P2cbf2b8"
+  echo -en "\e]P3ea9a97"
+  echo -en "\e]P49ccfd8"
+  echo -en "\e]P5c4a7e7"
+  echo -en "\e]P63e8fb0"
+  echo -en "\e]P7e0def4"
+  echo -en "\e]P8817c9c"
+  echo -en "\e]P9eb6f92"
+  echo -en "\e]PAcbf2b8"
+  echo -en "\e]PBea9a97"
+  echo -en "\e]PC9ccfd8"
+  echo -en "\e]PDc4a7e7"
+  echo -en "\e]PE3e8fb0"
+  echo -en "\e]PFf5f5f7"
   clear # Clear artifacts
 fi
+# end flavours
 
 ###############
 ### History ###
@@ -96,6 +99,8 @@ then
 else
     export EDITOR="emacsclient -c -a 'emacs'"
 fi
+
+fpath=($ZSH/functions $ZSH/completions $fpath)
 
 # export DISPLAY=":0"
 

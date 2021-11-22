@@ -80,3 +80,8 @@ subtemplate = "custom"
 hook = "eww reload"
 start = "// start flavours"
 end =  "// end flavours"
+
+[[item]]
+file = "~/.config/zsh/.zshrc"
+template = "zsh"
+subtemplate = "custom"

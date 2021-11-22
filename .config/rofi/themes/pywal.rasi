@@ -1,7 +1,7 @@
 /* start flavours */
 * {
-	background-color: #1e2127;
-	text-color: #abb2bf;
+	background-color: #232136;
+	text-color: #e0def4;
 	spacing: 0;
 	width: 1440px;
     dpi: 220;
@@ -35,7 +35,7 @@ element {
 }
 
 element selected {
-	background-color: #bd93f9;
-	text-color: #1e2127;
+	background-color: #c4a7e7;
+	text-color: #232136;
 }
 /* end flavours */
