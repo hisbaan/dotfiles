@@ -64,3 +64,15 @@ template = "bento"
 subtemplate = "custom"
 start = "/* start flavours */"
 end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/zsh/.zshrc"
+template = "zsh"
+subtemplate = "custom"
+
+[[item]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
+subtemplate = "default-256"
+
+

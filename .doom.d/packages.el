@@ -6,6 +6,7 @@
 ;; use 'M-x doom/reload'.
 
 ;; (package! elcord)
+(package! format-all)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)

@@ -15,7 +15,6 @@ davinci-resolve
 discocss-git
 droidcam
 espanso-bin
-eww-git
 ffhevc
 ffmpeg-compat-57
 flavours
@@ -30,6 +29,7 @@ minecraft-launcher
 mpd-mpris
 nerd-fonts-meslo
 nomachine
+nvim-packer-git
 onlyoffice-bin
 openjpeg
 pandoc-bin

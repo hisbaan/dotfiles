@@ -15,18 +15,23 @@
 (setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13)
       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 20)
       doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13)
-      doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13 :weight 'light))
+      doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 13))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
-  '(font-lock0keyword-face :slant italic))
+  '(font-lock-keyword-face :slant italic))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-custom)
+
+;; (use-package autothemer :ensure t)
+;; (load-theme 'rose-pine-moon} t)
+
+(setq org-superstar-headline-bullets-list '("⁖"))
 
 ;;;;;;;;;;
 ;; Tabs ;;
@@ -49,6 +54,12 @@
 ;; (setq-default evil-shift-width custom-tab-width)
 
 ; (setq backward-delete-char-untabify-method 'hungry)
+
+;;;;;;;;;;;;;;;;
+;; Projectile ;;
+;;;;;;;;;;;;;;;;
+
+(setq projectile-project-search-path '("~/projects"))
 
 ;;;;;;;;;;;;;;
 ;; Org Mode ;;
@@ -139,6 +150,102 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;;;;;;;;;;;;;;;;;;
+;; Company-mode ;;
+;;;;;;;;;;;;;;;;;;
+
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
+(setq comapny-minimum-prefix-length 2)
+(setq company-selection-wrap-around t)
+(company-tng-configure-default)
+
+(setq company-global-modes '(not latex-mode))
+(setq company-global-modes '(not LaTeX-mode))
+
+;; (defun company-yasnippet-or-completion ()
+;;   (interactive)
+;;   (let ((yas-fallback-behavior nil))
+;;     (unless (yas-expand)
+;;       (call-interactively #'company-complete-common))))
+
+;; (add-hook 'company-mode-hook (lambda ()
+;;   (substitute-key-definition 'company-complete-common
+;;                              'company-yasnippet-or-completion
+;;                              company-active-map)))
+
+;; (defun check-expansion ()
+;;   (save-excursion
+;;     (if (looking-at "\\_>") t
+;;       (backward-char 1)
+;;       (if (looking-at "\\.") t
+;;     (backward-char 1)
+;;     (if (looking-at "->") t nil)))))
+
+;; (defun do-yas-expand ()
+;;   (let ((yas/fallback-behavior 'return-nil))
+;;     (yas/expand)))
+
+;; (defun tab-indent-or-complete ()
+;;   (interactive)
+;;   (cond
+;;    ((minibufferp)
+;;     (minibuffer-complete))
+;;    (t
+;;     (indent-for-tab-command)
+;;     (if (or (not yas/minor-mode)
+;;         (null (do-yas-expand)))
+;;     (if (check-expansion)
+;;         (progn
+;;           (company-manual-begin)
+;;           (if (null company-candidates)
+;;           (progn
+;;             (company-abort)
+;;             (indent-for-tab-command)))))))))
+
+;; (defun tab-complete-or-next-field ()
+;;   (interactive)
+;;   (if (or (not yas/minor-mode)
+;;       (null (do-yas-expand)))
+;;       (if company-candidates
+;;       (company-complete-selection)
+;;     (if (check-expansion)
+;;       (progn
+;;         (company-manual-begin)
+;;         (if (null company-candidates)
+;;         (progn
+;;           (company-abort)
+;;           (yas-next-field))))
+;;       (yas-next-field)))))
+
+;; (defun expand-snippet-or-complete-selection ()
+;;   (interactive)
+;;   (if (or (not yas/minor-mode)
+;;       (null (do-yas-expand))
+;;       (company-abort))
+;;       (company-complete-selection)))
+
+;; (defun abort-company-or-yas ()
+;;   (interactive)
+;;   (if (null company-candidates)
+;;       (yas-abort-snippet)
+;;     (company-abort)))
+
+;; (global-set-key [tab] 'tab-indent-or-complete)
+;; (global-set-key (kbd "TAB") 'tab-indent-or-complete)
+;; (global-set-key [(control return)] 'company-complete-common)
+
+;; (define-key company-active-map [tab] 'expand-snippet-or-complete-selection)
+;; (define-key company-active-map (kbd "TAB") 'expand-snippet-or-complete-selection)
+
+;; (define-key yas-minor-mode-map [tab] nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+
+;; (define-key yas-keymap [tab] 'tab-complete-or-next-field)
+;; (define-key yas-keymap (kbd "TAB") 'tab-complete-or-next-field)
+;; (define-key yas-keymap [(control tab)] 'yas-next-field)
+;; (define-key yas-keymap (kbd "C-g") 'abort-company-or-yas)
+
 ;;;;;;;;;;;;;;;
 ;; Yasnippet ;;
 ;;;;;;;;;;;;;;;
@@ -148,13 +255,15 @@
   "Custom behaviours for `snippet'."
   (setq-local require-final-newline nil))
 
+(setq yas-triggers-in-field t)
+
 ;;;;;;;;;;
 ;; Misc ;;
 ;;;;;;;;;;
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 (setq comfirm-kill-emacs nil)
 

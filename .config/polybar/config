@@ -50,10 +50,10 @@ format-offset =
 
 # start flavours
 [colors]
-background = 1e2127
-foreground = abb2bf
-accent = bd93f9
-alert = e06c75
+background = 232136
+foreground = e0def4
+accent = c4a7e7
+alert = eb6f92
 
 # end flavours
 

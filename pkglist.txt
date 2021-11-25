@@ -1,3 +1,4 @@
+alacritty
 alsa-utils
 amd-ucode
 android-file-transfer
@@ -26,7 +27,9 @@ bspwm
 capitaine-cursors
 celluloid
 chromium
+cloc
 cmatrix
+code
 cuda
 cups
 cups-pdf
@@ -90,6 +93,7 @@ linux-headers
 linux-lts
 linux-lts-headers
 lolcat
+lua
 luit
 lutris
 lxappearance
@@ -123,6 +127,7 @@ otf-ipafont
 pacman-contrib
 patch
 pavucontrol
+pdfgrep
 pdftk
 peek
 perl-file-mimeinfo
@@ -159,6 +164,7 @@ scrot
 shellcheck
 signal-desktop
 sl
+sloccount
 smartmontools
 smbclient
 speedtest-cli
@@ -186,6 +192,7 @@ torbrowser-launcher
 traceroute
 transmission-cli
 transmission-qt
+trash-cli
 tree
 ttf-dejavu
 unison

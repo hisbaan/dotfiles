@@ -11,6 +11,8 @@ function sudo
     end
 end
 
+alias ls='exa --color=auto'
+
 set -x -g PATH $PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-scripts/:/home/hisbaan/.local/bin/xresources/:/home/hisbaan/.emacs.d/bin/
 set -x -g EDITOR "/usr/bin/emacsclient -c -a 'emacs'"
 set -x -g DISPLAY ':0'

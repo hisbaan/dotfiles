@@ -6,13 +6,16 @@ set clipboard+=unnamedplus
 # Splits open at the bottom and the right.
 set splitbelow splitright
 
-# # Some basic stuff
-# syntax on
-# set nocompatible
-# set number
-# set hidden
-# set ignorecase
-# set smartcase
+# Set relative line numbers
+set relativenumber
+set number
+
+# Plugins
+set surround
+set commentary
+set highlightedyank
+let g:highlightedyank_highlight_duration = "250"
+let g:highlightedyank_highlight_color = "rgba(255, 255, 255, 100)"
 
 # Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h

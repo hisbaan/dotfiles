@@ -1,9 +1,9 @@
 /* start flavours */
 * {
-	background-color: #1e2127;
-	text-color: #abb2bf;
+	background-color: #232136;
+	text-color: #e0def4;
 	spacing: 0;
-	width: 720px;
+	width: 1440px;
     dpi: 220;
 }
 
@@ -13,29 +13,29 @@ inputbar {
 }
 
 prompt {
-	padding: 16px;
+	padding: 32px;
 }
 
 textbox {
-	padding: 8px 16px;
+	padding: 16px 32px;
 }
 
 entry {
-	padding: 16px;
+	padding: 32px;
 }
 
 listview {
 	cycle: false;
-	margin: 0 0 -1px 0;
+	margin: 0 0 -2px 0;
 	scrollbar: false;
 }
 
 element {
-	padding: 16px;
+	padding: 32px;
 }
 
 element selected {
-	background-color: #bd93f9;
-	text-color: #1e2127;
+	background-color: #c4a7e7;
+	text-color: #232136;
 }
 /* end flavours */
