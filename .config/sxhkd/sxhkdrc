@@ -2,7 +2,7 @@
 
 # close and kill
 super + shift + q
-    bspc node -c
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -101,7 +101,8 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-      kitty --single-instance
+	alacritty
+      # kitty --single-instance
 
 # floating kitty
 super + shift + Return
@@ -143,15 +144,15 @@ shift + {Print, Insert}
 
 # pause/play music
 {XF86AudioPlay, super + slash}
-                playerctl -p spotify play-pause
+	playerctl -p spotify play-pause
 
 # skip track
 {XF86AudioNext, super + period}
-                playerctl -p spotify next
+	playerctl -p spotify next
 
 # go back a track
 {XF86AudioPrev, super + comma}
-                playerctl -p spotify previous
+	playerctl -p spotify previous
 
 # stop music
 XF86AudioStop
