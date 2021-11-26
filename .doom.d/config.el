@@ -1,4 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+;;; subtemplate = "default-265"
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
@@ -39,7 +40,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-custom)
+(setq doom-theme 'doom-palenight)
 
 ;; (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
 (setq org-superstar-headline-bullets-list '("⁖"))

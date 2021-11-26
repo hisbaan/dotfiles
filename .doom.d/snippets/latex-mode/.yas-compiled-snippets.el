@@ -8,6 +8,7 @@
                        ("seq" "\\cbr{${1:a}}_{${2:n = 1}}^{${3:\\infty}}$0" "sequence" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/sequence" nil nil)
                        ("part" "\\partial_{$1} $0" "partial" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/partial" nil nil)
                        ("temp" "\\documentclass[12pt]{article}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}\n\n\\title{${1:TITLE}}\n\\author{Hisbaan Noorani}\n\\date{${2:DATE}}\n\n\\begin{document}\n$0\n\\end{document}\n" "normal-template" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/normal-template" nil nil)
+                       ("mlm" "\\[\n  $0\n\\]" "multi-line math mode" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/multi-line math mode" nil nil)
                        ("mat" "\\begin{bmatrix} $0 \\end{bmatrix}" "matrix" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/matrix" nil nil)
                        ("mtemp" "\\documentclass[12pt]{article}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools, mdframed}\n\\usepackage{import, pdfpages, transparent, xcolor}\n\n\\newcommand{\\inkfig}[2][1]{%\n    \\def\\svgwidth{#1\\columnwidth}\n    \\import{./img/}{#2.pdf_tex}\n}\n\n\\newcommand{\\br}[1]{\\left(#1\\right)}\n\\newcommand{\\sbr}[1]{\\left[#1\\right]}\n\\newcommand{\\cbr}[1]{\\left\\\\{#1\\right\\\\}}\n\\newcommand{\\norm}[1]{\\left\\|#1\\right\\|}\n\\newcommand{\\abs}[1]{\\left|#1\\right|}\n\n\\newcommand{\\st}{\\text{ s.t. }}\n\\newcommand{\\tand}{\\text{ and }}\n\\newcommand{\\tor}{\\text{ or }}\n\\newcommand{\\R}{\\mathbb{R}}\n\\newcommand{\\Z}{\\mathbb{Z}}\n\\newcommand{\\N}{\\mathbb{N}}\n\\newcommand{\\Q}{\\mathbb{Q}}\n\\newcommand{\\DS}{\\displaystyle}\n\n\\renewcommand{\\qedsymbol}{\\ensuremath{\\blacksquare}}\n\\renewcommand*{\\proofname}{\\underline{Pf}:}\n\\pagestyle{empty}\n\n\\title{${1:TITLE}}\n\\author{Hisbaan Noorani}\n\\date{${2:DATE}}\n\n\\begin{document}\n$0\n\\end{document}" "math-template" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/math-template" nil nil)
                        ("lalign" "\\begin{flalign} \\nonumber\n&\\begin{aligned}\n$0\n\\end{aligned} &&\n\\end{flalign}" "lalign" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/lalign" nil nil)
@@ -32,4 +33,4 @@
                        ("abs" "\\abs{${1:x - a}}$0" "absolute value" nil nil nil "/home/hisbaan/.doom.d/snippets/latex-mode/absolute-value" nil nil)))
 
 
-;;; Do not edit! File generated at Thu Nov 18 20:57:12 2021
+;;; Do not edit! File generated at Mon Nov 22 11:46:37 2021
