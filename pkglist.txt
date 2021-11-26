@@ -1,5 +1,6 @@
 acpi
 acpilight
+alacritty
 alsa-utils
 android-file-transfer
 android-tools
@@ -29,9 +30,9 @@ bluez-utils
 bpytop
 bspwm
 capitaine-cursors
-celluloid
 cheese
 chromium
+cloc
 code
 cpupower
 cups
@@ -65,8 +66,10 @@ gifsicle
 gimp
 git
 github-cli
+glfw-wayland
 gnome-calculator
 gradle
+grim
 groff
 hsetroot
 htop
@@ -113,6 +116,7 @@ mariadb
 meld
 mpc
 mpd
+mpv
 nautilus
 ncmpcpp
 neofetch
@@ -129,6 +133,7 @@ pacman-contrib
 patch
 pavucontrol
 pdf2svg
+pdfgrep
 pdftk
 peek
 pkgconf
@@ -157,11 +162,13 @@ s-tui
 scrot
 signal-desktop
 sl
+slurp
 smartmontools
 speedtest-cli
 spotifyd
 steam
 sudo
+swappy
 swayidle
 sxhkd
 tesseract
@@ -187,6 +194,7 @@ tldr
 tlp
 transmission-cli
 transmission-qt
+trash-cli
 tree
 ttf-dejavu
 unison
@@ -202,6 +210,7 @@ which
 wine-mono
 wine-staging
 winetricks
+wl-clipboard
 wmname
 wofi
 xcolor

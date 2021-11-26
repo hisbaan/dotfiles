@@ -13,7 +13,6 @@ cbonsai
 citra-qt-git
 color-picker
 corekeyboard
-davinci-resolve
 dell-bios-fan-control-git
 discocss-git
 discord-canary-electron-bin
@@ -38,6 +37,7 @@ minecraft-launcher
 mkmm
 nerd-fonts-meslo
 nomachine
+nvim-packer-git
 onlyoffice-bin
 opendetex
 pandoc-bin
@@ -57,6 +57,7 @@ spotify
 spotify-tui-bin
 sway-borders-git
 teams
+texlive-latexindent-meta
 themix-full-git
 trello
 ttf-material-wifi-icons-git
