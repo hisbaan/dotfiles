@@ -12,7 +12,6 @@ end = "! end flavours"
 file = "~/.config/zathura/zathurarc"
 template = "zathura"
 subtemplate = "custom"
-# hook = "refresh zathurarc somehow"  # Doesn't look like I can do anything here
 
 [[item]]
 file = "~/.config/kitty/kitty.conf"
@@ -73,15 +72,20 @@ end = "/* end flavours */"
 # start = "; start flavours"
 # end = "; end flavours"
 
-[[item]]
-file = "~/.config/eww/eww.scss"
-template = "eww"
-subtemplate = "custom"
-hook = "eww reload"
-start = "// start flavours"
-end =  "// end flavours"
+# [[item]]
+# file = "~/.config/eww/eww.scss"
+# template = "eww"
+# subtemplate = "custom"
+# hook = "eww reload"
+# start = "// start flavours"
+# end =  "// end flavours"
 
 [[item]]
 file = "~/.config/zsh/.zshrc"
 template = "zsh"
 subtemplate = "custom"
+
+[[item]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
+subtemplate = "default-256"
