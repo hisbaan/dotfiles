@@ -82,6 +82,8 @@ y=$(xwininfo -root | grep Height | awk '{print $2}')
 bspc rule -a firefox:Navigator center=true rectangle=2560x1440+0+0
 # bspc rule -a kitty center=true rectangle=${$((0.36 * x))%.}x${$((0.3 * y))%.}+0+0
 bspc rule -a kitty center=true rectangle=1400x800+0+0
+# bspc rule -a Alacritty center=true rectangle=1400x800+0+0
+bspc rule -a Alacritty center=true
 
 ############
 ### Misc ###
