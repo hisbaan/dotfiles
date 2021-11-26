@@ -1,16 +1,17 @@
 #!/bin/env bash
 
-# deps: bspwm, texlive, emacs, pdflatex, catdvi
+# deps: bspwm, texlive, alacritty, neovim, pdflatex, catdvi
 # TODO integrate python script
 # TODO for super and subscript, find text in between {} and if it's all able to be replaced, replace it all
 
 cd /tmp
 
-bspc rule -a Emacs --one-shot state=floating
+bspc rule -a Alacritty --one-shot state=floating
 
 > /tmp/latex-copy.tex
 # emacsclient -c -a 'emacs' /tmp/latex-copy.tex
-emacsclient -nw -c -a 'emacs' /tmp/latex-copy.tex
+# emacsclient -nw -c -a 'emacs' /tmp/latex-copy.tex
+alacritty -c 'zsh' -e 'nvim /tmp/latex-copy.tex'
 
 echo "%&latex
 \documentclass[12pt]{article}

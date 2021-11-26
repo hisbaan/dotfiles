@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-# deps: bspwm, texlive, emacs, pdflatex, catdvi
+# deps: bspwm or sway, texlive, alacritty, neovim, pdflatex, catdvi, xclip or wl-clipboard
 
 case "$1" in
     discord)
@@ -22,13 +22,13 @@ echo $background
 cd /tmp
 rm /tmp/latex-pic*
 
-bspc rule -a Emacs --one-shot state=floating
+bspc rule -a Alacritty --one-shot state=floating
 
 echo "\(\displaystyle{}
 
 \)" > /tmp/latex-copy.tex
 # emacsclient -c -a 'emacs' /tmp/latex-copy.tex
-emacsclient -c -a 'emacs' /tmp/latex-copy.tex
+alacritty -e "zsh" -c "nvim /tmp/latex-copy.tex"
 
 echo "\documentclass[border=0.2cm]{standalone}
 \usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, xcolor, pagecolor, mathtools}
