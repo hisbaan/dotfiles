@@ -93,12 +93,14 @@ setopt share_history
 ### Env Var ###
 ###############
 
-if [[ -n $SSH_CONNECTION ]]
-then
-    export EDITOR='nvim'
-else
-    export EDITOR="emacsclient -c -a 'emacs'"
-fi
+export EDITOR='nvim'
+
+# if [[ -n $SSH_CONNECTION ]]
+# then
+#     export EDITOR='nvim'
+# else
+#     export EDITOR="emacsclient -c -a 'emacs'"
+# fi
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
