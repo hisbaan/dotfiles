@@ -91,12 +91,7 @@ setopt share_history
 ### Env Var ###
 ###############
 
-if [[ -n $SSH_CONNECTION ]]
-then
-    export EDITOR='nvim'
-else
-    export EDITOR="emacsclient -c -a 'emacs'"
-fi
+export EDITOR='nvim'
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
