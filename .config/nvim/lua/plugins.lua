@@ -27,10 +27,10 @@ return require('packer').startup(function()
 	        vim.cmd('colorscheme rose-pine')
 	    end
 	}
-	use { 
-		'TimUntersberger/neogit', 
-		requires = 'nvim-lua/plenary.nvim' 
-	}
+	-- use { 
+	-- 	'TimUntersberger/neogit', 
+	-- 	requires = 'nvim-lua/plenary.nvim' 
+	-- }
 	use {
 	  'nvim-telescope/telescope.nvim',
 	  requires = { {'nvim-lua/plenary.nvim'} }
@@ -39,4 +39,18 @@ return require('packer').startup(function()
 	use 'lervag/vimtex'
 	-- use "steelsojka/pears.nvim"
 	use 'windwp/nvim-autopairs'
+	use 'neovim/nvim-lspconfig'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	use 'quangnguyen30192/cmp-nvim-ultisnips'
+	use {
+		'goolord/alpha-nvim',
+	  	requires = {'kyazdani42/nvim-web-devicons'},
+		config = function ()
+			require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+		end
+	}
 end)

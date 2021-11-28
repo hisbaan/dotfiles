@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/hisbaan/.config/zsh/plugins/expand-ealias'
+let g:netrw_dirhist_8='/home/hisbaan/.config/fish/functions'
+let g:netrw_dirhist_7='/home/hisbaan/.config/bspwm'
+let g:netrw_dirhist_6='/home/hisbaan/.config/fish/functions'
+let g:netrw_dirhist_5='/home/hisbaan/.local/bin'
+let g:netrw_dirhist_4='/home/hisbaan/.config/espanso'
+let g:netrw_dirhist_3='/mnt/storage'
+let g:netrw_dirhist_2='/home/hisbaan/.config/fish/conf.d'
+let g:netrw_dirhist_1='/home/hisbaan/AndroidStudioProjects/sticky/.git'
+let g:netrw_dirhist_0='/home/hisbaan/Downloads/OpenCV-android-sdk/sdk'
