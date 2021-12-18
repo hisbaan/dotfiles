@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
-  local success, result = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
     vim.schedule(function()
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
@@ -70,42 +70,104 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["alpha-nvim"] = {
-    config = { "\27LJ\1\2_\0\0\3\0\5\0\n4\0\0\0%\1\1\0>\0\2\0027\0\2\0004\1\0\0%\2\3\0>\1\2\0027\1\4\1>\0\2\1G\0\1\0\topts\27alpha.themes.dashboard\nsetup\nalpha\frequire\0" },
+    config = { "require('config/alpha-nvim')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["bufferline.nvim"] = {
+    config = { "require('config/bufferline')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-ultisnips"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips",
+    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["fzf.vim"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["gitsigns.nvim"] = {
+    config = { "require('config/gitsigns')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["lualine.nvim"] = {
+    config = { "require('config/lualine')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
+  ["markdown-preview.nvim"] = {
+    config = { "require('config/markdown-preview')" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nvim-autopairs"] = {
+    config = { "require('config/autopairs')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-compe"] = {
+  ["nvim-cmp"] = {
+    config = { "require('config/cmp')" },
     loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-compe",
-    url = "https://github.com/hrsh7th/nvim-compe"
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lastplace"] = {
+    config = { "require('config/nvim-lastplace')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lastplace",
+    url = "https://github.com/ethanholz/nvim-lastplace"
+  },
+  ["nvim-lsp-installer"] = {
+    config = { "require('config/lsp')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    config = { "require('config/nvim-tree')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
+    config = { "require('config/treesitter')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -116,7 +178,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   orgmode = {
-    config = { "\27LJ\1\0029\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\forgmode\frequire\0" },
+    config = { "require('config/orgmode')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/orgmode",
     url = "https://github.com/nvim-orgmode/orgmode"
@@ -126,13 +188,25 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["project.nvim"] = {
+    config = { "require('config/project')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "https://github.com/ahmedkhalf/project.nvim"
+  },
   ["rose-pine"] = {
-    config = { "\27LJ\1\2b\0\0\2\0\6\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\4\0%\1\5\0>\0\2\1G\0\1\0\26colorscheme rose-pine\bcmd\tmoon\22rose_pine_variant\6g\bvim\0" },
+    config = { "require('config/rose-pine')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
+    config = { "require('config/telescope')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
@@ -147,51 +221,87 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
-  ["vim-css-color"] = {
+  ["vim-snippets"] = {
     loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-css-color",
-    url = "https://github.com/ap/vim-css-color"
-  },
-  ["vim-lastplace"] = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-lastplace",
-    url = "https://github.com/farmergreg/vim-lastplace"
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
   },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
-  ["vim-wal"] = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-wal",
-    url = "https://github.com/sholland1/vim-wal"
-  },
   vimtex = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
-  },
-  wal = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/wal",
-    url = "https://github.com/dylanaraps/wal"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: orgmode
-time([[Config for orgmode]], true)
-try_loadstring("\27LJ\1\0029\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\forgmode\frequire\0", "config", "orgmode")
-time([[Config for orgmode]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\1\2b\0\0\2\0\6\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\4\0%\1\5\0>\0\2\1G\0\1\0\26colorscheme rose-pine\bcmd\tmoon\22rose_pine_variant\6g\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('config/cmp')
+time([[Config for nvim-cmp]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+require('config/lsp')
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: nvim-lastplace
+time([[Config for nvim-lastplace]], true)
+require('config/nvim-lastplace')
+time([[Config for nvim-lastplace]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\1\2_\0\0\3\0\5\0\n4\0\0\0%\1\1\0>\0\2\0027\0\2\0004\1\0\0%\2\3\0>\1\2\0027\1\4\1>\0\2\1G\0\1\0\topts\27alpha.themes.dashboard\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
+require('config/alpha-nvim')
 time([[Config for alpha-nvim]], false)
+-- Config for: orgmode
+time([[Config for orgmode]], true)
+require('config/orgmode')
+time([[Config for orgmode]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require('config/gitsigns')
+time([[Config for gitsigns.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+require('config/rose-pine')
+time([[Config for rose-pine]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('config/bufferline')
+time([[Config for bufferline.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('config/autopairs')
+time([[Config for nvim-autopairs]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('config/project')
+time([[Config for project.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
