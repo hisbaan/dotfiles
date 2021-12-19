@@ -41,7 +41,6 @@ dolphin-emu
 dunst
 efibootmgr
 emacs
-espeak
 exa
 exfat-utils
 fail2ban
@@ -133,6 +132,7 @@ peek
 perl-file-mimeinfo
 piper
 pipewire
+pipewire-media-session
 pipewire-pulse
 pkgconf
 playerctl
@@ -160,8 +160,8 @@ rustup
 rxvt-unicode
 s-tui
 sane
+scrcpy
 scrot
-shellcheck
 signal-desktop
 sl
 sloccount

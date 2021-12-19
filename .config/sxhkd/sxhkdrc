@@ -106,8 +106,10 @@ super + Return
 
 # floating kitty
 super + shift + Return
-      bspc rule -a kitty --one-shot state=floating; \
-      kitty --single-instance
+    bspc rule -a Alacritty --one-shot state=floating; \
+	alacritty
+    # bspc rule -a kitty --one-shot state=floating; \
+    # kitty --single-instance
 
 # rofi
 super + d

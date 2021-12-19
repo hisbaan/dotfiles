@@ -1,5 +1,4 @@
 #+AUTHOR: Hisbaan Noorani
-#+STARTUP: inlineimages
 
 * Preview
 

@@ -1,0 +1,24 @@
+###################
+### TTY Colours ###
+###################
+
+if [ "$TERM" = "linux" ]
+then
+  echo -en "\e]P0{{base00-hex}}"
+  echo -en "\e]P1{{base08-hex}}"
+  echo -en "\e]P2{{base0B-hex}}"
+  echo -en "\e]P3{{base09-hex}}"
+  echo -en "\e]P4{{base0D-hex}}"
+  echo -en "\e]P5{{base0E-hex}}"
+  echo -en "\e]P6{{base0C-hex}}"
+  echo -en "\e]P7{{base05-hex}}"
+  echo -en "\e]P8{{base04-hex}}"
+  echo -en "\e]P9{{base08-hex}}"
+  echo -en "\e]PA{{base0B-hex}}"
+  echo -en "\e]PB{{base09-hex}}"
+  echo -en "\e]PC{{base0D-hex}}"
+  echo -en "\e]PD{{base0E-hex}}"
+  echo -en "\e]PE{{base0C-hex}}"
+  echo -en "\e]PF{{base07-hex}}"
+  clear # Clear artifacts
+fi

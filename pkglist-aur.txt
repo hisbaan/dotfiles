@@ -1,6 +1,7 @@
 aic94xx-firmware
 anbox-image-gapps
 android-studio
+android-studio-beta
 authy
 autojump
 betterlockscreen
@@ -15,6 +16,7 @@ davinci-resolve
 discocss-git
 droidcam
 espanso-bin
+espeak
 ffhevc
 ffmpeg-compat-57
 flavours
@@ -27,6 +29,7 @@ intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 minecraft-launcher
 mpd-mpris
+nerd-fonts-fira-code
 nerd-fonts-meslo
 nomachine
 nvim-packer-git
@@ -41,7 +44,7 @@ polybar
 protonvpn-cli-ng
 pycharm-professional
 rstudio-desktop-bin
-scrcpy
+shellcheck-bin
 slack-desktop
 smloadr
 sp
@@ -53,10 +56,11 @@ texlive-latexindent-meta
 themix-full-git
 trello
 ttf-meslo
-ttf-times-new-roman
+ttf-ms-win10-auto
 tuxi-git
 ufetch-git
 via-bin
+vim-language-server
 wd719x-firmware
 windscribe-cli
 ytop
