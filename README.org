@@ -27,7 +27,7 @@
 | *Secondary Editor*      | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[.doom.d/][config]]          |
 | *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
 | *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[.config/rofi/config][config]]          |
-| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | \-              |
+| *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | [[.config/firefox][config]]              |
 | *Startpage*             | [[https://github.com/MiguelRAvila/Bento][bento]]                   | \-              |
 | *Music Player*          | [[https://www.musicpd.org/][mpd]] + [[https://github.com/ncmpcpp/ncmpcpp][ncmpcpp]]           | [[.config/mpd/mpd.conf][config]] + [[.config/ncmpcpp/config][config]] |
 | *Terminal File Manager* | [[https://github.com/ranger/ranger][Ranger]]                  | [[.config/ranger/rc.conf][config]]          |
