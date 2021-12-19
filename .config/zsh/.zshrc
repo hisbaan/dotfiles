@@ -173,13 +173,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # proper history behaviour
-autoload -U history-search-end
+bindkey "\e[A" up-line-or-search
+bindkey "\e[B" down-line-or-search
 
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-
-bindkey "\e[A" history-beginning-search-backward-end
-bindkey "\e[B" history-beginning-search-forward-end
 bindkey -M viins '^e' edit-command-line
 
 # fast syntax highlighting -- should be last

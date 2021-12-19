@@ -1,19 +1,12 @@
 configuration {
 	modi: "drun,run,window,ssh";
-	lines: 7;
 	font: "MesloLGS Nerd Font 10";
-	bw: 0;
-	padding: 0;
 	show-icons: false;
-	matching: "fuzzy";
-	line-margin: 0;
-	line-padding: 10;
-	separator-style: "none";
-	hide-scrollbar: true;
 	dpi: 220;
-	theme: "~/.config/rofi/themes/pywal.rasi";
 	kb-remove-to-eol: "Control+Shift+e";
 	kb-accept-entry: "Control+m,Return,KP_Enter";
 	kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
 	kb-row-down: "Down,Control+j";
 }
+
+@theme "~/.config/rofi/themes/pywal.rasi"
