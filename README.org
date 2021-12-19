@@ -1,9 +1,5 @@
 #+AUTHOR: Hisbaan Noorani
 
-* Note
-
-  This repository has been archived as of December 18th, 2021. All my future dotfiles for my desktop will be in [[http://github.com/hisbaan/dotfiles]] under the ~desktop~ branch.
-
 * Preview
 
 [[Pictures/screenshots/desktop-screenshots/gif/1-compressed.gif]]
