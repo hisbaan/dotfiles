@@ -95,7 +95,7 @@ export EDITOR='nvim'
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 #############
@@ -156,10 +156,10 @@ source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # proper history behaviour
 # autoload -U history-search-end
-# 
+#
 # zle -N history-beginning-search-backward-end history-search-end
 # zle -N history-beginning-search-forward-end history-search-end
-# 
+#
 # bindkey "\e[A" history-beginning-search-backward-end
 # bindkey "\e[B" history-beginning-search-forward-end
 bindkey "\e[A" up-line-or-search
