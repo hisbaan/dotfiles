@@ -54,6 +54,7 @@ packer.startup({function()
         requires = { 'nvim-lua/plenary.nvim' },
         config = get_config('telescope')
     }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
     use {"ahmedkhalf/project.nvim", config = get_config("project")}
     use { 'neovim/nvim-lspconfig' }
