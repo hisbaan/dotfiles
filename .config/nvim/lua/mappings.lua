@@ -52,7 +52,7 @@ map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', default_options )
 
 -- Telescope
 map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', default_options)
-map('n', '<Leader>.', '<Cmd>Telescope file_browser<CR>', default_options)
+map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", default_options)
 
 -- Terminal
 map('n', '<Leader>tt', '<Cmd>terminal<CR>A', default_options)
