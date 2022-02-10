@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/hisbaan/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/hisbaan/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/home/hisbaan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/hisbaan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/hisbaan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -69,6 +69,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "require('config/comment')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["alpha-nvim"] = {
     config = { "require('config/alpha-nvim')" },
     loaded = true,
@@ -131,6 +137,12 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  neogit = {
+    config = { "require('config/neogit')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   ["nvim-autopairs"] = {
     config = { "require('config/autopairs')" },
     loaded = true,
@@ -172,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -179,14 +196,21 @@ _G.packer_plugins = {
   },
   orgmode = {
     config = { "require('config/orgmode')" },
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/orgmode",
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode",
     url = "https://github.com/nvim-orgmode/orgmode"
   },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["project.nvim"] = {
     config = { "require('config/project')" },
@@ -200,6 +224,11 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -211,15 +240,22 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "require('config/todo-comments')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
   ultisnips = {
+    config = { "require('config/ultisnips')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
   },
-  ["vim-commentary"] = {
+  ["vim-hexokinase"] = {
     loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-commentary",
-    url = "https://github.com/tpope/vim-commentary"
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
+    url = "https://github.com/RRethy/vim-hexokinase"
   },
   ["vim-snippets"] = {
     loaded = true,
@@ -232,6 +268,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-surround"
   },
   vimtex = {
+    config = { "require('config/vimtex')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
@@ -239,54 +276,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('config/treesitter')
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require('config/cmp')
-time([[Config for nvim-cmp]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config/nvim-tree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-require('config/lsp')
-time([[Config for nvim-lsp-installer]], false)
--- Config for: nvim-lastplace
-time([[Config for nvim-lastplace]], true)
-require('config/nvim-lastplace')
-time([[Config for nvim-lastplace]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('config/alpha-nvim')
-time([[Config for alpha-nvim]], false)
--- Config for: orgmode
-time([[Config for orgmode]], true)
-require('config/orgmode')
-time([[Config for orgmode]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require('config/gitsigns')
-time([[Config for gitsigns.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config/lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-require('config/rose-pine')
-time([[Config for rose-pine]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('config/bufferline')
 time([[Config for bufferline.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('config/telescope')
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require('config/autopairs')
@@ -295,12 +288,84 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for project.nvim]], true)
 require('config/project')
 time([[Config for project.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+require('config/rose-pine')
+time([[Config for rose-pine]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('config/cmp')
+time([[Config for nvim-cmp]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+require('config/ultisnips')
+time([[Config for ultisnips]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+require('config/lsp')
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: nvim-lastplace
+time([[Config for nvim-lastplace]], true)
+require('config/nvim-lastplace')
+time([[Config for nvim-lastplace]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require('config/todo-comments')
+time([[Config for todo-comments.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('config/alpha-nvim')
+time([[Config for alpha-nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require('config/gitsigns')
+time([[Config for gitsigns.nvim]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+require('config/neogit')
+time([[Config for neogit]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require('config/comment')
+time([[Config for Comment.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: vimtex
+time([[Config for vimtex]], true)
+require('config/vimtex')
+time([[Config for vimtex]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType org ++once lua require("packer.load")({'orgmode'}, { ft = "org" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/filetype.lua]], true)
+vim.cmd [[source /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/filetype.lua]]
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/filetype.lua]], false)
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org.vim]], true)
+vim.cmd [[source /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org.vim]]
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org.vim]], false)
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org_archive.vim]], true)
+vim.cmd [[source /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org_archive.vim]]
+time([[Sourcing ftdetect script at: /home/hisbaan/.local/share/nvim/site/pack/packer/opt/orgmode/ftdetect/org_archive.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

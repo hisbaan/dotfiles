@@ -1,4 +1,4 @@
-priority 100
+priority 1
 
 #############
 # Templates #
@@ -124,7 +124,7 @@ endsnippet
 
 # begin
 snippet begin "begin / end"
-\begin{${1:environment}}
+\begin{$1}
 	$0
 \end{$1}
 endsnippet
@@ -132,6 +132,11 @@ endsnippet
 # definite integral
 snippet dint "definite integral" i
 \int_{${1:a}}^{${2:b}}{$3} d${4:x}$0
+endsnippet
+
+# set integral
+snippet sint "set integral" i
+\int_{${1:R}}{${2:f}} d${3:V}$0
 endsnippet
 
 # evaluate at
@@ -156,7 +161,7 @@ snippet e2 "e2 vector" i
 endsnippet
 
 # ell
-snippet l "ell" i
+snippet el "ell" i
 \ell
 endsnippet
 
@@ -165,12 +170,17 @@ snippet es "empty set"
 \emptyset
 endsnippet
 
+# subset or equal
+snippet sseq "subset equal"
+\subseteq
+endsnippet
+
 # enumerate
 snippet enum "enumerate"
 \begin{enumerate}
 	\item$0
 \end{enumerate}
-endsnippet 
+endsnippet
 
 # epsilon
 snippet ep "epsilon" i
@@ -193,7 +203,7 @@ snippet inf "infinity" i
 endsnippet
 
 # inkscape figure
-snippet inkfig "inkscape figure"
+snippet inkfig "inkscape figure" i
 \begin{figure}[ht]
 	\centering
 	\inkfig{${1:figure}}
@@ -251,7 +261,7 @@ snippet part "partial" i
 endsnippet
 
 # sequence
-snippet seq "sequence" i
+snippet seq "sequence"
 \cbr{${1:a}}_{${2:n = 1}}^{${3:\infty}}$0
 endsnippet
 
@@ -277,7 +287,7 @@ endsnippet
 
 # inline math mode
 snippet in "inline math mode"
-\($0\)
+\($1\)$0
 endsnippet
 
 # log base 2
@@ -293,4 +303,31 @@ endsnippet
 # surround inline math mode
 snippet "(\S+)!!" "inline math mode" Ar
 \(`!p snip.rv = match.group(1)`\)
+endsnippet
+
+# upint
+snippet upint "upper integral" i
+\upint{${1:R}}{${2:f}}
+endsnippet
+
+# lowint
+snippet lowint "lower integral" i
+\lowint{${1:R}}{${2:f}}
+endsnippet
+
+# dot
+snippet dot "dot" i
+\dot{$1}$0
+endsnippet
+
+# bold format
+snippet bf "bold format"
+\textbf{$1}$0
+endsnippet
+
+# proof environment
+snippet proof "proof environment"
+\begin{proof}
+	$0
+\end{proof}
 endsnippet

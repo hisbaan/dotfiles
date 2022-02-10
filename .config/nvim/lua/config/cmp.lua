@@ -1,5 +1,4 @@
 local cmp = require('cmp')
-
 local kind_icons = {
 	Text = "",
 	Method = "",
@@ -43,13 +42,13 @@ cmp.setup({
 				buffer = "[Buffer]",
 				nvim_lsp = "[LSP]",
 				ultisnips = "[UltiSnips]",
+                luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
 				latex_symbols = "[LaTeX]",
 			})[entry.source.name]
 			return vim_item
 		end
-	}
-	,
+	},
 	mapping = {
 		['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 		['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -62,7 +61,29 @@ cmp.setup({
 		['<CR>'] = cmp.mapping.confirm({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
-		})
+		}),
+        -- TODO work in progress
+        -- - after using CMP to complete something that is a snippet, it then triggers ultisnips completion on the next TAB. Try mapping a global variable to ignore ultisinps bindings after a complete tab until a space is pressed or something like that? I don't know how to set it back but it should be ignored once someone starts using cmp and reset once it becomes invisible. Is there a way to watch the visibliity of cmp?
+        -- ["<Tab>"] = cmp.mapping(function(fallback)
+        --     if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
+        --         vim.fn["UltiSnips#ExpandSnippet"]()
+        --     elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+        --         vim.fn["UltiSnips#"]()
+        --     elseif cmp.visible() then
+        --         cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+        --     else
+        --         fallback()
+        --     end
+        -- end),
+        -- ["<S-Tab>"] = cmp.mapping(function(fallback)
+        --     if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+        --         vim.fn["UltiSnips#JumpForwards"]()
+        --     elseif cmp.visible() then
+        --         cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+        --     else
+        --         fallback()
+        --     end
+        -- end),
 	},
 	-- mapping = {
 	-- 	['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
@@ -75,16 +96,21 @@ cmp.setup({
 	-- 	}),
 	-- 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 	-- },
+    documentation = {
+        -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
 	sources = cmp.config.sources(
 		{
 			{ name = 'nvim_lsp' },
 			{ name = 'ultisnips' },
+			{ name = 'luasnip' },
 			{ name = 'orgmode' },
 			{ name = 'path' },
 		},
 		{
 			{ name = 'buffer' },
-		})
+		}
+    )
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
@@ -94,6 +120,8 @@ cmp.setup.cmdline('/', {
 		{ name = 'path' },
 	}
 })
+
+
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
