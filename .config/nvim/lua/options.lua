@@ -14,7 +14,7 @@ g.tex_flavor = "latex"
 o.undofile = true
 o.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
 o.ttimeoutlen = 0 -- Time in milliseconds to wait for a key code sequence to complete
-o.conceallevel = 0 -- so that `` is visible in markdown files
+o.conceallevel = 0 -- so that ` is visible in markdown files
 if vim.fn.executable("rg") then
 	o.grepprg = "rg --vimgrep --no-heading --smart-case --"
 end
@@ -33,6 +33,7 @@ o.wildignore = [[
 *.swp,.lock,.DS_Store,._*
 */tmp/*,*.so,*.swp,*.zip,**/node_modules/**,**/target/**,**.terraform/**"
 ]]
+-- o.spelllang="en-ca"
 
 -- Tabs & Indentation
 o.tabstop = 4
@@ -40,6 +41,7 @@ o.shiftwidth = 4
 vim.cmd([[set nojoinspaces]])
 o.expandtab = true -- convert tabs to spaces
 o.smartindent = true -- make indenting smarter again
+o.breakindent = true -- indent wrapped lines
 
 -- Search
 o.ignorecase = true

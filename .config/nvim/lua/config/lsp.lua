@@ -6,8 +6,8 @@ nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.diagnostic.goto_next()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.diagnostic.goto_prev()<CR>
 ]])
 
 -- Setup nvim-cmp.
@@ -34,28 +34,58 @@ lsp_installer.on_server_ready(function(server)
 			}
 		}
 	end
+    if server.name == "ltex" then
+        opts.settings = {
+            ltex = {
+                enabled = { 'latex', 'tex', 'bib', 'markdown', 'org' },
+                language = 'en-CA',
+                disabledRules = { ['en-CA'] = {
+                    'PROFANITY',
+                    'EN_QUOTES',
+                    'PASSIVE_VOICE',
+                } },
+                dictionary = {
+                    ['en-CA'] = {
+                        'TODO',
+                        'Hisbaan',
+                        'Noorani',
+                        'Bo',
+                        'Deidra',
+                        'mux',
+                        'circ',
+                        'Weise',
+                        'Akshat',
+                        'Naik',
+                        'Organoids',
+                    }
+                },
+                additionalRules = {
+                    enablePickyRules = true,
+                    motherTongue = 'en-CA',
+                },
+                latex = {
+                    environments = {
+                        verbatim = { 'ignore' },
+                        Verbatim = { 'ignore' },
+                        minted = { 'ignore' },
+                        texttt = { 'ignore' },
+                        forest = { 'ignore' },
+                    },
+                },
+                markdown = {
+                    nodes = {
+                        CodeBlock = { 'ignore' },
+                        FencedCodeBlock = { 'ignore' },
+                        AutoLink = { 'dummy' },
+                        Code = { 'dummy' },
+                    },
+                },
+            }
+        }
+    end
 
-	-- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-	server:setup(opts)
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    server:setup(opts)
 end)
-
--- texlab = {
--- 	auxDirectory = ".",
--- 	bibtexFormatter = "texlab",
--- 	build = {
--- 		args = {
--- 			"--keep-intermediates", "--keep-logs", "--synctex", "%f"
--- 		},
--- 		executable = "tectonic",
--- 		forwardSearchAfter = false,
--- 		onSave = false
--- 	},
--- 	chktex = {onEdit = false, onOpenAndSave = false},
--- 	diagnosticsDelay = 300,
--- 	formatterLineLength = 80,
--- 	forwardSearch = {args = {}},
--- 	latexFormatter = "latexindent",
--- 	latexindent = {modifyLineBreaks = false}
--- }
 
 vim.o.signcolumn="yes:1"
