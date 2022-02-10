@@ -57,6 +57,9 @@ super + {_,shift + }{1-9}
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
 
+super + Tab
+    bspc desktop -f last
+
 #################
 ### Preselect ###
 #################

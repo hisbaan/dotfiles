@@ -3,7 +3,6 @@ anbox-image-gapps
 android-studio
 android-studio-beta
 authy
-autojump
 betterlockscreen
 bluebubbles-desktop-app
 brave-bin
@@ -14,6 +13,7 @@ cloudflared-bin
 colorpicker
 davinci-resolve
 discocss-git
+dragon-drag-and-drop
 droidcam
 espanso-bin
 espeak
@@ -27,9 +27,13 @@ hfsprogs
 hide-client
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
+jekyll
 minecraft-launcher
 mpd-mpris
-nerd-fonts-fira-code
+nerd-fonts-bitstream-vera-mono
+nerd-fonts-inconsolata
+nerd-fonts-jetbrains-mono
+nerd-fonts-liberation-mono
 nerd-fonts-meslo
 nomachine
 nvim-packer-git
@@ -40,7 +44,8 @@ paru-bin
 pdfsam
 pfetch-git
 picom-ibhagwan-git
-polybar
+polybar-git
+postman-bin
 protonvpn-cli-ng
 pycharm-professional
 rstudio-desktop-bin
@@ -55,10 +60,12 @@ teams
 texlive-latexindent-meta
 themix-full-git
 trello
+ttf-menlo-powerline-git
 ttf-meslo
 ttf-ms-win10-auto
 tuxi-git
 ufetch-git
+ventoy-bin
 via-bin
 vim-language-server
 wd719x-firmware
@@ -68,3 +75,4 @@ zaread-git
 zoom
 zsh-abbr
 zsh-theme-powerlevel10k-git
+zsh-vi-mode

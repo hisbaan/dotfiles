@@ -43,11 +43,12 @@ alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
-alias btop='bpytop'
 alias bin='cd ~/projects/binocularss/'
 alias proj='source projects'
+alias conf='source config'
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias test="cd ~/Documents/uoft/mat237/test/01"
 
 # start flavours
 ###################
@@ -153,15 +154,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # proper history behaviour
-# autoload -U history-search-end
-#
-# zle -N history-beginning-search-backward-end history-search-end
-# zle -N history-beginning-search-forward-end history-search-end
-#
-# bindkey "\e[A" history-beginning-search-backward-end
-# bindkey "\e[B" history-beginning-search-forward-end
 bindkey "\e[A" up-line-or-search
 bindkey "\e[B" down-line-or-search
 bindkey -M viins '^e' edit-command-line

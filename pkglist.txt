@@ -22,8 +22,8 @@ bind
 binutils
 bison
 bitwarden
-bpytop
 bspwm
+btop
 capitaine-cursors
 celluloid
 chromium
@@ -40,7 +40,6 @@ docker-compose
 dolphin-emu
 dunst
 efibootmgr
-emacs
 exa
 exfat-utils
 fail2ban
@@ -57,6 +56,7 @@ fzf
 gamemode
 gcc
 gcc-fortran
+gdb
 gimp
 git
 github-cli
@@ -100,6 +100,7 @@ lxsession
 lynx
 m4
 make
+man-pages
 mariadb
 meld
 mosh
@@ -121,6 +122,7 @@ nvidia-dkms
 nvidia-lts
 nvidia-settings
 obs-studio
+opendoas
 openresolv
 otf-ipafont
 pacman-contrib
@@ -170,6 +172,7 @@ smbclient
 speedtest-cli
 spotifyd
 steam
+strace
 sudo
 sxhkd
 tesseract
@@ -195,11 +198,13 @@ transmission-qt
 trash-cli
 tree
 ttf-dejavu
+ueberzug
 unison
 unrar
 unzip
 usbutils
 vi
+vim
 virtualbox
 wget
 which
@@ -263,6 +268,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 xterm
 yarn
 youtube-dl

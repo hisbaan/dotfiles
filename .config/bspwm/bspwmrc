@@ -12,7 +12,7 @@ espanso start &
 killall -9 flameshot
 flameshot &
 redshift -x; killall -9 redshift; redshift &
-eww daemon &
+# eww daemon &
 dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
