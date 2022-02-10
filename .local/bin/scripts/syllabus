@@ -4,7 +4,7 @@ courses=(csc207 csc236 fsl100 mat237 sta247)
 course=$(printf '%s\n' "${courses[@]}" | rofi -dmenu -p syllabus)
 
 case $course in
-    csc207) firefox 'https://q.utoronto.ca/courses/233945/assignments/syllabus' ;;
+    csc209) firefox 'https://q.utoronto.ca/courses/249982/pages/syllabus' ;;
     csc236) firefox 'https://q.utoronto.ca/courses/233992/assignments/syllabus' ;;
     fsl100) zathura ~/Documents/uoft/fsl100/syllabus.pdf ;;
     mat237) zathura ~/Documents/uoft/mat237/syllabus.pdf ;;

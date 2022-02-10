@@ -44,10 +44,10 @@ alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
-alias btop='bpytop'
 alias bin="cd ~/projects/binocularss/"
 alias iwlan="iwctl station wlan0 "
 alias proj="source projects"
+alias conf="source config"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
@@ -171,6 +171,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# ZVM_CURSOR_STYLE_ENABLED=false
 
 # proper history behaviour
 bindkey "\e[A" up-line-or-search

@@ -34,21 +34,21 @@ echo "\documentclass[border=0.2cm]{standalone}
 \usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, xcolor, pagecolor, mathtools}
 \definecolor{background}{HTML}{${background}}
 \definecolor{foreground}{HTML}{${foreground}}
-% \pagecolor{background}
-\DeclarePairedDelimiter\autobracket{(}{)}
-\newcommand{\br}[1]{\autobracket*{#1}}
-\DeclarePairedDelimiter\autosquarebracket{[}{]}
-\newcommand{\sbr}[1]{\autosquarebracket*{#1}}
-\DeclarePairedDelimiter\autocurlybracket{\{}{\}}
-\newcommand{\cbr}[1]{\autocurlybracket*{#1}}
+\newcommand{\br}[1]{\left(#1\right)}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\st}{\text{ s.t. }}
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tor}{\text{ or }}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\DS}{\displaystyle}
 \renewcommand{\qedsymbol}{(\blacksquare)}
-\renewcommand*{\proofname}{\underline{Pf}:}
 \pagestyle{empty}
 \title{TITLE}
 \author{Hisbaan Noorani}

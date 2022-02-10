@@ -2,7 +2,6 @@ aic94xx-firmware
 android-studio
 android-studio-beta
 authy
-autojump
 autotiling
 betterlockscreen
 bluebubbles-desktop-app
@@ -10,7 +9,7 @@ brave-bin
 brother-dcpl2520dw
 catdvi
 cbonsai
-citra-qt-git
+citra-qt-bin
 color-picker
 corekeyboard
 dell-bios-fan-control-git
@@ -27,6 +26,7 @@ i3-swallow-git
 i8kutils
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
+jekyll
 kimi-dark-gtk-theme-git
 libfprint-2-tod1-xps9300-bin
 lua-pam-git
@@ -45,10 +45,11 @@ paru-bin
 pfetch-git
 picom-ibhagwan-git
 polybar
+postman-bin
 pycharm-professional
 python-pmw
 rstudio-desktop-bin
-scrcpy
+shellcheck-bin
 slack-desktop
 slack-term
 smloadr
@@ -64,7 +65,9 @@ ttf-material-wifi-icons-git
 ttf-meslo
 ttf-times-new-roman
 tuxi-git
+unimatrix-git
 via-bin
+vim-language-server
 wd719x-firmware
 windscribe-cli
 xf86-input-mtrack
@@ -72,3 +75,4 @@ ytop
 zoom
 zsh-abbr
 zsh-theme-powerlevel10k-git
+zsh-vi-mode

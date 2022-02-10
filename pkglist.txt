@@ -18,6 +18,7 @@ automake
 awesome
 barrier
 base
+bash-language-server
 bat
 biber
 binutils
@@ -27,8 +28,8 @@ blueman
 bluez
 bluez-plugins
 bluez-utils
-bpytop
 bspwm
+btop
 capitaine-cursors
 cheese
 chromium
@@ -105,6 +106,7 @@ linux
 linux-firmware
 linux-headers
 linux-lts
+linux-lts-headers
 lolcat
 luit
 lutris
@@ -159,6 +161,7 @@ rsync
 rustup
 rxvt-unicode
 s-tui
+scrcpy
 scrot
 signal-desktop
 sl
@@ -201,6 +204,7 @@ unison
 unrar
 unzip
 usbutils
+valgrind
 vi
 virtualbox
 wavemon

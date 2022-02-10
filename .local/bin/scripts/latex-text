@@ -8,30 +8,41 @@ cd /tmp
 
 bspc rule -a Alacritty --one-shot state=floating
 
-> /tmp/latex-copy.tex
-# emacsclient -c -a 'emacs' /tmp/latex-copy.tex
-# emacsclient -nw -c -a 'emacs' /tmp/latex-copy.tex
-alacritty -c 'zsh' -e 'nvim /tmp/latex-copy.tex'
 
-echo "%&latex
-\documentclass[12pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
+echo "\(\displaystyle{}
+
+\)" > /tmp/latex-copy.tex
+
+alacritty -e 'zsh' -c 'nvim /tmp/latex-copy.tex'
+
+echo "\documentclass[border=0.2cm]{standalone}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, xcolor, pagecolor, mathtools}
+\newcommand{\br}[1]{\left(#1\right)}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\st}{\text{ s.t. }}
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tor}{\text{ or }}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\DS}{\displaystyle{}}
 \renewcommand{\qedsymbol}{(\blacksquare)}
-\renewcommand*{\proofname}{\underline{Pf}:}
 \pagestyle{empty}
 \title{TITLE}
 \author{Hisbaan Noorani}
 \date{DATE}
 \begin{document}
-\input{/tmp/latex-copy.tex}
-\end{document}" > /tmp/latex-to-text.tex
+\color{foreground}
+$(cat /tmp/latex-copy.tex)
+\end{document}" > /tmp/latex-text.tex
 # might not need the whole big thing. Just the small latex file.
 # use pandoc to convert to txt (or just use the small latex file directly)
 # run it though a little replace thing where it interprets the plain text
 # (or use the one that you saw on github if you can find it again)
+
+pandoc --to=plain --wrap=none /tmp/latex-text.tex | xclip -selection clipboard

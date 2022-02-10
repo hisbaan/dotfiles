@@ -223,7 +223,7 @@ super + Escape
 # power states
 super + XF86Tools ; {l,e,s,r,shift + s,Return}
     echo "" > ~/.config/bspwm/bspwm-chord-status; \
-    {betterlockscreen -l,bspc quit,betterlockscreen -s,reboot,poweroff,xdotool key Escape}
+    {betterlockscreen -l,bspc quit,systemctl suspend,reboot,poweroff,xdotool key Escape}
 
 # brightness up
 {shift,_} XF86MonBrightnessUp
