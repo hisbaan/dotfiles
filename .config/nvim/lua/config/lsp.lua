@@ -43,6 +43,8 @@ lsp_installer.on_server_ready(function(server)
                     'PROFANITY',
                     'EN_QUOTES',
                     'PASSIVE_VOICE',
+                    'WHITESPACE_RULE',
+                    'TOO_LONG_SENTENCE',
                 } },
                 dictionary = {
                     ['en-CA'] = {
@@ -57,6 +59,10 @@ lsp_installer.on_server_ready(function(server)
                         'Akshat',
                         'Naik',
                         'Organoids',
+                        'Fubini',
+                        'Cavalieri',
+                        'logisim',
+                        'combinational',
                     }
                 },
                 additionalRules = {

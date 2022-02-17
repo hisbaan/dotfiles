@@ -48,6 +48,7 @@ alias bin="cd ~/projects/binocularss/"
 alias iwlan="iwctl station wlan0 "
 alias proj="source projects"
 alias conf="source config"
+alias script="SHELL=bash script"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 

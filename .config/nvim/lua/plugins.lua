@@ -17,7 +17,7 @@ packer.startup({function()
     use { 'nvim-lua/popup.nvim' }
     use { 'tpope/vim-surround' }
     use { 'numToStr/Comment.nvim', config = get_config('comment')}
-    use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+    use { 'JoosepAlviste/nvim-ts-context-commentstring', config = get_config('nvim-ts-context-commentstring') }
     use { 'junegunn/fzf.vim' }
     use { 'SirVer/ultisnips', config = get_config('ultisnips') }
     -- use { 'L3MON4D3/LuaSnip', config = get_config('luasnip') }
