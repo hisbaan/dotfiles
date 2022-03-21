@@ -18,6 +18,7 @@ discord-canary-electron-bin
 dispad-git
 downgrade
 downgrader-git
+dragon-drag-and-drop
 droidcam
 espanso-bin
 flavours
@@ -26,7 +27,6 @@ i3-swallow-git
 i8kutils
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
-jekyll
 kimi-dark-gtk-theme-git
 libfprint-2-tod1-xps9300-bin
 lua-pam-git

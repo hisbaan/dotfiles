@@ -50,8 +50,8 @@ neogit.setup {
   -- customize displayed signs
   signs = {
     -- { CLOSED, OPENED }
-    section = { ">", "v" },
-    item = { ">", "v" },
+    section = { "", "" },
+    item = { "", "" },
     hunk = { "", "" },
   },
   integrations = {

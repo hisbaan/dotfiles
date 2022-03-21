@@ -45,6 +45,7 @@ lsp_installer.on_server_ready(function(server)
                     'PASSIVE_VOICE',
                     'WHITESPACE_RULE',
                     'TOO_LONG_SENTENCE',
+                    -- 'MORFOLOGIK_RULE_EN_CA',
                 } },
                 dictionary = {
                     ['en-CA'] = {
@@ -63,6 +64,13 @@ lsp_installer.on_server_ready(function(server)
                         'Cavalieri',
                         'logisim',
                         'combinational',
+                        'Laposa',
+                        'Pelley',
+                        'Medicago',
+                        'Covifenz',
+                        'deque',
+                        'parametrization',
+                        'irrotational',
                     }
                 },
                 additionalRules = {

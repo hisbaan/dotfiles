@@ -1,4 +1,4 @@
 root = /home/hisbaan/.config/nvim
 root = ssh://hisbaan@archeops/.config/nvim
 
-ignore = Path ~/.config/nvim/plugins
+ignore = Path ~/.config/nvim/plugin

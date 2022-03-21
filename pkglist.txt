@@ -63,6 +63,7 @@ fwupd
 fzf
 gamemode
 gcc
+gdb
 gifsicle
 gimp
 git
@@ -114,6 +115,7 @@ lxappearance
 lynx
 m4
 make
+man-pages
 mariadb
 meld
 mpc
@@ -200,12 +202,14 @@ transmission-qt
 trash-cli
 tree
 ttf-dejavu
+ueberzug
 unison
 unrar
 unzip
 usbutils
 valgrind
 vi
+vim
 virtualbox
 wavemon
 waybar
@@ -270,6 +274,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xournalpp
 xsel
 xterm
 youtube-dl
