@@ -1,0 +1,15 @@
+#!/bin/env bash
+
+filename="$HOME/Documents/stream/notes.md"
+
+if [ ! -f $filename ]; then
+    echo "# Notes" > $filename
+fi
+
+# alacritty -e "zsh -c \
+nvim -n \
+    -c "norm Go" \
+    -c "norm Go## $(date +%Y-%m-%d-%H:%M)" \
+    -c "norm G2o" \
+    -c "norm zz" \
+    -c "startinsert" $filename
