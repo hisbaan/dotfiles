@@ -115,7 +115,10 @@ fpath=($ZSH/functions $ZSH/completions $fpath)
 # export QT_AUTO_SCREEN_SCALE_FACTOR=1
 # export MOZ_ENABLE_WAYLAND=1
 
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:/home/hisbaan/.local/share/gem/ruby/3.0.0/bin
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:/home/hisbaan/.local/share/gem/ruby/3.0.0/bin/:/home/hisbaan/.rvm/bin:$CARGO_HOME/bin/:/home/hisbaan/.local/share/npm/bin/
+
+# ruby version management
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #############
 ### Other ###

@@ -13,6 +13,7 @@ citra-qt-bin
 color-picker
 corekeyboard
 dell-bios-fan-control-git
+didyoumean-git
 discocss-git
 discord-canary-electron-bin
 dispad-git
@@ -21,6 +22,7 @@ downgrader-git
 dragon-drag-and-drop
 droidcam
 espanso-bin
+farge-git
 flavours
 howdy
 i3-swallow-git
@@ -44,11 +46,9 @@ pandoc-bin
 paru-bin
 pfetch-git
 picom-ibhagwan-git
-polybar
 postman-bin
 pycharm-professional
 python-pmw
-rstudio-desktop-bin
 shellcheck-bin
 slack-desktop
 slack-term
@@ -56,7 +56,6 @@ smloadr
 spicetify-cli
 spotify
 spotify-tui-bin
-sway-borders-git
 teams
 texlive-latexindent-meta
 themix-full-git
@@ -64,7 +63,6 @@ trello
 ttf-material-wifi-icons-git
 ttf-meslo
 ttf-times-new-roman
-tuxi-git
 unimatrix-git
 via-bin
 vim-language-server
@@ -72,6 +70,7 @@ wd719x-firmware
 windscribe-cli
 xf86-input-mtrack
 ytop
+zeal
 zoom
 zsh-abbr
 zsh-theme-powerlevel10k-git

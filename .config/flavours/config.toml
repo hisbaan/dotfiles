@@ -23,6 +23,8 @@ hook = "kitty @ set-colors --all ~/.config/kitty/kitty.conf"
 file = "~/.config/polybar/config.ini"
 template = "polybar"
 subtemplate = "custom"
+start = "; start flavours"
+end = "; end flavours"
 
 [[item]]
 file = "~/.config/bspwm/bspwmrc"

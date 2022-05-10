@@ -38,6 +38,7 @@ code
 cpupower
 cups
 cups-pdf
+devtools
 dialog
 discord
 dmenu
@@ -118,6 +119,7 @@ make
 man-pages
 mariadb
 meld
+mosh
 mpc
 mpd
 mpv
@@ -131,6 +133,7 @@ nss-mdns
 ntfs-3g
 obs-studio
 onboard
+openbsd-netcat
 openresolv
 otf-ipafont
 pacman-contrib
@@ -143,13 +146,13 @@ peek
 pkgconf
 playerctl
 polkit-gnome
+polybar
 powertop
 pulseaudio-alsa
 python-pip
 python-pywal
-qemu
+qemu-desktop
 qt5ct
-r
 ranger
 redshift
 refind
@@ -174,6 +177,8 @@ spotifyd
 steam
 sudo
 swappy
+sway
+swaybg
 swayidle
 sxhkd
 tesseract
@@ -219,6 +224,7 @@ wine-mono
 wine-staging
 winetricks
 wl-clipboard
+wlroots
 wmname
 wofi
 xcolor
