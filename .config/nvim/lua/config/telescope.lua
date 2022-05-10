@@ -3,8 +3,9 @@ local custom_actions = {}
 local telescope = require("telescope")
 
 telescope.load_extension("projects")
-telescope.load_extension("fzf")
+telescope.load_extension("ui-select")
 telescope.load_extension("file_browser")
+telescope.load_extension("fzf")
 
 telescope.setup {
     defaults = {
@@ -61,5 +62,12 @@ telescope.setup {
         color_devicons = true,
         use_less = true,
         set_env = {["COLORTERM"] = "truecolor"},
+    },
+    extensions = {
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+
+            }
+        }
     }
 }

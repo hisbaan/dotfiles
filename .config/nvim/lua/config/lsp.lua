@@ -34,10 +34,16 @@ lsp_installer.on_server_ready(function(server)
 			}
 		}
 	end
+    -- if server.name == 'asm_lsp' then
+    --     opts.settings = {
+    --         filetype = { 'asm', 's', 'S' }
+    --     }
+    -- end
     if server.name == "ltex" then
         opts.settings = {
             ltex = {
-                enabled = { 'latex', 'tex', 'bib', 'markdown', 'org' },
+                disabled = { 'markdown' },
+                enabled = { 'latex', 'tex', 'bib', 'org' },
                 language = 'en-CA',
                 disabledRules = { ['en-CA'] = {
                     'PROFANITY',
