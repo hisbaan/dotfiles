@@ -29,7 +29,7 @@ bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width 4
 bspc config window_gap 20
-bspc config top_padding 55
+bspc config top_padding 74
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
@@ -69,6 +69,7 @@ bspc config urgent_border_color 	\#eb6f92
 bspc rule -a Emacs state=tiled
 bspc rule -a Zathura state=tiled
 bspc rule -a Wine:photoshop.exe state=floating
+bspc rule -a feh state=floating
 bspc rule -a firefox:Toolkit state=floating sticky=on
 
 #####################
