@@ -62,3 +62,55 @@ function man () {
     export LESS_TERMCAP_ZW=$(tput rsupm)
     command man "$@"
 }
+
+function proj () {
+    if [[ $# == 1 ]]
+    then
+        cd ~/projects/$1
+    else
+        cd ~/projects/
+        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+    fi
+}
+
+function _proj() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/projects/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/projects/}
+    fi
+}
+
+function conf () {
+    if [[ $# == 1 ]]
+    then
+        cd ~/.config/$1
+    else
+        cd ~/.config/
+        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+    fi
+}
+
+function _conf() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/.config/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/.config/}
+    fi
+}

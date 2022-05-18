@@ -46,8 +46,6 @@ alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
 alias bin="cd ~/projects/binocularss/"
 alias iwlan="iwctl station wlan0 "
-alias proj="source projects"
-alias conf="source config"
 alias script="SHELL=bash script"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
@@ -158,6 +156,8 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 #################
 
 source ~/.config/zsh/functions.zsh
+compdef _proj proj
+compdef _conf conf
 
 ###############
 ### Plugins ###

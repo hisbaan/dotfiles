@@ -143,6 +143,7 @@ pdf2svg
 pdfgrep
 pdftk
 peek
+picom
 pkgconf
 playerctl
 polkit-gnome

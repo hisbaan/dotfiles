@@ -13,7 +13,7 @@ citra-qt-bin
 color-picker
 corekeyboard
 dell-bios-fan-control-git
-didyoumean-git
+didyoumean-bin
 discocss-git
 discord-canary-electron-bin
 dispad-git
@@ -45,7 +45,6 @@ opendetex
 pandoc-bin
 paru-bin
 pfetch-git
-picom-ibhagwan-git
 postman-bin
 pycharm-professional
 python-pmw

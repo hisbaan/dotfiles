@@ -1,9 +1,0 @@
-#!/bin/env bash
-
-if [[ $# == 1 ]]
-then
-    cd ~/projects/$1
-else
-    cd ~/projects/
-    cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
-fi
