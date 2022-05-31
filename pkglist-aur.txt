@@ -9,14 +9,15 @@ brave-bin
 brother-dcpl2520dw
 cbonsai
 citra-qt-bin
-cloudflared-bin
 colorpicker
 davinci-resolve
+didyoumean-git
 discocss-git
 dragon-drag-and-drop
 droidcam
 espanso-bin
 espeak
+farge-git
 ffhevc
 ffmpeg-compat-57
 flavours
@@ -36,7 +37,6 @@ nerd-fonts-jetbrains-mono
 nerd-fonts-liberation-mono
 nerd-fonts-meslo
 nomachine
-nvim-packer-git
 onlyoffice-bin
 openjpeg
 pandoc-bin
@@ -46,9 +46,6 @@ pfetch-git
 picom-ibhagwan-git
 polybar-git
 postman-bin
-protonvpn-cli-ng
-pycharm-professional
-rstudio-desktop-bin
 shellcheck-bin
 slack-desktop
 smloadr
@@ -67,7 +64,6 @@ tuxi-git
 ufetch-git
 ventoy-bin
 via-bin
-vim-language-server
 wd719x-firmware
 windscribe-cli
 ytop

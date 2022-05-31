@@ -39,6 +39,7 @@ docker
 docker-compose
 dolphin-emu
 dunst
+dust
 efibootmgr
 exa
 exfat-utils
@@ -117,11 +118,11 @@ nmap
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
-nvidia
 nvidia-dkms
-nvidia-lts
 nvidia-settings
+nvtop
 obs-studio
+openbsd-netcat
 opendoas
 openresolv
 otf-ipafont
@@ -146,8 +147,7 @@ python-pip
 python-pipenv
 python-pywal
 python2
-qemu
-r
+qemu-desktop
 ranger
 redshift
 refind
@@ -203,6 +203,7 @@ unison
 unrar
 unzip
 usbutils
+valgrind
 vi
 vim
 virtualbox

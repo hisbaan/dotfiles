@@ -281,38 +281,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config/lualine')
-time([[Config for lualine.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('config/treesitter')
-time([[Config for nvim-treesitter]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require('config/bufferline')
-time([[Config for bufferline.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('config/telescope')
-time([[Config for telescope.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-require('config/comment')
-time([[Config for Comment.nvim]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-require('config/rose-pine')
-time([[Config for rose-pine]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require('config/cmp')
-time([[Config for nvim-cmp]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require('config/project')
-time([[Config for project.nvim]], false)
 -- Config for: nvim-lastplace
 time([[Config for nvim-lastplace]], true)
 require('config/nvim-lastplace')
@@ -321,38 +289,70 @@ time([[Config for nvim-lastplace]], false)
 time([[Config for nvim-lsp-installer]], true)
 require('config/lsp')
 time([[Config for nvim-lsp-installer]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('config/autopairs')
-time([[Config for nvim-autopairs]], false)
--- Config for: vimtex
-time([[Config for vimtex]], true)
-require('config/vimtex')
-time([[Config for vimtex]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
-require('config/neogit')
-time([[Config for neogit]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-require('config/todo-comments')
-time([[Config for todo-comments.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config/nvim-tree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require('config/alpha-nvim')
-time([[Config for alpha-nvim]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-require('config/ultisnips')
-time([[Config for ultisnips]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/treesitter')
+time([[Config for nvim-treesitter]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require('config/gitsigns')
 time([[Config for gitsigns.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require('config/todo-comments')
+time([[Config for todo-comments.nvim]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+require('config/ultisnips')
+time([[Config for ultisnips]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require('config/comment')
+time([[Config for Comment.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require('config/alpha-nvim')
+time([[Config for alpha-nvim]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('config/project')
+time([[Config for project.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+require('config/rose-pine')
+time([[Config for rose-pine]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('config/bufferline')
+time([[Config for bufferline.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('config/autopairs')
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('config/cmp')
+time([[Config for nvim-cmp]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+require('config/neogit')
+time([[Config for neogit]], false)
+-- Config for: vimtex
+time([[Config for vimtex]], true)
+require('config/vimtex')
+time([[Config for vimtex]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
