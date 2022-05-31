@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+if [[ $# -eq 1 ]]
+then
+    gcc -Wall -std=gnu99 -g -o $(echo $1 | awk 'BEGIN{FS=OFS="."}{NF--; print}') $1
+else
+    echo "Please only use one argument"
+fi

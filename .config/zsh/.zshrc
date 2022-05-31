@@ -44,11 +44,8 @@ alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
 alias bin='cd ~/projects/binocularss/'
-alias proj='source projects'
-alias conf='source config'
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
-alias test="cd ~/Documents/uoft/mat237/test/01"
 
 # start flavours
 ###################
@@ -96,8 +93,11 @@ export EDITOR='nvim'
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/:/home/hisbaan/.rvm/bin/
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
+
+# ruby environment switcher
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 #############
 ### Other ###
@@ -137,6 +137,8 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 #################
 
 source ~/.config/zsh/functions.zsh
+compdef _proj proj
+compdef _conf conf
 
 ###############
 ### Plugins ###
