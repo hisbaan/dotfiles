@@ -21,9 +21,11 @@ subtemplate = "custom"
 hook = "kitty @ set-colors --all ~/.config/kitty/kitty.conf"
 
 [[item]]
-file = "~/.config/polybar/config"
+file = "~/.config/polybar/config.ini"
 template = "polybar"
 subtemplate = "custom"
+start = "; start flavours"
+end = "; end flavours"
 
 [[item]]
 file = "~/.config/bspwm/bspwmrc"
