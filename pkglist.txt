@@ -35,6 +35,7 @@ cheese
 chromium
 cloc
 code
+cpio
 cpupower
 cups
 cups-pdf
@@ -163,6 +164,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
 rofi
+rpmextract
 rsync
 rustup
 rxvt-unicode

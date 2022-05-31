@@ -1,6 +1,5 @@
 aic94xx-firmware
 android-studio
-android-studio-beta
 authy
 autotiling
 betterlockscreen
@@ -13,7 +12,7 @@ citra-qt-bin
 color-picker
 corekeyboard
 dell-bios-fan-control-git
-didyoumean-bin
+didyoumean
 discocss-git
 discord-canary-electron-bin
 dispad-git
@@ -62,6 +61,7 @@ trello
 ttf-material-wifi-icons-git
 ttf-meslo
 ttf-times-new-roman
+typioca
 unimatrix-git
 via-bin
 vim-language-server
