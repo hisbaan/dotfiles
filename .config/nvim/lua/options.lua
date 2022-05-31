@@ -39,6 +39,7 @@ o.wildignore = [[
 o.tabstop = 4
 o.shiftwidth = 4
 vim.cmd([[set nojoinspaces]])
+-- o.nojoinspaces = true
 o.expandtab = true -- convert tabs to spaces
 o.smartindent = true -- make indenting smarter again
 o.breakindent = true -- indent wrapped lines

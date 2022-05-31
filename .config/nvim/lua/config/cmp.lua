@@ -62,28 +62,6 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = false,
 		}),
-        -- TODO work in progress
-        -- - after using CMP to complete something that is a snippet, it then triggers ultisnips completion on the next TAB. Try mapping a global variable to ignore ultisinps bindings after a complete tab until a space is pressed or something like that? I don't know how to set it back but it should be ignored once someone starts using cmp and reset once it becomes invisible. Is there a way to watch the visibliity of cmp?
-        -- ["<Tab>"] = cmp.mapping(function(fallback)
-        --     if vim.fn["UltiSnips#CanExpandSnippet"]() == 1 then
-        --         vim.fn["UltiSnips#ExpandSnippet"]()
-        --     elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
-        --         vim.fn["UltiSnips#"]()
-        --     elseif cmp.visible() then
-        --         cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-        --     else
-        --         fallback()
-        --     end
-        -- end),
-        -- ["<S-Tab>"] = cmp.mapping(function(fallback)
-        --     if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
-        --         vim.fn["UltiSnips#JumpForwards"]()
-        --     elseif cmp.visible() then
-        --         cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
-        --     else
-        --         fallback()
-        --     end
-        -- end),
 	},
 	-- mapping = {
 	-- 	['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
@@ -96,9 +74,6 @@ cmp.setup({
 	-- 	}),
 	-- 	['<CR>'] = cmp.mapping.confirm({ select = true }),
 	-- },
-    documentation = {
-        -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    },
 	sources = cmp.config.sources(
 		{
 			{ name = 'nvim_lsp' },

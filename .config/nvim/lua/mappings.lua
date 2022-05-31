@@ -50,6 +50,9 @@ map("i", "<c-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts)
 map("x", "K", ":move '<-2<CR>gv-gv", opts)
 map("x", "J", ":move '>+1<CR>gv-gv", opts)
 
+-- Remove conflicting keybinds
+vim.cmd([[map <C-f> <Nop>]])
+
 -- Ctrl + backspace
 vim.cmd([[
 noremap! <C-BS> <C-w>
@@ -62,7 +65,7 @@ map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', opts)
 -- Telescope
 map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
-map('n', '<Leader>ca', '<Cmd>Telescope lsp_code_actions<CR>', opts)
+map('n', '<Leader>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
 -- Terminal
 map('n', '<Leader>tt', '<Cmd>terminal<CR>A', opts)
@@ -70,3 +73,6 @@ map('n', '<Leader>te', '<Cmd>!alacritty --working-directory=$(pwd) & disown<CR><
 
 -- Neogit
 map('n', '<Leader>gg', '<Cmd>Neogit<CR>', opts)
+
+-- todo-comments
+map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
