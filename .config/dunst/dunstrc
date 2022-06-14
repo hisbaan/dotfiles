@@ -32,7 +32,7 @@
 	width = 300
 	height = 540
 	origin = top-right
-	offset = 5x30
+	offset = 5x42
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -279,21 +279,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2a273f"
+    background = "#1f1d2e"
     foreground = "#e0def4"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#2a273f"
+    background = "#1f1d2e"
     foreground = "#e0def4"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#2a273f"
+    background = "#1f1d2e"
     foreground = "#e0def4"
     frame_color = "#eb6f92"
     timeout = 0
