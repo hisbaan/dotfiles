@@ -75,6 +75,12 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    config = { "require('config/luasnip')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["alpha-nvim"] = {
     config = { "require('config/alpha-nvim')" },
     loaded = true,
@@ -102,15 +108,20 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-ultisnips"] = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips",
-    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     config = { "require('config/gitsigns')" },
@@ -184,6 +195,12 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
+  ["nvim-ufo"] = {
+    config = { "require('config/nvim-ufo')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -218,6 +235,11 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
   ["rose-pine"] = {
     config = { "require('config/rose-pine')" },
     loaded = true,
@@ -251,11 +273,11 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
-  ultisnips = {
-    config = { "require('config/ultisnips')" },
+  ["toggleterm.nvim"] = {
+    config = { "require('config/toggleterm')" },
     loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/ultisnips",
-    url = "https://github.com/SirVer/ultisnips"
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-hexokinase"] = {
     loaded = true,
@@ -281,18 +303,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-lastplace
-time([[Config for nvim-lastplace]], true)
-require('config/nvim-lastplace')
-time([[Config for nvim-lastplace]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-require('config/lsp')
-time([[Config for nvim-lsp-installer]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('config/treesitter')
-time([[Config for nvim-treesitter]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require('config/gitsigns')
@@ -305,38 +315,26 @@ time([[Config for telescope.nvim]], false)
 time([[Config for lualine.nvim]], true)
 require('config/lualine')
 time([[Config for lualine.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-require('config/todo-comments')
-time([[Config for todo-comments.nvim]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-require('config/ultisnips')
-time([[Config for ultisnips]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-require('config/comment')
-time([[Config for Comment.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config/alpha-nvim')
 time([[Config for alpha-nvim]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require('config/project')
-time([[Config for project.nvim]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-require('config/rose-pine')
-time([[Config for rose-pine]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+require('config/neogit')
+time([[Config for neogit]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('config/toggleterm')
+time([[Config for toggleterm.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('config/bufferline')
 time([[Config for bufferline.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config/nvim-tree')
-time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-ufo
+time([[Config for nvim-ufo]], true)
+require('config/nvim-ufo')
+time([[Config for nvim-ufo]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 require('config/autopairs')
@@ -345,20 +343,52 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for nvim-cmp]], true)
 require('config/cmp')
 time([[Config for nvim-cmp]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
-require('config/neogit')
-time([[Config for neogit]], false)
+-- Config for: nvim-lastplace
+time([[Config for nvim-lastplace]], true)
+require('config/nvim-lastplace')
+time([[Config for nvim-lastplace]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+require('config/rose-pine')
+time([[Config for rose-pine]], false)
 -- Config for: vimtex
 time([[Config for vimtex]], true)
 require('config/vimtex')
 time([[Config for vimtex]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('config/project')
+time([[Config for project.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require('config/todo-comments')
+time([[Config for todo-comments.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-lsp-installer
+time([[Config for nvim-lsp-installer]], true)
+require('config/lsp')
+time([[Config for nvim-lsp-installer]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+require('config/comment')
+time([[Config for Comment.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+require('config/luasnip')
+time([[Config for LuaSnip]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType org ++once lua require("packer.load")({'orgmode'}, { ft = "org" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

@@ -25,8 +25,8 @@ packer.startup({function()
     use { 'tpope/vim-surround' }
     use { 'numToStr/Comment.nvim', config = get_config('comment')}
     use { 'JoosepAlviste/nvim-ts-context-commentstring' }
-    use { 'SirVer/ultisnips', config = get_config('ultisnips') }
-    -- use { 'L3MON4D3/LuaSnip', config = get_config('luasnip') }
+    use { 'L3MON4D3/LuaSnip', config = get_config('luasnip') }
+    use { 'rafamadriz/friendly-snippets' }
     use { 'honza/vim-snippets' }
     use { 'windwp/nvim-autopairs', config = get_config('autopairs') }
     use { 'nvim-treesitter/nvim-treesitter', config = get_config('treesitter') }
@@ -93,7 +93,7 @@ packer.startup({function()
         { 'hrsh7th/cmp-buffer' },
         { 'hrsh7th/cmp-path' },
         { 'hrsh7th/cmp-cmdline' },
-        { 'quangnguyen30192/cmp-nvim-ultisnips' }
+        { 'saadparwaiz1/cmp_luasnip' },
         },
         config = get_config('cmp')
     }
@@ -113,6 +113,12 @@ packer.startup({function()
         requires = "nvim-lua/plenary.nvim",
         config = get_config("todo-comments"),
     }
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+        config = get_config("nvim-ufo")
+    }
+    use { "akinsho/toggleterm.nvim", config = get_config("toggleterm") }
 
     if PACKER_BOOTSTRAP then
         require('packer').sync()

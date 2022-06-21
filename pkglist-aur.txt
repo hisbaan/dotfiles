@@ -2,6 +2,7 @@ aic94xx-firmware
 anbox-image-gapps
 android-studio
 android-studio-beta
+apfs-fuse-git
 authy
 betterlockscreen
 bluebubbles-desktop-app
@@ -28,8 +29,10 @@ hfsprogs
 hide-client
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
+iriunwebcam-bin
 jekyll
 minecraft-launcher
+mosh-git
 mpd-mpris
 nerd-fonts-bitstream-vera-mono
 nerd-fonts-inconsolata
@@ -71,4 +74,3 @@ zaread-git
 zoom
 zsh-abbr
 zsh-theme-powerlevel10k-git
-zsh-vi-mode
