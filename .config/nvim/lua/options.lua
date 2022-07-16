@@ -13,8 +13,10 @@ o.encoding = "utf-8"
 g.tex_flavor = "latex"
 o.undofile = true
 o.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
+o.ttimeout = true
 o.ttimeoutlen = 0 -- Time in milliseconds to wait for a key code sequence to complete
 o.conceallevel = 0 -- so that ` is visible in markdown files
+o.concealcursor = "nc"
 if vim.fn.executable("rg") then
 	o.grepprg = "rg --vimgrep --no-heading --smart-case --"
 end
@@ -64,7 +66,7 @@ o.splitbelow = true -- force all horizontal splits to go below current window
 o.splitright = true -- force all vertical splits to go to the right of current window
 o.hlsearch = true -- highlight all matches on previous search pattern
 o.foldenable = false -- disable folding; enable with zi
-o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
+-- o.foldmethod = "expr"
+-- o.foldexpr = "nvim_treesitter#foldexpr()"
 o.listchars = "eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣"
 o.lazyredraw = true -- do not redraw screen while running macros

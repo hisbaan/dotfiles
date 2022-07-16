@@ -15,6 +15,10 @@ vim.o.completeopt = "menuone,noselect"
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
 
 -- Setup lsp servers.
 local lsp_installer = require("nvim-lsp-installer")
@@ -24,8 +28,12 @@ lsp_installer.on_server_ready(function(server)
 	local opts = {}
 	opts.capabilities = capabilities
 
-	-- Ignore certain diagnostics in lua
+    if server.name == "jdtls" then
+        opts.use_lombok_agent = true
+    end
+
 	if server.name == "sumneko_lua" then
+        -- Ignore certain diagnostics in lua
 		opts.settings = {
 			Lua = {
 				diagnostics = {
@@ -34,16 +42,12 @@ lsp_installer.on_server_ready(function(server)
 			}
 		}
 	end
-    -- if server.name == 'asm_lsp' then
-    --     opts.settings = {
-    --         filetype = { 'asm', 's', 'S' }
-    --     }
-    -- end
+
     if server.name == "ltex" then
         opts.settings = {
             ltex = {
-                disabled = { 'markdown' },
-                enabled = { 'latex', 'tex', 'bib', 'org' },
+                disabled = { 'markdown', 'org' },
+                enabled = { 'latex', 'tex', 'bib' },
                 language = 'en-CA',
                 disabledRules = { ['en-CA'] = {
                     'PROFANITY',

@@ -5,12 +5,13 @@ local function get_config(name)
 end
 
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    PACKER_BOOTSTRAP = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+        install_path })
 end
 
-local packer = require("packer")
+local packer = require('packer')
 packer.init {
     enable = true,
     treshold = 0,
@@ -18,24 +19,21 @@ packer.init {
 local use = packer.use
 packer.reset()
 
-packer.startup({function()
-    use { "wbthomason/packer.nvim" }
+packer.startup({ function()
+    use { 'wbthomason/packer.nvim' }
     use { 'nvim-lua/plenary.nvim' }
     use { 'nvim-lua/popup.nvim' }
-    use { 'tpope/vim-surround' }
-    use { 'numToStr/Comment.nvim', config = get_config('comment')}
+    use { 'kylechui/nvim-surround', config = get_config('nvim-surround') }
+    use { 'numToStr/Comment.nvim', config = get_config('comment') }
     use { 'JoosepAlviste/nvim-ts-context-commentstring' }
-    use { 'SirVer/ultisnips', config = get_config('ultisnips') }
-    -- use { 'L3MON4D3/LuaSnip', config = get_config('luasnip') }
+    use { 'L3MON4D3/LuaSnip', config = get_config('luasnip') }
+    use { 'rafamadriz/friendly-snippets' }
     use { 'honza/vim-snippets' }
     use { 'windwp/nvim-autopairs', config = get_config('autopairs') }
     use { 'nvim-treesitter/nvim-treesitter', config = get_config('treesitter') }
     use { 'ethanholz/nvim-lastplace', config = get_config('nvim-lastplace') }
     use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }
-    use {
-        'lervag/vimtex',
-        config = get_config('vimtex'),
-    }
+    use { 'lervag/vimtex', config = get_config('vimtex'), }
     use {
         'akinsho/bufferline.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
@@ -51,24 +49,27 @@ packer.startup({function()
         run = function()
             vim.fn['mkdp#util#install']()
         end,
-        ft = {'markdown'},
+        ft = { 'markdown' },
         config = get_config('markdown-preview')
     }
     use {
         'kyazdani42/nvim-tree.lua',
-        requires = {
-            'kyazdani42/nvim-web-devicons',
-        },
+        requires = 'kyazdani42/nvim-web-devicons',
         config = get_config('nvim-tree')
     }
     use {
         'nvim-orgmode/orgmode',
-        ft = {'org'},
+        ft = { 'org' },
         config = get_config('orgmode')
     }
     use {
+        'akinsho/org-bullets.nvim',
+        ft = { 'org' },
+        config = get_config('org-bullets')
+    }
+    use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true},
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
         config = get_config('lualine')
     }
     use {
@@ -81,38 +82,46 @@ packer.startup({function()
         requires = { 'nvim-lua/plenary.nvim' },
         config = get_config('telescope')
     }
-    use { "nvim-telescope/telescope-ui-select.nvim" }
-    use { "nvim-telescope/telescope-file-browser.nvim" }
-    use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-    use {"ahmedkhalf/project.nvim", config = get_config("project") }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
+    use { 'nvim-telescope/telescope-file-browser.nvim' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'ahmedkhalf/project.nvim', config = get_config('project') }
     use { 'neovim/nvim-lspconfig' }
     use {
         'hrsh7th/nvim-cmp',
         requires = {
-        { 'hrsh7th/cmp-nvim-lsp' },
-        { 'hrsh7th/cmp-buffer' },
-        { 'hrsh7th/cmp-path' },
-        { 'hrsh7th/cmp-cmdline' },
-        { 'quangnguyen30192/cmp-nvim-ultisnips' }
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'saadparwaiz1/cmp_luasnip',
         },
         config = get_config('cmp')
     }
     use { 'williamboman/nvim-lsp-installer', config = get_config('lsp') }
+    use { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') }
     use {
         'goolord/alpha-nvim',
-        requires = {'kyazdani42/nvim-web-devicons'},
+        requires = { 'kyazdani42/nvim-web-devicons' },
         config = get_config('alpha-nvim')
     }
     use {
         'lewis6991/gitsigns.nvim',
-        requires = { 'nvim-lua/plenary.nvim' },
+        requires = 'nvim-lua/plenary.nvim',
         config = get_config('gitsigns')
     }
     use {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim",
-        config = get_config("todo-comments"),
+        'folke/todo-comments.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+        config = get_config('todo-comments'),
     }
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+        config = get_config('nvim-ufo')
+    }
+    use { 'akinsho/toggleterm.nvim', config = get_config('toggleterm') }
+    use { 'folke/which-key.nvim', config = get_config('which-key') }
 
     if PACKER_BOOTSTRAP then
         require('packer').sync()
