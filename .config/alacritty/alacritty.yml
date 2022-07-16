@@ -225,25 +225,25 @@ font:
 # Available themes are:
 
 # start flavours
-# Base16 Rosé Pine Moon Custom 256 - alacritty color config
+# Base16 Rosé Pine Custom 256 - alacritty color config
 # Hisbaan Noorani (https://github.com/hisbaan)
 colors:
   # Default colors
   primary:
-    background: '0x232136'
+    background: '0x191724'
     foreground: '0xe0def4'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x232136'
+    text: '0x191724'
     cursor: '0xe0def4'
 
   # Normal colors
   normal:
-    black:   '0x232136'
+    black:   '0x191724'
     red:     '0xeb6f92'
     green:   '0xcbf2b8'
-    yellow:  '0xea9a97'
+    yellow:  '0xebbcba'
     blue:    '0x9ccfd8'
     magenta: '0xc4a7e7'
     cyan:    '0x3e8fb0'
@@ -251,22 +251,22 @@ colors:
 
   # Bright colors
   bright:
-    black:   '0x59546d'
+    black:   '0x555169'
     red:     '0xeb6f92'
     green:   '0xcbf2b8'
-    yellow:  '0xea9a97'
+    yellow:  '0xebbcba'
     blue:    '0x9ccfd8'
     magenta: '0xc4a7e7'
     cyan:    '0x3e8fb0'
-    white:   '0xf5f5f7'
+    white:   '0xe2e1e7'
 
   indexed_colors:
-    - { index: 16, color: '0xea9a97' }
+    - { index: 16, color: '0xebbcba' }
     - { index: 17, color: '0xb9b9bc' }
-    - { index: 18, color: '0x2a273f' }
-    - { index: 19, color: '0x393552' }
-    - { index: 20, color: '0x817c9c' }
-    - { index: 21, color: '0xd9d7e1' }
+    - { index: 18, color: '0x1f1d2e' }
+    - { index: 19, color: '0x26233a' }
+    - { index: 20, color: '0x6e6a86' }
+    - { index: 21, color: '0xf0f0f3' }
 # end flavours
 
 #######################################

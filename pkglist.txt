@@ -129,6 +129,7 @@ ncmpcpp
 neofetch
 neovim
 nitrogen
+nodejs
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
@@ -144,7 +145,6 @@ pdf2svg
 pdfgrep
 pdftk
 peek
-picom
 pkgconf
 playerctl
 polkit-gnome
@@ -178,12 +178,14 @@ smartmontools
 speedtest-cli
 spotifyd
 steam
+strace
 sudo
 swappy
 sway
 swaybg
 swayidle
 sxhkd
+syncthing
 tesseract
 tesseract-data-eng
 testdisk

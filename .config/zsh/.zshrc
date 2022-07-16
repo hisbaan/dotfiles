@@ -57,22 +57,22 @@ alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
 if [ "$TERM" = "linux" ]
 then
-  echo -en "\e]P0232136"
+  echo -en "\e]P0191724"
   echo -en "\e]P1eb6f92"
   echo -en "\e]P2cbf2b8"
-  echo -en "\e]P3ea9a97"
+  echo -en "\e]P3ebbcba"
   echo -en "\e]P49ccfd8"
   echo -en "\e]P5c4a7e7"
   echo -en "\e]P63e8fb0"
   echo -en "\e]P7e0def4"
-  echo -en "\e]P8817c9c"
+  echo -en "\e]P86e6a86"
   echo -en "\e]P9eb6f92"
   echo -en "\e]PAcbf2b8"
-  echo -en "\e]PBea9a97"
+  echo -en "\e]PBebbcba"
   echo -en "\e]PC9ccfd8"
   echo -en "\e]PDc4a7e7"
   echo -en "\e]PE3e8fb0"
-  echo -en "\e]PFf5f5f7"
+  echo -en "\e]PFe2e1e7"
   clear # Clear artifacts
 fi
 # end flavours

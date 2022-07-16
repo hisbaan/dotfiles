@@ -21,38 +21,38 @@ set recolor "true"
 set recolor-keephue "true"
 
 # start flavours
-# Base16 Rosé Pine Moon Custom
+# Base16 Rosé Pine Custom
 # Author: Hisbaan Noorani (https://github.com/hisbaan)
 
-set default-bg                  "#232136"
-set default-fg                  "#f5f5f7"
+set default-bg                  "#191724"
+set default-fg                  "#e2e1e7"
 
-set inputbar-bg                 "#232136"
-set inputbar-fg                 "#f5f5f7"
+set inputbar-bg                 "#191724"
+set inputbar-fg                 "#e2e1e7"
 
-set statusbar-bg                "#232136"
-set statusbar-fg                "#f5f5f7"
+set statusbar-bg                "#191724"
+set statusbar-fg                "#e2e1e7"
 
-set notification-bg             "#232136"
-set notification-fg             "#f5f5f7"
+set notification-bg             "#191724"
+set notification-fg             "#e2e1e7"
 
-set notification-error-bg       "#232136"
+set notification-error-bg       "#191724"
 set notification-error-fg       "#eb6f92"
 
-set notification-warning-bg     "#232136"
+set notification-warning-bg     "#191724"
 set notification-warning-fg     "#eb6f92"
 
 set highlight-color             "#c4a7e7"
 set highlight-active-color      "#9ccfd8"
 
-set completion-bg               "#2a273f"
-set completion-fg               "#f5f5f7"
+set completion-bg               "#1f1d2e"
+set completion-fg               "#e2e1e7"
 
-set completion-highlight-fg     "#f5f5f7"
+set completion-highlight-fg     "#e2e1e7"
 set completion-highlight-bg     "#c4a7e7"
 
-set recolor-lightcolor          "#232136"
-set recolor-darkcolor           "#f5f5f7"
+set recolor-lightcolor          "#191724"
+set recolor-darkcolor           "#e2e1e7"
 
 # end flavours
 

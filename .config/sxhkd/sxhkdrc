@@ -52,6 +52,8 @@ super + bracket{left,right}
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
 
+super + Tab
+    bspc desktop -f last
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
@@ -113,7 +115,7 @@ super + shift + Return
 
 # rofi
 super + d
-    noswallow_rofi
+    ROFI=1 noswallow_rofi
 
 # rofi-workflows
 super + o
