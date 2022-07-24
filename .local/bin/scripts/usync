@@ -1,8 +1,8 @@
 #!/bin/env bash
 
-cd ~/.unison/
+cd ~/.unison/ || exit
 
 for i in *.prf
 do
-    unison ${i/.prf/}
+    unison "${i/.prf/}"
 done

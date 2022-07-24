@@ -75,11 +75,15 @@ wk.register({
         a = {"Code action"},
         f = {"Format code"},
         r = {"Rename variable"},
+        t = {"Toggle lsp lines"}
     },
     t = {
         e = {"External terminal"},
         t = {"Terminal buffer"},
         d = {"Telescope todo"},
+    },
+    b = {
+        "View Buffers"
     }
 }, {prefix = "<leader>", mode = "n", default_options})
 

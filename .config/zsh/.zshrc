@@ -49,6 +49,7 @@ alias iwlan="iwctl station wlan0 "
 alias script="SHELL=bash script"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias org="cd ~/Documents/org/ ; . ranger"
 
 # start flavours
 ###################

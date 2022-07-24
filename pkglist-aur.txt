@@ -17,8 +17,7 @@ discocss-git
 discord-canary-electron-bin
 dispad-git
 downgrade
-downgrader-git
-dragon-drag-and-drop
+dragon-drop
 droidcam
 espanso-bin
 eww-git
@@ -60,7 +59,6 @@ teams
 texlive-latexindent-meta
 themix-full-git
 trello
-ttf-material-wifi-icons-git
 ttf-meslo
 ttf-times-new-roman
 typioca
@@ -69,7 +67,6 @@ via-bin
 vim-language-server
 wd719x-firmware
 windscribe-cli
-ytop
 zeal
 zoom
 zsh-abbr

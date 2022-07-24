@@ -53,6 +53,16 @@ map("x", "J", ":move '>+1<CR>gv-gv", opts)
 -- Remove conflicting keybinds
 vim.cmd([[map <C-f> <Nop>]])
 
+-- Smart dd
+local function smart_dd()
+    if vim.api.nvim_get_current_line():match("^%s*$") then
+        return "\"_dd"
+    else
+        return "dd"
+    end
+end
+vim.keymap.set("n", "dd", smart_dd, expr_options)
+
 -- Ctrl + backspace
 vim.cmd([[
 noremap! <C-BS> <C-w>
@@ -64,6 +74,7 @@ map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', opts)
 
 -- Telescope
 map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', opts)
+map('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', opts)
 map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Terminal
@@ -76,7 +87,18 @@ map('n', '<Leader>gg', '<Cmd>Neogit<CR>', opts)
 -- todo-comments
 map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
 
--- null-ls formatting
+-- lsp
 map('n', '<Leader>la', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 map('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+local virtual_lines_enabled = false
+map('n', '<leader>lt', '', {
+    callback = function()
+        virtual_lines_enabled = not virtual_lines_enabled
+        vim.diagnostic.config({
+            virtual_lines = virtual_lines_enabled,
+            virtual_text = not virtual_lines_enabled,
+        })
+    end,
+})
