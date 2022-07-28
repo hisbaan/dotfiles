@@ -86,7 +86,7 @@ packer.startup({ function()
     use { 'nvim-telescope/telescope-file-browser.nvim' }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use { 'ahmedkhalf/project.nvim', config = get_config('project') }
-    use { 'neovim/nvim-lspconfig' }
+    use { 'neovim/nvim-lspconfig', config = get_config('lsp') }
     use {
         'hrsh7th/nvim-cmp',
         requires = {
@@ -98,14 +98,17 @@ packer.startup({ function()
         },
         config = get_config('cmp')
     }
-    use { 'williamboman/nvim-lsp-installer', config = get_config('lsp') }
+    use {
+        'williamboman/mason.nvim',
+        requires = { 'williamboman/mason-lspconfig.nvim' },
+        config = get_config('mason')
+    }
     use({
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
         config = get_config("lsp-lines"),
     })
     -- use { 'mfussenegger/nvim-dap' }
     -- use { 'mfussenegger/nvim-jdtls' }
-    -- use { 'Pocco81/dap-buddy.nvim' }
     use { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') }
     use {
         'goolord/alpha-nvim',

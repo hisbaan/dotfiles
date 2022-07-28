@@ -69,23 +69,23 @@ local wk = require("which-key")
 local default_options = { noremap = true, silent = true }
 
 wk.register({
-    point = {"File browser"},
+    point = { "File browser" },
     l = {
         name = "lsp",
-        a = {"Code action"},
-        f = {"Format code"},
-        r = {"Rename variable"},
-        t = {"Toggle lsp lines"}
+        a = { "Code action" },
+        f = { "Format code" },
+        r = { "Rename variable" },
+        t = { "Toggle lsp lines" }
     },
     t = {
-        e = {"External terminal"},
-        t = {"Terminal buffer"},
-        d = {"Telescope todo"},
+        e = { "External terminal" },
+        t = { "Terminal buffer" },
+        d = { "Telescope todo" },
     },
     b = {
         "View Buffers"
     }
-}, {prefix = "<leader>", mode = "n", default_options})
+}, { prefix = "<leader>", mode = "n", default_options })
 
 -- register non leader based mappings
 -- wk.register({ga = {"<Plug>(EasyAlign)", "Align", mode = "x"}})

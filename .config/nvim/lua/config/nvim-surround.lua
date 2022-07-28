@@ -1,10 +1,10 @@
 require("nvim-surround").setup({
-    keymaps = { -- vim-surround style keymaps
-        insert = "ys",
-        visual = "S",
-        delete = "ds",
-        change = "cs",
-    },
+    -- keymaps = { -- vim-surround style keymaps
+    --     insert = "ys",
+    --     visual = "S",
+    --     delete = "ds",
+    --     change = "cs",
+    -- },
     delimiters = {
         pairs = {
             ["("] = { "( ", " )" },
@@ -24,6 +24,8 @@ require("nvim-surround").setup({
             ["'"] = { "'", "'" },
             ['"'] = { '"', '"' },
             ["`"] = { "`", "`" },
+            ["="] = { "=", "=" },
+            ["~"] = { "~", "~" },
         },
         HTML = {
             ["t"] = true, -- Use "t" for HTML-style mappings

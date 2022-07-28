@@ -56,11 +56,11 @@ local math_template = s("mtemp", fmt([[
     {}
 \end{{document}}
 ]], {
-        i(1, "TITLE"),
-        i(2, "Hisbaan Noorani"),
-        i(3, "DATE"),
-        i(0)
-    })
+    i(1, "TITLE"),
+    i(2, "Hisbaan Noorani"),
+    i(3, "DATE"),
+    i(0)
+})
 )
 table.insert(snippets, math_template)
 
@@ -77,11 +77,11 @@ local normal_template = s("temp", fmt([[
     {}
 \end{{document}}
 ]], {
-        i(1, "TITLE"),
-        i(2, "Hisbaan Noorani"),
-        i(3, "DATE"),
-        i(0)
-    })
+    i(1, "TITLE"),
+    i(2, "Hisbaan Noorani"),
+    i(3, "DATE"),
+    i(0)
+})
 )
 table.insert(snippets, normal_template)
 
@@ -113,29 +113,29 @@ local apa_template = s("apa", fmt([[
 \printbibliography[title={{\centering References}}]
 \end{{document}}
 ]], {
-        i(1, "TITLE"),
-        i(2, "Hisbaan Noorani"),
-        i(3, "University of Toronto"),
-        i(4, "COURSE"),
-        i(5, "PROFESSOR"),
-        i(6, "DATE"),
-        i(0)
-    })
+    i(1, "TITLE"),
+    i(2, "Hisbaan Noorani"),
+    i(3, "University of Toronto"),
+    i(4, "COURSE"),
+    i(5, "PROFESSOR"),
+    i(6, "DATE"),
+    i(0)
+})
 )
 table.insert(snippets, apa_template)
 
 local times = s("times", {
-    t{"\\usepackage{fontspec}", "\\setmainfont{Times New Roman}"}
+    t { "\\usepackage{fontspec}", "\\setmainfont{Times New Roman}" }
 })
 table.insert(snippets, times)
 
 local absolute_value = s("abs", {
-    t"\\abs{", i(1, "x - a"), t"}"
+    t "\\abs{", i(1, "x - a"), t "}"
 })
 table.insert(snippets, absolute_value)
 
 local align = s("align", {
-    t{"\\begin{align*}", "\t"}, i(0), t{"", "\\end{align*}"}
+    t { "\\begin{align*}", "\t" }, i(0), t { "", "\\end{align*}" }
 })
 table.insert(snippets, align)
 
@@ -146,99 +146,99 @@ local left_align = s("lalign", fmt([[
 	\end{{aligned}} &&
 \end{{flalign}}
 ]], {
-        i(0)
-    })
+    i(0)
+})
 )
 table.insert(snippets, left_align)
 
 -- TODO fix this, i0 fills at the same time as i1?
 local environment = s("begin", {
-    t"\\begin{", i(1, "env"), t{"}", "\t"}, i(0), t{"", "\\end{", i(1, "env"), "}"}
+    t "\\begin{", i(1, "env"), t { "}", "\t" }, i(0), t { "", "\\end{", i(1, "env"), "}" }
 })
 table.insert(snippets, environment)
 
 local definite_integral = s("dint", {
-    t"\\int_{", i(1, "a"), t"}^{", i(2, "b"), t"}{", i(3, "f(x)"), t"} d", i(4, "x")
+    t "\\int_{", i(1, "a"), t "}^{", i(2, "b"), t "}{", i(3, "f(x)"), t "} d", i(4, "x")
 })
 table.insert(snippets, definite_integral)
 
 local set_integral = s("sint", {
-    t"\\int_{", i(1, "R"), t"}{", i(2, "f"), t"} d", i(3, "V")
+    t "\\int_{", i(1, "R"), t "}{", i(2, "f"), t "} d", i(3, "V")
 })
 table.insert(snippets, set_integral)
 
 local integral = s("int", {
-    t"\\int_{", i(1, "f(x)"), t"} d", i(2, "x")
+    t "\\int_{", i(1, "f(x)"), t "} d", i(2, "x")
 })
 table.insert(snippets, integral)
 
 local evaluate_at = s("eval", {
-    t"\\Big\\vert_{x = ", i(1, "a"), t"}^{x = ", i(2, "b"), t"}"
+    t "\\Big\\vert_{x = ", i(1, "a"), t "}^{x = ", i(2, "b"), t "}"
 })
 table.insert(snippets, evaluate_at)
 
 local e1_vec = s("e1", {
-    t"\\vec{e_1}"
+    t "\\vec{e_1}"
 })
 table.insert(snippets, e1_vec)
 
 local e2_vec = s("e2", {
-    t"\\vec{e_2}"
+    t "\\vec{e_2}"
 })
 table.insert(snippets, e2_vec)
 
 local e3_vec = s("e3", {
-    t"\\vec{e_3}"
+    t "\\vec{e_3}"
 })
 table.insert(snippets, e3_vec)
 
 local ell = s("el", {
-    t"\\ell"
+    t "\\ell"
 })
 table.insert(snippets, ell)
 
 local empty_set = s("es", {
-    t"\\emptyset"
+    t "\\emptyset"
 })
 table.insert(snippets, empty_set)
 
 local epsilon = s("ep", {
-    t"\\varepsilon"
+    t "\\varepsilon"
 })
 table.insert(snippets, epsilon)
 
 local subset_equals = s("sseq", {
-    t"\\subseteq"
+    t "\\subseteq"
 })
 table.insert(snippets, subset_equals)
 
 local enumerate = s("enum", {
-    t{"\\begin{enumerate}", "\t\\item"}, i(0), t{"", "\\end{enumerate}"}
+    t { "\\begin{enumerate}", "\t\\item" }, i(0), t { "", "\\end{enumerate}" }
 })
 table.insert(snippets, enumerate)
 
 local fraction = s("frac", {
-    t"\\frac{", i(1, "numerator"), t"}{", i(2, "denominator"), t"}"
+    t "\\frac{", i(1, "numerator"), t "}{", i(2, "denominator"), t "}"
 })
 table.insert(snippets, fraction)
 
 local fraction_alt = s("/", {
-    t"\\frac{", i(1, "numerator"), t"}{", i(2, "denominator"), t"}"
+    t "\\frac{", i(1, "numerator"), t "}{", i(2, "denominator"), t "}"
 })
 table.insert(snippets, fraction_alt)
 
 local infinity = s("inf", {
-    t"\\infty"
+    t "\\infty"
 })
 table.insert(snippets, infinity)
 
 local item = s("item", {
-    t"\\item"
+    t "\\item"
 })
 table.insert(snippets, item)
 
 local item_alt = s("-", {
-    t"\\item"
+    t "\\item"
 })
 table.insert(snippets, item_alt)
 
@@ -247,8 +247,8 @@ local itemize = s("it", fmt([[
     \item {}
 \end{{itemize}}
 ]], {
-        i(0)
-    })
+    i(0)
+})
 )
 table.insert(snippets, itemize)
 
@@ -260,15 +260,15 @@ local inkscape_figure = s("inkfig", fmt([[
     \label{{{}}}
 \end{{figure}}
 ]], {
-        i(1, "filename"),
-        i(2, "caption"),
-        i(3, "label")
-    })
+    i(1, "filename"),
+    i(2, "caption"),
+    i(3, "label")
+})
 )
 table.insert(snippets, inkscape_figure)
 
 local bracket_matrix = s("bmat", {
-    t"\\begin{bmatrix} ", i(1), t" \\end{bmatrix}"
+    t "\\begin{bmatrix} ", i(1), t " \\end{bmatrix}"
 })
 table.insert(snippets, bracket_matrix)
 
@@ -277,28 +277,28 @@ local display_mode = s("dm", fmt([[
     {}
 \]
 ]], {
-        i(0)
-    })
+    i(0)
+})
 )
 table.insert(snippets, display_mode)
 
 local insert_mode = s("in", {
-    t"\\(", i(1), t"\\)"
+    t "\\(", i(1), t "\\)"
 })
 table.insert(snippets, insert_mode)
 
 local partial = s("part", {
-    t"\\partial_{", i(1), t"}"
+    t "\\partial_{", i(1), t "}"
 })
 table.insert(snippets, partial)
 
 local summation = s("sum", {
-    t"\\sum_{", i(1, "n"), t"}^{", i(2, "\\infty"), t"}"
+    t "\\sum_{", i(1, "n"), t "}^{", i(2, "\\infty"), t "}"
 })
 table.insert(snippets, summation)
 
 local vector = s("vec", {
-    t"\\vec{", i(1), t"}"
+    t "\\vec{", i(1), t "}"
 })
 table.insert(snippets, vector)
 
@@ -306,7 +306,7 @@ local carret = s({ trig = "(%S)^", regTrig = true }, {
     f(function(_, snip)
         return snip.captures[1]
     end),
-    t"^{", i(1), t"}"
+    t "^{", i(1), t "}"
 })
 table.insert(autosnippets, carret)
 
@@ -314,46 +314,46 @@ local underscore = s({ trig = "(%S)_", regTrig = true }, {
     f(function(_, snip)
         return snip.captures[1]
     end),
-    t"_{", i(1), t"}"
+    t "_{", i(1), t "}"
 })
 table.insert(autosnippets, underscore)
 
 local log_base_2 = s("lg", {
-    t"\\log_{2}(", i(1), t")"
+    t "\\log_{2}(", i(1), t ")"
 })
 table.insert(snippets, log_base_2)
 
 local hat = s("hat", {
-    t"\\hat{", i(1), t"}"
+    t "\\hat{", i(1), t "}"
 })
 table.insert(snippets, hat)
 
-local inline_mode_bang = s({trig = "(%S+)!!", regTrig = true}, {
-    t"\\(",
+local inline_mode_bang = s({ trig = "(%S+)!!", regTrig = true }, {
+    t "\\(",
     f(function(_, snip)
         return snip.captures[1]
     end),
-    t"\\)"
+    t "\\)"
 })
 table.insert(autosnippets, inline_mode_bang)
 
 local upper_integral = s("upint", {
-    t"\\upint{", i(1, "R"), t"}{", i(2, "f"), t"}"
+    t "\\upint{", i(1, "R"), t "}{", i(2, "f"), t "}"
 })
 table.insert(snippets, upper_integral)
 
 local lower_integral = s("lowint", {
-    t"\\lowint{", i(1, "R"), t"}{", i(2, "f"), t"}"
+    t "\\lowint{", i(1, "R"), t "}{", i(2, "f"), t "}"
 })
 table.insert(snippets, lower_integral)
 
 local dot = s("dot", {
-    t"\\dot{", i(1), t"}"
+    t "\\dot{", i(1), t "}"
 })
 table.insert(snippets, dot)
 
 local bold_format = s("dot", {
-    t"\\textbf{", i(1), t"}"
+    t "\\textbf{", i(1), t "}"
 })
 table.insert(snippets, bold_format)
 
@@ -362,8 +362,8 @@ local proof_environment = s("proof", fmt([[
     {}
 \end{{proof}}
 ]], {
-        i(0)
-    })
+    i(0)
+})
 )
 table.insert(snippets, proof_environment)
 
