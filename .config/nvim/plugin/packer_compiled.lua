@@ -129,6 +129,12 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["lsp_lines.nvim"] = {
+    config = { "require('config/lsp-lines')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  },
   ["lualine.nvim"] = {
     config = { "require('config/lualine')" },
     loaded = true,
@@ -143,11 +149,28 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    config = { "require('config/mason')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   neogit = {
     config = { "require('config/neogit')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["null-ls.nvim"] = {
+    config = { "require('config/null-ls')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "require('config/autopairs')" },
@@ -161,22 +184,34 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    config = { "require('config/dap')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lastplace"] = {
     config = { "require('config/nvim-lastplace')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lastplace",
     url = "https://github.com/ethanholz/nvim-lastplace"
   },
-  ["nvim-lsp-installer"] = {
-    config = { "require('config/lsp')" },
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
   ["nvim-lspconfig"] = {
+    config = { "require('config/lsp')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    config = { "require('config/nvim-surround')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     config = { "require('config/nvim-tree')" },
@@ -205,6 +240,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["org-bullets.nvim"] = {
+    config = { "require('config/org-bullets')" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/opt/org-bullets.nvim",
+    url = "https://github.com/akinsho/org-bullets.nvim"
   },
   orgmode = {
     config = { "require('config/orgmode')" },
@@ -289,106 +332,131 @@ _G.packer_plugins = {
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-snippets",
     url = "https://github.com/honza/vim-snippets"
   },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
   vimtex = {
     config = { "require('config/vimtex')" },
     loaded = true,
     path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  ["which-key.nvim"] = {
+    config = { "require('config/which-key')" },
+    loaded = true,
+    path = "/home/hisbaan/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+require('config/dap')
+time([[Config for nvim-dap]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require('config/gitsigns')
 time([[Config for gitsigns.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('config/telescope')
-time([[Config for telescope.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config/lualine')
-time([[Config for lualine.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 require('config/alpha-nvim')
 time([[Config for alpha-nvim]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
-require('config/neogit')
-time([[Config for neogit]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require('config/toggleterm')
-time([[Config for toggleterm.nvim]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require('config/bufferline')
-time([[Config for bufferline.nvim]], false)
--- Config for: nvim-ufo
-time([[Config for nvim-ufo]], true)
-require('config/nvim-ufo')
-time([[Config for nvim-ufo]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require('config/autopairs')
-time([[Config for nvim-autopairs]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require('config/cmp')
-time([[Config for nvim-cmp]], false)
--- Config for: nvim-lastplace
-time([[Config for nvim-lastplace]], true)
-require('config/nvim-lastplace')
-time([[Config for nvim-lastplace]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-require('config/rose-pine')
-time([[Config for rose-pine]], false)
--- Config for: vimtex
-time([[Config for vimtex]], true)
-require('config/vimtex')
-time([[Config for vimtex]], false)
--- Config for: project.nvim
-time([[Config for project.nvim]], true)
-require('config/project')
-time([[Config for project.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-require('config/todo-comments')
-time([[Config for todo-comments.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config/nvim-tree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-require('config/lsp')
-time([[Config for nvim-lsp-installer]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 require('config/comment')
 time([[Config for Comment.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('config/treesitter')
-time([[Config for nvim-treesitter]], false)
+-- Config for: project.nvim
+time([[Config for project.nvim]], true)
+require('config/project')
+time([[Config for project.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config/lualine')
+time([[Config for lualine.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+require('config/which-key')
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+require('config/nvim-surround')
+time([[Config for nvim-surround]], false)
+-- Config for: nvim-ufo
+time([[Config for nvim-ufo]], true)
+require('config/nvim-ufo')
+time([[Config for nvim-ufo]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('config/bufferline')
+time([[Config for bufferline.nvim]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
 require('config/luasnip')
 time([[Config for LuaSnip]], false)
+-- Config for: vimtex
+time([[Config for vimtex]], true)
+require('config/vimtex')
+time([[Config for vimtex]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('config/treesitter')
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('config/cmp')
+time([[Config for nvim-cmp]], false)
+-- Config for: mason.nvim
+time([[Config for mason.nvim]], true)
+require('config/mason')
+time([[Config for mason.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config/nvim-tree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+require('config/neogit')
+time([[Config for neogit]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+require('config/rose-pine')
+time([[Config for rose-pine]], false)
+-- Config for: nvim-lastplace
+time([[Config for nvim-lastplace]], true)
+require('config/nvim-lastplace')
+time([[Config for nvim-lastplace]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config/telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+require('config/lsp')
+time([[Config for nvim-lspconfig]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+require('config/lsp-lines')
+time([[Config for lsp_lines.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require('config/autopairs')
+time([[Config for nvim-autopairs]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require('config/todo-comments')
+time([[Config for todo-comments.nvim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require('config/null-ls')
+time([[Config for null-ls.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('config/toggleterm')
+time([[Config for toggleterm.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType org ++once lua require("packer.load")({'orgmode'}, { ft = "org" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType org ++once lua require("packer.load")({'orgmode', 'org-bullets.nvim'}, { ft = "org" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

@@ -9,7 +9,7 @@ telescope.load_extension("fzf")
 
 telescope.setup {
     defaults = {
-        file_ignore_patterns = {"node_modules", "%.jpg", "%.png"},
+        file_ignore_patterns = { "node_modules", "%.jpg", "%.png" },
         vimgrep_arguments = {
             "rg", "--follow", "--color=never", "--no-heading",
             "--with-filename", "--line-number", "--column", "--smart-case"
@@ -51,17 +51,17 @@ telescope.setup {
             width = 0.75,
             prompt_position = "bottom",
             preview_cutoff = 120,
-            horizontal = {mirror = false},
-            vertical = {mirror = true}
+            horizontal = { mirror = false },
+            vertical = { mirror = true }
         },
-        file_sorter = require"telescope.sorters".get_fzf_sorter,
-        generic_sorter = require"telescope.sorters".get_fzf_sorter,
+        file_sorter = require "telescope.sorters".get_fzf_sorter,
+        generic_sorter = require "telescope.sorters".get_fzf_sorter,
         winblend = 0,
         border = {},
         -- borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
         color_devicons = true,
         use_less = true,
-        set_env = {["COLORTERM"] = "truecolor"},
+        set_env = { ["COLORTERM"] = "truecolor" },
     },
     extensions = {
         ["ui-select"] = {

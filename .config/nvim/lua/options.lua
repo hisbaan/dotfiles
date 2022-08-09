@@ -13,8 +13,10 @@ o.encoding = "utf-8"
 g.tex_flavor = "latex"
 o.undofile = true
 o.timeoutlen = 400 -- time to wait for a mapped sequence to complete (in milliseconds)
+o.ttimeout = true
 o.ttimeoutlen = 0 -- Time in milliseconds to wait for a key code sequence to complete
 o.conceallevel = 0 -- so that ` is visible in markdown files
+o.concealcursor = "nc"
 if vim.fn.executable("rg") then
 	o.grepprg = "rg --vimgrep --no-heading --smart-case --"
 end
