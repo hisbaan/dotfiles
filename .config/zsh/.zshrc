@@ -46,6 +46,7 @@ alias rs='rsync --numeric-ids --info=progress2'
 alias bin='cd ~/projects/binocularss/'
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias org="cd ~/Documents/org/ ; . ranger"
 
 # start flavours
 ###################
@@ -90,6 +91,7 @@ setopt share_history
 ###############
 
 export EDITOR='nvim'
+export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1

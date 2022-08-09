@@ -116,7 +116,7 @@ super + shift + Return
 
 # rofi
 super + d
-    noswallow_rofi
+    ROFI=1 noswallow_rofi
 
 # rofi-workflows
 super + o

@@ -14,7 +14,7 @@ colorpicker
 davinci-resolve
 didyoumean-git
 discocss-git
-dragon-drag-and-drop
+dragon-drop
 droidcam
 espanso-bin
 espeak
@@ -27,6 +27,7 @@ genwipe.sh
 gstreamer0.10-base
 hfsprogs
 hide-client
+highlight-pointer
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 iriunwebcam-bin
