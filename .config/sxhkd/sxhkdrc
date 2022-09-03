@@ -113,6 +113,10 @@ super + shift + Return
       # bspc rule -a kitty --one-shot state=floating; \
       # kitty --single-instance
 
+# discord emote menu
+super + e
+    ~/.local/bin/scripts/discord-emote-menu/emote.sh -c -r ~/.local/bin/scripts/discord-emote-menu/sample.rofi
+
 # rofi
 super + d
     ROFI=1 noswallow_rofi
