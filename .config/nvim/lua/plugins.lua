@@ -31,6 +31,7 @@ packer.startup({ function()
     use { 'honza/vim-snippets' }
     use { 'windwp/nvim-autopairs', config = get_config('autopairs') }
     use { 'nvim-treesitter/nvim-treesitter', config = get_config('treesitter') }
+    use { 'nvim-treesitter/nvim-treesitter-context', config = get_config('treesitter-context') }
     use { 'ethanholz/nvim-lastplace', config = get_config('nvim-lastplace') }
     use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }
     use { 'lervag/vimtex', config = get_config('vimtex'), }
@@ -107,8 +108,8 @@ packer.startup({ function()
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
         config = get_config("lsp-lines"),
     })
-    -- use { 'mfussenegger/nvim-dap' }
-    -- use { 'mfussenegger/nvim-jdtls' }
+    use { 'mfussenegger/nvim-dap', config = get_config('dap') }
+    use { 'mfussenegger/nvim-jdtls' }
     use { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') }
     use {
         'goolord/alpha-nvim',

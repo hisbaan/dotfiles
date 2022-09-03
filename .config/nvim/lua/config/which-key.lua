@@ -84,7 +84,22 @@ wk.register({
     },
     b = {
         "View Buffers"
-    }
+    },
+    c = {
+        name = "context",
+        t = {"Toggle Treesitter Context"}
+    },
+    d = {
+        name = "dap",
+        c = { "Continue" },
+        v = { "Step over" },
+        i = { "Step into" },
+        o = { "Step out" },
+        b = { "Toggle breakpoint" },
+        B = { "Set breakpoint" },
+        r = { "Open REPL" },
+        l = { "Run last" },
+    },
 }, { prefix = "<leader>", mode = "n", default_options })
 
 -- register non leader based mappings

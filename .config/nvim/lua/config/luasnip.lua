@@ -39,7 +39,7 @@ local conds = require("luasnip.extras.expand_conditions")
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 ls.config.set_config({
-    history = true,
+    history = false,
     update_events = "TextChanged,TextChangedI",
     delete_check_events = "TextChanged",
     ext_opts = {
@@ -187,5 +187,28 @@ ls.add_snippets("java", {
 	key = "java",
 })
 
+function leave_snippet()
+    if
+        ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
+        and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
+        and not require('luasnip').session.jump_active
+    then
+        require('luasnip').unlink_current()
+    end
+end
+
+-- stop snippets when you leave to normal mode
+vim.api.nvim_command([[
+    autocmd ModeChanged * lua leave_snippet()
+]])
+
+--[[ autocmd("InsertLeave", { ]]
+--[[   callback = function() ]]
+--[[     if require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()] ]]
+--[[       and not require("luasnip").session.jump_active then ]]
+--[[       require("luasnip").unlink_current() ]]
+--[[     end ]]
+--[[   end, ]]
+--[[ }) ]]
 
 require("luasnip.loaders.from_vscode").lazy_load()
