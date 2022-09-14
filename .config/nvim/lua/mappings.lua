@@ -103,9 +103,6 @@ map('n', '<leader>dr', "<Cmd>lua require('dap').repl.open()<CR>", opts)
 map('n', '<leader>dl', "<Cmd>lua require('dap').run_last()<CR>", opts)
 -- map('n', '<leader>dpb', "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
 
--- treesitter context
-map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
-
 local virtual_lines_enabled = false
 map('n', '<leader>lt', '', {
     callback = function()
@@ -116,3 +113,15 @@ map('n', '<leader>lt', '', {
         })
     end,
 })
+
+-- treesitter context
+map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
+
+-- session managment
+map('n', '<leader>ss', '<Cmd>AutoSession search<CR>', opts)
+map('n', '<leader>sd', '<Cmd>DeleteSession<CR>', opts)
+map('n', '<leader>sr', '<Cmd>RestoreSession<CR>', opts)
+map('n', '<leader>sS', '<Cmd>SaveSession<CR>', opts)
+
+-- jot
+map('n', '<leader>j', '<Cmd>Jot<CR>', opts)

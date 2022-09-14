@@ -1,6 +1,7 @@
 -- Setup lspconfig
 local lspconfig = require("lspconfig")
 
+-- TODO change these to lua mappings
 local function on_attach(client, bufnr)
     -- set up buffer keymaps, etc.
     vim.cmd([[
@@ -21,11 +22,15 @@ capabilities.textDocument.foldingRange = {
     lineFoldingOnly = true,
 }
 
+require('lua-dev').setup({})
 lspconfig.sumneko_lua.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         Lua = {
+            completion = {
+                callSnippet = "Replace"
+            },
             diagnostics = {
                 globals = { "vim", "use" },
             },
@@ -36,17 +41,6 @@ lspconfig.sumneko_lua.setup({
 lspconfig.jdtls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    --[[ settings = { ]]
-    --[[     java = { ]]
-    --[[         import = { ]]
-    --[[             gradle = { ]]
-    --[[                 wrapper = { ]]
-    --[[                     enabled = false, ]]
-    --[[                 }, ]]
-    --[[             }, ]]
-    --[[         }, ]]
-    --[[     }, ]]
-    --[[ }, ]]
 })
 
 lspconfig.intelephense.setup({
