@@ -46,7 +46,6 @@ alias rs='rsync --numeric-ids --info=progress2'
 alias bin='cd ~/projects/binocularss/'
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
-alias org="cd ~/Documents/org/ ; . ranger"
 
 # start flavours
 ###################
@@ -139,6 +138,7 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 #################
 
 source ~/.config/zsh/functions.zsh
+compdef _org org
 compdef _proj proj
 compdef _conf conf
 

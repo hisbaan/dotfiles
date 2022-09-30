@@ -35,7 +35,6 @@ o.wildignore = [[
 *.swp,.lock,.DS_Store,._*
 */tmp/*,*.so,*.swp,*.zip,**/node_modules/**,**/target/**,**.terraform/**"
 ]]
--- o.spelllang="en-ca"
 
 -- Tabs & Indentation
 o.tabstop = 4

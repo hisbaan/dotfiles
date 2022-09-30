@@ -1,6 +1,7 @@
 -- Setup lspconfig
 local lspconfig = require("lspconfig")
 
+-- TODO change these to lua mappings
 local function on_attach(client, bufnr)
     -- set up buffer keymaps, etc.
     vim.cmd([[
@@ -15,139 +16,142 @@ local function on_attach(client, bufnr)
 ]]   )
 end
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.foldingRange = {
     dynamicRegistration = true,
-    lineFoldingOnly = true
+    lineFoldingOnly = true,
 }
 
-lspconfig.sumneko_lua.setup {
+require('lua-dev').setup({})
+lspconfig.sumneko_lua.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
         Lua = {
+            completion = {
+                callSnippet = "Replace"
+            },
             diagnostics = {
-                globals = { 'vim', 'use' }
-            }
-        }
+                globals = { "vim", "use" },
+            },
+        },
     },
-}
+})
 
-lspconfig.jdtls.setup {
+lspconfig.jdtls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.intelephense.setup {
+lspconfig.intelephense.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.ltex.setup {
+lspconfig.volar.setup({
     on_attach = on_attach,
+    capabilities = capabilities,
+})
+
+lspconfig.ltex.setup({
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        require("ltex_extra").setup{
+            load_langs = { "en-CA", "en-US" },
+            init_check = true,
+            path = os.getenv("HOME") .. "/.config/nvim/dictionaries",
+            log_level = "none",
+        }
+    end,
     capabilities = capabilities,
     settings = {
         ltex = {
-            disabled = { 'markdown', 'org' },
-            enabled = { 'latex', 'tex', 'bib' },
-            language = 'en-CA',
-            disabledRules = { ['en-CA'] = {
-                'PROFANITY',
-                'EN_QUOTES',
-                'PASSIVE_VOICE',
-                'WHITESPACE_RULE',
-                'TOO_LONG_SENTENCE',
-                -- 'MORFOLOGIK_RULE_EN_CA',
-            } },
-            dictionary = {
-                ['en-CA'] = {
-                    'TODO',
-                    'Hisbaan',
-                    'Noorani',
-                    'Bo',
-                    'Deidra',
-                    'mux',
-                    'circ',
-                    'Weise',
-                    'Akshat',
-                    'Naik',
-                    'Organoids',
-                    'Fubini',
-                    'Cavalieri',
-                    'logisim',
-                    'combinational',
-                    'Laposa',
-                    'Pelley',
-                    'Medicago',
-                    'Covifenz',
-                    'deque',
-                    'parametrization',
-                    'irrotational',
-                }
+            disabled = { "markdown", "org", "gitcommit" },
+            enabled = { "latex", "tex", "bib" },
+            language = "en-CA",
+            dictionary = { ["en-CA"] = { "Hisbaan", "Noorani" } },
+            disabledRules = {
+                ["en-CA"] = {
+                    "PROFANITY",
+                    "EN_QUOTES",
+                    "PASSIVE_VOICE",
+                    "WHITESPACE_RULE",
+                    "TOO_LONG_SENTENCE",
+                    -- 'MORFOLOGIK_RULE_EN_CA',
+                },
             },
             additionalRules = {
                 enablePickyRules = true,
-                motherTongue = 'en-CA',
+                motherTongue = "en-CA",
             },
             latex = {
                 environments = {
-                    verbatim = { 'ignore' },
-                    Verbatim = { 'ignore' },
-                    minted = { 'ignore' },
-                    texttt = { 'ignore' },
-                    forest = { 'ignore' },
+                    verbatim = { "ignore" },
+                    Verbatim = { "ignore" },
+                    minted = { "ignore" },
+                    texttt = { "ignore" },
+                    forest = { "ignore" },
                 },
             },
             markdown = {
                 nodes = {
-                    CodeBlock = { 'ignore' },
-                    FencedCodeBlock = { 'ignore' },
-                    AutoLink = { 'dummy' },
-                    Code = { 'dummy' },
+                    CodeBlock = { "ignore" },
+                    FencedCodeBlock = { "ignore" },
+                    AutoLink = { "dummy" },
+                    Code = { "dummy" },
                 },
             },
         },
     },
-}
+})
 
-lspconfig.bashls.setup {
+lspconfig.bashls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.clangd.setup {
+lspconfig.clangd.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.cssls.setup {
+lspconfig.cssls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.emmet_ls.setup {
+lspconfig.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    init_options = {
+      html = {
+        options = {
+          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+          -- ["bem.enabled"] = true,
+        },
+      },
+    }
+})
 
-lspconfig.html.setup {
+lspconfig.html.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.jsonls.setup {
+lspconfig.jsonls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
-lspconfig.rust_analyzer.setup {
+lspconfig.rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities,
-}
+})
 
 vim.o.signcolumn = "yes:1"

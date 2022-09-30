@@ -22,96 +22,100 @@ local conds = require("luasnip.extras.expand_conditions")
 
 local snippets, autosnippets = {}, {}
 
+---------------
+-- Templates --
+---------------
+
 local math_template = s("mtemp", fmt([[
-\documentclass[12pt]{{article}}
-\usepackage[margin=1in]{{geometry}}
-\usepackage{{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools, mdframed}}
-\usepackage{{import, pdfpages, transparent, xcolor}}
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array, mathtools, mdframed}
+\usepackage{import, pdfpages, transparent, xcolor}
 
-\newcommand{{\inkfig}}[2][1]{{\def\svgwidth{{#1\columnwidth}} \import{{./img/}}{{#2.pdf_tex}} }}
+\newcommand{\inkfig}[2][1]{\def\svgwidth{#1\columnwidth} \import{./img/}{#2.pdf_tex}}
 
-\newcommand{{\br}}[1]{{\left(#1\right)}}
-\newcommand{{\sbr}}[1]{{\left[#1\right]}}
-\newcommand{{\cbr}}[1]{{\left\\{{#1\right\\}}}}
-\newcommand{{\norm}}[1]{{\left\|#1\right\|}}
-\newcommand{{\abs}}[1]{{\left|#1\right|}}
+\newcommand{\br}[1]{\left(#1\right)}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\cbr}[1]{\left\\{#1\right\\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
 
-\newcommand{{\st}}{{\text{{ s.t. }}}}
-\newcommand{{\tand}}{{\text{{ and }}}}
-\newcommand{{\tor}}{{\text{{ or }}}}
-\newcommand{{\R}}{{\mathbb{{R}}}}
-\newcommand{{\Z}}{{\mathbb{{Z}}}}
-\newcommand{{\N}}{{\mathbb{{N}}}}
-\newcommand{{\Q}}{{\mathbb{{Q}}}}
-\newcommand{{\DS}}{{\displaystyle{{}}}}
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\tand}{\text{ and }}
+\newcommand{\tor}{\text{ or }}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\DS}{\displaystyle{}}
 
-\renewcommand{{\qedsymbol}}{{\ensuremath{{\blacksquare}}}}
-\pagestyle{{empty}}
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+\pagestyle{empty}
 
-\title{{{}}}
-\author{{{}}}
-\date{{{}}}
+\title{<>}
+\author{<>}
+\date{<>}
 
-\begin{{document}}
-    {}
-\end{{document}}
+\begin{document}
+    <>
+\end{document}
 ]], {
     i(1, "TITLE"),
     i(2, "Hisbaan Noorani"),
     i(3, "DATE"),
     i(0)
-})
-)
+}, { delimiters = "<>" }
+))
 table.insert(snippets, math_template)
 
 local normal_template = s("temp", fmt([[
-\documentclass[12pt]{{article}}
-\usepackage[margin=1in]{{geometry}}
-\usepackage{{amsmath, amsthm, amssymb, graphicx, multicol, array}}
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, graphicx, multicol, array}
 
-\title{{{}}}
-\author{{{}}}
-\date{{{}}}
+\title{<>}
+\author{<>}
+\date{<>}
 
-\begin{{document}}
-    {}
-\end{{document}}
+\begin{document}
+    <>
+\end{document}
 ]], {
     i(1, "TITLE"),
     i(2, "Hisbaan Noorani"),
     i(3, "DATE"),
     i(0)
-})
+}, { delimiters = "<>" })
 )
 table.insert(snippets, normal_template)
 
 local apa_template = s("apa", fmt([[
-\documentclass[man, 12pt]{{apa7}}
+\documentclass[man, 12pt]{apa7}
 
-\usepackage{{fontspec}}
-\setmainfont{{Times New Roman}}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
 
-\usepackage[english]{{babel}}
-\usepackage{{csquotes}}
-\usepackage[style=apa, backend=biber, sortcites=true, sorting=nty]{{biblatex}}
-\bibliography{{refs.bib}}
-\usepackage{{hyperref}}
-\hypersetup{{hidelinks}}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber, sortcites=true, sorting=nty]{biblatex}
+\bibliography{refs.bib}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
 
-\title{{{}}}
-\author{{{}}}
-\affiliation{{{}, {}, {}, {}}}
-\shorttitle{{}}
+\title{<>}
+\author{<>}
+\affiliation{<>, <>, <>, <>}
+\shorttitle{}
 
-\linespread{{2}}
-\setlength{{\parindent}}{{0.5in}}
+\linespread{2}
+\setlength{\parindent}{0.5in}
 
-\begin{{document}}
+\begin{document}
 \maketitle
-    {}
+    <>
 \newpage
-\printbibliography[title={{\centering References}}]
-\end{{document}}
+\printbibliography[title={\centering References}]
+\end{document}
 ]], {
     i(1, "TITLE"),
     i(2, "Hisbaan Noorani"),
@@ -120,9 +124,13 @@ local apa_template = s("apa", fmt([[
     i(5, "PROFESSOR"),
     i(6, "DATE"),
     i(0)
-})
+}, { delimiters = "<>" })
 )
 table.insert(snippets, apa_template)
+
+--------------
+-- Snippets --
+--------------
 
 local times = s("times", {
     t { "\\usepackage{fontspec}", "\\setmainfont{Times New Roman}" }
@@ -151,10 +159,14 @@ local left_align = s("lalign", fmt([[
 )
 table.insert(snippets, left_align)
 
--- TODO fix this, i0 fills at the same time as i1?
-local environment = s("begin", {
-    t "\\begin{", i(1, "env"), t { "}", "\t" }, i(0), t { "", "\\end{", i(1, "env"), "}" }
-})
+local environment = s("begin", fmt([[
+\begin{<>}
+    <>
+\end{<>}
+]],
+    { i(1, "env"), i(0), rep(1) },
+    { delimiters = "<>" }
+))
 table.insert(snippets, environment)
 
 local definite_integral = s("dint", {
@@ -243,27 +255,27 @@ local item_alt = s("-", {
 table.insert(snippets, item_alt)
 
 local itemize = s("it", fmt([[
-\begin{{itemize}}
-    \item {}
-\end{{itemize}}
+\begin{itemize}
+    \item <>
+\end{itemize}
 ]], {
     i(0)
-})
+}, { delimiters = "<>" })
 )
 table.insert(snippets, itemize)
 
 local inkscape_figure = s("inkfig", fmt([[
-\begin{{figure}}[ht]
-    \centering{{}}
-    \inkfig{{{}}}
-    \caption{{{}}}
-    \label{{{}}}
-\end{{figure}}
+\begin{figure}[ht]
+    \centering{}
+    \inkfig{<>}
+    \caption{<>}
+    \label{<>}
+\end{figure}
 ]], {
     i(1, "filename"),
     i(2, "caption"),
     i(3, "label")
-})
+}, { delimiters = "<>" })
 )
 table.insert(snippets, inkscape_figure)
 
@@ -352,7 +364,7 @@ local dot = s("dot", {
 })
 table.insert(snippets, dot)
 
-local bold_format = s("dot", {
+local bold_format = s("bf", {
     t "\\textbf{", i(1), t "}"
 })
 table.insert(snippets, bold_format)

@@ -69,32 +69,45 @@ local wk = require("which-key")
 local default_options = { noremap = true, silent = true }
 
 wk.register({
-    point = { "File browser" },
-    l = {
-        name = "lsp",
-        a = { "Code action" },
-        f = { "Format code" },
-        r = { "Rename variable" },
-        t = { "Toggle lsp lines" }
-    },
-    t = {
-        e = { "External terminal" },
-        t = { "Terminal buffer" },
-        d = { "Telescope todo" },
-    },
+    dot = { "file browser" },
     b = {
-        "View Buffers"
+        "view buffers"
+    },
+    c = {
+        name = "context",
+        t = { "toggle Treesitter Context" }
     },
     d = {
         name = "dap",
-        c = { "Continue" },
-        v = { "Step over" },
-        i = { "Step into" },
-        o = { "Step out" },
-        b = { "Toggle breakpoint" },
-        B = { "Set breakpoint" },
-        r = { "Open REPL" },
-        l = { "Run last" },
+        c = { "continue" },
+        v = { "step over" },
+        i = { "step into" },
+        o = { "step out" },
+        b = { "toggle breakpoint" },
+        B = { "set breakpoint" },
+        r = { "open REPL" },
+        l = { "run last" },
+    },
+    g = { name = "neogit", g = { "Neogit" } },
+    i = { "invert text" },
+    l = {
+        name = "lsp",
+        a = { "code action" },
+        f = { "format code" },
+        r = { "rename variable" },
+        t = { "toggle lsp lines" }
+    },
+    s = {
+        name = "session",
+        s = { "search session" },
+        d = { "delete session" },
+        r = { "restore session" },
+        S = { "save session" },
+    },
+    t = {
+        e = { "external terminal" },
+        t = { "terminal buffer" },
+        d = { "telescope todo" },
     },
 }, { prefix = "<leader>", mode = "n", default_options })
 

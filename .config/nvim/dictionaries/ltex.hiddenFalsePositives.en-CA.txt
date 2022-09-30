@@ -1,0 +1,1 @@
+{"rule":"PASSIVE_VOICE","sentence":"^\\QThe algorithm is described in the following pseudocode:\\E$"}

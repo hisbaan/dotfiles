@@ -17,6 +17,8 @@ dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/kdeconnectd &
+kdeconnect-indicator &
 
 ################
 ### Monitors ###
