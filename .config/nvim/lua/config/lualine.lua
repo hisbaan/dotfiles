@@ -1,13 +1,10 @@
-require('lualine').setup({
-    options = { theme = 'rose-pine' }
-})
-
 require 'lualine'.setup {
     options = {
         icons_enabled = true,
         theme = 'auto',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
+        -- section_separators = { left = '', right = '' },
         disabled_filetypes = {},
         always_divide_middle = true,
     },
@@ -29,5 +26,5 @@ require 'lualine'.setup {
         lualine_z = {}
     },
     tabline = {},
-    extensions = { "nvim-tree", "toggleterm", "quickfix" }
+    extensions = { "nvim-tree", "toggleterm", "quickfix", "nvim-dap-ui" }
 }

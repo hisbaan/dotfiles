@@ -56,7 +56,7 @@ vim.cmd([[map <C-f> <Nop>]])
 -- Smart dd
 local function smart_dd()
     if vim.api.nvim_get_current_line():match("^%s*$") then
-        return "\"_dd"
+        return '"_dd'
     else
         return "dd"
     end
@@ -68,6 +68,9 @@ vim.cmd([[
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 ]])
+
+-- Save on leader w
+map('n', '<Leader>w', "<Cmd>w<CR>", opts)
 
 -- NvimTree
 map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', opts)
@@ -89,7 +92,7 @@ map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
 
 -- lsp
 map('n', '<Leader>la', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
 map('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
 -- dap
@@ -118,7 +121,7 @@ map('n', '<leader>lt', '', {
 map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
 
 -- session managment
-map('n', '<leader>ss', '<Cmd>AutoSession search<CR>', opts)
+map('n', '<leader>ss', '<Cmd>Autosession search<CR>', opts)
 map('n', '<leader>sd', '<Cmd>DeleteSession<CR>', opts)
 map('n', '<leader>sr', '<Cmd>RestoreSession<CR>', opts)
 map('n', '<leader>sS', '<Cmd>SaveSession<CR>', opts)

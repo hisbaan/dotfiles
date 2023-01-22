@@ -22,6 +22,10 @@ local conds = require("luasnip.extras.expand_conditions")
 
 local snippets, autosnippets = {}, {}
 
+---------------
+-- Templates --
+---------------
+
 local math_template = s("mtemp", fmt([[
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
@@ -32,7 +36,7 @@ local math_template = s("mtemp", fmt([[
 
 \newcommand{\br}[1]{\left(#1\right)}
 \newcommand{\sbr}[1]{\left[#1\right]}
-\newcommand{\cbr}[1]{\left\\{#1\right\\}}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\abs}[1]{\left|#1\right|}
 
@@ -124,6 +128,10 @@ local apa_template = s("apa", fmt([[
 )
 table.insert(snippets, apa_template)
 
+--------------
+-- Snippets --
+--------------
+
 local times = s("times", {
     t { "\\usepackage{fontspec}", "\\setmainfont{Times New Roman}" }
 })
@@ -151,7 +159,6 @@ local left_align = s("lalign", fmt([[
 )
 table.insert(snippets, left_align)
 
--- TODO fix this, i0 fills at the same time as i1?
 local environment = s("begin", fmt([[
 \begin{<>}
     <>
@@ -371,5 +378,10 @@ local proof_environment = s("proof", fmt([[
 })
 )
 table.insert(snippets, proof_environment)
+
+local left_arrow = s("la", {
+    t "\\leftarrow"
+})
+table.insert(snippets, left_arrow)
 
 return snippets, autosnippets

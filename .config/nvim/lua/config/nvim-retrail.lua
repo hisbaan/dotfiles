@@ -1,6 +1,7 @@
 require("retrail").setup {
   -- Highlight group to use for trailing whitespace.
-  hlgroup = "Search",
+  -- hlgroup = "Search",
+  hlgroup = "Visual",
   -- Pattern to match trailing whitespace against. Edit with caution!
   pattern = "\\v((.*%#)@!|%#)\\s+$",
   -- Enabled filetypes.

@@ -22,6 +22,7 @@ require("mason-lspconfig").setup {
         "rust_analyzer",
         "sumneko_lua",
         "tsserver",
+        "pyright",
         "volar",
     }
 }
