@@ -103,13 +103,13 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-	alacritty
+	wezterm
       # kitty --single-instance
 
 # floating kitty
 super + shift + Return
-	bspc rule -a Alacritty --one-shot state=floating; \
-	alacritty
+	bspc rule -a org.wezfurlong.wezterm --one-shot state=floating; \
+	wezterm
       # bspc rule -a kitty --one-shot state=floating; \
       # kitty --single-instance
 
@@ -134,7 +134,7 @@ super + w
     firefox
 
 ctrl + q
-     notify-send "Saved you!" "You were about to hate yourself!"
+    notify-send "Saved you!" "You were about to hate yourself!"
 
 # flameshot (screenshot)
 {Print, Insert}
@@ -229,7 +229,7 @@ super + Escape
 # power states
 super + XF86Tools ; {l,e,s,r,shift + s,Return}
     echo "" > ~/.config/bspwm/bspwm-chord-status; \
-    {betterlockscreen -l,bspc quit,systemctl suspend,reboot,poweroff,xdotool key Escape}
+    {betterlockscreen -l,bspc quit,betterlockscreen -s,reboot,poweroff,xdotool key Escape}
 
 # brightness up
 {shift,_} XF86MonBrightnessUp

@@ -63,6 +63,34 @@ function man () {
     command man "$@"
 }
 
+function org() {
+    if [[ $# == 1 ]]
+    then
+        cd ~/Documents/org
+        nvim $1
+    else
+        cd ~/Documents/org
+        nvim $(fzf)
+    fi
+}
+
+function _org() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/Documents/org/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/Documents/org/}
+    fi
+}
+
+
 function proj () {
     if [[ $# == 1 ]]
     then

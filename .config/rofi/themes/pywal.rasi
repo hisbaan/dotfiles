@@ -1,9 +1,9 @@
 /* start flavours */
 * {
-	bg: #1f1d2e;
+	bg: #181825;
 	fg: #e2e1e7;
-	ac: #c4a7e7;
-	background-color: #1f1d2e;
+	ac: #cba6f7;
+	background-color: #181825;
 }
 /* end flavours */
 

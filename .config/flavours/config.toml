@@ -52,19 +52,19 @@ subtemplate = "custom"
 start = "/* start flavours */"
 end = "/* end flavours */"
 
-[[item]]
-file = "~/.config/firefox/userChrome.css"
-template = "firefox"
-subtemplate = "custom"
-start = "/* start flavours */"
-end = "/* end flavours */"
+# [[item]]
+# file = "~/.config/firefox/userChrome.css"
+# template = "firefox"
+# subtemplate = "custom"
+# start = "/* start flavours */"
+# end = "/* end flavours */"
 
-[[item]]
-file = "~/projects/bento/css/style.css"
-template = "bento"
-subtemplate = "custom"
-start = "/* start flavours */"
-end = "/* end flavours */"
+# [[item]]
+# file = "~/projects/bento/css/style.css"
+# template = "bento"
+# subtemplate = "custom"
+# start = "/* start flavours */"
+# end = "/* end flavours */"
 
 # [[item]]
 # file = "~/.config/spicetify/Themes/Dribbblish/color.ini"
@@ -94,5 +94,17 @@ subtemplate = "default-256"
 
 [[item]]
 file = "~/.config/sway/config"
-template="sway"
-subtemplate="colors"
+template = "sway"
+subtemplate = "colors"
+
+[[item]]
+file = "~/.config/waybar/style.css"
+template = "waybar"
+start = "/* start flavours */"
+end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/wezterm/colors.lua"
+template = "wezterm"
+start = "-- start flavours"
+end = "-- end flavours"

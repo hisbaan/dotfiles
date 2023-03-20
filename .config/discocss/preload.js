@@ -1,23 +1,40 @@
 module.exports = () => {
   const fs = require("fs");
+  const electron = require("electron");
   const confDir = "/home/hisbaan/.config/discocss";
   const cssFile = "/home/hisbaan/.config/discocss/custom.css";
 
-  function reload(style) {
-    style.innerHTML = fs.readFileSync(cssFile);
+  function reload() {
+    const css = fs.readFileSync(cssFile, { encoding: "utf-8" });
+
+    electron.webFrame.executeJavaScript(`
+      (() => {
+        let loaded = false;
+        function load() {
+          if (loaded) return;
+
+          const disco = document.createElement("style");
+          disco.id = "disco";
+          disco.innerHTML = ${JSON.stringify(css)};
+
+          document.getElementById('disco')?.remove();
+          document.head.appendChild(disco);
+
+          loaded = true;
+        }
+
+        window.addEventListener("load", () => {
+          load();
+        });
+        try {
+          load();
+        } catch (e) {}
+      })();
+    `);
   }
 
-  function inject({ document, window }) {
-    window.addEventListener("load", () => {
-      const style = document.createElement("style");
-      reload(style);
-      document.head.appendChild(style);
-
-      fs.watch(confDir, {}, () => reload(style));
-    });
-  }
-
-  inject(require("electron").webFrame.context);
+  reload();
+  fs.watch(confDir, {}, () => reload());
 };
 
 module.exports.mw = (mainWindow) => {

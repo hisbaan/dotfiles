@@ -1,3 +1,3 @@
 #!/bin/env bash
 
-alacritty --working-directory $(pwd) & disown
+wezterm start --cwd "$PWD" --always-new-process & disown
