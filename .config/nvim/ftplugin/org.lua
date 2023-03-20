@@ -39,3 +39,10 @@ vim.api.nvim_set_keymap('i', '<C-d>', '<Esc>m1^hh"_x"_x`1a', { noremap = false, 
 
 -- vim.api.nvim_set_keymap('i', '<C-t>', lua_fn(function() indent() end), { noremap = false, silent = true })
 -- vim.api.nvim_set_keymap('i', '<C-d>', lua_fun(function() dedent() end), { noremap = false, silent = true })
+
+if vim.g.colors_name == 'catppuccin' then
+    local cp = require("catppuccin.palettes").get_palette()
+    vim.api.nvim_set_hl(0, 'OrgBulletsDash', { fg = cp.flamingo, link = nil })
+    vim.api.nvim_set_hl(0, 'OrgBulletsPlus', { fg = cp.flamingo, link = nil })
+    vim.api.nvim_set_hl(0, 'OrgBulletsStar', { fg = cp.flamingo, link = nil })
+end

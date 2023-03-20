@@ -19,19 +19,50 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     { 'nvim-lua/plenary.nvim', },
     { 'nvim-lua/popup.nvim' },
-    { 'kylechui/nvim-surround', config = get_config('nvim-surround') },
-    { 'nguyenvukhang/nvim-toggler', config = get_config('nvim-toggler') },
-    { 'zakharykaplan/nvim-retrail', config = get_config('nvim-retrail') },
-    { 'numToStr/Comment.nvim', config = get_config('comment') },
-    { 'JoosepAlviste/nvim-ts-context-commentstring' },
-    { 'L3MON4D3/LuaSnip', config = get_config('luasnip') },
+    {
+        'kylechui/nvim-surround',
+        config = get_config('nvim-surround')
+    },
+    {
+        'nguyenvukhang/nvim-toggler',
+        config = get_config('nvim-toggler')
+    },
+    {
+        'zakharykaplan/nvim-retrail',
+        config = get_config('nvim-retrail')
+    },
+    {
+        'numToStr/Comment.nvim',
+        config = get_config('comment')
+    },
+    {
+        'JoosepAlviste/nvim-ts-context-commentstring' },
+    {
+        'L3MON4D3/LuaSnip',
+        config = get_config('luasnip')
+    },
     { 'rafamadriz/friendly-snippets' },
     { 'honza/vim-snippets' },
-    { 'windwp/nvim-autopairs', config = get_config('autopairs') },
-    { 'nvim-treesitter/nvim-treesitter', config = get_config('treesitter') },
-    { 'nvim-treesitter/nvim-treesitter-context', config = get_config('treesitter-context') },
-    { 'ethanholz/nvim-lastplace', config = get_config('nvim-lastplace') },
-    { 'NvChad/nvim-colorizer.lua', config = get_config('nvim-colorizer') },
+    {
+        'windwp/nvim-autopairs',
+        config = get_config('autopairs')
+    },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        config = get_config('treesitter')
+    },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        config = get_config('treesitter-context')
+    },
+    {
+        'ethanholz/nvim-lastplace',
+        config = get_config('nvim-lastplace')
+    },
+    {
+        'NvChad/nvim-colorizer.lua',
+        config = get_config('nvim-colorizer')
+    },
     {
         'lervag/vimtex',
         ft = { 'tex' },
@@ -69,13 +100,13 @@ local plugins = {
         enabled = false,
     },
 	{
-		"feline-nvim/feline.nvim",
+		'feline-nvim/feline.nvim',
 		config = get_config('feline'),
         enabled = true,
 	},
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        'catppuccin/nvim',
+        name = 'catppuccin',
         config = get_config('catppuccin'),
         priority = 1000,
         enabled = true,
@@ -102,11 +133,20 @@ local plugins = {
         ft = { 'markdown' },
         config = get_config('markdown-preview')
     },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-    { 'ahmedkhalf/project.nvim', config = get_config('project'), },
+    {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make'
+    },
+    {
+        'ahmedkhalf/project.nvim',
+        config = get_config('project'),
+    },
     { 'folke/neodev.nvim' },
     { 'barreiroleo/ltex-extra.nvim' },
-    { 'neovim/nvim-lspconfig', config = get_config('lsp') },
+    {
+        'neovim/nvim-lspconfig',
+        config = get_config('lsp')
+    },
     {
         'hrsh7th/nvim-cmp',
         dependencies = {
@@ -124,10 +164,16 @@ local plugins = {
         config = get_config('mason')
     },
     {
-        url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-        config = get_config("lsp-lines"),
+        url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+        config = get_config('lsp-lines'),
     },
     { 'mfussenegger/nvim-dap', config = get_config('dap') },
+    {
+        'mfussenegger/nvim-dap-python',
+        ft = "python",
+        dependencies = 'mfussenegger/nvim-dap',
+        config = get_config('dap-python'),
+    },
     { 'mfussenegger/nvim-jdtls', enabled = false },
     { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') },
     {
@@ -154,29 +200,58 @@ local plugins = {
         dependencies = 'kevinhwang91/promise-async',
         config = get_config('nvim-ufo')
     },
-    { 'akinsho/toggleterm.nvim', config = get_config('toggleterm') },
-    { 'folke/which-key.nvim', config = get_config('which-key') },
+    {
+        'akinsho/toggleterm.nvim',
+        config = get_config('toggleterm')
+    },
+    {
+        'folke/which-key.nvim',
+        config = get_config('which-key')
+    },
     {
         'hisbaan/jot.nvim',
         dependencies = 'nvim-lua/plenary.nvim',
         config = get_config('jot'),
     },
-    { 'smjonas/live-command.nvim', config = get_config('live-command') },
+    {
+        'smjonas/live-command.nvim',
+        config = get_config('live-command')
+    },
     {
         'gaoDean/autolist.nvim',
         ft = {
-            "markdown",
-            "text",
-            "org",
+            'markdown',
+            'text',
+            'org',
         },
-        config = get_config('autolist')
+        config = get_config('autolist'),
+        enabled = false
     },
+    {
+        'danymat/neogen',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        config = true,
+    },
+    {
+        'nmac427/guess-indent.nvim',
+        config = get_config('guess-indent')
+    },
+    {
+        "samjwill/nvim-unception",
+        config = get_config("unception")
+    },
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     cmd = "Copilot",
+    --     event = "InsertEnter",
+    --     config = get_config('copilot')
+    -- },
 }
 
 local opts = {
     plugins = {
         install = {
-            colorscheme = { "rose-pine" }
+            colorscheme = { "catppuccin-mocha" }
         }
     },
     ui = {

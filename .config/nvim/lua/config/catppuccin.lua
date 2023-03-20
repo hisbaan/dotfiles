@@ -64,15 +64,27 @@ require("catppuccin").setup({
     highlight_overrides = {
         mocha = function(cp)
             return {
+                -- General
                 FloatBorder = { fg = cp.overlay0 },
+
+                -- Toggle term
                 ToggleTerm1FloatBorder = { fg = cp.overlay0 },
+
+                -- Telescope
                 TelescopeBorder = { fg = cp.overlay0 },
                 TelescopeSelection = { bg = cp.surface0 },
                 TelescopeMatching = { fg = cp.flamingo },
                 TelescopeSelectionCaret = { bg = cp.surface0 },
+
+                -- Folds
                 UfoFoldedBg = { bg = cp.mantle },
                 Folded = { bg = cp.mantle },
                 Visual = { bg = cp.surface0 },
+
+                -- org-bullets
+                OrgBulletsDash = { fg = cp.flamingo, link = nil },
+                OrgBulletsPlus = { fg = cp.flamingo, link = nil },
+                OrgBulletsStar = { fg = cp.flamingo, link = nil },
             }
         end,
     },

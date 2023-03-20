@@ -78,11 +78,12 @@ map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', opts)
 -- Telescope
 map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', opts)
+map('n', '<Leader>g', '<Cmd>Telescope live_grep<CR>', opts)
 map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Terminal
 map('n', '<Leader>tt', '<Cmd>terminal<CR>A', opts)
-map('n', '<Leader>te', '<Cmd>!alacritty --working-directory=$(pwd) & disown<CR><CR>', opts)
+map('n', '<Leader>te', '<Cmd>!wezterm start --cwd "$PWD" --always-new-process & disown<CR><CR>', opts)
 
 -- Neogit
 map('n', '<Leader>gg', '<Cmd>Neogit<CR>', opts)
@@ -128,3 +129,6 @@ map('n', '<leader>sS', '<Cmd>SaveSession<CR>', opts)
 
 -- jot
 map('n', '<leader>j', '<Cmd>Jot<CR>', opts)
+
+-- neogen
+map('n', '<leader>lg', '<Cmd>Neogen<CR>', opts)

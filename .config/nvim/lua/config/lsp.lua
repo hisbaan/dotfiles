@@ -10,14 +10,6 @@ local border = {
     { "─", "FloatBorder" },
     { "╰", "FloatBorder" },
     { "│", "FloatBorder" },
-    -- { "🭽", "FloatBorder" },
-    -- { "▔", "FloatBorder" },
-    -- { "🭾", "FloatBorder" },
-    -- { "▕", "FloatBorder" },
-    -- { "🭿", "FloatBorder" },
-    -- { "▁", "FloatBorder" },
-    -- { "🭼", "FloatBorder" },
-    -- { "▏", "FloatBorder" },
 }
 
 local handlers = {
@@ -47,7 +39,7 @@ capabilities.textDocument.foldingRange = {
 }
 
 require('neodev').setup({})
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     handlers = handlers,
@@ -169,6 +161,12 @@ lspconfig.emmet_ls.setup({
             },
         },
     }
+})
+
+lspconfig.hls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    handlers = handlers,
 })
 
 lspconfig.html.setup({
