@@ -94,8 +94,9 @@ wk.register({
         name = "lsp",
         a = { "code action" },
         f = { "format code" },
+        g = { "generate function documentation" },
         r = { "rename variable" },
-        t = { "toggle lsp lines" }
+        t = { "toggle lsp lines" },
     },
     s = {
         name = "session",

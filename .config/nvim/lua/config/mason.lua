@@ -15,13 +15,16 @@ require("mason-lspconfig").setup {
         "cssls",
         "emmet_ls",
         "html",
+        "hls",
         "jdtls",
         "jsonls",
         "ltex",
         "intelephense",
         "rust_analyzer",
-        "sumneko_lua",
+        "sqlls",
+        "lua_ls",
         "tsserver",
+        "pyright",
         "volar",
     }
 }

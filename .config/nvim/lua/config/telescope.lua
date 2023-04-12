@@ -42,7 +42,8 @@ telescope.setup {
                 ["<c-t>"] = custom_actions.multi_selection_open_tab
             }
         },
-        -- entry_prefix = "  ",
+        selection_caret = " ",
+        prompt_prefix = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",
         sorting_strategy = "descending",

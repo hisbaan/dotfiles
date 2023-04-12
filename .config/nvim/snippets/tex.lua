@@ -36,7 +36,7 @@ local math_template = s("mtemp", fmt([[
 
 \newcommand{\br}[1]{\left(#1\right)}
 \newcommand{\sbr}[1]{\left[#1\right]}
-\newcommand{\cbr}[1]{\left\\{#1\right\\}}
+\newcommand{\cbr}[1]{\left\{#1\right\}}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\abs}[1]{\left|#1\right|}
 
@@ -378,5 +378,10 @@ local proof_environment = s("proof", fmt([[
 })
 )
 table.insert(snippets, proof_environment)
+
+local left_arrow = s("la", {
+    t "\\leftarrow"
+})
+table.insert(snippets, left_arrow)
 
 return snippets, autosnippets

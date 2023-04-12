@@ -15,13 +15,3 @@ vim.g.vimtex_toc_config = {
     indent_levels = 1,
     todo_sorted = 1,
 }
--- vim.g.vimtex_latexmk_options = "-shell-escape -verbose -file-line-error -synctex=1 -interaction=nonstopmode"
--- vim.g.vimtex_compiler_latexmk = "lualatex"
--- vim.cmd([[ syntax enable ]])
--- vim.g.vimtex_compiler_latexmk_engines = {
--- 	_        = '-lualatex',
--- 	pdflatex = '-pdf',
--- 	dvipdfex = '-pdfdvi',
--- 	lualatex = '-lualatex',
--- 	xelatex  = '-xelatex'
--- }

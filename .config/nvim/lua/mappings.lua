@@ -56,7 +56,7 @@ vim.cmd([[map <C-f> <Nop>]])
 -- Smart dd
 local function smart_dd()
     if vim.api.nvim_get_current_line():match("^%s*$") then
-        return "\"_dd"
+        return '"_dd'
     else
         return "dd"
     end
@@ -69,17 +69,21 @@ noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 ]])
 
+-- Save on leader w
+map('n', '<Leader>w', "<Cmd>w<CR>", opts)
+
 -- NvimTree
 map('n', '<Leader>f', '<Cmd>NvimTreeToggle<CR>', opts)
 
 -- Telescope
 map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', opts)
 map('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', opts)
+map('n', '<Leader>g', '<Cmd>Telescope live_grep<CR>', opts)
 map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Terminal
 map('n', '<Leader>tt', '<Cmd>terminal<CR>A', opts)
-map('n', '<Leader>te', '<Cmd>!alacritty --working-directory=$(pwd) & disown<CR><CR>', opts)
+map('n', '<Leader>te', '<Cmd>!wezterm start --cwd "$PWD" --always-new-process & disown<CR><CR>', opts)
 
 -- Neogit
 map('n', '<Leader>gg', '<Cmd>Neogit<CR>', opts)
@@ -89,7 +93,7 @@ map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
 
 -- lsp
 map('n', '<Leader>la', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
 map('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
 -- dap
@@ -118,10 +122,16 @@ map('n', '<leader>lt', '', {
 map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
 
 -- session managment
-map('n', '<leader>ss', '<Cmd>AutoSession search<CR>', opts)
+map('n', '<leader>ss', '<Cmd>Autosession search<CR>', opts)
 map('n', '<leader>sd', '<Cmd>DeleteSession<CR>', opts)
 map('n', '<leader>sr', '<Cmd>RestoreSession<CR>', opts)
 map('n', '<leader>sS', '<Cmd>SaveSession<CR>', opts)
 
 -- jot
 map('n', '<leader>j', '<Cmd>Jot<CR>', opts)
+
+-- neogen
+map('n', '<leader>lg', '<Cmd>Neogen<CR>', opts)
+
+-- nvim navbuddy
+map('n', '<leader>ln', '<Cmd>Navbuddy<CR>', opts)
