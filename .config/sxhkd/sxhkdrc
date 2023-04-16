@@ -104,13 +104,14 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-	alacritty
-      # kitty --single-instance
+    wezterm
+    # alacritty
+    # kitty --single-instance
 
 # floating kitty
 super + shift + Return
-    bspc rule -a Alacritty --one-shot state=floating; \
-	alacritty
+    bspc rule -a org.wezfurlong.wezterm --one-shot state=floating; \
+    wezterm
     # bspc rule -a kitty --one-shot state=floating; \
     # kitty --single-instance
 

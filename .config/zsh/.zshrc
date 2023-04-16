@@ -55,20 +55,20 @@ alias uoft="cd ~/Documents/uoft/ ; . ranger"
 if [ "$TERM" = "linux" ]
 then
   echo -en "\e]P0191724"
-  echo -en "\e]P1eb6f92"
-  echo -en "\e]P2cbf2b8"
-  echo -en "\e]P3ebbcba"
-  echo -en "\e]P49ccfd8"
-  echo -en "\e]P5c4a7e7"
-  echo -en "\e]P63e8fb0"
-  echo -en "\e]P7e0def4"
-  echo -en "\e]P86e6a86"
-  echo -en "\e]P9eb6f92"
-  echo -en "\e]PAcbf2b8"
-  echo -en "\e]PBebbcba"
-  echo -en "\e]PC9ccfd8"
-  echo -en "\e]PDc4a7e7"
-  echo -en "\e]PE3e8fb0"
+  echo -en "\e]P1f38ba8"
+  echo -en "\e]P2a6e3a1"
+  echo -en "\e]P3fab387"
+  echo -en "\e]P489b4fa"
+  echo -en "\e]P5cba6f7"
+  echo -en "\e]P694e2d5"
+  echo -en "\e]P7cdd6f4"
+  echo -en "\e]P8585b70"
+  echo -en "\e]P9f38ba8"
+  echo -en "\e]PAa6e3a1"
+  echo -en "\e]PBfab387"
+  echo -en "\e]PC89b4fa"
+  echo -en "\e]PDcba6f7"
+  echo -en "\e]PE94e2d5"
   echo -en "\e]PFe2e1e7"
   clear # Clear artifacts
 fi
@@ -94,7 +94,7 @@ export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/l
 
 export DISPLAY=":0"
 export MOZ_USE_XINPUT2=1
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/:/home/hisbaan/.rvm/bin/
+export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/:/home/hisbaan/.rvm/bin/:/home/hisbaan/.ghcup/bin/
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 # ruby environment switcher
@@ -145,6 +145,8 @@ compdef _conf conf
 ###############
 ### Plugins ###
 ###############
+
+eval "$(direnv hook zsh)"
 
 # Powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

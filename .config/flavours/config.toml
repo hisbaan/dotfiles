@@ -53,12 +53,12 @@ subtemplate = "custom"
 start = "/* start flavours */"
 end = "/* end flavours */"
 
-[[item]]
-file = "~/.config/firefox/userChrome.css"
-template = "firefox"
-subtemplate = "custom"
-start = "/* start flavours */"
-end = "/* end flavours */"
+# [[item]]
+# file = "~/.config/firefox/userChrome.css"
+# template = "firefox"
+# subtemplate = "custom"
+# start = "/* start flavours */"
+# end = "/* end flavours */"
 
 [[item]]
 file = "~/projects/bento/css/style.css"

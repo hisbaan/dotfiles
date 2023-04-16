@@ -21,7 +21,7 @@ set recolor "true"
 set recolor-keephue "true"
 
 # start flavours
-# Base16 Rosé Pine Custom
+# Base16 Catppuccin Custom
 # Author: Hisbaan Noorani (https://github.com/hisbaan)
 
 set default-bg                  "#191724"
@@ -37,19 +37,19 @@ set notification-bg             "#191724"
 set notification-fg             "#e2e1e7"
 
 set notification-error-bg       "#191724"
-set notification-error-fg       "#eb6f92"
+set notification-error-fg       "#f38ba8"
 
 set notification-warning-bg     "#191724"
-set notification-warning-fg     "#eb6f92"
+set notification-warning-fg     "#f38ba8"
 
-set highlight-color             "#c4a7e7"
-set highlight-active-color      "#9ccfd8"
+set highlight-color             "#cba6f7"
+set highlight-active-color      "#89b4fa"
 
-set completion-bg               "#1f1d2e"
+set completion-bg               "#181825"
 set completion-fg               "#e2e1e7"
 
 set completion-highlight-fg     "#e2e1e7"
-set completion-highlight-bg     "#c4a7e7"
+set completion-highlight-bg     "#cba6f7"
 
 set recolor-lightcolor          "#191724"
 set recolor-darkcolor           "#e2e1e7"

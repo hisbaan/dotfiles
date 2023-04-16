@@ -35,8 +35,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 6
-    y: 6
+    x: 12
+    y: 12
   dimensions:
     columns: 80
     lines: 24
@@ -163,48 +163,48 @@ font:
 # Available themes are:
 
 # start flavours
-# Base16 Rosé Pine Custom 256 - alacritty color config
+# Base16 Catppuccin Custom 256 - alacritty color config
 # Hisbaan Noorani (https://github.com/hisbaan)
 colors:
   # Default colors
   primary:
     background: '0x191724'
-    foreground: '0xe0def4'
+    foreground: '0xcdd6f4'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0x191724'
-    cursor: '0xe0def4'
+    cursor: '0xcdd6f4'
 
   # Normal colors
   normal:
     black:   '0x191724'
-    red:     '0xeb6f92'
-    green:   '0xcbf2b8'
-    yellow:  '0xebbcba'
-    blue:    '0x9ccfd8'
-    magenta: '0xc4a7e7'
-    cyan:    '0x3e8fb0'
-    white:   '0xe0def4'
+    red:     '0xf38ba8'
+    green:   '0xa6e3a1'
+    yellow:  '0xfab387'
+    blue:    '0x89b4fa'
+    magenta: '0xcba6f7'
+    cyan:    '0x94e2d5'
+    white:   '0xcdd6f4'
 
   # Bright colors
   bright:
-    black:   '0x555169'
-    red:     '0xeb6f92'
-    green:   '0xcbf2b8'
-    yellow:  '0xebbcba'
-    blue:    '0x9ccfd8'
-    magenta: '0xc4a7e7'
-    cyan:    '0x3e8fb0'
+    black:   '0x45475a'
+    red:     '0xf38ba8'
+    green:   '0xa6e3a1'
+    yellow:  '0xfab387'
+    blue:    '0x89b4fa'
+    magenta: '0xcba6f7'
+    cyan:    '0x94e2d5'
     white:   '0xe2e1e7'
 
   indexed_colors:
-    - { index: 16, color: '0xebbcba' }
-    - { index: 17, color: '0xb9b9bc' }
-    - { index: 18, color: '0x1f1d2e' }
-    - { index: 19, color: '0x26233a' }
-    - { index: 20, color: '0x6e6a86' }
-    - { index: 21, color: '0xf0f0f3' }
+    - { index: 16, color: '0xfab387' }
+    - { index: 17, color: '0xf2cdcd' }
+    - { index: 18, color: '0x181825' }
+    - { index: 19, color: '0x313244' }
+    - { index: 20, color: '0x585b70' }
+    - { index: 21, color: '0xe0def4' }
 # end flavours
 
 #######################################
