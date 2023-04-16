@@ -4,7 +4,7 @@ local act = wezterm.action
 return {
     -- fonts
     font = wezterm.font('Meslo LGS Nerd Font Mono'),
-    font_size = 11.0,
+    font_size = 12.0,
 
     -- key bindings
     use_dead_keys = false,

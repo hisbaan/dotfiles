@@ -86,6 +86,7 @@ groff
 hsetroot
 htop
 httplz
+hyprland
 imv
 inotify-tools
 intel-gpu-tools
@@ -255,7 +256,7 @@ wl-clipboard
 wlroots
 wmname
 xcolor
-xdg-desktop-portal
+xdg-desktop-portal-hyprland
 xdo
 xf86-input-wacom
 xf86-video-vesa

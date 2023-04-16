@@ -29,7 +29,6 @@ firefox-tridactyl-native-bin
 flavours
 galaxybudsclient-bin
 ghcup-hs-bin
-hyprland-bin
 i3-swallow-git
 i8kutils
 intellij-idea-ultimate-edition
@@ -73,6 +72,7 @@ via-bin
 vim-language-server
 waybar-hyprland
 wd719x-firmware
+webcord-bin
 windscribe-cli
 wmenu-git
 zeal

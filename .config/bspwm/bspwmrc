@@ -8,7 +8,7 @@ sxhkd &
 killall -9 dispad; dispad &
 picom --config ~/.config/picom/picom.conf &
 nitrogen --restore &
-$HOME/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
 espanso start &
 killall -9 flameshot; flameshot &
 redshift -x; killall -9 redshift; redshift &
@@ -78,8 +78,8 @@ bspc rule -a firefox:Toolkit state=floating sticky=on
 ### Floating Size ###
 #####################
 
-x=$(xwininfo -root | grep Width | awk '{print $2}')
-y=$(xwininfo -root | grep Height | awk '{print $2}')
+# x=$(xwininfo -root | grep Width | awk '{print $2}')
+# y=$(xwininfo -root | grep Height | awk '{print $2}')
 
 # bspc rule -a firefox center=true rectangle=${$((0.6 * x))%.}x${$((0.6 * y))%.}+0+0
 bspc rule -a firefox:Navigator center=true rectangle=2560x1440+0+0

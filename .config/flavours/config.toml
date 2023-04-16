@@ -108,3 +108,7 @@ file = "~/.config/wezterm/colors.lua"
 template = "wezterm"
 start = "-- start flavours"
 end = "-- end flavours"
+
+[[item]]
+file = "~/.config/hypr/hyprland.conf"
+template = "hyprland"
