@@ -32,6 +32,10 @@ local plugins = {
         config = get_config('nvim-retrail')
     },
     {
+        "luukvbaal/statuscol.nvim",
+        config = get_config("statuscol")
+    },
+    {
         'numToStr/Comment.nvim',
         config = get_config('comment')
     },
@@ -93,12 +97,6 @@ local plugins = {
         ft = { 'org' },
         config = get_config('org-bullets')
     },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true },
-        config = get_config('lualine'),
-        enabled = false,
-    },
 	{
 		'feline-nvim/feline.nvim',
 		config = get_config('feline'),
@@ -109,14 +107,6 @@ local plugins = {
         name = 'catppuccin',
         config = get_config('catppuccin'),
         priority = 1000,
-        enabled = true,
-    },
-    {
-        'rose-pine/neovim',
-        name = 'rose-pine',
-        config = get_config('rose-pine'),
-        priority = 1000,
-        enabled = false,
     },
     {
         'nvim-telescope/telescope.nvim',
@@ -168,13 +158,6 @@ local plugins = {
         config = get_config('lsp-lines'),
     },
     { 'mfussenegger/nvim-dap', config = get_config('dap') },
-    {
-        'mfussenegger/nvim-dap-python',
-        ft = "python",
-        dependencies = 'mfussenegger/nvim-dap',
-        config = get_config('dap-python'),
-    },
-    { 'mfussenegger/nvim-jdtls', enabled = false },
     { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') },
     {
         'rmagatti/auto-session',
@@ -218,16 +201,6 @@ local plugins = {
         config = get_config('live-command')
     },
     {
-        'gaoDean/autolist.nvim',
-        ft = {
-            'markdown',
-            'text',
-            'org',
-        },
-        config = get_config('autolist'),
-        enabled = false
-    },
-    {
         'danymat/neogen',
         dependencies = 'nvim-treesitter/nvim-treesitter',
         config = true,
@@ -240,12 +213,15 @@ local plugins = {
         "samjwill/nvim-unception",
         config = get_config("unception")
     },
-    -- {
-    --     "zbirenbaum/copilot.lua",
-    --     cmd = "Copilot",
-    --     event = "InsertEnter",
-    --     config = get_config('copilot')
-    -- },
+    {
+    "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        },
+        config = get_config("nvim-navbuddy")
+    },
 }
 
 local opts = {

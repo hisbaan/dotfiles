@@ -6,14 +6,16 @@ require("todo-comments").setup({
         FIX = {
             icon = " ", -- icon used for the sign, and in search results
             color = "error", -- can be a hex color, or a named color (see below)
-            alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+            alt = { "FIXME", "BUG", "FIXIT", "ISSUE", "FIX:", "FIXME:", "BUG:", "FIXIT:", "ISSUE:" }, -- a set of other keywords that all map to this FIX keywords
             -- signs = false, -- configure signs for some keywords individually
         },
+        TEST = { icon = "  " },
         TODO = { icon = " ", color = "hint", alt = { "TODO:" } },
-        HACK = { icon = " ", color = "warning" },
-        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-        NOTE = { icon = " ", color = "info", alt = { "INFO" } },
+        HACK = { icon = " ", color = "warning", alt = { "HACK:" } },
+        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX", "WARNING:", "WARN:", "XXX:" } },
+        OMIT = { icon = " ", color = "error", alt = { "OMIT:" } },
+        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE", "OPTIM:", "PERFORMANCE:", "OPTIMIZE:", "PERF:" } },
+        NOTE = { icon = " ", color = "info", alt = { "INFO", "INFO:", "NOTE:" } },
     },
     merge_keywords = true, -- when true, custom keywords will be merged with the defaults
     -- highlighting of the line containing the todo comment

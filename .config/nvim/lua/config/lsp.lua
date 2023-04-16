@@ -101,7 +101,6 @@ lspconfig.ltex.setup({
                     "PASSIVE_VOICE",
                     "WHITESPACE_RULE",
                     "TOO_LONG_SENTENCE",
-                    -- 'MORFOLOGIK_RULE_EN_CA',
                 },
             },
             additionalRules = {
@@ -156,7 +155,6 @@ lspconfig.emmet_ls.setup({
         html = {
             options = {
                 -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-                -- ["bem.enabled"] = true,
                 ["output.selfClosingStyle"] = "xhtml"
             },
         },
@@ -198,5 +196,11 @@ lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     handlers = handlers,
 })
+
+-- lspconfig.sqlls.setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     handlers = handlers,
+-- })
 
 vim.o.signcolumn = "yes:1"

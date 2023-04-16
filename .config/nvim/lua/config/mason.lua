@@ -21,6 +21,7 @@ require("mason-lspconfig").setup {
         "ltex",
         "intelephense",
         "rust_analyzer",
+        "sqlls",
         "lua_ls",
         "tsserver",
         "pyright",

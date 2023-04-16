@@ -132,3 +132,6 @@ map('n', '<leader>j', '<Cmd>Jot<CR>', opts)
 
 -- neogen
 map('n', '<leader>lg', '<Cmd>Neogen<CR>', opts)
+
+-- nvim navbuddy
+map('n', '<leader>ln', '<Cmd>Navbuddy<CR>', opts)

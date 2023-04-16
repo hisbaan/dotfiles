@@ -1,6 +1,5 @@
 local opt = vim.opt
 local wo = vim.wo
-local fn = vim.fn
 local g = vim.g
 
 opt.linebreak = true
@@ -52,7 +51,7 @@ opt.smartcase = true
 opt.incsearch = true
 
 -- Appearance
-opt.background = "dark"
+-- opt.background = "dark"
 opt.cursorline = true
 wo.rnu = true
 wo.number = true

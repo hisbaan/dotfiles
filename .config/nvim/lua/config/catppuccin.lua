@@ -49,7 +49,7 @@ require("catppuccin").setup({
             subtext1 = "#BAC2DE",
             subtext0 = "#A6ADC8",
             overlay2 = "#C3BAC6",
-            overlay1 = "#988BA2",
+            overlay = "#988BA2",
             overlay0 = "#6E6C7E",
             surface2 = "#6E6C7E",
             surface1 = "#575268",
@@ -57,15 +57,16 @@ require("catppuccin").setup({
 
             -- mantle = "#1A1826",
             mantle = "#1F1D2E",
-            crust = "#161320",
-            base = "#191724", -- darker base
+            crust = "#161320", -- darker base
+            base = "#191724",
         },
     },
     highlight_overrides = {
         mocha = function(cp)
             return {
-                -- General
+                -- Float
                 FloatBorder = { fg = cp.overlay0 },
+                NormalFloat = { bg = cp.base },
 
                 -- Toggle term
                 ToggleTerm1FloatBorder = { fg = cp.overlay0 },
