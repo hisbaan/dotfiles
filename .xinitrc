@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export WAYLAND=0
+
 ####################################
 ### Merging Defaults and Keymaps ###
 ####################################

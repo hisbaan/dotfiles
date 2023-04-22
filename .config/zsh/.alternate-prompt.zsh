@@ -12,7 +12,7 @@
 unset -m 'POWERLEVEL9K_*|DEFAULT_USER'
 
 # Left prompt segments.
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs prompt_char)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vcs prompt_char)
 # Right prompt segments.
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 #   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
@@ -32,8 +32,8 @@ POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION=                       # no segment ico
 
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
 
-POWERLEVEL9K_PROMPT_CHAR_PREFIX='%F{15}… '
-POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION='●'
+POWERLEVEL9K_PROMPT_CHAR_PREFIX='%F{237}%K{237}%F{004}%K{237} %F{252}%2~%{%k%}%F{237}%f'
+POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION=' '
 
 typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_VIINS_FOREGROUND=green
 typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_VIINS_FOREGROUND=red
@@ -82,14 +82,14 @@ POWERLEVEL9K_SHORTEN_STRATEGY=none
 #   # Don't show context unless root or in SSH.
 #   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
-# # Show previous command duration only if it's >= 5s.
-# typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-# # Don't show fractional seconds. Thus, 7s rather than 7.3s.
-# typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
-# # Duration format: 1d 2h 3m 4s.
-# typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
-# # Yellow previous command duration.
-# typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
+#   # Show previous command duration only if it's >= 5s.
+#   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
+#   # Don't show fractional seconds. Thus, 7s rather than 7.3s.
+#   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
+#   # Duration format: 1d 2h 3m 4s.
+#   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FORMAT='d h m s'
+#   # Yellow previous command duration.
+#   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
 POWERLEVEL9K_VCS_PREFIX='%f• '
 POWERLEVEL9K_VCS_FOREGROUND=8
@@ -157,7 +157,7 @@ POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes)
 #   #   - verbose: Enable instant prompt and print a warning when detecting console output during
 #   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
 #   #              seen the warning, or if you are unsure what this all means.
-POWERLEVEL9K_INSTANT_PROMPT=quiet
+POWERLEVEL9K_INSTANT_PROMPT=verbose
 
 #   # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
 #   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload

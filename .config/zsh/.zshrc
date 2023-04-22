@@ -93,24 +93,7 @@ setopt share_history
 
 export EDITOR='nvim'
 
-# if [[ -n $SSH_CONNECTION ]]
-# then
-#     export EDITOR='nvim'
-# else
-#     export EDITOR="emacsclient -c -a 'emacs'"
-# fi
-
 fpath=($ZSH/functions $ZSH/completions $fpath)
-
-# export DISPLAY=":0"
-
-# Comment out for wayland
-# export GDK_SCALE=2
-# export GDK_DPI_SCALE=0.5
-# export MOZ_USE_XINPUT2=1
-# export MOZ_X11_EGL=1
-# export QT_AUTO_SCREEN_SCALE_FACTOR=1
-# export MOZ_ENABLE_WAYLAND=1
 
 export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:/home/hisbaan/.local/share/gem/ruby/3.0.0/bin/:/home/hisbaan/.rvm/bin:$CARGO_HOME/bin/:/home/hisbaan/.local/share/npm/bin/:/home/hisbaan/.ghcup/bin/
 
@@ -155,9 +138,6 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 #################
 
 source ~/.config/zsh/functions.zsh
-compdef _proj proj
-compdef _conf conf
-compdef _org org
 
 ###############
 ### Plugins ###
@@ -178,6 +158,14 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 # ZVM_CURSOR_STYLE_ENABLED=false
+
+# zsh vim mode clipboard support
+source /usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+if [[ $WAYLAND == 1 ]]; then
+  ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
+elif [[ $WAYLAND == 0 ]]; then
+  ZSH_SYSTEM_CLIPBOARD_METHOD=xcc
+fi
 
 # proper history behaviour
 bindkey "\e[A" up-line-or-search

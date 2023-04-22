@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export WAYLAND=1
+
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_X11_EGL=1
 export _JAVA_AWT_WM_NONREPARENTING=1
