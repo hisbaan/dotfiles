@@ -1,5 +1,0 @@
-#!/bin/sh
-
-file_to_open="$(ls /usr/share/doc/arch-wiki/html/en/ | rofi -dmenu)"
-
-firefox "/usr/share/doc/arch-wiki/html/en/$file_to_open"

@@ -26,7 +26,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 
-alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
+# alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
 ###############
 ### Aliases ###
@@ -38,14 +38,12 @@ alias df="df -h $argv"
 alias rm="trash-put $argv"
 alias undo-rm="trash-restore $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
-alias system="/usr/bin/git --git-dir=/home/hisbaan/.system-setup.git/ --work-tree=/ $argv"
 alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
 alias bin="cd ~/projects/binocularss/"
 alias iwlan="iwctl station wlan0 "
-alias script="SHELL=bash script"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
@@ -92,10 +90,12 @@ setopt share_history
 ###############
 
 export EDITOR='nvim'
+export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
+export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.local/bin/scripts/rofi-spotlight:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:/home/hisbaan/.local/share/gem/ruby/3.0.0/bin/:/home/hisbaan/.rvm/bin:$CARGO_HOME/bin/:/home/hisbaan/.local/share/npm/bin/:/home/hisbaan/.ghcup/bin/
+export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/
 
 # ruby version management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

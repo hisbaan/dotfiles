@@ -18,13 +18,12 @@
 | *Hotkey Daemon*         | [[https://github.com/baskerville/sxhkd][sxhkd]]                   | [[.config/sxhkd/sxhkdrc][config]]          |
 | *Compositor*            | [[https://github.com/yshui/picom/pull/361][Picom Ibghawan Fork]]     | [[.config/picom/picom.conf][config]]          |
 | *Bar*                   | [[https://github.com/polybar/polybar][Polybar]]                 | [[.config/polybar/config][config]]          |
-| *Terminal*              | [[https://sw.kovidgoyal.net/kitty/][Kitty]]                   | [[.config/kitty/kitty.conf][config]]          |
-| *Current Color Schem*   | [[https://github.com/rose-pine/rose-pine-theme][rose-pine (moon)]]        | \-              |
+| *Terminal*              | [[https://wezfurlong.org/wezterm/][wezterm]]                   | [[.config/wezterm/wezterm.lua][config]]          |
+| *Current Color Scheme*  | [[https://github.com/catppuccin/catppuccin][Catppuccin Mocha]]        | \-              |
 | *Color Scheme Manager*  | [[https://github.com/Misterio77/flavours][flavours]]                | [[.config/flavours/config.toml][config]]          |
 | *Shell*                 | [[https://www.zsh.org/][zsh]]                     | [[.config/zsh/.zshrc][config]]          |
 | *AUR Helper*            | [[https://github.com/Morganamilo/paru][paru]]                    | \-              |
 | *Primary Editor*        | [[https://neovim.io][neovim]]                  | [[.config/nvim/][config]]          |
-| *Secondary Editor*      | [[https://github.com/hlissner/doom-emacs][Doom Emacs]]              | [[.doom.d/][config]]          |
 | *Font*                  | [[https://github.com/ryanoasis/nerd-fonts][MesloLGS Nerd Font Mono]] | \-              |
 | *App Launcher*          | [[https://github.com/davatorium/rofi][Rofi]]                    | [[.config/rofi/config][config]]          |
 | *Browser*               | [[https://www.mozilla.org/firefox/][Firefox]] + [[https://www.userchrome.org/][userChrome]]    | [[.config/firefox][config]]              |
@@ -34,8 +33,8 @@
 | *GUI File Manager*      | [[https://gitlab.gnome.org/GNOME/nautilus][Nautilus]]                | \-              |
 | *Notification Daemon*   | [[https://github.com/dunst-project/dunst][Dunst]]                   | [[.config/dunst/dunstrc][config]]          |
 | *Video Player*          | [[https://mpv.io/][mpv]] + [[https://celluloid-player.github.io/][Celluloid]]         | \-              |
-| *System Monitor*        | [[https://github.com/aristocratos/bashtop][Bashtop]]                 | \-              |
-| *Image Viewer*          | [[https://github.com/muennich/sxiv][sxiv]]                    | \-              |
+| *System Monitor*        | [[https://github.com/aristocratos/btop][btop]]                 | \-              |
+| *Image Viewer*          | [[https://sr.ht/~exec64/imv/][imv]]                    | \-              |
 | *Document Viewer*       | [[https://pwmt.org/projects/zathura/][Zathura]]                 | \-              |
 
 * Installation
@@ -51,12 +50,3 @@ $HOME/hass/hass.sh
 Answer the prompts that appear.
 
 The script will create a backup folder for your old configs in =~/hass-backup=. There will be an uninstall script in the future that assumes =~/hass-backup= exists so don't delete the folder if you're just trying out my config.
-* Notable Scripts
-** [[.local/bin/scripts/update-theme][update-theme]]
-Reads a theme from the .xcolors directory and applies it to xresources and all used applications. I no longer use this as I have switched to [[https://github.com/Misterio77/flavours][flavours]].
-** [[.local/bin/scripts/addcolorscheme][addcolorscheme]]
-Creates a colour scheme in a format that [[.local/bin/update-theme][update-theme]] can read and places it in the .xcolors directory based on user input. This will be adaped to work with [[https://github.com/Misterio77/flavours][flavours]].
-** [[https://github.com/hisbaan/latex-copy][latex-copy]]
-Opens an emacs window and allows the user to type in LaTeX code which can then be coppied to the user's clipboard as latex or unicode (depending on the script run).
-** [[.local/bin/scripts/mkrecursiveplaylist][mkrecursiveplaylist]]
-Makes a playlist file that can be read by a music player such as ncmpcpp. Currently only finds mp3 files.

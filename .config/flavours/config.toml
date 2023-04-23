@@ -59,29 +59,6 @@ end = "/* end flavours */"
 # start = "/* start flavours */"
 # end = "/* end flavours */"
 
-# [[item]]
-# file = "~/projects/bento/css/style.css"
-# template = "bento"
-# subtemplate = "custom"
-# start = "/* start flavours */"
-# end = "/* end flavours */"
-
-# [[item]]
-# file = "~/.config/spicetify/Themes/Dribbblish/color.ini"
-# template = "spicetify"
-# subtemplate = "custom"
-# hook = "spicetify apply -n"
-# start = "; start flavours"
-# end = "; end flavours"
-
-# [[item]]
-# file = "~/.config/eww/eww.scss"
-# template = "eww"
-# subtemplate = "custom"
-# hook = "eww reload"
-# start = "// start flavours"
-# end =  "// end flavours"
-
 [[item]]
 file = "~/.config/zsh/.zshrc"
 template = "zsh"
