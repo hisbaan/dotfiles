@@ -12,7 +12,6 @@ end = "! end flavours"
 file = "~/.config/zathura/zathurarc"
 template = "zathura"
 subtemplate = "custom"
-# hook = "refresh zathurarc somehow"  # Doesn't look like I can do anything here
 
 [[item]]
 file = "~/.config/kitty/kitty.conf"
@@ -61,13 +60,6 @@ end = "/* end flavours */"
 # end = "/* end flavours */"
 
 [[item]]
-file = "~/projects/bento/css/style.css"
-template = "bento"
-subtemplate = "custom"
-start = "/* start flavours */"
-end = "/* end flavours */"
-
-[[item]]
 file = "~/.config/zsh/.zshrc"
 template = "zsh"
 subtemplate = "custom"
@@ -77,4 +69,23 @@ file = "~/.config/alacritty/alacritty.yml"
 template = "alacritty"
 subtemplate = "default-256"
 
+# [[item]]
+# file = "~/.config/sway/config"
+# template = "sway"
+# subtemplate = "colors"
 
+# [[item]]
+# file = "~/.config/waybar/style.css"
+# template = "waybar"
+# start = "/* start flavours */"
+# end = "/* end flavours */"
+
+[[item]]
+file = "~/.config/wezterm/colors.lua"
+template = "wezterm"
+start = "-- start flavours"
+end = "-- end flavours"
+
+# [[item]]
+# file = "~/.config/hypr/hyprland.conf"
+# template = "hyprland"

@@ -21,9 +21,6 @@ matches:
   - trigger: ":hsg"
     replace: "hisbaan@gmail.com"
 
-  - trigger: ":phone"
-    replace: "+1 647 554 7950"
-
 # Shruggie
   - trigger: ":shrug"
     replace: "¯\\_(ツ)_/¯"

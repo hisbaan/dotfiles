@@ -146,12 +146,11 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+0 mode "(l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown"
-mode "(l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown" {
-    bindsym l 		exec --no-startup-id betterlockscreen -l blur, mode "default"
-    bindsym e 		exec --no-startup-id i3exit logout, mode "default"
-    bindsym s 		exec --no-startup-id betterlockscreen -s blur, mode "default"
-    bindsym h 		exec --no-startup-id systemctl hibernate, mode "default"
+bindsym $mod+0 mode "(l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown"
+mode "(l)ock, (e)xit, (s)uspend, (r)eboot, (Shift+s)hutdown" {
+    bindsym l 		exec --no-startup-id betterlockscreen -l, mode "default"
+    bindsym e 		exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s 		exec --no-startup-id systemctl suspend, mode "default"
     bindsym r 		exec --no-startup-id reboot, mode "default"
     bindsym Shift+s 	exec --no-startup-id poweroff, mode "default"
     

@@ -1,3 +1,5 @@
+abbr --add sp 'sudo pacman'
+
 #bobthefish
 set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
@@ -17,3 +19,4 @@ set -x -g PATH $PATH:/home/hisbaan/.local/bin/:/home/hisbaan/.local/bin/color-sc
 set -x -g EDITOR "/usr/bin/emacsclient -c -a 'emacs'"
 set -x -g DISPLAY ':0'
 set -x -g MOZ_USE_XINPUT2 1
+set -x -g MOZ_X11_EGL 1

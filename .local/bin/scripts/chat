@@ -1,3 +1,0 @@
-#!/bin/sh
-
-discord-fix & firefox -new-window "https://messages.google.com/web/conversations/23" & firefox -new-tab "https://web.airmessage.org"

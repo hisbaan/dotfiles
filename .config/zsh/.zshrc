@@ -38,12 +38,11 @@ alias df="df -h $argv"
 alias rm="trash-put $argv"
 alias undo-rm="trash-restore $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
-alias emacs="emacsclient -c -a 'emacs'"
 alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
-alias bin='cd ~/projects/binocularss/'
+alias bin="cd ~/projects/binocularss/"
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
@@ -91,14 +90,14 @@ setopt share_history
 
 export EDITOR='nvim'
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
-
-export DISPLAY=":0"
-export MOZ_USE_XINPUT2=1
-export PATH=$PATH:/home/hisbaan/.local/bin/scripts/:/home/hisbaan/.local/bin/scripts/color-scripts/:/home/hisbaan/.local/bin/scripts/xresources/:/home/hisbaan/.emacs.d/bin/:/home/hisbaan/.local/bin/:~/.local/share/npm/bin/:/home/hisbaan/.rvm/bin/:/home/hisbaan/.ghcup/bin/
 export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
-# ruby environment switcher
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+fpath=($ZSH/functions $ZSH/completions $fpath)
+
+export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/
+
+# ruby version management
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #############
 ### Other ###
@@ -138,9 +137,6 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 #################
 
 source ~/.config/zsh/functions.zsh
-compdef _org org
-compdef _proj proj
-compdef _conf conf
 
 ###############
 ### Plugins ###
@@ -160,11 +156,20 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
-# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# ZVM_CURSOR_STYLE_ENABLED=false
+
+# zsh vim mode clipboard support
+source /usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+if [[ $WAYLAND == 1 ]]; then
+  ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
+elif [[ $WAYLAND == 0 ]]; then
+  ZSH_SYSTEM_CLIPBOARD_METHOD=xcc
+fi
 
 # proper history behaviour
 bindkey "\e[A" up-line-or-search
 bindkey "\e[B" down-line-or-search
+
 bindkey -M viins '^e' edit-command-line
 
 # fast syntax highlighting -- should be last

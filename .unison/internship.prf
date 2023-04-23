@@ -1,4 +1,0 @@
-root = /home/hisbaan/projects/internship
-root = ssh://hisbaan@archen/projects/internship
-
-ignore = Path *hydra

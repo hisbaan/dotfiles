@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export WAYLAND=0
+
 ####################################
 ### Merging Defaults and Keymaps ###
 ####################################
@@ -36,6 +38,13 @@ xrandr --output DP-0 --mode 1920x1080 --rate 120
 ##################
 
 xset r rate 300 50
+
+###############
+### Env Var ###
+###############
+
+export MOZ_USE_XINPUT2=1
+export MOZ_X11_EGL=1
 
 ############
 ### Exec ###

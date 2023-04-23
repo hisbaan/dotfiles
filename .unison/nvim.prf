@@ -1,5 +1,0 @@
-root = /home/hisbaan/.config/nvim
-root = ssh://hisbaan@archen/.config/nvim
-
-ignore = Name {lazy-lock.json}
-ignore = Name {packer_compiled.lua}
