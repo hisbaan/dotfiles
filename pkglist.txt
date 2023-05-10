@@ -80,6 +80,7 @@ git-delta
 github-cli
 glfw-wayland
 gnome-calculator
+gparted
 gradle
 grim
 groff

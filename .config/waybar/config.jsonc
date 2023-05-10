@@ -1,0 +1,117 @@
+{
+    "position": "top",
+    "height": 20,
+    "modules-left": [
+        "custom/logo",
+        "wlr/workspaces"
+    ],
+    "modules-right": [
+        "memory",
+        "cpu",
+        "pulseaudio",
+        "battery",
+        "network",
+        "custom/date",
+        "clock",
+        "tray"
+    ],
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "format": "{icon} {name}",
+        "format-icons": {
+            "1": "<span font='16' rise='-2000'>󰈹</span>",
+            "2": "<span font='15' rise='-1500'></span>",
+            "3": "<span font='15' rise='-1500'></span>",
+            "4": "<span font='15' rise='-1500'></span>",
+            "5": "<span font='15' rise='-1500'>󰕧</span>",
+            "6": "<span font='15' rise='-1500'></span>",
+            "7": "<span font='15' rise='-1500'> </span>",
+            "8": "<span font='15' rise='-1500'>󰝚</span>",
+            "9": "<span font='15' rise='-1500'>󰙯</span>",
+            "default": " "
+        }
+    },
+    "memory": {
+        "format": "<span font='14' rise='-1000'></span> {percentage}%"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "<span font='14' rise='-1000'></span> {usage}%"
+    },
+    "tray": {
+        "icon-size": 13,
+        "spacing": 10
+    },
+    "custom/logo": {
+        "format": "<span font='16' rise='-2000'>󰣇</span>"
+    },
+    "custom/date": {
+        "format": "<span font='14' rise='-1500'>󰃭</span> {}",
+        "interval": 3600,
+        "exec": "date +'%a, %B %d'"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": {
+            "discharging": [
+                "<span font='10' rise='500'>󰁺</span>",
+                "<span font='10' rise='500'>󰁻</span>",
+                "<span font='10' rise='500'>󰁼</span>",
+                "<span font='10' rise='500'>󰁽</span>",
+                "<span font='10' rise='500'>󰁾</span>",
+                "<span font='10' rise='500'>󰁿</span>",
+                "<span font='10' rise='500'>󰂀</span>",
+                "<span font='10' rise='500'>󰂁</span>",
+                "<span font='10' rise='500'>󰂂</span>",
+                "<span font='10' rise='500'>󰁹</span>"
+            ],
+            "charging": [
+                "<span font='16' rise='-2000'>󰢜</span>",
+                "<span font='16' rise='-2000'>󰂆</span>",
+                "<span font='16' rise='-2000'>󰂇</span>",
+                "<span font='16' rise='-2000'>󰂈</span>",
+                "<span font='16' rise='-2000'>󰢝</span>",
+                "<span font='16' rise='-2000'>󰂉</span>",
+                "<span font='16' rise='-2000'>󰢞</span>",
+                "<span font='16' rise='-2000'>󰂊</span>",
+                "<span font='16' rise='-2000'>󰂋</span>",
+                "<span font='16' rise='-2000'>󰂅</span>"
+            ],
+            "full": [ "<span font='10' rise='500'>󰁹</span>" ]
+        }
+    },
+    "clock": {
+        "format": "<span font='16' rise='-2000'></span> {:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-icons": [
+            "<span font='16' rise='-1600'>󰤯</span>",
+            "<span font='16' rise='-1600'>󰤟</span>",
+            "<span font='16' rise='-1600'>󰤢</span>",
+            "<span font='16' rise='-1600'>󰤥</span>",
+            "<span font='16' rise='-1600'>󰤨</span>"
+        ],
+        "format-wifi": "{icon} {essid}",
+        "format-ethernet": "<span font='16' rise='-1600'>󰤮</span> Ethernet",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "<span font='16' rise='-1600'>󰤮</span> Disconnected",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "<span font='16' rise='-2000'>󰖁</span> muted",
+        "format-icons": {
+            "default": [
+                "<span font='12' rise='-1000'>󰖀</span>",
+                "<span font='16' rise='-2000'>󰕾</span>"
+            ]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-middle": "switch-sink",
+        "on-click-right": "pavucontrol"
+    }
+}
