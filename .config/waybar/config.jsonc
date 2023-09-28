@@ -3,7 +3,7 @@
     "height": 20,
     "modules-left": [
         "custom/logo",
-        "wlr/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "memory",
@@ -15,7 +15,7 @@
         "clock",
         "tray"
     ],
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "active-only": false,
@@ -24,11 +24,11 @@
         "format-icons": {
             "1": "<span font='16' rise='-2000'>󰈹</span>",
             "2": "<span font='15' rise='-1500'></span>",
-            "3": "<span font='15' rise='-1500'></span>",
-            "4": "<span font='15' rise='-1500'></span>",
+            "3": "<span font='15' rise='-1500'>󰂖</span>",
+            "4": "<span font='15' rise='-1500'>󰑴</span>",
             "5": "<span font='15' rise='-1500'>󰕧</span>",
             "6": "<span font='15' rise='-1500'></span>",
-            "7": "<span font='15' rise='-1500'> </span>",
+            "7": "<span font='15' rise='-1500'>󰎁</span>",
             "8": "<span font='15' rise='-1500'>󰝚</span>",
             "9": "<span font='15' rise='-1500'>󰙯</span>",
             "default": " "

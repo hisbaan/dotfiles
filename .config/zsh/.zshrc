@@ -35,7 +35,7 @@ export NVM_DIR="$XDG_DATA_HOME"/nvm
 alias cat="bat $argv"
 alias cp="cp -i $argv"
 alias df="df -h $argv"
-alias rm="trash-put $argv"
+alias tp="trash-put $argv"
 alias undo-rm="trash-restore $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias grep="rg $argv"
@@ -95,7 +95,7 @@ export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/
+export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/
 
 # ruby version management
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
