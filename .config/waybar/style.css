@@ -48,13 +48,13 @@ tooltip {
 
 #workspaces {
     background-color: @base00;
-    border-radius: 8px;
     margin-left: 4px;
 }
 
 #workspaces button {
     border-width: 0;
     color: @base04;
+    color: @base0E;
     background: @base02;
     padding: 5px 10px;
     margin: 10px 0px;
@@ -72,8 +72,15 @@ tooltip {
     padding-right: 12px;
 }
 
+#workspaces button.persistent {
+    color: @base04;
+}
+
 #workspaces button.active {
-    color: @base0E;
+    /* color: @base0E; */
+    background-color: @base0E;
+    color: @base02;
+    border-radius: 8px;
 }
 
 #workspaces button.urgent {
@@ -82,11 +89,11 @@ tooltip {
     border-radius: 8px;
 }
 
-#workspaces button:hover {
-    background-color: @base0E;
-    color: @base02;
-    border-radius: 8px;
-}
+/* #workspaces button:hover { */
+/*     background-color: @base0E; */
+/*     color: @base02; */
+/*     border-radius: 8px; */
+/* } */
 
 #custom-date, #clock, #battery, #pulseaudio, #network, #tray, #cpu, #memory {
     color: @base0E;
