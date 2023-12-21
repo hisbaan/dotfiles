@@ -5,6 +5,7 @@ return {
     -- fonts
     font = wezterm.font('Meslo LGS Nerd Font Mono'),
     font_size = 12.0,
+    warn_about_missing_glyphs = false,
 
     -- key bindings
     use_dead_keys = false,
@@ -41,5 +42,5 @@ return {
         top = '0.5cell',
         bottom = '0.5cell',
     },
-    -- enable_kitty_graphics = true,
+    enable_kitty_graphics = true,
 }

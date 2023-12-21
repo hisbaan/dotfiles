@@ -10,13 +10,13 @@ cbonsai
 citra-qt-bin
 corekeyboard
 dell-bios-fan-control-git
+dict-git
 didyoumean-git
 discocss-git
 downgrade
 dragon-drop
 earbuds
 electron19
-espanso-wayland
 espeak
 eww-wayland
 farge-git
@@ -25,10 +25,10 @@ firefox-tridactyl-native-bin
 flavours
 galaxybudsclient-bin
 ghcup-hs-bin
+hyprshot
 i3-swallow-git
 i8kutils
-intellij-idea-ultimate-edition
-intellij-idea-ultimate-edition-jre
+idlehack-git
 jbig2enc
 kaboom-git
 libfprint-2-tod1-xps9300-bin
@@ -37,6 +37,7 @@ lua-pam-git
 masterpdfeditor-free
 megasync-bin
 minecraft-launcher
+mycli
 nerdfix
 nomachine
 ocrmypdf
@@ -60,6 +61,7 @@ teams
 tetrio-plus-bin
 texlive-latexindent-meta
 tofi
+trashy-git
 trello
 ttf-meslo
 ttf-times-new-roman
@@ -68,6 +70,7 @@ unimatrix-git
 waybar-hyprland
 wd719x-firmware
 webcord-bin
+wezterm-git
 windscribe-cli
 youtube-dl
 zoom

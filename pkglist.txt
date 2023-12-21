@@ -47,6 +47,7 @@ devtools
 dialog
 direnv
 discord
+distrobox
 dmenu
 docker
 docker-compose
@@ -98,11 +99,11 @@ intel-undervolt
 interception-dual-function-keys
 inxi
 iwd
-jdk11-openjdk
 jpegoptim
 jq
 kdeconnect
 kitty
+kruler
 latex2rtf
 lib32-gamemode
 lib32-giflib
@@ -131,6 +132,7 @@ linux-headers
 linux-lts
 linux-lts-headers
 lolcat
+lua51
 luit
 lutris
 lxappearance
@@ -144,7 +146,6 @@ mosh
 mpc
 mpd
 mpv
-nano
 nautilus
 ncmpcpp
 neofetch
@@ -152,11 +153,15 @@ neovide
 neovim
 nitrogen
 nix
+nmap
 nodejs
 noto-fonts-emoji
 nss-mdns
 ntfs-3g
+nvtop
 obs-studio
+obsidian
+ollama
 onboard
 openbsd-netcat
 openresolv
@@ -180,7 +185,6 @@ python-pipx
 python-pywal
 qemu-desktop
 qt5ct
-racket
 ranger
 redshift
 refind
@@ -196,7 +200,6 @@ rxvt-unicode
 s-tui
 scrcpy
 scrot
-signal-desktop
 sl
 slurp
 smartmontools
@@ -235,9 +238,9 @@ throttled
 thunderbird
 tldr
 tlp
+traceroute
 transmission-cli
 transmission-qt
-trash-cli
 tree
 ttf-dejavu
 ttf-meslo-nerd
@@ -248,10 +251,8 @@ unrar
 unzip
 usbutils
 valgrind
-vi
 virtualbox
 wavemon
-wezterm
 wget
 which
 wine-mono
