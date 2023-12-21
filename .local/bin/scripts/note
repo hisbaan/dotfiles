@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ "$ROFI" ]
-then
-    alacritty -e "zsh" -c "cd ~/Documents/org/ && nvim refile.org"
-else
-    cd ~/Documents/org/ && nvim refile.org
-fi
-

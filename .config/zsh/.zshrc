@@ -47,6 +47,8 @@ alias iwlan="iwctl station wlan0 "
 
 alias uoft="cd ~/Documents/uoft/ ; . ranger"
 
+alias mycli="mycli -u root freshcityfarms_dev"
+
 # start flavours
 ###################
 ### TTY Colours ###
