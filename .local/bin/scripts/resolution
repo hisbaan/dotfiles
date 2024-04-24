@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ $(xrandr -q | grep -w connected | awk -F'[ \\+]' '{print $4}') == 3840x2400 ]
-then
-    xrandr --output eDP-1 --mode 1920x1200 --rate 60 --dpi 220
-elif [ $(xrandr -q | grep -w connected | awk -F'[ \\+]' '{print $4}') == 1920x1200 ]
-then
-    xrandr --output eDP-1 --mode 3840x2400 --rate 60 --dpi 220
-fi

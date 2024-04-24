@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-cd ~/.unison/ || exit
+cd ~/.local/share/unison/ || exit
 
 for i in *.prf
 do
