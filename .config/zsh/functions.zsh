@@ -90,6 +90,33 @@ function _note() {
 }
 compdef _note note
 
+function work() {
+    if [[ $# == 1 ]]
+    then
+        cd ~/work/$1
+    else
+        cd ~/work/
+        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+    fi
+}
+
+function _work() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/work/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/work/}
+    fi
+}
+compdef _work work
+
 function proj() {
     if [[ $# == 1 ]]
     then
@@ -143,3 +170,12 @@ function _conf() {
     fi
 }
 compdef _conf conf
+
+function ya() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    	cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}

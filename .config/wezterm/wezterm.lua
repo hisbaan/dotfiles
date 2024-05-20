@@ -21,9 +21,9 @@ return {
             action = act.ScrollByLine(-1),
         },
         {
-            key = 'h',
-            mods = 'SHIFT|CTRL',
-            action = wezterm.action.Search { Regex = '[a-f0-9]{6,}' },
+            key = 'm',
+            mods = 'SUPER',
+            action = wezterm.action.DisableDefaultAssignment,
         },
     },
     adjust_window_size_when_changing_font_size = false,
@@ -31,6 +31,7 @@ return {
     -- functionality
     scrollback_lines = 10000,
     window_close_confirmation = "NeverPrompt",
+    check_for_updates = false,
 
     -- aesthetics
     hide_tab_bar_if_only_one_tab = true,

@@ -1,13 +1,15 @@
 [user]
 	email = hisbaan@gmail.com
 	name = hisbaan
-	signingkey = DA1E7FDB0C0C668A
+	signingkey = /home/hisbaan/.ssh/id_ed25519.pub
 [pull]
 	rebase = false
 [credential]
 	helper = store
 [commit]
 	gpgsign = true
+[gpg]
+	format = ssh
 [blame]
 	coloring = highlightRecent
 [color "blame"]
