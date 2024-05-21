@@ -46,39 +46,25 @@ start = "/* start flavours */"
 end = "/* end flavours */"
 
 [[item]]
-file = "~/.config/discocss/custom.css"
-template = "discocss"
-subtemplate = "custom"
-start = "/* start flavours */"
-end = "/* end flavours */"
-
-# [[item]]
-# file = "~/.config/firefox/userChrome.css"
-# template = "firefox"
-# subtemplate = "custom"
-# start = "/* start flavours */"
-# end = "/* end flavours */"
-
-[[item]]
 file = "~/.config/zsh/.zshrc"
 template = "zsh"
 subtemplate = "custom"
 
 [[item]]
-file = "~/.config/alacritty/alacritty.yml"
+file = "~/.config/alacritty/alacritty.toml"
 template = "alacritty"
 subtemplate = "default-256"
 
-# [[item]]
-# file = "~/.config/sway/config"
-# template = "sway"
-# subtemplate = "colors"
+[[item]]
+file = "~/.config/sway/config"
+template = "sway"
+subtemplate = "colors"
 
-# [[item]]
-# file = "~/.config/waybar/style.css"
-# template = "waybar"
-# start = "/* start flavours */"
-# end = "/* end flavours */"
+[[item]]
+file = "~/.config/waybar/style.css"
+template = "waybar"
+start = "/* start flavours */"
+end = "/* end flavours */"
 
 [[item]]
 file = "~/.config/wezterm/colors.lua"
@@ -86,6 +72,6 @@ template = "wezterm"
 start = "-- start flavours"
 end = "-- end flavours"
 
-# [[item]]
-# file = "~/.config/hypr/hyprland.conf"
-# template = "hyprland"
+[[item]]
+file = "~/.config/hypr/hyprland.conf"
+template = "hyprland"

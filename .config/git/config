@@ -9,9 +9,9 @@
 [commit]
 	gpgsign = true
 [color "blame"]
-	highlightRecent = blue,12 month ago,green,1 month ago,yellow,1 week ago,red
+    highlightRecent = blue,12 month ago,green,1 month ago,yellow,1 week ago,red
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
     pager = delta
 [interactive]

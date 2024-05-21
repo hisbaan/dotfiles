@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+webcord --enable-webrtc-pipewire-capturer --ozone-platform=wayland

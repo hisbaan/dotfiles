@@ -17,15 +17,41 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export DOTNET_CLI_HOME="$XDG_CONFIG_HOME"/dotnet
+export GEM_HOME="$XDG_DATA_HOME"/gem
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
+export GHCUP_USE_XDG_DIRS=true
+export GOPATH="$XDG_DATA_HOME"/go
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export GRIPHOME="$XDG_CONFIG_HOME/grip"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 # export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
+export MYCLI_HISTFILE="$XDG_DATA_HOME/mycli/history"
+
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
 export NVM_DIR="$XDG_DATA_HOME"/nvm
+export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
+export UNISON="$XDG_DATA_HOME"/unison
+# export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 # alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
 ###############
@@ -41,9 +67,12 @@ alias grep="rg $argv"
 alias ls='exa --color=auto'
 alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
-alias bin="cd ~/projects/binocularss/"
+alias iwlan="iwctl station wlan0 "
+alias drag="dragon-drop"
 
-alias uoft="cd ~/Documents/uoft/ ; . ranger"
+alias uoft="cd ~/Documents/uoft/ ; ya"
+
+alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
 
 # start flavours
 ###################
@@ -88,15 +117,16 @@ setopt share_history
 ###############
 
 export EDITOR='nvim'
-export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
-export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
+
+# export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
+# export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/
+export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/
 
 # ruby version management
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #############
 ### Other ###
@@ -143,22 +173,27 @@ source ~/.config/zsh/functions.zsh
 
 eval "$(direnv hook zsh)"
 
+PREFIX=""
+if [[ -n $CONTAINER_ID ]]
+then
+  PREFIX="/run/host"
+fi
+
 # Powerlevel10k
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source $PREFIX/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # zsh abbr
-source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
+source $PREFIX/usr/share/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
 
 # zsh autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $PREFIX/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh vim mode
 source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
-# ZVM_CURSOR_STYLE_ENABLED=false
 
 # zsh vim mode clipboard support
-source /usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+source $PREFIX/usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
 if [[ $WAYLAND == 1 ]]; then
   ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
 elif [[ $WAYLAND == 0 ]]; then

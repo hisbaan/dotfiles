@@ -9,23 +9,19 @@ picom &
 nitrogen --restore &
 $HOME/.config/polybar/launch.sh &
 espanso start &
-killall -9 flameshot
-flameshot &
+killall -9 flameshot; flameshot &
 redshift -x; killall -9 redshift; redshift &
-# eww daemon &
 dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/kdeconnectd &
 kdeconnect-indicator &
-blueman-applet &
 
 ################
 ### Monitors ###
 ################
 
-# bspc monitor DVI-D-0 -d 1 2 3 4 5 6 7 8 9
 bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
 
 ###########################
@@ -80,12 +76,7 @@ bspc rule -a firefox:Toolkit state=floating sticky=on
 ### Floating Size ###
 #####################
 
-x=$(xwininfo -root | grep Width | awk '{print $2}')
-y=$(xwininfo -root | grep Height | awk '{print $2}')
-
-# bspc rule -a firefox center=true rectangle=${$((0.6 * x))%.}x${$((0.6 * y))%.}+0+0
 bspc rule -a firefox:Navigator center=true rectangle=1280x720+0+0
-# bspc rule -a kitty center=true rectangle=${$((0.36 * x))%.}x${$((0.3 * y))%.}+0+0
 bspc rule -a kitty center=true rectangle=700x400+0+0
 
 ############

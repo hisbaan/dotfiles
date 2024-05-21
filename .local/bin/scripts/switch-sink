@@ -1,9 +1,0 @@
-#!/bin/env bash
-
-if [[ $(pactl get-default-sink) == "alsa_output.pci-0000_12_00.3.analog-stereo" ]]
-then
-    pactl set-default-sink alsa_output.usb-Apple__Inc._USB-C_to_3.5mm_Headphone_Jack_Adapter_DWH034202C0JKLTA9-00.analog-stereo
-elif [[ $(pactl get-default-sink) == "alsa_output.usb-Apple__Inc._USB-C_to_3.5mm_Headphone_Jack_Adapter_DWH034202C0JKLTA9-00.analog-stereo" ]]
-then
-    pactl set-default-sink alsa_output.pci-0000_12_00.3.analog-stereo
-fi

@@ -53,7 +53,16 @@ set completion-highlight-bg     "#cba6f7"
 
 set recolor-lightcolor          "#191724"
 set recolor-darkcolor           "#e2e1e7"
-
 # end flavours
 
 set font "MesloLGS Nerd Font normal 10"
+
+# mappings
+# map j feedkeys "<C-Down>"
+# map k feedkeys "<C-Up>"
+# map l feedkeys "<C-Right>"
+# map h feedkeys "<C-Left>"
+map . feedkeys "<S-j>"
+map , feedkeys "<S-k>"
+
+set database "sqlite"

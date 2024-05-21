@@ -28,9 +28,6 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-palenight)
 
-;; (use-package autothemer :ensure t)
-;; (load-theme 'rose-pine-moon} t)
-
 (setq org-superstar-headline-bullets-list '("⁖"))
 
 ;;;;;;;;;;
@@ -76,9 +73,11 @@
 (setq org-latex-listings 'minted)
 
 (setq org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode %f"
-        "pdflatex -shell-escape -interaction nonstopmode %f"
-        "pdflatex -shell-escape -interaction nonstopmode %f"))
+      '("latexmk -shell-escape -f -pdf %f"))
+;; (setq org-latex-pdf-process
+;;       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (setq org-src-fontify-natively t)
 
@@ -121,7 +120,7 @@
 (defun open-pdf ()
   (interactive)
   (async-shell-command
-    (concat "xdg-open " (file-name-base (buffer-file-name)) ".pdf")))
+    (concat "zathura " (file-name-base (buffer-file-name)) ".pdf")))
 
 (map! :leader
       :desc "Open compiled pdf"

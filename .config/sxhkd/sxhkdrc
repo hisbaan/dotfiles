@@ -2,7 +2,7 @@
 
 # close and kill
 super + shift + q
-	bspc node -c
+    bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -52,13 +52,12 @@ super + bracket{left,right}
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
 
+super + Tab
+    bspc desktop -f last
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
     bspc {desktop -f,node -d} focused:'^{1-9}'
-
-super + Tab
-    bspc desktop -f last
 
 #################
 ### Preselect ###
@@ -132,7 +131,7 @@ super + w
     firefox
 
 ctrl + q
-     notify-send "Saved you!" "You were about to hate yourself!"
+    notify-send "Saved you!" "You were about to hate yourself!"
 
 # flameshot (screenshot)
 {Print, Insert}

@@ -1,3 +1,0 @@
-#!/bin/env bash
-
-java -jar ~/Documents/uoft/z-completed-courses/csc258/mars-theming.jar
