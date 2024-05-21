@@ -6,7 +6,7 @@ return {
     cursor_bg = '#cdd6f4',
     cursor_border = '#cdd6f4',
     selection_fg = '#191724',
-    selection_bg = '#cdd6f4',
+    selection_bg = '#585b70',
     scrollbar_thumb = '#cdd6f4',
     split = '#45475a',
     ansi = {

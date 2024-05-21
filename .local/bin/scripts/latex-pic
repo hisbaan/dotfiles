@@ -39,6 +39,8 @@ echo "\documentclass[border=0.2cm]{standalone}
 \newcommand{\cbr}[1]{\left\{#1\right\}}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
 \newcommand{\st}{\text{ s.t. }}
 \newcommand{\tand}{\text{ and }}
 \newcommand{\tor}{\text{ or }}
@@ -48,6 +50,7 @@ echo "\documentclass[border=0.2cm]{standalone}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\DS}{\displaystyle}
+\newcommand{\bigo}{\mathcal{O}}
 \renewcommand{\qedsymbol}{(\blacksquare)}
 \pagestyle{empty}
 \title{TITLE}

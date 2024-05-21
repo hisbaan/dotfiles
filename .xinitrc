@@ -32,7 +32,6 @@ fi
 ###############
 
 xrandr --output eDP-1 --mode 3840x2400 --rate 60 --dpi 220
-# xrandr --output eDP-1 --mode 3840x2400 --rate 60 --dpi 110
 
 ##################
 ### Key Repeat ###

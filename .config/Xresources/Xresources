@@ -36,7 +36,7 @@ URxvt.url-select.underline: true
 ! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 ! Matcher
-URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
 URxvt.matcher.button: 1
 ! clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
@@ -104,4 +104,5 @@ rofi.dpi: 220;
 ! white
 *.color7: base05
 *.color15: base07
+
 ! end flavours

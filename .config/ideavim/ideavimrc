@@ -6,6 +6,10 @@ set clipboard+=unnamedplus
 # Splits open at the bottom and the right.
 set splitbelow splitright
 
+# Set relative line numbers
+set relativenumber
+set number
+
 # Plugins
 set surround
 set commentary

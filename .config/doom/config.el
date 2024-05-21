@@ -1,5 +1,4 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-;;; subtemplate = "default-265"
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
@@ -24,25 +23,11 @@
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
-
-;; (setq doom-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30)
-;;       doom-big-font (font-spec :family "MesloLGS Nerd Font Mono" :size 45)
-;;       doom-vairable-pitch-font (font-spec :family "MesloLGS Nerd Font" :size 30)
-;;       doom-serif-font (font-spec :family "MesloLGS Nerd Font Mono" :size 30 :weight 'light))
-;; ;; (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
-;; (after! doom-themes
-;;   (setq doom-themes-enable-bold t
-;;         doom-themes-enable-italic t))
-;; (custom-set-faces!
-;;   '(font-lock-comment-face :slant italic)
-;;   '(font-lock-keyword-face :slant italic))
-
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-palenight)
 
-;; (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
 (setq org-superstar-headline-bullets-list '("⁖"))
 
 ;;;;;;;;;;
@@ -65,7 +50,7 @@
 ;; (setq-default python-indent-offset custom-tab-width)
 ;; (setq-default evil-shift-width custom-tab-width)
 
-;; (setq backward-delete-char-untabify-method 'hungry)
+; (setq backward-delete-char-untabify-method 'hungry)
 
 ;;;;;;;;;;;;;;;;
 ;; Projectile ;;
@@ -97,12 +82,12 @@
 (setq org-src-fontify-natively t)
 
 (org-babel-do-load-languages
-  'org-babel-load-languages
-  '((R . t)
-    (latex . t)))
+ 'org-babel-load-languages
+ '((R . t)
+   (latex . t)))
 
 (map! :leader
-      :desc "Open already compiled org pdf"
+      :desc "Open compiled pdf"
       "m o" (cmds! (eq major-mode 'org-mode) #'open-pdf
                    #'+default/lsp-command-map))
 
@@ -110,16 +95,25 @@
 ;; LaTeX ;;
 ;;;;;;;;;;;
 
+(with-eval-after-load 'tex
+  (setq TeX-source-correlate-method 'synctex)
+  (TeX-source-correlate-mode)
+  (setq TeX-source-correlate-start-server t)
+
+  (add-to-list 'TeX-view-program-selection
+               '(output-pdf "Zathura")))
+
 (setq-hook! 'LaTeX-mode-hook +spellcheck-immediately nil)
 
 (defun compile-latex ()
   (interactive)
   (save-buffer)
-  ;; (async-shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
-  (shell-command (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
+  (shell-command
+  ;; (async-shell-command
+   (concat "latexmk -lualatex -shell-escape " buffer-file-name)))
 
 (map! :leader
-      :desc "Open already compiled latex pdf"
+      :desc "Compile with lualatex"
       "m c" (cmds! (eq major-mode 'latex-mode) #'compile-latex
                    #'+default/lsp-command-map))
 

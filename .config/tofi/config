@@ -6,7 +6,7 @@
 
 # If a path is given, tofi will startup much quicker, but any characters not in the chosen font will fail to render. Otherwise, fonts are interpreted in Pango format.
 font = "/usr/share/fonts/TTF/Meslo LG S Regular Nerd Font Complete Mono.ttf"
-font-size = 14
+font-size = 12
 
 # Comma separated list of OpenType font feature settings to apply,
 # if supported by the chosen font. The format is similar to the CSS

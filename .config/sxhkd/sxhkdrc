@@ -103,19 +103,16 @@ super + {Left,Down,Up,Right}
 
 # kitty (terminal emulator)
 super + Return
-	wezterm
-      # kitty --single-instance
+    wezterm
+    # alacritty
+    # kitty --single-instance
 
 # floating kitty
 super + shift + Return
-	bspc rule -a org.wezfurlong.wezterm --one-shot state=floating; \
-	wezterm
-      # bspc rule -a kitty --one-shot state=floating; \
-      # kitty --single-instance
-
-# discord emote menu
-super + e
-    ~/.local/bin/scripts/discord-emote-menu/emote.sh -c -r ~/.local/bin/scripts/discord-emote-menu/sample.rofi
+    bspc rule -a org.wezfurlong.wezterm --one-shot state=floating; \
+    wezterm
+    # bspc rule -a kitty --one-shot state=floating; \
+    # kitty --single-instance
 
 # rofi
 super + d

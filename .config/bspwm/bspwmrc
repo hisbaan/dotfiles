@@ -5,16 +5,16 @@
 #################
 
 sxhkd &
-killall -9 dispad; dispad &
-picom --config ~/.config/picom/picom.conf &
+picom &
 nitrogen --restore &
-~/.config/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh &
 espanso start &
 killall -9 flameshot; flameshot &
 redshift -x; killall -9 redshift; redshift &
 dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/kdeconnectd &
 kdeconnect-indicator &
 
@@ -22,7 +22,6 @@ kdeconnect-indicator &
 ### Monitors ###
 ################
 
-# bspc monitor eDP-1 -d I II III IV V VI VII VIII IX
 bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
 
 ###########################
@@ -36,7 +35,6 @@ bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config single_monocle false
-# bspc config click_to_focus true
 bspc config split_ratio 0.50
 bspc config borderless_monocle true
 bspc config gapless_monocle true
@@ -78,15 +76,8 @@ bspc rule -a firefox:Toolkit state=floating sticky=on
 ### Floating Size ###
 #####################
 
-# x=$(xwininfo -root | grep Width | awk '{print $2}')
-# y=$(xwininfo -root | grep Height | awk '{print $2}')
-
-# bspc rule -a firefox center=true rectangle=${$((0.6 * x))%.}x${$((0.6 * y))%.}+0+0
 bspc rule -a firefox:Navigator center=true rectangle=2560x1440+0+0
-# bspc rule -a kitty center=true rectangle=${$((0.36 * x))%.}x${$((0.3 * y))%.}+0+0
 bspc rule -a kitty center=true rectangle=1400x800+0+0
-# bspc rule -a Alacritty center=true rectangle=1400x800+0+0
-bspc rule -a Alacritty center=true
 
 ############
 ### Misc ###
