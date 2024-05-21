@@ -1,0 +1,4 @@
+# key: part
+# name: partial
+# --
+\partial_{$1} $0

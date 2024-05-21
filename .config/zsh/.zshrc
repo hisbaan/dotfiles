@@ -35,8 +35,7 @@ export NVM_DIR="$XDG_DATA_HOME"/nvm
 alias cat="bat $argv"
 alias cp="cp -i $argv"
 alias df="df -h $argv"
-alias rm="trash-put $argv"
-alias undo-rm="trash-restore $argv"
+alias tp="trashy put $argv"
 alias dotfiles="/usr/bin/git --git-dir=/home/hisbaan/.dotfiles.git/ --work-tree=/home/hisbaan $argv"
 alias grep="rg $argv"
 alias ls='exa --color=auto'

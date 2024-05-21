@@ -52,7 +52,72 @@ function _org() {
 }
 compdef _org org
 
-function proj () {
+function note() {
+    cd ~/Documents/obsidian/ || exit
+
+    if [[ $# -eq 0 ]]
+    then
+        nvim . +ObsidianQuickSwitch
+        cd -
+        return
+    fi
+
+    if [[ $1 = "cd" ]]
+    then
+        return
+    elif [[ $1 = "browse" ]]
+    then
+        nvim .
+    elif [[ $1 = "new" ]]
+    then
+        nvim . +ObsidianNew
+    else
+        nvim . +"ObsidianNew $1"
+    fi
+    cd -
+}
+
+function _note() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->arg'
+
+    if [[ $state == "arg" ]]; then
+        compadd "cd" "browse" "new"
+    fi
+}
+compdef _note note
+
+function work() {
+    if [[ $# == 1 ]]
+    then
+        cd ~/work/$1
+    else
+        cd ~/work/
+        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+    fi
+}
+
+function _work() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/work/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/work/}
+    fi
+}
+compdef _work work
+
+function proj() {
     if [[ $# == 1 ]]
     then
         cd ~/projects/$1
@@ -105,3 +170,12 @@ function _conf() {
     fi
 }
 compdef _conf conf
+
+function ya() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    	cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
