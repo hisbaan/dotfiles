@@ -37,10 +37,10 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
 export MYCLI_HISTFILE="$XDG_DATA_HOME/mycli/history"
+export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-# export UNISON="$XDG_CONFIG_HOME"/unison # Breaks zsh autocomplete
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
@@ -173,27 +173,22 @@ source ~/.config/zsh/functions.zsh
 
 eval "$(direnv hook zsh)"
 
-PREFIX=""
-if [[ -n $CONTAINER_ID ]]
-then
-  PREFIX="/run/host"
-fi
-
 # Powerlevel10k
-source $PREFIX/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # zsh abbr
-source $PREFIX/usr/share/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
+source ~/.config/zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh
 
 # zsh autosuggestions
-source $PREFIX/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 # zsh vim mode
-source ~/.config/zsh/plugins/zsh-vim-mode/zsh-vim-mode.plugin.zsh
+ZVM_CURSOR_STYLE_ENABLED=false
+source ~/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # zsh vim mode clipboard support
-source $PREFIX/usr/share/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.plugin.zsh
 if [[ $WAYLAND == 1 ]]; then
   ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
 elif [[ $WAYLAND == 0 ]]; then
