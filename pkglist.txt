@@ -138,6 +138,7 @@ ncmpcpp
 neofetch
 neovim
 net-snmp
+net-tools
 networkmanager
 nitrogen
 nmap

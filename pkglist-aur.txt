@@ -29,6 +29,7 @@ ttf-meslo
 ttf-ms-win10-auto
 tuxi-git
 webcord-bin
+xdg-ninja
 youtube-dl
 zsh-abbr
 zsh-system-clipboard-git
