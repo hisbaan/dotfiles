@@ -73,6 +73,7 @@ alias drag="dragon-drop"
 alias uoft="cd ~/Documents/uoft/ ; ya"
 
 alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
+alias db-int="PGPASSWORD=postgres pgcli -h 172.31.8.211 -p 5432 -U postgres"
 
 # start flavours
 ###################
@@ -124,9 +125,6 @@ export EDITOR='nvim'
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
 export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/
-
-# ruby version management
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #############
 ### Other ###

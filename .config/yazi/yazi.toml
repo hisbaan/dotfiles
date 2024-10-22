@@ -1,0 +1,23 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+# If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+
+[input]
+cd_origin = "hovered"
+create_origin = "hovered"
+rename_origin = "hovered"
+trash_origin = "hovered"
+delete_origin = "hovered"
+filter_origin = "hovered"
+find_origin = "hovered"
+shell_origin = "center"
+overwrite_origin = "hovered"
+quit_origin = "hovered"
+
+[select]
+open_origin = "hovered"
