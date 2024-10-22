@@ -6,6 +6,7 @@ alsa-utils
 android-file-transfer
 android-tools
 antlr4-runtime
+apple-fonts
 arandr
 arch-wiki-docs
 arch-wiki-lite
@@ -51,9 +52,11 @@ cpio
 cpupower
 cups
 cups-pdf
+darktable
 dbeaver
 devtools
 dialog
+digikam
 direnv
 discord
 distrobox
@@ -74,6 +77,7 @@ eza
 fakeroot
 fd
 figlet
+filezilla
 firefox
 firefox-tridactyl
 fish
@@ -81,6 +85,7 @@ flameshot
 flex
 foliate
 fprintd
+freecad
 fuzzel
 fwupd
 fzf
@@ -106,8 +111,8 @@ httplz
 hypridle
 hyprland
 hyprlock
-hyprpicker-git
 hyprshot
+hyprutils
 imv
 inotify-tools
 intel-gpu-tools
@@ -120,8 +125,11 @@ iwd
 jpegoptim
 jq
 kdeconnect
+kicad
 kitty
+kooha
 kruler
+lazygit
 lib32-gamemode
 lib32-giflib
 lib32-gnutls
@@ -137,6 +145,7 @@ lib32-mpg123
 lib32-ocl-icd
 lib32-openal
 lib32-v4l-utils
+libinput
 libqalculate
 libreoffice-fresh
 libretro-gambatte
@@ -161,7 +170,6 @@ make
 man-pages
 mariadb
 masterpdfeditor-free
-megasync-bin
 meld
 minecraft-launcher
 mosh
@@ -194,6 +202,8 @@ openbsd-netcat
 openresolv
 otf-ipafont
 pacman-contrib
+pandoc-bin
+paru
 patch
 pavucontrol
 pdf2svg
@@ -228,6 +238,7 @@ retroarch-assets-ozone
 retroarch-assets-xmb
 ripgrep
 rofi
+rpi-imager
 rsync
 rustup
 rxvt-unicode
@@ -235,10 +246,12 @@ s-tui
 scrcpy
 scrot
 shotcut
+silicon
 sl
 slack-desktop
 slurp
 smartmontools
+solaar
 speedtest-cli
 spicetify-cli
 spotify
@@ -276,6 +289,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 throttled
+thunar
 thunderbird
 timew
 tldr
@@ -284,7 +298,6 @@ traceroute
 transmission-cli
 transmission-qt
 tree
-trello
 ttf-dejavu
 ttf-meslo-nerd
 ueberzug
@@ -300,10 +313,8 @@ virtualbox
 wavemon
 waybar
 wd719x-firmware
-wezterm-git
 wget
 which
-windscribe-cli
 wine-mono
 wine-staging
 winetricks
@@ -373,6 +384,7 @@ yazi
 ydotool
 zathura
 zathura-pdf-mupdf
+zen-browser-bin
 zip
 zsh
 zsh-autosuggestions
