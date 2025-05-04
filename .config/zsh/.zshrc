@@ -69,6 +69,7 @@ alias mv="mv -i $argv"
 alias rs='rsync --numeric-ids --info=progress2'
 alias iwlan="iwctl station wlan0 "
 alias drag="dragon-drop"
+alias pn="pnpm"
 
 alias uoft="cd ~/Documents/uoft/ ; ya"
 
@@ -118,6 +119,8 @@ setopt share_history
 ###############
 
 export EDITOR='nvim'
+export DIFFPROG='meld'
+export ELECTRON_OZONE_PLATFORM_HINT='wayland'
 
 # export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar"
 # export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=512m"

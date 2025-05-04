@@ -32,6 +32,8 @@ return {
     scrollback_lines = 10000,
     window_close_confirmation = "NeverPrompt",
     check_for_updates = false,
+    max_fps = 120,
+    -- animation_fps = 120,
 
     -- aesthetics
     hide_tab_bar_if_only_one_tab = true,
@@ -44,4 +46,5 @@ return {
         bottom = '0.5cell',
     },
     enable_kitty_graphics = true,
+    audible_bell="Disabled",
 }

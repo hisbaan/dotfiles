@@ -21,9 +21,9 @@
     follow = keyboard
 
 	width = 300
-	height = 800
+	height = (0, 800)
 	origin = top-right
-	offset = 5x37
+	offset = (5, 5)
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -210,7 +210,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 10
 
     ##############
     ### Legacy ###

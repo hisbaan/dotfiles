@@ -1,5 +1,6 @@
-act-bin
+acpilight
 awsvpnclient
+barrier
 bluetuith-bin
 brother-dcpl2520dw
 catdvi
@@ -9,7 +10,6 @@ dict-git
 didyoumean-git
 dragon-drop
 earbuds
-electron19
 espeak
 farge-git
 figma-linux-bin
@@ -34,6 +34,7 @@ shellcheck-bin
 smloadr
 spek
 spotify-tui-bin
+teams
 tetrio-plus-bin
 texlive-latexindent-meta
 tofi
@@ -47,6 +48,5 @@ webcord-bin
 windscribe-cli
 wl-color-picker
 xdg-ninja-git
-youtube-dl
 zsh-abbr
 zsh-system-clipboard-git

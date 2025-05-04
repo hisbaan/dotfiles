@@ -1,5 +1,4 @@
 acpi
-acpilight
 aic94xx-firmware
 alacritty
 alsa-utils
@@ -20,7 +19,6 @@ autoconf
 automake
 autotiling
 awesome
-barrier
 base
 base-devel
 bash-language-server
@@ -53,7 +51,6 @@ cpupower
 cups
 cups-pdf
 darktable
-dbeaver
 devtools
 dialog
 digikam
@@ -69,9 +66,9 @@ dunst
 dust
 easyeffects
 efibootmgr
-element-desktop
 emacs
 ethtool
+evcxr_repl
 exfat-utils
 eza
 fakeroot
@@ -267,7 +264,6 @@ swayidle
 swaylock
 sxhkd
 syncthing
-teams
 tenacity
 tesseract
 tesseract-data-eng
@@ -294,6 +290,7 @@ thunderbird
 timew
 tldr
 tlp
+tmux
 traceroute
 transmission-cli
 transmission-qt
@@ -307,12 +304,14 @@ unrar
 unzip
 usbutils
 valgrind
+vesktop
 vi
 virt-manager
 virtualbox
 wavemon
 waybar
 wd719x-firmware
+wezterm-git
 wget
 which
 wine-mono
