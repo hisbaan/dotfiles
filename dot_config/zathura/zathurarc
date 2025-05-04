@@ -1,0 +1,68 @@
+# Zathura configuration file
+# See man `man zathurarc'
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+# One page per row by default
+set pages-per-row 1
+
+#stop at page boundries
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+# set scroll-step 50
+
+# zoom settings
+set zoom-min 10
+
+set render-loading "false"
+
+set recolor "true"
+set recolor-keephue "true"
+
+# start flavours
+# Base16 Catppuccin Custom
+# Author: Hisbaan Noorani (https://github.com/hisbaan)
+
+set default-bg                  "#191724"
+set default-fg                  "#e2e1e7"
+
+set inputbar-bg                 "#191724"
+set inputbar-fg                 "#e2e1e7"
+
+set statusbar-bg                "#191724"
+set statusbar-fg                "#e2e1e7"
+
+set notification-bg             "#191724"
+set notification-fg             "#e2e1e7"
+
+set notification-error-bg       "#191724"
+set notification-error-fg       "#f38ba8"
+
+set notification-warning-bg     "#191724"
+set notification-warning-fg     "#f38ba8"
+
+set highlight-color             "#cba6f7"
+set highlight-active-color      "#89b4fa"
+
+set completion-bg               "#181825"
+set completion-fg               "#e2e1e7"
+
+set completion-highlight-fg     "#e2e1e7"
+set completion-highlight-bg     "#cba6f7"
+
+set recolor-lightcolor          "#191724"
+set recolor-darkcolor           "#e2e1e7"
+# end flavours
+
+set font "MesloLGS Nerd Font normal 10"
+
+# mappings
+# map j feedkeys "<C-Down>"
+# map k feedkeys "<C-Up>"
+# map l feedkeys "<C-Right>"
+# map h feedkeys "<C-Left>"
+map . feedkeys "<S-j>"
+map , feedkeys "<S-k>"
+
+set database "sqlite"

@@ -1,0 +1,237 @@
+### BSPWM hotkeys ###
+
+# close and kill
+super + shift + q
+    bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+    bspc desktop -l next
+
+# send the newset marked node to the newwest preselected node
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest node
+super + g
+    bspc node -s biggest.local
+
+# set the window state
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,\~fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+    bspc node -g {marked,locked,sticky,private}
+
+# restart bspwm in place
+super + shift + r
+    killall -9 sxhkd && bspc wm -r
+
+#############
+### Focus ###
+#############
+
+# focus or swap the node in the given direction
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+# # focus the node for the given path jump
+# super + {p,b,comma,period}
+#     bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }n
+    bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} focused:'^{1-9}'
+
+super + Tab
+    bspc desktop -f last
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+    bspc {desktop -f,node -d} focused:'^{1-9}'
+
+#################
+### Preselect ###
+#################
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+    bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+    bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+    bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+    bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+###################
+### Move/Resize ###
+###################
+
+# puts text into an identifier file then runs the resize chord.
+super + r
+    echo " resize " > ~/.config/bspwm/bspwm-chord-status; \
+    xdotool key super+XF86Eject
+
+# expand a window by moving one of its side outward
+super + XF86Eject : {h,j,k,l,Return}
+    {~/.config/bspwm/bspwm_resize.sh west 40,~/.config/bspwm/bspwm_resize.sh south 40,~/.config/bspwm/bspwm_resize.sh north 40,~/.config/bspwm/bspwm_resize.sh east 40, xdotool key Escape && echo "" > ~/.config/bspwm/bspwm-chord-status}
+
+
+# move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+####################
+### Applications ###
+####################
+
+# kitty (terminal emulator)
+super + Return
+    wezterm
+    # alacritty
+    # kitty --single-instance
+
+# floating kitty
+super + shift + Return
+    bspc rule -a org.wezfurlong.wezterm --one-shot state=floating; \
+    wezterm
+    # bspc rule -a kitty --one-shot state=floating; \
+    # kitty --single-instance
+
+# rofi
+super + d
+    ROFI=1 noswallow_rofi
+
+# rofi-workflows
+super + o
+    rofi-workflows
+
+# rofi-file-launcher
+super + shift + d
+    rofi-file-launcher
+
+# firefox
+super + w
+    firefox
+
+ctrl + q
+    notify-send "Saved you!" "You were about to hate yourself!"
+
+# flameshot (screenshot)
+{Print, Insert}
+    flameshot gui
+
+# scrot (screenshot)
+shift + {Print, Insert}
+    scrot
+
+##################
+### Media Keys ###
+##################
+
+XF68AudioPlay
+	playerctl play-pause
+
+# pause/play music
+super + slash
+    playerctl -p spotify play-pause
+
+# skip track
+{XF86AudioNext, super + period}
+    playerctl -p spotify next
+
+# go back a track
+{XF86AudioPrev, super + comma}
+    playerctl -p spotify previous
+
+# stop music
+XF86AudioStop
+    playerctl -p spotify stop
+
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     spdctl play-pause
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     spdctl next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     spdctl prev
+
+# # stop music
+# XF86AudioStop
+#     spdctl stop
+
+# # pause/play music
+# {XF86AudioPlay, super + slash}
+#     mpc toggle
+
+# # skip track
+# {XF86AudioNext, super + period}
+#     mpc next
+
+# # go back a track
+# {XF86AudioPrev, super + comma}
+#     mpc prev
+
+# # stop music
+# XF86AudioStop
+#     mpc stop
+
+# increase volume and unmute
+{XF86AudioRaiseVolume, super + equal}
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+super + shift + equal
+    pactl set-sink-volume @DEFAULT_SINK@ +1% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+# lower volume and unmute
+{XF86AudioLowerVolume, super + minus}
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+super + shift + minus
+    pactl set-sink-volume @DEFAULT_SINK@ -1% && pactl set-sink-mute @DEFAULT_SINK@ 0
+
+# mute audio
+{XF86AudioMute, super + 0, super + BackSpace}
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+######################
+### System Control ###
+######################
+
+# put text into an identifier file then run the power states chord
+super + Escape
+    echo " (l)ock, (e)xit, (s)uspend, (r)eboot, (Shift + s)hutdown " > ~/.config/bspwm/bspwm-chord-status; \
+    xdotool key super+XF86Tools
+
+# power states
+super + XF86Tools ; {l,e,s,r,shift + s,Return}
+    echo "" > ~/.config/bspwm/bspwm-chord-status; \
+    {betterlockscreen -l,bspc quit,betterlockscreen -s,reboot,poweroff,xdotool key Escape}
+
+# brightness up
+{shift,_} XF86MonBrightnessUp
+    xbacklight -steps 10 -inc {1,5}
+
+# brightness down
+{shift,_} XF86MonBrightnessDown
+    xbacklight -steps 10 -dec {1,5}

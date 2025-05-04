@@ -1,0 +1,29 @@
+# neovim config
+[".config/nvim"]
+type = "git-repo"
+url = "git@github.com:hisbaan/nvim"
+
+# zsh plugins
+[".config/zsh/plugins/zsh-autosuggestions"]
+type = "git-repo"
+url = "https://github.com/zsh-users/zsh-autosuggestions"
+
+[".config/zsh/plugins/zsh-vi-mode"]
+type = "git-repo"
+url = "https://github.com/jeffreytse/zsh-vi-mode"
+
+[".config/zsh/plugins/zsh-abbr"]
+type = "git-repo"
+url = "https://github.com/olets/zsh-abbr"
+
+[".config/zsh/plugins/powerlevel10k"]
+type = "git-repo"
+url = "https://github.com/romkatv/powerlevel10k"
+
+[".config/zsh/plugins/zsh-system-clipboard"]
+type = "git-repo"
+url = "https://github.com/kutsan/zsh-system-clipboard"
+
+[".config/zsh/plugins/fast-syntax-highlighting"]
+type = "git-repo"
+url = "https://github.com/zdharma-continuum/fast-syntax-highlighting"

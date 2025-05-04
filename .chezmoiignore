@@ -1,0 +1,14 @@
+README.md
+{{ if ne .chezmoi.os "darwin" }}
+.config/Xresources
+.config/bspwm
+.config/dunst
+.config/hypr
+.config/i3
+.config/picom
+.config/polybar
+.config/rofi
+.config/sxhkd
+.config/tofi
+.config/waybar
+{{ end }}

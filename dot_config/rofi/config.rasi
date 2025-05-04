@@ -1,0 +1,12 @@
+configuration {
+	modi: "drun,run,window,ssh";
+	font: "MesloLGS Nerd Font 10";
+	show-icons: false;
+	dpi: 220;
+	kb-remove-to-eol: "Control+Shift+e";
+	kb-accept-entry: "Control+m,Return,KP_Enter";
+	kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
+	kb-row-down: "Down,Control+j";
+}
+
+@theme "~/.config/rofi/theme.rasi"
