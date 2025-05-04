@@ -1,5 +1,0 @@
-#!/bin/env bash
-
-spotify \
-    --ozone-platform=wayland
-# --force-device-scale-factor=2

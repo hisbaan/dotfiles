@@ -9,4 +9,4 @@ configuration {
 	kb-row-down: "Down,Control+j";
 }
 
-@theme "~/.config/rofi/themes/pywal.rasi"
+@theme "~/.config/rofi/theme.rasi"

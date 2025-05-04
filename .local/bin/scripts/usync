@@ -1,8 +1,0 @@
-#!/bin/env bash
-
-cd ~/.local/share/unison/ || exit
-
-for i in *.prf
-do
-    unison "${i/.prf/}"
-done

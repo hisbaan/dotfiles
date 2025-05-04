@@ -1,3 +1,0 @@
-#!/bin/env bash
-
-wezterm start --cwd "$PWD" --always-new-process > disown & disown
