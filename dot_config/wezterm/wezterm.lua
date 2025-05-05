@@ -3,7 +3,7 @@ local act = wezterm.action
 
 return {
     -- fonts
-    font = wezterm.font('Meslo LGS Nerd Font Mono'),
+    font = wezterm.font('MesloLGS Nerd Font Mono'),
     font_size = 14.0,
     warn_about_missing_glyphs = false,
 
@@ -45,7 +45,7 @@ return {
         bottom = '0.5cell',
     },
     enable_kitty_graphics = true,
-    audible_bell="Disabled",
+    audible_bell = "Disabled",
     default_cursor_style = "SteadyBlock",
     cursor_blink_rate = 0,
 }

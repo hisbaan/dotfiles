@@ -55,7 +55,7 @@ alias cat="bat $argv"
 alias cp="cp -i $argv"
 alias df="df -h $argv"
 alias grep="rg $argv"
-alias ls='exa --color=auto'
+alias ls='eza --color=auto'
 alias mv="mv -i $argv"
 alias pn="pnpm"
 alias rs='rsync --numeric-ids --info=progress2'
@@ -127,6 +127,17 @@ export ELECTRON_OZONE_PLATFORM_HINT='wayland'
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
 export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/
+
+{{ if eq .chezmoi.os "darwin" -}}
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source $(brew --prefix nvm)/nvm.sh
+{{ end }}
+
+###############
+### Secrets ###
+###############
+
+export GEMINI_API_KEY={{ (bitwarden "item" "gemini_api_key").notes | quote }}
 
 #############
 ### Other ###

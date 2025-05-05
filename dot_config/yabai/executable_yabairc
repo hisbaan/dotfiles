@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+yabai -m config external_bar all:38:0
+
+yabai -m config mouse_modifier fn
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+yabai -m config focus_follows_mouse autoraise
+# yabai -m config mouse_follows_focus on
+
+# window rules
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+
+sketchybar & disown

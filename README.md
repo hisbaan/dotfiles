@@ -12,4 +12,15 @@ Init the dotfiles with:
 chezmoi init hisbaan # optionally include --ssh
 ```
 
-Secrets are managed with the [`bitwarden-cli`](https://github.com/bitwarden/clients/tree/main/apps/cli). Authenticate with that before running `chezmoi apply` to install the files.
+Secrets are managed with the [`bitwarden-cli`](https://github.com/bitwarden/clients/tree/main/apps/cli).
+Authenticate with that:
+
+```sh
+export BW_SESSION=$(bw unlock --raw)
+```
+
+Install the dotfiles with:
+
+```sh
+chezmoi apply
+```

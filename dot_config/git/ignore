@@ -1,12 +1,1 @@
 .DS_Store
-.idea
-*.log
-tmp/
-
-.local/bin/scripts/student-number
-.doom.d/email.el
-.config/mu4e/mbsyncrc
-.config/mu4e/mbsyncpass-acc1.gpg
-.config/spotifyd/password*
-.config/nvim/.netrwhist
-.config/zsh/.zsh_history

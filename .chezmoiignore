@@ -1,5 +1,5 @@
 README.md
-{{ if ne .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.os "linux" }}
 .config/Xresources
 .config/bspwm
 .config/dunst
@@ -11,4 +11,12 @@ README.md
 .config/sxhkd
 .config/tofi
 .config/waybar
+{{ end }}
+
+{{ if ne .chezmoi.os "darwin" }}
+.config/aerospace
+.config/karabiner
+.config/sketchybar
+.config/skhd
+.config/yabai
 {{ end }}

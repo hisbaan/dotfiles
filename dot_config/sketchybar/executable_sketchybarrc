@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/.config/sketchybar/"
+ITEM_DIR="$DIR/items"
+PLUGIN_DIR="$DIR/plugins"
+
+FONT="MesloLGS Nerd Font Mono"
+ICON_FONT="MesloLGS Nerd Font Mono"
+
+PADDING=0
+
+source "$DIR/colors.sh"
+source "$DIR/icons.sh"
+
+BAR_PROPS=(
+  height=38
+  color=$BG_PRI_COLOR
+  shadow=off
+  position=top
+  sticky=on
+  padding_right=10
+  padding_left=10
+  corner_radius=0
+  y_offset=0
+  margin=0
+  blur_radius=0
+  notch_width=0
+)
+
+DEF_PROPS=(
+  updates=when_shown
+  icon.font="$ICON_FONT:Regular:14.0"
+  icon.color=$WHITE
+  icon.padding_left=10
+  icon.padding_right=2
+  label.font="$FONT:Regular:14.0"
+  label.color=$WHITE
+  label.padding_left=$PADDING
+  label.padding_right=10
+  background.color=$BG_PRI_COLOR
+  background.padding_right=$PADDING
+  background.padding_left=$PADDING
+  background.height=24
+  background.corner_radius=4
+)
+
+sketchybar --bar "${BAR_PROPS[@]}"
+sketchybar --default "${DEF_PROPS[@]}"
+
+# -- LEFT Side Items --
+source "$ITEM_DIR/spaces.sh"
+# source "$ITEM_DIR/occupied_spaces.sh"
+
+# -- RIGHT Side Items --
+# TODO maybe separate date and time and give them icons
+source "$ITEM_DIR/time.sh"
+source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/sound.sh"
+source "$ITEM_DIR/cpu.sh"
+
+sketchybar --update

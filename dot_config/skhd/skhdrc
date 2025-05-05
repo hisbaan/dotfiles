@@ -1,0 +1,73 @@
+# applications
+ctrl + alt + cmd - return : open -n /Applications/WezTerm.app
+ctrl + alt + cmd - w : open -n /Applications/Zen\ Browser.app
+
+# global shortcuts
+ctrl + alt + cmd - 0x2B : skhd -k "previous"
+ctrl + alt + cmd - 0x2F : skhd -k "next"
+ctrl + alt + cmd - 0x2C : skhd -k "play"
+
+# wm bindings
+
+## window management
+ctrl + alt + cmd - h : yabai -m window --focus west || yabai -m display --focus west
+ctrl + alt + cmd - j : yabai -m window --focus south || yabai -m display --focus south
+ctrl + alt + cmd - k : yabai -m window --focus north || yabai -m display --focus north
+ctrl + alt + cmd - l : yabai -m window --focus east || yabai -m display --focus east
+
+# ctrl + alt + cmd + shift - h : yabai -m window --warp west
+# ctrl + alt + cmd + shift - j : yabai -m window --warp south
+# ctrl + alt + cmd + shift - k : yabai -m window --warp north
+# ctrl + alt + cmd + shift - l : yabai -m window --warp east
+
+# todo move to display direction, then focus based on PID if that's possible to ensure the correct window is always selected when moving
+ctrl + alt + cmd + shift - h : yabai -m window --warp west  || $(yabai -m window --display west; yabai -m display --focus west)
+ctrl + alt + cmd + shift - j : yabai -m window --warp south || $(yabai -m window --display south; yabai -m display --focus south)
+ctrl + alt + cmd + shift - k : yabai -m window --warp north || $(yabai -m window --display north; yabai -m display --focus north)
+ctrl + alt + cmd + shift - l : yabai -m window --warp east  || $(yabai -m window --display east; yabai -m display --focus east)
+
+ctrl + alt + cmd - s : yabai -m window --toggle float
+ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen
+ctrl + alt + cmd + shift - q : yabai -m window --close
+
+## space management
+ctrl + alt + cmd + shift - 1 : yabai -m window --space 1
+ctrl + alt + cmd + shift - 2 : yabai -m window --space 2
+ctrl + alt + cmd + shift - 3 : yabai -m window --space 3
+ctrl + alt + cmd + shift - 4 : yabai -m window --space 4
+ctrl + alt + cmd + shift - 5 : yabai -m window --space 5
+ctrl + alt + cmd + shift - 6 : yabai -m window --space 6
+ctrl + alt + cmd + shift - 7 : yabai -m window --space 7
+ctrl + alt + cmd + shift - 8 : yabai -m window --space 8
+ctrl + alt + cmd + shift - 9 : yabai -m window --space 9
+
+ctrl + alt + cmd - 1 : skhd -k "ctrl - 1"
+ctrl + alt + cmd - 2 : skhd -k "ctrl - 2"
+ctrl + alt + cmd - 3 : skhd -k "ctrl - 3"
+ctrl + alt + cmd - 4 : skhd -k "ctrl - 4"
+ctrl + alt + cmd - 5 : skhd -k "ctrl - 5"
+ctrl + alt + cmd - 6 : skhd -k "ctrl - 6"
+ctrl + alt + cmd - 7 : skhd -k "ctrl - 7"
+ctrl + alt + cmd - 8 : skhd -k "ctrl - 8"
+ctrl + alt + cmd - 9 : skhd -k "ctrl - 9"
+
+## resize mode
+:: resize
+ctrl + alt + cmd - r ; resize
+resize < h : yabai -m window west --resize right:-10:0 2> /dev/null || yabai -m window --resize right:-10:0
+resize < j : yabai -m window north --resize bottom:0:10 2> /dev/null || yabai -m window --resize bottom:0:10
+resize < k : yabai -m window south --resize top:0:-10 2> /dev/null || yabai -m window --resize top:0:-10
+resize < l : yabai -m window east --resize left:10:0 2> /dev/null || yabai -m window --resize left:10:0
+resize < return ; default
+resize < escape ; default
+
+## system control
+:: system
+ctrl + alt + cmd - escape ; system
+system < shift - s : osascript -e 'tell app "System Events" to shut down'
+system < s : osascript -e 'tell app "System Events" to sleep'
+system < r : osascript -e 'tell app "System Events" to restart'
+system < l : skhd -k "ctrl + cmd - q"
+system < e : osascript -e 'tell app "System Events" to log out'
+system < return ; default
+system < escape ; default
