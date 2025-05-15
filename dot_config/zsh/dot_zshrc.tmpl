@@ -137,7 +137,13 @@ source $(brew --prefix nvm)/nvm.sh
 ### Secrets ###
 ###############
 
-export GEMINI_API_KEY={{ (bitwarden "item" "gemini_api_key").notes | quote }}
+{{ if eq .chezmoi.hostname "cocoflo" -}}
+export GEMINI_API_KEY={{ (bitwarden "item" "fa1061c0-fc13-4ca7-9d83-b2de011eaa8b").notes | quote }}
+{{ else -}}
+export GEMINI_API_KEY={{ (bitwarden "item" "89ca5815-383b-42da-b9c2-b2d40021163e").notes | quote }}
+{{ end }}
+export OPENROUTER_API_KEY={{ (bitwarden "item" "ca4e4567-218b-4fe1-b664-b2dd00fe779b").notes | quote }}
+
 
 #############
 ### Other ###

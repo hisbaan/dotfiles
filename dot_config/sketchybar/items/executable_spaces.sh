@@ -21,7 +21,8 @@ do
   sketchybar --add space space.$sid left \
              --set space.$sid associated_space=$sid \
              --set space.$sid icon="${SPACE_ICONS[i]}" \
-             --set space.$sid click_script="skhd -k 'ctrl - $sid'" \
+             --set space.$sid click_script="yabai -m space --focus $sid'" \
              --set space.$sid "${SPACE[@]}"
+             # --set space.$sid click_script="skhd -k 'ctrl - $sid'" \ # SIP enabled workflow
              # --subscribe space space_windows_change space_change
 done

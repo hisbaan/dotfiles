@@ -33,9 +33,11 @@ return {
     window_close_confirmation = "NeverPrompt",
     check_for_updates = false,
     max_fps = 120,
+    -- animation_fps = 120,
 
     -- aesthetics
     hide_tab_bar_if_only_one_tab = true,
+    -- window_decorations = "NONE",
     colors = require('colors'),
     underline_thickness = '0.75pt',
     window_padding = {
