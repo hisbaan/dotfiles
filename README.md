@@ -12,11 +12,11 @@ Init the dotfiles with:
 chezmoi init hisbaan # optionally include --ssh
 ```
 
-Secrets are managed with the [`bitwarden-cli`](https://github.com/bitwarden/clients/tree/main/apps/cli).
+Secrets are managed with the unofficial rust bitwarden cli, [`rbw`](https://github.com/doy/rbw).
 Authenticate with that:
 
 ```sh
-export BW_SESSION=$(bw unlock --raw)
+rbw login
 ```
 
 Install the dotfiles with:
