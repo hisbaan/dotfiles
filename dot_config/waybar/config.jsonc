@@ -30,40 +30,7 @@
             "7": "<span font='15' rise='-1500'>󰎁</span>",
             "8": "<span font='15' rise='-1500'>󰝚</span>",
             "9": "<span font='15' rise='-1500'>󰙯</span>",
-            "11": "<span font='16' rise='-2000'>󰈹</span>",
-            "12": "<span font='15' rise='-1500'></span>",
-            "13": "<span font='15' rise='-1500'>󰂖</span>",
-            "14": "<span font='15' rise='-1500'>󰑴</span>",
-            "15": "<span font='15' rise='-1500'>󰕧</span>",
-            "16": "<span font='15' rise='-1500'></span>",
-            "17": "<span font='15' rise='-1500'>󰎁</span>",
-            "18": "<span font='15' rise='-1500'>󰝚</span>",
-            "19": "<span font='15' rise='-1500'>󰙯</span>",
             "default": " "
-        },
-        "persistent-workspaces": {
-            "eDP-1": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9
-            ],
-            "DP-3": [
-                11,
-                12,
-                13,
-                14,
-                15,
-                16,
-                17,
-                18,
-                19
-            ]
         }
     },
     "memory": {
