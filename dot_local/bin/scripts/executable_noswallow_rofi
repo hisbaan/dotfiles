@@ -1,0 +1,14 @@
+#!/bin/sh
+
+killall bspswallow
+rofi -show run
+
+while pidof rofi; do continue
+done
+
+bspc subscribe note_add | while read -r event; do
+    bspswallow & exit
+done
+
+sleep 2
+bspswallow & exit

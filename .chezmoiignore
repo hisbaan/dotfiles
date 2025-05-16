@@ -11,6 +11,15 @@ README.md
 .config/sxhkd
 .config/tofi
 .config/waybar
+.local/bin/scripts/backup
+.local/bin/scripts/bspswallow
+.local/bin/scripts/drag
+.local/bin/scripts/inkfig
+.local/bin/scripts/noswallow_rofi
+.local/bin/scripts/startw
+.local/bin/scripts/switch-sink
+.local/bin/scripts/update-pkglist
+.local/bin/scripts/waybar-reload
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export WAYLAND=1
+
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_X11_EGL=1
+export _JAVA_AWT_WM_NONREPARENTING=1
+export XCURSOR_SIZE=24
+
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORM=wayland
+export GDK_BACKEND=wayland
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
+
+Hyprland

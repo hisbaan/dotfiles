@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+USB_C=alsa_output.usb-Apple__Inc._USB-C_to_3.5mm_Headphone_Jack_Adapter_DWH034202C0JKLTA9-00.analog-stereo
+BUILT_IN=alsa_output.pci-0000_00_1f.3.analog-stereo
+
+if [[ $(pactl get-default-sink) == "$BUILT_IN" ]]
+then
+    pactl set-default-sink ${USB_C}
+elif [[ $(pactl get-default-sink) == "$USB_C" ]]
+then
+    pactl set-default-sink ${BUILT_IN}
+fi
