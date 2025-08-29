@@ -39,6 +39,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 export PLATFORMIO_CORE_DIR="$XDG_DATA_HOME"/platformio
+export PNPM_HOME=~/.local/share/pnpm
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 export WINEPREFIX="$XDG_DATA_HOME"/wine
@@ -63,7 +64,11 @@ alias tp="trashy put $argv"
 
 {{ if eq .chezmoi.os "linux" -}}
 alias drag="dragon-drop"
-alias iwlan="iwctl station wlan0 "
+alias iwlan="iwctl station wlan0"
+{{ end }}
+
+{{ if eq .chezmoi.os "darwin" -}}
+alias sed="gsed"
 {{ end }}
 
 {{ if eq .chezmoi.hostname "cocoflo" -}}
@@ -142,11 +147,7 @@ source $(brew --prefix nvm)/nvm.sh
 ### Secrets ###
 ###############
 
-{{ if eq .chezmoi.hostname "cocoflo" -}}
 export GEMINI_API_KEY={{ (rbw "cocoflo_gemini_api_key").notes | quote }}
-{{ else -}}
-export GEMINI_API_KEY={{ (rbw "gemini_api_key").notes | quote }}
-{{ end -}}
 export OPENROUTER_API_KEY={{ (rbw "openrouter_api_key").notes |quote }}
 
 #############
