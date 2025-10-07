@@ -74,7 +74,9 @@ alias sed="gsed"
 {{ if eq .chezmoi.hostname "cocoflo" -}}
 alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres -d cocoflo"
 alias db-bl="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
-alias db-int="PGPASSWORD=postgres pgcli -h 172.31.8.211 -p 5432 -U postgres"
+alias db-int="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-pg.ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_int"
+alias db-demo="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-pg.ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_demo"
+alias db-myrtlebeach="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-pg.cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d myrtlebeach"
 {{ end }}
 
 ###################
@@ -148,7 +150,7 @@ source $(brew --prefix nvm)/nvm.sh
 ###############
 
 export GEMINI_API_KEY={{ (rbw "cocoflo_gemini_api_key").notes | quote }}
-export OPENROUTER_API_KEY={{ (rbw "openrouter_api_key").notes |quote }}
+export OPENROUTER_API_KEY={{ (rbw "openrouter_api_key").notes | quote }}
 
 #############
 ### Other ###
