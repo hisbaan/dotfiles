@@ -36,7 +36,7 @@ ctrl + alt + cmd + shift - 7 : yabai -m window --space 7
 ctrl + alt + cmd + shift - 8 : yabai -m window --space 8
 ctrl + alt + cmd + shift - 9 : yabai -m window --space 9
 
-## focus window
+## focus space
 ### SIP disabled workflow
 ctrl + alt + cmd - 1 : yabai -m space --focus 1
 ctrl + alt + cmd - 2 : yabai -m space --focus 2
