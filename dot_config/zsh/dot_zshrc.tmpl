@@ -74,9 +74,9 @@ alias sed="gsed"
 {{ if eq .chezmoi.hostname "cocoflo" -}}
 alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres -d cocoflo"
 alias db-bl="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
-alias db-int="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-pg.ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_int"
-alias db-demo="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-pg.ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_demo"
-alias db-myrtlebeach="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-pg.cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d myrtlebeach"
+alias db-int="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_int"
+alias db-demo="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_demo"
+alias db-myrtlebeach="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d myrtlebeach"
 {{ end }}
 
 ###################
@@ -138,7 +138,7 @@ export ELECTRON_OZONE_PLATFORM_HINT='wayland'
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/
+export PATH=$PATH:~/.local/bin/scripts/:~/.local/bin/scripts/color-scripts/:~/.local/bin/:$CARGO_HOME/bin/:~/.local/share/npm/bin/:~/.ghcup/bin/:~/.rvm/bin/:~/.config/emacs/bin/:$PNPM_HOME
 
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
