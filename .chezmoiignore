@@ -29,3 +29,11 @@ README.md
 .config/skhd
 .config/yabai
 {{ end }}
+
+{{ if ne .chezmoi.hostname "archen" }}
+.config/hypr/hyprland/monitors-archen.conf
+{{ end }}
+
+{{ if ne .chezmoi.hostname "lab" }}
+.config/hypr/hyprland/monitors-lab.conf
+{{ end }}
