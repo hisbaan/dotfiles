@@ -21,9 +21,14 @@
     follow = keyboard
 
 	width = 300
+    {{ if eq .chezmoi.hostname "archen" }}
 	height = (0, 800)
-	origin = top-right
 	offset = (5, 5)
+    {{ else if eq .chezmoi.hostname "lab" }}
+	height = 540
+	offset = 5x42
+    {{ end }}
+	origin = top-right
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -156,7 +161,11 @@
     icon_position = left
 
     #3 Scale larger icons down to this size, set to 0 to disable
+    {{ if eq .chezmoi.hostname "archen" }}
     max_icon_size = 64
+    {{ else if eq .chezmoi.hostname "lab" }}
+    max_icon_size = 32
+    {{ end }}
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/

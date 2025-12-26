@@ -7,10 +7,11 @@
 sxhkd &
 picom &
 nitrogen --restore &
-$HOME/.config/polybar/launch.sh &
+polybar &
+# $HOME/.config/polybar/launch.sh &
 espanso start &
 killall -9 flameshot; flameshot &
-redshift -x; killall -9 redshift; redshift &
+# redshift -x; killall -9 redshift; redshift &
 dunst &
 pgrep bspswallow || bspswallow &
 xsetroot -cursor_name left_ptr &
@@ -22,15 +23,15 @@ kdeconnect-indicator &
 ### Monitors ###
 ################
 
-bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
+bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9
 
 ###########################
 ### BSPWM Configuration ###
 ###########################
 
-bspc config border_width 4
-bspc config window_gap 20
-bspc config top_padding 74
+bspc config border_width 2
+bspc config window_gap 10
+bspc config top_padding 37
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
@@ -76,15 +77,15 @@ bspc rule -a firefox:Toolkit state=floating sticky=on
 ### Floating Size ###
 #####################
 
-bspc rule -a firefox:Navigator center=true rectangle=2560x1440+0+0
-bspc rule -a kitty center=true rectangle=1400x800+0+0
+bspc rule -a firefox:Navigator center=true rectangle=1280x720+0+0
+bspc rule -a kitty center=true rectangle=700x400+0+0
 
 ############
 ### Misc ###
 ############
 
 # polybar hidden when fullscreen for vlc, youtube, mpv, etc.
-xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_eDP-1)
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_DVI-D-0)
 
 # fix jetbrains software
 wmname LG3D

@@ -4,7 +4,7 @@
 
 # vim:fileencoding=utf-8:foldmethod=marker
 
-[manager]
+[mgr]
 preview_hovered = { fg = "black", bg="lightblue", underline = false }
 border_symbol = " "
 

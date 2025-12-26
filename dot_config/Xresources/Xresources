@@ -1,5 +1,5 @@
 ! == Xft ==
-Xft.dpi: 220
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -43,8 +43,7 @@ URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt*depth: 32
 
-! == Rofi ==
-rofi.dpi: 220;
+! == colours ==
 
 ! start flavours
 ! Base16 Catppuccin Custom

@@ -36,4 +36,5 @@ README.md
 
 {{ if ne .chezmoi.hostname "lab" }}
 .config/hypr/hyprland/monitors-lab.conf
+.config/hypr/hyprland/env-lab.conf
 {{ end }}
