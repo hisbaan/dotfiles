@@ -1,9 +1,8 @@
 {
     "position": "top",
     "layer": "top",
-    "height": 58,
+    "height": 30,
     "modules-left": [
-        "custom/logo",
         "hyprland/workspaces"
     ],
     "modules-right": [
@@ -13,7 +12,6 @@
         "battery",
         "network",
         "custom/date",
-        "clock",
         "tray"
     ],
     "hyprland/workspaces": {
@@ -49,8 +47,8 @@
     },
     "custom/date": {
         "format": "<span font='14' rise='-1500'>󰃭</span> {}",
-        "interval": 3600,
-        "exec": "date +'%a, %B %d'"
+        "interval": 10,
+        "exec": "date +'%a, %b %d %I:%M %p'"
     },
     "battery": {
         "format": "{icon} {capacity}%",
@@ -83,10 +81,6 @@
                 "<span font='10' rise='500'>󰁹</span>"
             ]
         }
-    },
-    "clock": {
-        "format": "<span font='16' rise='-2000'></span> {:%I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "network": {
         "format-icons": [
