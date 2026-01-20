@@ -144,7 +144,7 @@ vi = True
 on_error = STOP
 
 # Set threshold for row limit. Use 0 to disable limiting.
-row_limit = 1000
+row_limit = 0
 
 # Truncate long text fields to this value for tabular display (does not apply to csv).
 # Leave unset to disable truncation. Example: "max_field_width = "

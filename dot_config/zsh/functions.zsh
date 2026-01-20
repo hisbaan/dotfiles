@@ -144,6 +144,33 @@ function _conf() {
 }
 compdef _conf conf
 
+function serv () {
+    if [[ $# == 1 ]]
+    then
+        cd ~/services/$1
+    else
+        cd ~/services/
+        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+    fi
+}
+
+function _serv() {
+    local context state line
+    typeset -A opt_args
+
+    _arguments \
+        '1:: :->dir'
+
+    if [[ $state == dir ]]; then
+        local -a dirs
+
+        dirs=( ~/services/*(N) )
+        (( $#dirs )) && \
+            compadd "$@" - ${dirs#~/services/}
+    fi
+}
+compdef _serv serv
+
 function ya() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
     yazi "$@" --cwd-file="$tmp"
