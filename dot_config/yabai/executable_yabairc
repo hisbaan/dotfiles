@@ -26,3 +26,4 @@ yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 
 sketchybar & disown
+clipse -listen & disown
