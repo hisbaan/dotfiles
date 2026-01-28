@@ -1,0 +1,34 @@
+# Font configuration
+# TODO read this in from system specific config file to have size 12 on lab and manage those with chezmoi
+font-family = "MesloLGS Nerd Font Mono"
+font-size = 14
+
+# Key bindings
+## scrolling
+keybind = ctrl+shift+j=scroll_page_lines:1
+keybind = ctrl+shift+k=scroll_page_lines:-1
+
+## copy/paste
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+c=copy_to_clipboard
+
+## resizing
+keybind = ctrl+shift+equal=increase_font_size:1
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
+keybind = ctrl+0=reset_font_size
+keybind = ctrl+shift+0=reset_font_size
+
+# Window and behavior
+scrollback-limit = 10000
+confirm-close-surface = false
+quit-after-last-window-closed = true
+
+# Window padding
+window-padding-x = 10
+window-padding-y = 5
+window-padding-balance = false
+
+# theme
+theme = catpuccin-custom.conf
