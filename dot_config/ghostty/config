@@ -1,7 +1,6 @@
 # Font configuration
-# TODO read this in from system specific config file to have size 12 on lab and manage those with chezmoi
 font-family = "MesloLGS Nerd Font Mono"
-font-size = 14
+font-size = 12
 
 # Key bindings
 ## scrolling
@@ -27,8 +26,12 @@ quit-after-last-window-closed = true
 
 # Window padding
 window-padding-x = 10
-window-padding-y = 5
-window-padding-balance = false
+window-padding-y = 10
+window-padding-balance = true
 
 # theme
 theme = catpuccin-custom.conf
+
+# system specific overrides
+config-file = ?macos.conf
+config-file = ?laptop.conf

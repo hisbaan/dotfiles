@@ -28,10 +28,16 @@ README.md
 .config/sketchybar
 .config/skhd
 .config/yabai
+.config/ghostty/macos.conf
+{{ end }}
+
+{{ if ne .chezmoi.hostname "cocoflo" }}
+.config/ghostty/laptop.conf
 {{ end }}
 
 {{ if ne .chezmoi.hostname "archen" }}
 .config/hypr/hyprland/monitors-archen.conf
+.config/ghostty/laptop.conf
 {{ end }}
 
 {{ if ne .chezmoi.hostname "lab" }}
