@@ -1,3 +1,11 @@
+# open to home dir
+working-directory = home
+window-inherit-working-directory = false
+
+# titlebar
+macos-titlebar-style = hidden
+macos-option-as-alt = left
+
 # Font configuration
 font-family = "MesloLGS Nerd Font Mono"
 font-size = 12
@@ -31,6 +39,11 @@ window-padding-balance = true
 
 # theme
 theme = catpuccin-custom.conf
+
+# cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
 # system specific overrides
 config-file = ?macos.conf
