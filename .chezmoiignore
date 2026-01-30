@@ -1,4 +1,6 @@
 README.md
+
+# linux configuration
 {{ if ne .chezmoi.os "linux" }}
 .config/Xresources
 .config/bspwm
@@ -22,6 +24,7 @@ README.md
 .local/bin/scripts/waybar-reload
 {{ end }}
 
+# macos configuration
 {{ if ne .chezmoi.os "darwin" }}
 .config/aerospace
 .config/karabiner
@@ -31,13 +34,26 @@ README.md
 .config/ghostty/macos.conf
 {{ end }}
 
-{{ if ne .chezmoi.hostname "cocoflo" }}
+# determine laptop or desktop
+{{- $chassis := "desktop" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{-   if contains "MacBook" (output "system_profiler" "SPHardwareDataType") }}
+{{-     $chassis = "laptop" }}
+{{-   else }}
+{{-     $chassis = "desktop" }}
+{{-   end }}
+{{- else if eq .chezmoi.os "linux" }}
+{{-   $chassis = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+{{- end }}
+
+{{ if ne $chassis "laptop" }}
 .config/ghostty/laptop.conf
 {{ end }}
 
+# machine specific configurations
+
 {{ if ne .chezmoi.hostname "archen" }}
 .config/hypr/hyprland/monitors-archen.conf
-.config/ghostty/laptop.conf
 {{ end }}
 
 {{ if ne .chezmoi.hostname "lab" }}
