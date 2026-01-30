@@ -1,12 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 ###############################
 ### Cleaning Home Directory ###
 ###############################
@@ -142,7 +133,7 @@ export PATH=$PATH:~/.local/bin/scripts:~/.local/bin/scripts/color-scripts:~/.loc
 
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh # TODO if needed, replace NVM with FNM for speed improvements
 {{ end }}
 
 ###############
@@ -197,9 +188,9 @@ source ~/.config/zsh/functions.zsh
 
 eval "$(direnv hook zsh)"
 
-# Powerlevel10k
-source ~/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+zvm_after_init_commands+=('eval "$(fzf --zsh)"')
+
+eval "$(starship init zsh)"
 
 # zsh autosuggestions
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -212,11 +203,7 @@ ZVM_CURSOR_STYLE_ENABLED=false
 source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
 
 {{ if eq .chezmoi.os "linux" -}}
-if [[ $WAYLAND == 1 ]]; then
-  ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
-elif [[ $WAYLAND == 0 ]]; then
-  ZSH_SYSTEM_CLIPBOARD_METHOD=xcc
-fi
+ZSH_SYSTEM_CLIPBOARD_METHOD=wlc
 {{ else if eq .chezmoi.os "darwin" -}}
 ZSH_SYSTEM_CLIPBOARD_METHOD=pb
 {{ end }}

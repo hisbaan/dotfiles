@@ -1,0 +1,60 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$hostname$env_var$directory$git_status$git_branch$git_commit$git_state$character"
+right_format = ""
+add_newline = false
+
+[character]
+format = "… $symbol "
+success_symbol = "[●](green)"
+error_symbol = "[●](red)"
+vimcmd_symbol = "[●](blue)"
+vimcmd_replace_one_symbol = "[●](magenta)"
+vimcmd_replace_symbol = "[●](magenta)"
+vimcmd_visual_symbol = "[●](yellow)"
+
+[hostname]
+ssh_only = true
+format = "[$hostname](blue) "
+
+[env_var.CONTAINER_ID]
+variable = "CONTAINER_ID"
+format = "[$env_value](blue) "
+
+[directory]
+format = "[$path](blue) "
+truncation_length = 0
+truncate_to_repo = false
+
+[git_branch]
+format = "[$branch(:$remote_branch)](bright-black) "
+only_attached = true
+
+[git_commit]
+format = "[@$hash](bright-black) "
+only_detached = true
+tag_disabled = true
+
+[git_status]
+format = "([$all_status$ahead_behind](bright-black) )"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇡⇣"
+conflicted = "✕"
+modified = "•"
+staged = ""
+deleted = ""
+untracked = ""
+renamed = ""
+stashed = ""
+typechanged = ""
+
+[git_state]
+format = "[| $state ($progress_current/$progress_total)](red) "
+cherry_pick = "cherry-pick"
+revert = "revert"
+merge = "merge"
+rebase = "rebase"
+am = "am"
+am_or_rebase = "am/rebase"
+bisect = "bisect"
