@@ -90,86 +90,31 @@ function _note() {
 }
 compdef _note note
 
-function proj() {
-    if [[ $# == 1 ]]
-    then
-        cd ~/projects/$1
+function cd_function() {
+  local name=$1 dir=$2
+  eval "function $name() {
+    if [[ \$# == 1 ]]; then
+      cd ${(q)dir}/\$1
     else
-        cd ~/projects/
-        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
+      cd ${(q)dir}
+      cd \$(fzf | awk 'BEGIN{FS=OFS=\"/\"}{NF--; print}')
     fi
+  }"
+
+  eval "function _$name() {
+    local -a dirs
+    dirs=( ${(q)dir}/*(N) )
+    (( \$#dirs )) && compadd \"\$@\" - \${dirs#${(q)dir}/}
+  }"
+
+  compdef _$name $name
 }
 
-function _proj() {
-    local context state line
-    typeset -A opt_args
+cd_function conf ~/.config
+cd_function proj ~/projects
+cd_function serv ~/services
 
-    _arguments \
-        '1:: :->dir'
-
-    if [[ $state == dir ]]; then
-        local -a dirs
-
-        dirs=( ~/projects/*(N) )
-        (( $#dirs )) && \
-            compadd "$@" - ${dirs#~/projects/}
-    fi
-}
-compdef _proj proj
-
-function conf () {
-    if [[ $# == 1 ]]
-    then
-        cd ~/.config/$1
-    else
-        cd ~/.config/
-        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
-    fi
-}
-
-function _conf() {
-    local context state line
-    typeset -A opt_args
-
-    _arguments \
-        '1:: :->dir'
-
-    if [[ $state == dir ]]; then
-        local -a dirs
-
-        dirs=( ~/.config/*(N) )
-        (( $#dirs )) && \
-            compadd "$@" - ${dirs#~/.config/}
-    fi
-}
-compdef _conf conf
-
-function serv () {
-    if [[ $# == 1 ]]
-    then
-        cd ~/services/$1
-    else
-        cd ~/services/
-        cd $(fzf | awk 'BEGIN{FS=OFS="/"}{NF--; print}')
-    fi
-}
-
-function _serv() {
-    local context state line
-    typeset -A opt_args
-
-    _arguments \
-        '1:: :->dir'
-
-    if [[ $state == dir ]]; then
-        local -a dirs
-
-        dirs=( ~/services/*(N) )
-        (( $#dirs )) && \
-            compadd "$@" - ${dirs#~/services/}
-    fi
-}
-compdef _serv serv
+unset -f cd_function
 
 function ya() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
