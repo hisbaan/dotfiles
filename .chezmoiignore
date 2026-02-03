@@ -52,10 +52,12 @@ README.md
 # machine specific configurations
 
 {{ if ne .chezmoi.hostname "archen" }}
+.config/hypr/hyprland/binds-archen.conf
 .config/hypr/hyprland/monitors-archen.conf
 {{ end }}
 
 {{ if ne .chezmoi.hostname "lab" }}
-.config/hypr/hyprland/monitors-lab.conf
+.config/hypr/hyprland/binds-lab.conf
 .config/hypr/hyprland/env-lab.conf
+.config/hypr/hyprland/monitors-lab.conf
 {{ end }}
