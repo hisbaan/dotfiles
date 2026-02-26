@@ -1,6 +1,6 @@
 # applications
 # ctrl + alt + cmd - return : open -n /Applications/WezTerm.app
-ctrl + alt + cmd - return : open -na Ghostty.app
+ctrl + alt + cmd - return : ~/.config/ghostty/new
 ctrl + alt + cmd - w : open -na Zen\ Browser.app
 
 # global shortcuts
