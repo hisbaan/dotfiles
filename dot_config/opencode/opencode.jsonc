@@ -1,4 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": ["@franlol/opencode-md-table-formatter@latest"],
+  "mcp": {
+    "clickup": {
+      "type": "remote",
+      "url": "https://mcp.clickup.com/mcp",
+      "enabled": true,
+      "oauth": {}
+    }
+  }
 }
