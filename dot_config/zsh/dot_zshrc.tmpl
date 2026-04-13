@@ -68,6 +68,8 @@ alias db-bl="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
 alias db-int="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_int"
 alias db-demo="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_demo"
 alias db-myrtlebeach="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d myrtlebeach"
+alias db-manchester-tn="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d manchester-tn"
+alias db-winchester-tn="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d winchester-tn"
 {{ end }}
 
 ###################
