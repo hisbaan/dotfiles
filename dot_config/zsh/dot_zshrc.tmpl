@@ -62,14 +62,8 @@ alias iwlan="iwctl station wlan0"
 alias sed="gsed"
 {{ end }}
 
-{{ if eq .chezmoi.hostname "cocoflo" -}}
-alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres -d cocoflo"
-alias db-bl="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres"
-alias db-int="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_int"
-alias db-demo="PGPASSWORD=postgres pgcli -h parks-and-rec-dev-aurora-pg.cluster-ckgqwubnsnvg.ca-central-1.rds.amazonaws.com -p 5432 -U postgres -d cocoflo_demo"
-alias db-myrtlebeach="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d myrtlebeach"
-alias db-manchester-tn="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d manchester-tn"
-alias db-winchester-tn="PGPASSWORD={{ (rbw "cocoflo_myrtlebeach_postgres_password").notes | squote }} pgcli -h parks-and-rec-prod-aurora-pg.cluster-cjx4cp0qx0vx.us-east-1.rds.amazonaws.com -p 5432 -U postgres -d winchester-tn"
+{{ if eq .chezmoi.hostname "affiniti" -}}
+alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres -d postgres"
 {{ end }}
 
 ###################
@@ -142,8 +136,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ### Secrets ###
 ###############
 
-export GEMINI_API_KEY={{ (rbw "cocoflo_gemini_api_key").notes | quote }}
-export OPENROUTER_API_KEY={{ (rbw "openrouter_api_key").notes | quote }}
+# see `notes/dotfiles` for example
 
 #############
 ### Other ###
