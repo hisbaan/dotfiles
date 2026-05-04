@@ -1,7 +1,7 @@
 # applications
 # ctrl + alt + cmd - return : open -n /Applications/WezTerm.app
 ctrl + alt + cmd - return : ~/.config/ghostty/new
-ctrl + alt + cmd - w : open -na Zen\ Browser.app
+ctrl + alt + cmd - w : open -na Zen.app
 
 # global shortcuts
 ctrl + alt + cmd - 0x2B : skhd -k "previous"
