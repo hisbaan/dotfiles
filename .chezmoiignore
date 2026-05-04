@@ -31,6 +31,7 @@ README.md
 .config/sketchybar
 .config/skhd
 .config/yabai
+.hushlogin
 {{ end }}
 
 # determine laptop or desktop
