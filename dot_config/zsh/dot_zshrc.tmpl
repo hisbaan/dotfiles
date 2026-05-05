@@ -62,7 +62,8 @@ alias sed="gsed"
 {{ end }}
 
 {{ if eq .chezmoi.hostname "affiniti" -}}
-alias db="PGPASSWORD=postgres pgcli -h localhost -p 5432 -U postgres -d postgres"
+alias db-legacy="pgcli postgres"
+alias db-monorepo="PGPASSWORD=devpassword pgcli -h localhost -p 5433 -d services_local -U postgres"
 {{ end }}
 
 ###################
@@ -128,7 +129,6 @@ export PATH=$PATH:~/.local/bin/scripts:~/.local/bin/scripts/color-scripts:~/.loc
 
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# source $(brew --prefix nvm)/nvm.sh # TODO if needed, replace NVM with FNM for speed improvements
 {{ end }}
 
 ###############
