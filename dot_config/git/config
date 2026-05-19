@@ -32,7 +32,7 @@
     plus-style = syntax "#1f3523"
     plus-emph-style = syntax "#214724"
     line-numbers-plus-style = "#1f3523"
-    syntax-theme = Catppuccin-mocha
+    syntax-theme = Catppuccin Mocha
 [merge]
     conflictstyle = diff3
 [diff]
