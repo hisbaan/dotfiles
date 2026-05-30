@@ -113,6 +113,7 @@ function cd_function() {
 cd_function conf ~/.config
 cd_function proj ~/projects
 cd_function serv ~/services
+cd_function vol /mnt/nas/docker
 
 unset -f cd_function
 
