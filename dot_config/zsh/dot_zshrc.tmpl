@@ -125,7 +125,7 @@ export ELECTRON_OZONE_PLATFORM_HINT='wayland'
 
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
-export PATH=$PATH:~/.local/bin/scripts:~/.local/bin/scripts/color-scripts:~/.local/bin:$CARGO_HOME/bin:~/.local/share/npm/bin:~/.ghcup/bin:~/.rvm/bin:~/.config/emacs/bin:$PNPM_HOME/bin:$GOPATH/bin
+export PATH=$PATH:~/.local/bin/scripts:~/.local/bin/scripts/color-scripts:~/.local/bin:$CARGO_HOME/bin:~/.local/share/npm/bin:~/.ghcup/bin:~/.rvm/bin:~/.config/emacs/bin:$PNPM_HOME/bin:$GOPATH/bin:~/.bun/bin
 
 {{ if eq .chezmoi.os "darwin" -}}
 eval "$(/opt/homebrew/bin/brew shellenv)"
