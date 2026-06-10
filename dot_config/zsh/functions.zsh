@@ -55,25 +55,15 @@ compdef _org org
 function note() {
     cd ~/Documents/obsidian/ || exit
 
-    if [[ $# -eq 0 ]]
-    then
-        nvim . +ObsidianQuickSwitch
-        cd -
-        return
-    fi
-
-    if [[ $1 = "cd" ]]
-    then
-        return
-    elif [[ $1 = "browse" ]]
-    then
-        nvim .
-    elif [[ $1 = "new" ]]
-    then
-        nvim . +ObsidianNew
-    else
-        nvim . +"ObsidianNew $1"
-    fi
+    case "$1" in
+        "yesterday") nvim . +ObsidianYesterday ;;
+        "today") nvim . +ObsidianToday ;;
+        "tomorrow") nvim . +ObsidianYesterday ;;
+        "cd") return ;;
+        "browse") nvim . ;;
+        "new") nvim . +ObsidianNew ;;
+        *) nvim . +ObsidianQuickSwitch ;;
+    esac
     cd -
 }
 
