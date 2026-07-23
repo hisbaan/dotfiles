@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+SESSION="server"
+MONOREPO_MAIN_DIR="$HOME/projects/monorepo/main"
+MONOREPO_DIR="$HOME/projects/monorepo"
+LEGACY_DIR="$HOME/projects/affiniti"
+
+CURRENT_DIR=$(pwd -P)
+if [[ "$CURRENT_DIR" == "$MONOREPO_DIR"/* ]]; then
+  WORKTREE_NAME=${CURRENT_DIR#"$MONOREPO_DIR"/}
+  WORKTREE_NAME=${WORKTREE_NAME%%/*}
+  MONOREPO_MAIN_DIR="$MONOREPO_DIR/$WORKTREE_NAME"
+fi
+
+tmux new-session -d -s "$SESSION" -n webhooks "TERM=xterm-256color zsh -ic 'cd \"$MONOREPO_MAIN_DIR/scripts\" && ./dev-webhooks.sh'"
+
+tmux new-window -t "$SESSION:" -n accounts "zsh -ic 'cd \"$MONOREPO_MAIN_DIR/services/accounts\" && pn dev'"
+tmux new-window -t "$SESSION:" -n applications "zsh -ic 'cd \"$MONOREPO_MAIN_DIR/services/applications\" && pn dev'"
+tmux new-window -t "$SESSION:" -n customer "zsh -ic 'cd \"$MONOREPO_MAIN_DIR/apps/customer-dashboard\" && pn dev'"
+
+tmux new-window -t "$SESSION:" -n legacy-api "zsh -ic 'cd \"$LEGACY_DIR/api\" && yarn dev'"
+tmux new-window -t "$SESSION:" -n internal "zsh -ic 'cd \"$LEGACY_DIR/internal\" && yarn dev'"

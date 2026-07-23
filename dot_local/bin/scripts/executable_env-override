@@ -1,0 +1,128 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+OVERRIDES=(
+  'services/accounts/.env|ACCOUNTS_QBO_OAUTH_CREDENTIALS|rbw:qbo_sandbox_secret'
+  'services/accounts/.env|GOOGLE_APPLICATION_CREDENTIALS|plain:/Users/hisbaan/projects/accounts-dev-sa.json'
+)
+
+die() {
+  printf 'env-override: %s\n' "$*" >&2
+  exit 1
+}
+
+require_command() {
+  command -v "$1" >/dev/null 2>&1 || die "missing required command: $1"
+}
+
+find_project_root() {
+  local dir override env_file _key _rbw_item
+  dir=$(pwd -P)
+
+  while [[ "$dir" != "/" ]]; do
+    for override in "${OVERRIDES[@]}"; do
+      IFS='|' read -r env_file _key _rbw_item <<<"$override"
+      if [[ -f "$dir/$env_file" ]]; then
+        printf '%s\n' "$dir"
+        return 0
+      fi
+    done
+    dir=$(dirname "$dir")
+  done
+
+  return 1
+}
+
+rbw_value() {
+  local item=$1
+  local value
+
+  value=$(rbw get --field notes "$item" 2>/dev/null || true)
+  if [[ -z "$value" ]]; then
+    value=$(rbw get "$item" 2>/dev/null || true)
+  fi
+
+  [[ -n "$value" ]] || die "could not read value from rbw item: $item"
+  printf '%s' "$value"
+}
+
+unlock_rbw_once() {
+  if [[ ${RBW_UNLOCKED:-false} == true ]]; then
+    return 0
+  fi
+
+  require_command rbw
+
+  if ! rbw unlocked >/dev/null 2>&1; then
+    rbw unlock >/dev/null
+  fi
+
+  RBW_UNLOCKED=true
+}
+
+replace_env_value() {
+  local file=$1
+  local key=$2
+  local value=$3
+  local tmp
+  local found=false
+
+  tmp=$(mktemp)
+  trap 'rm -f "$tmp"' RETURN
+
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    if [[ "$line" == "$key="* ]]; then
+      printf '%s=%s\n' "$key" "$value"
+      found=true
+    else
+      printf '%s\n' "$line"
+    fi
+  done <"$file" >"$tmp"
+
+  if [[ "$found" == false ]]; then
+    printf '%s=%s\n' "$key" "$value" >>"$tmp"
+  fi
+
+  mv "$tmp" "$file"
+  trap - RETURN
+}
+
+apply_override() {
+  local project_root=$1
+  local override=$2
+  local env_file key source value
+
+  IFS='|' read -r env_file key source <<<"$override"
+  [[ -n "$env_file" && -n "$key" && -n "$source" ]] || die "invalid override: $override"
+
+  env_file="$project_root/$env_file"
+  [[ -f "$env_file" ]] || die "missing env file: $env_file"
+
+  case "$source" in
+    rbw:*)
+      unlock_rbw_once
+      value=$(rbw_value "${source#rbw:}")
+      ;;
+    plain:*)
+      value=${source#plain:}
+      ;;
+    *)
+      die "invalid override source, expected rbw: or plain:: $source"
+      ;;
+  esac
+
+  replace_env_value "$env_file" "$key" "$value"
+  printf 'Updated %s: %s\n' "$env_file" "$key"
+}
+
+main() {
+  local project_root override
+  project_root=$(find_project_root) || die "could not find project root from current directory"
+
+  for override in "${OVERRIDES[@]}"; do
+    apply_override "$project_root" "$override"
+  done
+}
+
+main "$@"
