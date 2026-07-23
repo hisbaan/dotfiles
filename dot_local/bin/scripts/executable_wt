@@ -1,0 +1,147 @@
+#!/usr/bin/env bash
+#
+# wt - git worktree helper
+#
+#   wt a|add [git worktree add args...]   Create a worktree, then run init
+#                                         commands from the nearest .wtrc.
+#   wt r|rm|remove [-f] <dir...>          Remove one or more worktrees.
+#
+# Anything after `wt a`/`wt add` is passed straight through to
+# `git worktree add`. After the worktree is created, the commands in the
+# repo's .wtrc file (if any) are run from inside the new worktree.
+#
+# .wtrc lookup order (first hit wins):
+#   1. <new worktree>/.wtrc   (e.g. a committed, project-wide init file)
+#   2. <main worktree>/.wtrc  (e.g. a personal, gitignored init file)
+#
+# The .wtrc file is a bash script run with the new worktree as its cwd.
+# These variables are exported for it to use:
+#   WT_DIR     absolute path of the new worktree
+#   WT_NAME    basename of the new worktree
+#   WT_BRANCH  checked-out branch of the new worktree
+#   WT_MAIN    absolute path of the main worktree
+
+set -uo pipefail
+
+die() {
+  printf 'wt: %s\n' "$*" >&2
+  exit 1
+}
+
+# Absolute path of the main (first) worktree.
+main_worktree() {
+  git worktree list --porcelain | awk '/^worktree /{print $2; exit}'
+}
+
+# All worktree paths, one per line.
+worktree_paths() {
+  git worktree list --porcelain | awk '/^worktree /{print $2}'
+}
+
+cmd_add() {
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 \
+    || die "not inside a git repository"
+
+  local run_init=1
+  local -a args=()
+  local a
+  for a in "$@"; do
+    if [[ "$a" == "--no-init" ]]; then
+      run_init=0
+    else
+      args+=("$a")
+    fi
+  done
+
+  [[ ${#args[@]} -gt 0 ]] || die "usage: wt a [--no-init] [git worktree add args...]"
+
+  # Snapshot existing worktrees so we can detect the newly created one
+  # without having to parse git's argument list ourselves.
+  local before after new
+  before=$(worktree_paths | sort)
+
+  git worktree add "${args[@]}" || exit $?
+
+  after=$(worktree_paths | sort)
+  new=$(comm -13 <(printf '%s\n' "$before") <(printf '%s\n' "$after") | head -n1)
+
+  [[ -n "$new" ]] || die "could not determine the new worktree path"
+
+  if [[ "$run_init" -eq 0 ]]; then
+    return 0
+  fi
+
+  # Locate the .wtrc to run.
+  local main wtrc=""
+  main=$(main_worktree)
+  if [[ -f "$new/.wtrc" ]]; then
+    wtrc="$new/.wtrc"
+  elif [[ -n "$main" && -f "$main/.wtrc" ]]; then
+    wtrc="$main/.wtrc"
+  fi
+
+  if [[ -z "$wtrc" ]]; then
+    printf 'wt: worktree ready at %s (no .wtrc found, skipping init)\n' "$new"
+    return 0
+  fi
+
+  local branch
+  branch=$(git -C "$new" rev-parse --abbrev-ref HEAD 2>/dev/null)
+
+  printf 'wt: running init from %s\n' "$wtrc"
+  (
+    cd "$new" || exit 1
+    export WT_DIR="$new"
+    export WT_NAME="$(basename "$new")"
+    export WT_BRANCH="$branch"
+    export WT_MAIN="$main"
+    bash "$wtrc"
+  ) || die "init commands failed (worktree left in place at $new)"
+
+  printf 'wt: worktree ready at %s\n' "$new"
+}
+
+cmd_remove() {
+  git rev-parse --is-inside-work-tree >/dev/null 2>&1 \
+    || die "not inside a git repository"
+
+  # Split flags (passed to every remove) from worktree targets.
+  local -a flags=() targets=()
+  local a
+  for a in "$@"; do
+    if [[ "$a" == -* ]]; then
+      flags+=("$a")
+    else
+      targets+=("$a")
+    fi
+  done
+
+  [[ ${#targets[@]} -gt 0 ]] || die "usage: wt r [-f|--force] <dir...>"
+
+  local target status=0
+  for target in "${targets[@]}"; do
+    if git worktree remove "${flags[@]}" "$target"; then
+      printf 'wt: removed %s\n' "$target"
+    else
+      status=1
+    fi
+  done
+  return "$status"
+}
+
+main() {
+  [[ $# -gt 0 ]] || die "usage: wt {a|add|r|rm|remove} ..."
+
+  local sub="$1"
+  shift
+  case "$sub" in
+    a|add)        cmd_add "$@" ;;
+    r|rm|remove)  cmd_remove "$@" ;;
+    -h|--help|help)
+      sed -n '2,26p' "$0" | sed 's/^# \{0,1\}//'
+      ;;
+    *) die "unknown command '$sub' (expected a|add|r|rm|remove)" ;;
+  esac
+}
+
+main "$@"

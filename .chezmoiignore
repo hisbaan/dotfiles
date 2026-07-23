@@ -62,3 +62,8 @@ README.md
 .config/hypr/hyprland/env-lab.conf
 .config/hypr/hyprland/monitors-lab.conf
 {{ end }}
+
+{{ if ne .chezmoi.hostname "affiniti" }}
+.local/bin/scripts/env-override
+.local/bin/scripts/dev-server-up
+{{ end }}

@@ -1,0 +1,50 @@
+#compdef wt
+
+# Completion for the `wt` git-worktree helper.
+#   wt a|add     -> delegate to `git worktree add` completion
+#   wt r|rm|...  -> complete existing worktrees (by name) from `git worktree list`
+
+_wt() {
+  local curcontext="$curcontext" state line
+  typeset -A opt_args
+
+  local -a subcommands
+  subcommands=(
+    'a:add a worktree and run init commands'
+    'add:add a worktree and run init commands'
+    'r:remove worktrees'
+    'rm:remove worktrees'
+    'remove:remove worktrees'
+  )
+
+  _arguments -C \
+    '1: :->cmd' \
+    '*:: :->args'
+
+  case $state in
+    cmd)
+      _describe -t commands 'wt command' subcommands
+      ;;
+    args)
+      case $line[1] in
+        a|add)
+          # Reuse git's own `git worktree add` completion for everything.
+          words=(git worktree add "${words[@]:1}")
+          (( CURRENT += 2 ))
+          _normal
+          ;;
+        r|rm|remove)
+          local -a worktrees
+          # All worktrees except the main one (which cannot be removed),
+          # offered by basename since `git worktree remove` accepts it.
+          worktrees=( ${(f)"$(git worktree list --porcelain 2>/dev/null \
+            | awk '/^worktree /{print $2}' | tail -n +2 \
+            | while read -r p; do basename "$p"; done)"} )
+          _values 'worktree' $worktrees
+          ;;
+      esac
+      ;;
+  esac
+}
+
+_wt "$@"
