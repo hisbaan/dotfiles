@@ -1,4 +1,6 @@
 README.md
+.claude/skills/synced
+**/.trash
 
 # linux configuration
 {{ if ne .chezmoi.os "linux" }}

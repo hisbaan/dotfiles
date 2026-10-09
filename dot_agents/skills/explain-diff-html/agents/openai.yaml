@@ -1,0 +1,5 @@
+interface:
+  display_name: "Explain Diff HTML"
+  short_description: "Generate an explination of a code change"
+policy:
+  allow_implicit_invocation: false

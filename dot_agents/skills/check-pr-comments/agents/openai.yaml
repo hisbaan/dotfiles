@@ -1,0 +1,5 @@
+interface:
+  display_name: "Check PR Comments"
+  short_description: "Investigate PR comments and provide solutions"
+policy:
+  allow_implicit_invocation: false
