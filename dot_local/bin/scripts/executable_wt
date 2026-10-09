@@ -95,7 +95,7 @@ cmd_add() {
     export WT_NAME="$(basename "$new")"
     export WT_BRANCH="$branch"
     export WT_MAIN="$main"
-    bash "$wtrc"
+    zsh "$wtrc"
   ) || die "init commands failed (worktree left in place at $new)"
 
   printf 'wt: worktree ready at %s\n' "$new"
