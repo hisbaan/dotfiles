@@ -57,12 +57,17 @@ README.md
 {{ if ne .chezmoi.hostname "archen" }}
 .config/hypr/hyprland/binds-archen.conf
 .config/hypr/hyprland/monitors-archen.conf
+.config/hypr/hyprland/binds-archen.lua
+.config/hypr/hyprland/monitors-archen.lua
 {{ end }}
 
 {{ if ne .chezmoi.hostname "lab" }}
 .config/hypr/hyprland/binds-lab.conf
 .config/hypr/hyprland/env-lab.conf
 .config/hypr/hyprland/monitors-lab.conf
+.config/hypr/hyprland/binds-lab.lua
+.config/hypr/hyprland/env-lab.lua
+.config/hypr/hyprland/monitors-lab.lua
 {{ end }}
 
 {{ if ne .chezmoi.hostname "affiniti" }}

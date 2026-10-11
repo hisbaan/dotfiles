@@ -1,0 +1,1 @@
+hl.env("XDG_SESSION_TYPE", "wayland")
