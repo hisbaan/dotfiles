@@ -51,6 +51,7 @@
         "exec": "date +'%a, %b %d %I:%M %p'"
     },
     "battery": {
+        "bat": "BAT0",
         "format": "{icon} {capacity}%",
         "format-icons": {
             "discharging": [
