@@ -1,5 +1,9 @@
 -- Machine-specific fragments
-pcall(require, "./hyprland/*.lua")
+local fragments = io.popen("ls " .. os.getenv("HOME") .. "/.config/hypr/hyprland/*.lua 2>/dev/null")
+for file in fragments:lines() do
+	dofile(file)
+end
+fragments:close()
 
 hl.device({
 	name = "AT Translated Set 2 keyboard",
