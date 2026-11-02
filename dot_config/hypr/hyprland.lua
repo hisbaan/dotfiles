@@ -113,7 +113,7 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind("SUPER + return", hl.dsp.exec_cmd("ghostty"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("alacritty --title 'alacritty_clipse' -e clipse"))
 hl.bind("SUPER + SHIFT + return", hl.dsp.exec_cmd("alacritty --title 'alacritty_floating'"))
-hl.bind("SUPER + D", hl.dsp.exec_cmd("tofi-run | xargs hyprctl dispatch exec"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd([[tofi-run | xargs -r -I{} hyprctl dispatch 'hl.dsp.exec_cmd("{}")']]))
 
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + E", hl.dsp.exit())

@@ -15,20 +15,20 @@ case $SECONDS in
   300)
     if on_battery; then
       case $EVENT in
-        timeout) hyprctl dispatch dpms off ;;
-        resume) hyprctl dispatch dpms on ;;
+        timeout) hyprctl dispatch 'hl.dsp.dpms({ action = "off" })' ;;
+        resume) hyprctl dispatch 'hl.dsp.dpms({ action = "on" })' ;;
       esac
     fi ;;
   600)
     if on_battery; then
       case $EVENT in
         timeout) systemctl suspend ;;
-        resume) hyprctl dispatch dpms on ;;
+        resume) hyprctl dispatch 'hl.dsp.dpms({ action = "on" })' ;;
       esac
     else
       case $EVENT in
-        timeout) hyprctl dispatch dpms off ;;
-        resume) hyprctl dispatch dpms on ;;
+        timeout) hyprctl dispatch 'hl.dsp.dpms({ action = "off" })' ;;
+        resume) hyprctl dispatch 'hl.dsp.dpms({ action = "on" })' ;;
       esac
     fi ;;
 esac
