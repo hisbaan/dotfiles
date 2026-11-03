@@ -1,0 +1,21 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+space"
+detach = "prefix+d"
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+last_pane = "prefix+tab"
+cycle_pane_next = ""
+
+[theme]
+name = "catppuccin"
+
+[ui.toast]
+delivery = "off"
+
+[ui.sound]
+enabled = false
+
+[ui]
+agent_panel_sort = "spaces"
