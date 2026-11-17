@@ -29,7 +29,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.github\\.wez\\.wezterm$",
-                                            "^com\\.mitchellh\\.ghostty$"
+                                            "^com\\.mitchellh\\.ghostty$",
+                                            "^com\\.superlogical\\.rex$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     },
@@ -55,7 +56,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.github\\.wez\\.wezterm$",
-                                            "^com\\.mitchellh\\.ghostty$"
+                                            "^com\\.mitchellh\\.ghostty$",
+                                            "^com\\.superlogical\\.rex$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     },
@@ -82,7 +84,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.github\\.wez\\.wezterm$",
-                                            "^com\\.mitchellh\\.ghostty$"
+                                            "^com\\.mitchellh\\.ghostty$",
+                                            "^com\\.superlogical\\.rex$"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
