@@ -2,19 +2,25 @@
 #
 # wt - git worktree helper
 #
-#   wt a|add [git worktree add args...]   Create a worktree, then run init
-#                                         commands from the nearest .wtrc.
+#   wt a|add [--no-init] [git worktree add args...]
+#                                         Create a worktree, then run init
+#                                         commands from the nearest .wtrc
+#                                         (skipped with --no-init).
+#   wt i|init                             Run .wtrc init commands in the
+#                                         current worktree (e.g. one made
+#                                         by another tool).
 #   wt r|rm|remove [-f] <dir...>          Remove one or more worktrees.
 #
-# Anything after `wt a`/`wt add` is passed straight through to
-# `git worktree add`. After the worktree is created, the commands in the
-# repo's .wtrc file (if any) are run from inside the new worktree.
+# Anything after `wt a`/`wt add` (other than --no-init) is passed
+# straight through to `git worktree add`. After the worktree is created,
+# the commands in the repo's .wtrc file (if any) are run from inside the
+# new worktree.
 #
 # .wtrc lookup order (first hit wins):
 #   1. <new worktree>/.wtrc   (e.g. a committed, project-wide init file)
 #   2. <main worktree>/.wtrc  (e.g. a personal, gitignored init file)
 #
-# The .wtrc file is a bash script run with the new worktree as its cwd.
+# The .wtrc file is a zsh script run with the new worktree as its cwd.
 # These variables are exported for it to use:
 #   WT_DIR     absolute path of the new worktree
 #   WT_NAME    basename of the new worktree
@@ -70,6 +76,20 @@ cmd_add() {
   if [[ "$run_init" -eq 0 ]]; then
     return 0
   fi
+
+  run_wtrc "$new"
+}
+
+cmd_init() {
+  local dir
+  dir=$(git rev-parse --show-toplevel 2>/dev/null) \
+    || die "not inside a git worktree"
+  run_wtrc "$dir"
+}
+
+# Run the nearest .wtrc from inside worktree $1.
+run_wtrc() {
+  local new="$1"
 
   # Locate the .wtrc to run.
   local main wtrc=""
@@ -130,17 +150,20 @@ cmd_remove() {
 }
 
 main() {
-  [[ $# -gt 0 ]] || die "usage: wt {a|add|r|rm|remove} ..."
+  [[ $# -gt 0 ]] || die "usage: wt {a|add|i|init|r|rm|remove} ..."
 
   local sub="$1"
   shift
   case "$sub" in
     a|add)        cmd_add "$@" ;;
+    i|init)       cmd_init "$@" ;;
     r|rm|remove)  cmd_remove "$@" ;;
     -h|--help|help)
-      sed -n '2,26p' "$0" | sed 's/^# \{0,1\}//'
+      # Print the header comment block (everything after the shebang up
+      # to the first non-comment line).
+      awk 'NR == 1 { next } /^#/ { sub(/^# ?/, ""); print; next } { exit }' "$0"
       ;;
-    *) die "unknown command '$sub' (expected a|add|r|rm|remove)" ;;
+    *) die "unknown command '$sub' (expected a|add|i|init|r|rm|remove)" ;;
   esac
 }
 
