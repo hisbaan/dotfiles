@@ -1,0 +1,5 @@
+interface:
+  display_name: "Worktrees"
+  short_description: "Use when creating a worktree"
+policy:
+  allow_implicit_invocation: true
